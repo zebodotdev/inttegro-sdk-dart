@@ -11,13 +11,13 @@ final class CustomData implements _InttegroValue {
   final Map<String, String> _values;
 
   CustomData([Map<String, String> values = const {}])
-    : _values = Map.unmodifiable(_validatedCustomData(values));
+      : _values = Map.unmodifiable(_validatedCustomData(values));
 
   factory CustomData.fromJson(Object? json) => CustomData(
-    (json as Map).cast<String, Object?>().map(
-      (key, value) => MapEntry(key, value as String),
-    ),
-  );
+        (json as Map).cast<String, Object?>().map(
+              (key, value) => MapEntry(key, value as String),
+            ),
+      );
 
   Map<String, String> get values => Map.unmodifiable(_values);
   String? operator [](String key) => _values[key];
@@ -42,7 +42,7 @@ final class CustomDataInput implements _InttegroValue {
   final Map<String, Object?> _values;
 
   CustomDataInput([Map<String, Object?> values = const {}])
-    : _values = Map.unmodifiable(_validatedCustomDataInput(values));
+      : _values = Map.unmodifiable(_validatedCustomDataInput(values));
 
   factory CustomDataInput.fromJson(Object? json) =>
       CustomDataInput((json as Map).cast<String, Object?>());
@@ -67,7 +67,7 @@ final class CustomDataPatch implements _InttegroValue {
   final Map<String, Object?> _changes;
 
   CustomDataPatch([Map<String, Object?> changes = const {}])
-    : _changes = Map.unmodifiable(_validatedCustomDataInput(changes));
+      : _changes = Map.unmodifiable(_validatedCustomDataInput(changes));
 
   factory CustomDataPatch.fromJson(Object? json) =>
       CustomDataPatch((json as Map).cast<String, Object?>());
@@ -94,7 +94,7 @@ final class JsonData implements _InttegroValue {
   final Map<String, Object?> _values;
 
   JsonData([Map<String, Object?> values = const {}])
-    : _values = Map.unmodifiable(_normalizeJsonMap(values));
+      : _values = Map.unmodifiable(_normalizeJsonMap(values));
 
   factory JsonData.fromJson(Object? json) =>
       JsonData((json as Map).cast<String, Object?>());
@@ -118,13 +118,13 @@ final class FileMetadata implements _InttegroValue {
   final Map<String, String> _values;
 
   FileMetadata([Map<String, String> values = const {}])
-    : _values = Map.unmodifiable(values);
+      : _values = Map.unmodifiable(values);
 
   factory FileMetadata.fromJson(Object? json) => FileMetadata(
-    (json as Map).cast<String, Object?>().map(
-      (key, value) => MapEntry(key, value as String),
-    ),
-  );
+        (json as Map).cast<String, Object?>().map(
+              (key, value) => MapEntry(key, value as String),
+            ),
+      );
 
   Map<String, String> get values => Map.unmodifiable(_values);
   String? operator [](String key) => _values[key];
@@ -145,13 +145,13 @@ final class PayoutDestinations implements _InttegroValue {
   final Map<String, String> _values;
 
   PayoutDestinations([Map<String, String> values = const {}])
-    : _values = Map.unmodifiable(values);
+      : _values = Map.unmodifiable(values);
 
   factory PayoutDestinations.fromJson(Object? json) => PayoutDestinations(
-    (json as Map).cast<String, Object?>().map(
-      (key, value) => MapEntry(key, value as String),
-    ),
-  );
+        (json as Map).cast<String, Object?>().map(
+              (key, value) => MapEntry(key, value as String),
+            ),
+      );
 
   Map<String, String> get values => Map.unmodifiable(_values);
   String? operator [](String key) => _values[key];
@@ -171,12 +171,12 @@ final class PayoutDestinations implements _InttegroValue {
 final class MessageHeaders implements _InttegroValue {
   final Map<String, String> _values;
   MessageHeaders([Map<String, String> values = const {}])
-    : _values = Map.unmodifiable(values);
+      : _values = Map.unmodifiable(values);
   factory MessageHeaders.fromJson(Object? json) => MessageHeaders(
-    (json as Map).cast<String, Object?>().map(
-      (key, value) => MapEntry(key, value as String),
-    ),
-  );
+        (json as Map).cast<String, Object?>().map(
+              (key, value) => MapEntry(key, value as String),
+            ),
+      );
   Map<String, String> get values => Map.unmodifiable(_values);
   String? operator [](String key) => _values[key];
   MessageHeaders set(String key, String value) =>
@@ -194,12 +194,12 @@ final class MessageHeaders implements _InttegroValue {
 final class ProductDimensionDetails implements _InttegroValue {
   final Map<String, String> _values;
   ProductDimensionDetails([Map<String, String> values = const {}])
-    : _values = Map.unmodifiable(values);
+      : _values = Map.unmodifiable(values);
   factory ProductDimensionDetails.fromJson(Object? json) =>
       ProductDimensionDetails(
         (json as Map).cast<String, Object?>().map(
-          (key, value) => MapEntry(key, value as String),
-        ),
+              (key, value) => MapEntry(key, value as String),
+            ),
       );
   Map<String, String> get values => Map.unmodifiable(_values);
   String? operator [](String key) => _values[key];
@@ -218,12 +218,12 @@ final class ProductDimensionDetails implements _InttegroValue {
 final class VariantValues implements _InttegroValue {
   final Map<String, String> _values;
   VariantValues([Map<String, String> values = const {}])
-    : _values = Map.unmodifiable(values);
+      : _values = Map.unmodifiable(values);
   factory VariantValues.fromJson(Object? json) => VariantValues(
-    (json as Map).cast<String, Object?>().map(
-      (key, value) => MapEntry(key, value as String),
-    ),
-  );
+        (json as Map).cast<String, Object?>().map(
+              (key, value) => MapEntry(key, value as String),
+            ),
+      );
   Map<String, String> get values => Map.unmodifiable(_values);
   String? operator [](String key) => _values[key];
   VariantValues set(String key, String value) =>
@@ -241,17 +241,17 @@ final class VariantValues implements _InttegroValue {
 final class BalanceSnapshot implements _InttegroValue {
   final Map<String, CurrencyBalanceSnapshot> _values;
   BalanceSnapshot([Map<String, CurrencyBalanceSnapshot> values = const {}])
-    : _values = Map.unmodifiable(values);
+      : _values = Map.unmodifiable(values);
   factory BalanceSnapshot.fromJson(Object? json) => BalanceSnapshot(
-    (json as Map).cast<String, Object?>().map(
-      (key, value) => MapEntry(
-        key,
-        CurrencyBalanceSnapshot.fromJson(
-          (value as Map).cast<String, Object?>(),
-        ),
-      ),
-    ),
-  );
+        (json as Map).cast<String, Object?>().map(
+              (key, value) => MapEntry(
+                key,
+                CurrencyBalanceSnapshot.fromJson(
+                  (value as Map).cast<String, Object?>(),
+                ),
+              ),
+            ),
+      );
   Map<String, CurrencyBalanceSnapshot> get values => Map.unmodifiable(_values);
   CurrencyBalanceSnapshot? operator [](String currency) => _values[currency];
   @override
@@ -263,15 +263,16 @@ final class BalanceSnapshot implements _InttegroValue {
 final class CustomerBalance implements _InttegroValue {
   final Map<String, CustomerBalanceValue> _values;
   CustomerBalance([Map<String, CustomerBalanceValue> values = const {}])
-    : _values = Map.unmodifiable(values);
+      : _values = Map.unmodifiable(values);
   factory CustomerBalance.fromJson(Object? json) => CustomerBalance(
-    (json as Map).cast<String, Object?>().map(
-      (key, value) => MapEntry(
-        key,
-        CustomerBalanceValue.fromJson((value as Map).cast<String, Object?>()),
-      ),
-    ),
-  );
+        (json as Map).cast<String, Object?>().map(
+              (key, value) => MapEntry(
+                key,
+                CustomerBalanceValue.fromJson(
+                    (value as Map).cast<String, Object?>()),
+              ),
+            ),
+      );
   Map<String, CustomerBalanceValue> get values => Map.unmodifiable(_values);
   CustomerBalanceValue? operator [](String currency) => _values[currency];
   @override
@@ -283,15 +284,16 @@ final class CustomerBalance implements _InttegroValue {
 final class CountrySpecifications implements _InttegroValue {
   final Map<String, CountrySpecification> _values;
   CountrySpecifications([Map<String, CountrySpecification> values = const {}])
-    : _values = Map.unmodifiable(values);
+      : _values = Map.unmodifiable(values);
   factory CountrySpecifications.fromJson(Object? json) => CountrySpecifications(
-    (json as Map).cast<String, Object?>().map(
-      (key, value) => MapEntry(
-        key,
-        CountrySpecification.fromJson((value as Map).cast<String, Object?>()),
-      ),
-    ),
-  );
+        (json as Map).cast<String, Object?>().map(
+              (key, value) => MapEntry(
+                key,
+                CountrySpecification.fromJson(
+                    (value as Map).cast<String, Object?>()),
+              ),
+            ),
+      );
   Map<String, CountrySpecification> get values => Map.unmodifiable(_values);
   CountrySpecification? operator [](String countryCode) => _values[countryCode];
   @override
@@ -327,10 +329,10 @@ final class FinancialAccountVerificationRequest implements _InttegroValue {
   }
   @override
   Map<String, Object?> toJson() => {
-    if (id != null) 'id': id,
-    if (mechanism != null) 'mechanism': mechanism,
-    if (type != null) 'type': type,
-  };
+        if (id != null) 'id': id,
+        if (mechanism != null) 'mechanism': mechanism,
+        if (type != null) 'type': type,
+      };
 }
 
 /// Verification state attached to a financial account.
@@ -353,10 +355,10 @@ final class FinancialAccountVerification implements _InttegroValue {
   }
   @override
   Map<String, Object?> toJson() => {
-    'initiated_at': initiatedAt,
-    if (completedAt != null) 'completed_at': completedAt,
-    'request': _encodeValue(request),
-  };
+        'initiated_at': initiatedAt,
+        if (completedAt != null) 'completed_at': completedAt,
+        'request': _encodeValue(request),
+      };
 }
 
 /// An order's payout destination.
@@ -389,9 +391,9 @@ final class OrderPayoutSettings implements _InttegroValue {
   }
   @override
   Map<String, Object?> toJson() => {
-    if (destination != null) 'destination': _encodeValue(destination),
-    if (enableFx != null) 'enable_fx': enableFx,
-  };
+        if (destination != null) 'destination': _encodeValue(destination),
+        if (enableFx != null) 'enable_fx': enableFx,
+      };
 }
 
 /// A delivery address captured on an order.
@@ -432,16 +434,16 @@ final class Address implements _InttegroValue {
   }
   @override
   Map<String, Object?> toJson() => {
-    'name': name,
-    'phone_number': phoneNumber,
-    'line1': line1,
-    if (line2 != null) 'line2': line2,
-    'town': town,
-    if (region != null) 'region': region,
-    if (district != null) 'district': district,
-    'country': country,
-    if (postCode != null) 'post_code': postCode,
-  };
+        'name': name,
+        'phone_number': phoneNumber,
+        'line1': line1,
+        if (line2 != null) 'line2': line2,
+        'town': town,
+        if (region != null) 'region': region,
+        if (district != null) 'district': district,
+        'country': country,
+        if (postCode != null) 'post_code': postCode,
+      };
 }
 
 /// Shipping details captured on an order.
