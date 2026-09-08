@@ -74,13 +74,13 @@ final class HttpReportContext {
     required this.durationMs,
   });
   Map<String, Object?> toJson() => {
-        'method': method,
-        if (route != null) 'route': route,
-        'serverAddress': serverAddress,
-        if (statusCode != null) 'statusCode': statusCode,
-        if (requestId != null) 'requestId': requestId,
-        'durationMs': durationMs,
-      };
+    'method': method,
+    if (route != null) 'route': route,
+    'serverAddress': serverAddress,
+    if (statusCode != null) 'statusCode': statusCode,
+    if (requestId != null) 'requestId': requestId,
+    'durationMs': durationMs,
+  };
 }
 
 final class ApiErrorReportContext {
@@ -89,10 +89,10 @@ final class ApiErrorReportContext {
   final String? fixCode;
   const ApiErrorReportContext({this.type, this.code, this.fixCode});
   Map<String, Object?> toJson() => {
-        if (type != null) 'type': type,
-        if (code != null) 'code': code,
-        if (fixCode != null) 'fixCode': fixCode,
-      };
+    if (type != null) 'type': type,
+    if (code != null) 'code': code,
+    if (fixCode != null) 'fixCode': fixCode,
+  };
 }
 
 final class TraceReportContext {
@@ -130,19 +130,19 @@ final class ErrorReport {
     required this.fingerprint,
   });
   Map<String, Object?> toJson() => {
-        'schemaVersion': schemaVersion,
-        'eventId': eventId,
-        'occurredAt': occurredAt.toUtc().toIso8601String(),
-        'severity': severity,
-        'category': category,
-        'operation': operation,
-        'sdk': sdk.toJson(),
-        'http': http.toJson(),
-        if (apiError != null) 'apiError': apiError!.toJson(),
-        if (trace != null) 'trace': trace!.toJson(),
-        'exceptionType': exceptionType,
-        'fingerprint': fingerprint,
-      };
+    'schemaVersion': schemaVersion,
+    'eventId': eventId,
+    'occurredAt': occurredAt.toUtc().toIso8601String(),
+    'severity': severity,
+    'category': category,
+    'operation': operation,
+    'sdk': sdk.toJson(),
+    'http': http.toJson(),
+    if (apiError != null) 'apiError': apiError!.toJson(),
+    if (trace != null) 'trace': trace!.toJson(),
+    'exceptionType': exceptionType,
+    'fingerprint': fingerprint,
+  };
 }
 
 abstract interface class ErrorReporter {
@@ -221,12 +221,12 @@ final class Client {
     Telemetry? telemetry,
     ErrorReporter? errorReporter,
     ErrorReportingPolicy errorReportingPolicy = ErrorReportingPolicy.unexpected,
-  })  : _apiKey = apiKey,
-        _baseUrl = baseUrl ?? Uri.parse('https://api.inttegro.com'),
-        _http = httpClient ?? http.Client(),
-        _telemetry = telemetry,
-        _errorReporter = errorReporter,
-        _errorReportingPolicy = errorReportingPolicy {
+  }) : _apiKey = apiKey,
+       _baseUrl = baseUrl ?? Uri.parse('https://api.inttegro.com'),
+       _http = httpClient ?? http.Client(),
+       _telemetry = telemetry,
+       _errorReporter = errorReporter,
+       _errorReportingPolicy = errorReportingPolicy {
     if (apiKey.trim().isEmpty) {
       throw const InttegroConfigurationException('api key cannot be empty');
     }
@@ -792,8 +792,9 @@ final class Client {
           method: method,
           route: route,
           statusCode: status,
-          durationMilliseconds:
-              DateTime.now().difference(started).inMilliseconds,
+          durationMilliseconds: DateTime.now()
+              .difference(started)
+              .inMilliseconds,
         ),
       );
     } catch (_) {
