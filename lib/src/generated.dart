@@ -6215,8 +6215,6 @@ final class FinalizeOrderRequest implements _InttegroValue {
 
 /// Typed Inttegro domain value.
 final class FinancialAccount implements _InttegroValue {
-  final String? appCustomerLocalFingerprint;
-  final String? appLocalFingerprint;
   final String? archivedAt;
   final String createdAt;
   final String currency;
@@ -6230,7 +6228,6 @@ final class FinancialAccount implements _InttegroValue {
   final String? reference;
   final ResourceSupply? supplied;
   final FinancialAccountType type;
-  final String? universalFingerprint;
   final FinancialAccountVerification? verification;
   final FinancialAccountBank? bankAccount;
   final String? disconnectedAt;
@@ -6238,8 +6235,6 @@ final class FinancialAccount implements _InttegroValue {
   final FinancialAccountOwner? owner;
   final FinancialAccountWallet? wallet;
   const FinancialAccount({
-    this.appCustomerLocalFingerprint,
-    this.appLocalFingerprint,
     this.archivedAt,
     required this.createdAt,
     required this.currency,
@@ -6253,7 +6248,6 @@ final class FinancialAccount implements _InttegroValue {
     this.reference,
     this.supplied,
     required this.type,
-    this.universalFingerprint,
     this.verification,
     this.bankAccount,
     this.disconnectedAt,
@@ -6265,13 +6259,6 @@ final class FinancialAccount implements _InttegroValue {
     Map<String, Object?> json,
   ) =>
       FinancialAccount(
-        appCustomerLocalFingerprint:
-            json["app_customer_local_fingerprint"] == null
-                ? null
-                : json["app_customer_local_fingerprint"] as String,
-        appLocalFingerprint: json["app_local_fingerprint"] == null
-            ? null
-            : json["app_local_fingerprint"] as String,
         archivedAt:
             json["archived_at"] == null ? null : json["archived_at"] as String,
         createdAt: json["created_at"] as String,
@@ -6306,9 +6293,6 @@ final class FinancialAccount implements _InttegroValue {
                 (json["supplied"] as Map).cast<String, Object?>(),
               ),
         type: FinancialAccountType.fromJson(json["type"]),
-        universalFingerprint: json["universal_fingerprint"] == null
-            ? null
-            : json["universal_fingerprint"] as String,
         verification: json["verification"] == null
             ? null
             : FinancialAccountVerification.fromJson(json["verification"]),
@@ -6336,12 +6320,6 @@ final class FinancialAccount implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (appCustomerLocalFingerprint != null)
-          "app_customer_local_fingerprint": _encodeValue(
-            appCustomerLocalFingerprint,
-          ),
-        if (appLocalFingerprint != null)
-          "app_local_fingerprint": _encodeValue(appLocalFingerprint),
         if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
         "created_at": _encodeValue(createdAt),
         "currency": _encodeValue(currency),
@@ -6357,8 +6335,6 @@ final class FinancialAccount implements _InttegroValue {
         if (reference != null) "reference": _encodeValue(reference),
         if (supplied != null) "supplied": _encodeValue(supplied),
         "type": _encodeValue(type),
-        if (universalFingerprint != null)
-          "universal_fingerprint": _encodeValue(universalFingerprint),
         if (verification != null) "verification": _encodeValue(verification),
         if (bankAccount != null) "bank_account": _encodeValue(bankAccount),
         if (disconnectedAt != null)
@@ -9983,8 +9959,6 @@ final class PaymentAttempt implements _InttegroValue {
 /// Typed Inttegro domain value.
 final class PaymentMethod implements _InttegroValue {
   final bool active;
-  final String? appCustomerLocalFingerprint;
-  final String? appLocalFingerprint;
   final String? archivedAt;
   final PaymentMethodBankAccount? bankAccount;
   final String createdAt;
@@ -9997,13 +9971,10 @@ final class PaymentMethod implements _InttegroValue {
   final PaymentMethodOwner? owner;
   final PaymentMethodType type;
   final PaymentMethodSupplied? supplied;
-  final String? universalFingerprint;
   final PaymentMethodVerification? verification;
   final String? verifiedAt;
   const PaymentMethod({
     required this.active,
-    this.appCustomerLocalFingerprint,
-    this.appLocalFingerprint,
     this.archivedAt,
     this.bankAccount,
     required this.createdAt,
@@ -10016,19 +9987,11 @@ final class PaymentMethod implements _InttegroValue {
     this.owner,
     required this.type,
     this.supplied,
-    this.universalFingerprint,
     this.verification,
     this.verifiedAt,
   });
   factory PaymentMethod.fromJson(Map<String, Object?> json) => PaymentMethod(
         active: json["active"] as bool,
-        appCustomerLocalFingerprint:
-            json["app_customer_local_fingerprint"] == null
-                ? null
-                : json["app_customer_local_fingerprint"] as String,
-        appLocalFingerprint: json["app_local_fingerprint"] == null
-            ? null
-            : json["app_local_fingerprint"] as String,
         archivedAt:
             json["archived_at"] == null ? null : json["archived_at"] as String,
         bankAccount: json["bank_account"] == null
@@ -10061,9 +10024,6 @@ final class PaymentMethod implements _InttegroValue {
             : PaymentMethodSupplied.fromJson(
                 (json["supplied"] as Map).cast<String, Object?>(),
               ),
-        universalFingerprint: json["universal_fingerprint"] == null
-            ? null
-            : json["universal_fingerprint"] as String,
         verification: json["verification"] == null
             ? null
             : PaymentMethodVerification.fromJson(
@@ -10075,12 +10035,6 @@ final class PaymentMethod implements _InttegroValue {
   @override
   Map<String, Object?> toJson() => {
         "active": _encodeValue(active),
-        if (appCustomerLocalFingerprint != null)
-          "app_customer_local_fingerprint": _encodeValue(
-            appCustomerLocalFingerprint,
-          ),
-        if (appLocalFingerprint != null)
-          "app_local_fingerprint": _encodeValue(appLocalFingerprint),
         if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
         if (bankAccount != null) "bank_account": _encodeValue(bankAccount),
         "created_at": _encodeValue(createdAt),
@@ -10093,8 +10047,6 @@ final class PaymentMethod implements _InttegroValue {
         if (owner != null) "owner": _encodeValue(owner),
         "type": _encodeValue(type),
         if (supplied != null) "supplied": _encodeValue(supplied),
-        if (universalFingerprint != null)
-          "universal_fingerprint": _encodeValue(universalFingerprint),
         if (verification != null) "verification": _encodeValue(verification),
         if (verifiedAt != null) "verified_at": _encodeValue(verifiedAt),
       };
