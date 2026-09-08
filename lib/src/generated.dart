@@ -1475,7 +1475,7 @@ typedef MessageTemplateAttachmentIDs = List<String>;
 
 typedef MessageTemplateAttachmentIDsInput = List<String>;
 
-typedef MessageTemplateVariablesInput = Map<String, Object?>;
+typedef MessageTemplateVariablesInput = JsonData;
 
 sealed class OrderLineItem implements _InttegroValue {
   const OrderLineItem();
@@ -2840,7 +2840,7 @@ final class CatalogProductWithPriceReferenceInput implements _InttegroValue {
 /// Typed Inttegro domain value.
 final class Chime implements _InttegroValue {
   final String createdAt;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String? customerId;
   final ChimeEmailMessage? email;
   final String fullMessage;
@@ -2867,9 +2867,7 @@ final class Chime implements _InttegroValue {
         createdAt: json["created_at"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         customerId:
             json["customer_id"] == null ? null : json["customer_id"] as String,
         email: json["email"] == null
@@ -3031,7 +3029,7 @@ final class ChimeEmailMessage implements _InttegroValue {
   final String? html;
   final ChimeEmailMailbox? from;
   final ChimeEmailMailbox? replyTo;
-  final Map<String, String>? headers;
+  final MessageHeaders? headers;
   final ChimeEmailSafetyResult? safety;
   final ChimeEmailSchemaMarkup? schema;
   const ChimeEmailMessage({
@@ -3061,9 +3059,7 @@ final class ChimeEmailMessage implements _InttegroValue {
               ),
         headers: json["headers"] == null
             ? null
-            : (json["headers"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : MessageHeaders.fromJson(json["headers"]),
         safety: json["safety"] == null
             ? null
             : ChimeEmailSafetyResult.fromJson(
@@ -3092,7 +3088,7 @@ final class ChimeEmailMessage implements _InttegroValue {
 final class ChimeEmailMessageInput implements _InttegroValue {
   final String? html;
   final String? replyTo;
-  final Map<String, String>? headers;
+  final MessageHeaders? headers;
   final String subject;
   final String text;
   final ChimeEmailMailboxInput from;
@@ -3110,9 +3106,7 @@ final class ChimeEmailMessageInput implements _InttegroValue {
         replyTo: json["reply_to"] == null ? null : json["reply_to"] as String,
         headers: json["headers"] == null
             ? null
-            : (json["headers"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : MessageHeaders.fromJson(json["headers"]),
         subject: json["subject"] as String,
         text: json["text"] as String,
         from: ChimeEmailMailboxInput.fromJson(
@@ -3236,7 +3230,7 @@ final class ChimeEmailScannedLink implements _InttegroValue {
 /// Typed Inttegro domain value.
 final class ChimeEmailSchemaMarkup implements _InttegroValue {
   final ChimeEmailSchemaKind? kind;
-  final Map<String, Object?>? jsonLd;
+  final JsonData? jsonLd;
   const ChimeEmailSchemaMarkup({this.kind, this.jsonLd});
   factory ChimeEmailSchemaMarkup.fromJson(Map<String, Object?> json) =>
       ChimeEmailSchemaMarkup(
@@ -3245,9 +3239,7 @@ final class ChimeEmailSchemaMarkup implements _InttegroValue {
             : ChimeEmailSchemaKind.fromJson(json["kind"]),
         jsonLd: json["json_ld"] == null
             ? null
-            : (json["json_ld"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : JsonData.fromJson(json["json_ld"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -3858,7 +3850,7 @@ final class CreateApplicationRequestRelationshipPolicy
 /// Typed Inttegro request parameters.
 final class CreateCustomerRequest implements _InttegroValue {
   final CustomerAddressInput? billingAddress;
-  final Map<String, Object?>? customData;
+  final CustomDataInput? customData;
   final String? emailAddress;
   final String? phoneNumber;
   final String? reference;
@@ -3884,9 +3876,7 @@ final class CreateCustomerRequest implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : CustomDataInput.fromJson(json["custom_data"]),
         emailAddress: json["email_address"] == null
             ? null
             : json["email_address"] as String,
@@ -3983,7 +3973,7 @@ final class CreateFileLinkRequest implements _InttegroValue {
   final FileLinkDeliveryInput? delivery;
   final FileLinkAccessRequest? access;
   final FileActorInput? createdBy;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String? expiresAt;
   final String fileId;
   const CreateFileLinkRequest({
@@ -4013,9 +4003,7 @@ final class CreateFileLinkRequest implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         expiresAt:
             json["expires_at"] == null ? null : json["expires_at"] as String,
         fileId: json["file_id"] as String,
@@ -4044,7 +4032,7 @@ final class CreateOrderExistingCustomerInput implements _InttegroValue {
   final CreateOrderExistingCustomerInputCheckoutSettings? checkoutSettings;
   final InvoiceSettingsInput? invoiceSettings;
   final OrderPayoutSettingsRequest? payoutSettings;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final BillingDetailsInput? billingDetails;
   final ShippingInput? shipping;
   final String customerId;
@@ -4114,9 +4102,7 @@ final class CreateOrderExistingCustomerInput implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         billingDetails: json["billing_details"] == null
             ? null
             : BillingDetailsInput.fromJson(
@@ -4220,7 +4206,7 @@ final class CreateOrderNewCustomerInput implements _InttegroValue {
   final CreateOrderNewCustomerInputCheckoutSettings? checkoutSettings;
   final InvoiceSettingsInput? invoiceSettings;
   final OrderPayoutSettingsRequest? payoutSettings;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final BillingDetailsInput? billingDetails;
   final ShippingInput? shipping;
   final PaymentMethodDataInput? paymentMethodData;
@@ -4282,9 +4268,7 @@ final class CreateOrderNewCustomerInput implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         billingDetails: json["billing_details"] == null
             ? null
             : BillingDetailsInput.fromJson(
@@ -4394,7 +4378,7 @@ final class CreateProductRequest implements _InttegroValue {
   final ProductMediaInput? media;
   final List<ProductAttributeInput>? attributes;
   final bool? publish;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final ProductType type;
   final String name;
   const CreateProductRequest({
@@ -4452,9 +4436,7 @@ final class CreateProductRequest implements _InttegroValue {
         publish: json["publish"] == null ? null : json["publish"] as bool,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         type: ProductType.fromJson(json["type"]),
         name: json["name"] as String,
       );
@@ -4698,7 +4680,7 @@ final class CreateRefundLineItemInput implements _InttegroValue {
 
 /// Typed Inttegro request parameters.
 final class CreateRefundRequest implements _InttegroValue {
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String? reasonDetails;
   final String? reference;
   final RefundRequestMetaInput? requestMeta;
@@ -4718,9 +4700,7 @@ final class CreateRefundRequest implements _InttegroValue {
       CreateRefundRequest(
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         reasonDetails: json["reason_details"] == null
             ? null
             : json["reason_details"] as String,
@@ -4813,7 +4793,7 @@ final class CreateUploadRequestRequest implements _InttegroValue {
   final FileResourceInput? resource;
   final FileActorInput? requester;
   final UploadRequestAttemptsRequest? attempts;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String? expiresAt;
   final String purpose;
   const CreateUploadRequestRequest({
@@ -4867,9 +4847,7 @@ final class CreateUploadRequestRequest implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         expiresAt:
             json["expires_at"] == null ? null : json["expires_at"] as String,
         purpose: json["purpose"] as String,
@@ -4953,10 +4931,10 @@ final class CurrencyBalanceSnapshotReserved implements _InttegroValue {
 
 /// Typed Inttegro domain value.
 final class Customer implements _InttegroValue {
-  final Map<String, CustomerBalanceValue> balance;
+  final CustomerBalance balance;
   final CustomerAddress? billingAddress;
   final String createdAt;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String? emailAddress;
   final bool guest;
   final String id;
@@ -4984,13 +4962,7 @@ final class Customer implements _InttegroValue {
     this.updatedAt,
   });
   factory Customer.fromJson(Map<String, Object?> json) => Customer(
-        balance: (json["balance"] as Map).cast<String, Object?>().map(
-              (key, value) => MapEntry(
-                key,
-                CustomerBalanceValue.fromJson(
-                    (value as Map).cast<String, Object?>()),
-              ),
-            ),
+        balance: CustomerBalance.fromJson(json["balance"]),
         billingAddress: json["billing_address"] == null
             ? null
             : CustomerAddress.fromJson(
@@ -4999,9 +4971,7 @@ final class Customer implements _InttegroValue {
         createdAt: json["created_at"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         emailAddress: json["email_address"] == null
             ? null
             : json["email_address"] as String,
@@ -5160,7 +5130,7 @@ final class CustomerBalanceValue implements _InttegroValue {
 /// Typed Inttegro request parameters.
 final class CustomerDataInput implements _InttegroValue {
   final String? reference;
-  final Map<String, Object?>? customData;
+  final CustomDataInput? customData;
   final String name;
   final String emailAddress;
   final String phoneNumber;
@@ -5177,9 +5147,7 @@ final class CustomerDataInput implements _InttegroValue {
             json["reference"] == null ? null : json["reference"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : CustomDataInput.fromJson(json["custom_data"]),
         name: json["name"] as String,
         emailAddress: json["email_address"] as String,
         phoneNumber: json["phone_number"] as String,
@@ -5317,7 +5285,7 @@ final class FeeDetailsInput implements _InttegroValue {
   final String? label;
   final String? taxCode;
   final String? description;
-  final Map<String, Object?>? customData;
+  final CustomDataInput? customData;
   final AmountParams amount;
   const FeeDetailsInput({
     this.id,
@@ -5336,9 +5304,7 @@ final class FeeDetailsInput implements _InttegroValue {
             json["description"] == null ? null : json["description"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : CustomDataInput.fromJson(json["custom_data"]),
         amount: AmountParams.fromJson(
           (json["amount"] as Map).cast<String, Object?>(),
         ),
@@ -5390,8 +5356,8 @@ final class File implements _InttegroValue {
   final PublicFileStorage storage;
   final FileDeliveryDetails? delivery;
   final FileLatestError? latestError;
-  final Map<String, String>? customData;
-  final Map<String, String>? metadata;
+  final CustomData? customData;
+  final FileMetadata? metadata;
   final String createdAt;
   final String updatedAt;
   final String? availableAt;
@@ -5454,14 +5420,10 @@ final class File implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         metadata: json["metadata"] == null
             ? null
-            : (json["metadata"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : FileMetadata.fromJson(json["metadata"]),
         createdAt: json["created_at"] as String,
         updatedAt: json["updated_at"] as String,
         availableAt: json["available_at"] == null
@@ -5632,8 +5594,8 @@ final class FileLink implements _InttegroValue {
   final FileLinkAccess access;
   final FileLinkActor createdBy;
   final FileLinkActor? revokedBy;
-  final Map<String, String>? customData;
-  final Map<String, String>? metadata;
+  final CustomData? customData;
+  final FileMetadata? metadata;
   final String createdAt;
   final String updatedAt;
   final String expiresAt;
@@ -5679,14 +5641,10 @@ final class FileLink implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         metadata: json["metadata"] == null
             ? null
-            : (json["metadata"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : FileMetadata.fromJson(json["metadata"]),
         createdAt: json["created_at"] as String,
         updatedAt: json["updated_at"] as String,
         expiresAt: json["expires_at"] as String,
@@ -6262,7 +6220,7 @@ final class FinancialAccount implements _InttegroValue {
   final String? archivedAt;
   final String createdAt;
   final String currency;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String? description;
   final String id;
   final FinancialInstitution? institution;
@@ -6273,10 +6231,10 @@ final class FinancialAccount implements _InttegroValue {
   final ResourceSupply? supplied;
   final FinancialAccountType type;
   final String? universalFingerprint;
-  final Map<String, Object?>? verification;
+  final FinancialAccountVerification? verification;
   final FinancialAccountBank? bankAccount;
   final String? disconnectedAt;
-  final Map<String, Object?>? doshAccount;
+  final DoshAccount? doshAccount;
   final FinancialAccountOwner? owner;
   final FinancialAccountWallet? wallet;
   const FinancialAccount({
@@ -6320,9 +6278,7 @@ final class FinancialAccount implements _InttegroValue {
         currency: json["currency"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         description:
             json["description"] == null ? null : json["description"] as String,
         id: json["id"] as String,
@@ -6355,9 +6311,7 @@ final class FinancialAccount implements _InttegroValue {
             : json["universal_fingerprint"] as String,
         verification: json["verification"] == null
             ? null
-            : (json["verification"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : FinancialAccountVerification.fromJson(json["verification"]),
         bankAccount: json["bank_account"] == null
             ? null
             : FinancialAccountBank.fromJson(
@@ -6368,9 +6322,7 @@ final class FinancialAccount implements _InttegroValue {
             : json["disconnected_at"] as String,
         doshAccount: json["dosh_account"] == null
             ? null
-            : (json["dosh_account"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : DoshAccount.fromJson(json["dosh_account"]),
         owner: json["owner"] == null
             ? null
             : FinancialAccountOwner.fromJson(
@@ -6486,7 +6438,7 @@ final class FinancialAccountBank implements _InttegroValue {
 
 /// Typed Inttegro request parameters.
 final class FinancialAccountBankRequest implements _InttegroValue {
-  final Map<String, Object?>? customData;
+  final CustomDataInput? customData;
   final String? description;
   final FinancialAccountOwnerInput? owner;
   final FinancialAccountBankRequestPullConfiguration? pullConfiguration;
@@ -6512,9 +6464,7 @@ final class FinancialAccountBankRequest implements _InttegroValue {
       FinancialAccountBankRequest(
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : CustomDataInput.fromJson(json["custom_data"]),
         description:
             json["description"] == null ? null : json["description"] as String,
         owner: json["owner"] == null
@@ -6687,7 +6637,7 @@ final class FinancialAccountDisableRequest implements _InttegroValue {
 
 /// Typed Inttegro request parameters.
 final class FinancialAccountDoshRequest implements _InttegroValue {
-  final Map<String, Object?>? customData;
+  final CustomDataInput? customData;
   final String? description;
   final FinancialAccountDoshRequestPullConfiguration? pullConfiguration;
   final FinancialAccountDoshRequestPushConfiguration? pushConfiguration;
@@ -6696,7 +6646,7 @@ final class FinancialAccountDoshRequest implements _InttegroValue {
   final FinancialAccountOwnerInput owner;
   final String reference;
   final FinancialAccountType type;
-  final Map<String, Object?> doshAccount;
+  final DoshAccount doshAccount;
   const FinancialAccountDoshRequest({
     this.customData,
     this.description,
@@ -6713,9 +6663,7 @@ final class FinancialAccountDoshRequest implements _InttegroValue {
       FinancialAccountDoshRequest(
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : CustomDataInput.fromJson(json["custom_data"]),
         description:
             json["description"] == null ? null : json["description"] as String,
         pullConfiguration: json["pull_configuration"] == null
@@ -6735,9 +6683,7 @@ final class FinancialAccountDoshRequest implements _InttegroValue {
         ),
         reference: json["reference"] as String,
         type: FinancialAccountType.fromJson(json["type"]),
-        doshAccount: (json["dosh_account"] as Map).cast<String, Object?>().map(
-              (key, value) => MapEntry(key, value),
-            ),
+        doshAccount: DoshAccount.fromJson(json["dosh_account"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -7102,7 +7048,7 @@ final class FinancialAccountPushConfiguration implements _InttegroValue {
 
 /// Typed Inttegro request parameters.
 final class FinancialAccountUpdateRequest implements _InttegroValue {
-  final Map<String, Object?>? customData;
+  final CustomDataPatch? customData;
   final String? description;
   final String? label;
   final FinancialAccountOwnerUpdateInput? owner;
@@ -7120,9 +7066,7 @@ final class FinancialAccountUpdateRequest implements _InttegroValue {
       FinancialAccountUpdateRequest(
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : CustomDataPatch.fromJson(json["custom_data"]),
         description:
             json["description"] == null ? null : json["description"] as String,
         label: json["label"] == null ? null : json["label"] as String,
@@ -7198,7 +7142,7 @@ final class FinancialAccountWalletMobileMoney implements _InttegroValue {
 
 /// Typed Inttegro request parameters.
 final class FinancialAccountWalletRequest implements _InttegroValue {
-  final Map<String, Object?>? customData;
+  final CustomDataInput? customData;
   final String? description;
   final FinancialAccountWalletRequestPullConfiguration? pullConfiguration;
   final FinancialAccountWalletRequestPushConfiguration? pushConfiguration;
@@ -7224,9 +7168,7 @@ final class FinancialAccountWalletRequest implements _InttegroValue {
       FinancialAccountWalletRequest(
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : CustomDataInput.fromJson(json["custom_data"]),
         description:
             json["description"] == null ? null : json["description"] as String,
         pullConfiguration: json["pull_configuration"] == null
@@ -7648,7 +7590,7 @@ final class InitiateOTPRequest implements _InttegroValue {
 /// Typed Inttegro request parameters.
 final class InlineProductDetailsInput implements _InttegroValue {
   final String? about;
-  final Map<String, Object?>? customData;
+  final CustomDataInput? customData;
   final String? reference;
   final String? taxCode;
   final String name;
@@ -7672,9 +7614,7 @@ final class InlineProductDetailsInput implements _InttegroValue {
         about: json["about"] == null ? null : json["about"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : CustomDataInput.fromJson(json["custom_data"]),
         reference:
             json["reference"] == null ? null : json["reference"] as String,
         taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
@@ -7702,7 +7642,7 @@ final class InvoiceSettings implements _InttegroValue {
   final String? number;
   final String? memo;
   final String? footer;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   const InvoiceSettings({this.number, this.memo, this.footer, this.customData});
   factory InvoiceSettings.fromJson(Map<String, Object?> json) =>
       InvoiceSettings(
@@ -7711,9 +7651,7 @@ final class InvoiceSettings implements _InttegroValue {
         footer: json["footer"] == null ? null : json["footer"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -7729,7 +7667,7 @@ final class InvoiceSettingsInput implements _InttegroValue {
   final String? number;
   final String? memo;
   final String? footer;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   const InvoiceSettingsInput({
     this.number,
     this.memo,
@@ -7743,9 +7681,7 @@ final class InvoiceSettingsInput implements _InttegroValue {
         footer: json["footer"] == null ? null : json["footer"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -8074,7 +8010,7 @@ final class MessageTemplateEmailContent implements _InttegroValue {
   final String html;
   final MessageTemplateMailbox? from;
   final MessageTemplateMailbox? replyTo;
-  final Map<String, String>? headers;
+  final MessageHeaders? headers;
   const MessageTemplateEmailContent({
     required this.subject,
     required this.html,
@@ -8098,9 +8034,7 @@ final class MessageTemplateEmailContent implements _InttegroValue {
               ),
         headers: json["headers"] == null
             ? null
-            : (json["headers"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : MessageHeaders.fromJson(json["headers"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -8116,7 +8050,7 @@ final class MessageTemplateEmailContent implements _InttegroValue {
 final class MessageTemplateEmailContentInput implements _InttegroValue {
   final MessageTemplateMailboxInput? from;
   final MessageTemplateMailboxInput? replyTo;
-  final Map<String, String>? headers;
+  final MessageHeaders? headers;
   final String subject;
   final String html;
   const MessageTemplateEmailContentInput({
@@ -8142,9 +8076,7 @@ final class MessageTemplateEmailContentInput implements _InttegroValue {
               ),
         headers: json["headers"] == null
             ? null
-            : (json["headers"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : MessageHeaders.fromJson(json["headers"]),
         subject: json["subject"] as String,
         html: json["html"] as String,
       );
@@ -8228,7 +8160,7 @@ final class MessageTemplatePreview implements _InttegroValue {
 
 /// Typed Inttegro request parameters.
 final class MessageTemplateReferenceInput implements _InttegroValue {
-  final Map<String, Object?>? variables;
+  final JsonData? variables;
   final String templateId;
   const MessageTemplateReferenceInput({
     this.variables,
@@ -8238,9 +8170,7 @@ final class MessageTemplateReferenceInput implements _InttegroValue {
       MessageTemplateReferenceInput(
         variables: json["variables"] == null
             ? null
-            : (json["variables"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : JsonData.fromJson(json["variables"]),
         templateId: json["template_id"] as String,
       );
   @override
@@ -8723,7 +8653,7 @@ final class Order implements _InttegroValue {
   final OrderCheckoutSettings? checkoutSettings;
   final String? completedAt;
   final OrderCreatedFrom? createdFrom;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final OrderCustomer customer;
   final String? expiresAt;
   final String id;
@@ -8739,9 +8669,9 @@ final class Order implements _InttegroValue {
   final Payment? payment;
   final String? paidAt;
   final String? paymentDueAt;
-  final Map<String, Object?>? payoutSettings;
+  final OrderPayoutSettings? payoutSettings;
   final String? reference;
-  final Map<String, Object?>? shipping;
+  final Shipping? shipping;
   const Order({
     this.canceledAt,
     this.checkoutSettings,
@@ -8785,9 +8715,7 @@ final class Order implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         customer: OrderCustomer.fromJson(
           (json["customer"] as Map).cast<String, Object?>(),
         ),
@@ -8835,16 +8763,12 @@ final class Order implements _InttegroValue {
             : json["payment_due_at"] as String,
         payoutSettings: json["payout_settings"] == null
             ? null
-            : (json["payout_settings"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : OrderPayoutSettings.fromJson(json["payout_settings"]),
         reference:
             json["reference"] == null ? null : json["reference"] as String,
         shipping: json["shipping"] == null
             ? null
-            : (json["shipping"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : Shipping.fromJson(json["shipping"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -9386,7 +9310,7 @@ final class OrderProductLineItemProduct implements _InttegroValue {
   final String? priceId;
   final String? reference;
   final String? about;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String? taxCode;
   final String name;
   final String? category;
@@ -9420,9 +9344,7 @@ final class OrderProductLineItemProduct implements _InttegroValue {
         about: json["about"] == null ? null : json["about"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
         name: json["name"] as String,
         category: json["category"] == null ? null : json["category"] as String,
@@ -10066,7 +9988,7 @@ final class PaymentMethod implements _InttegroValue {
   final String? archivedAt;
   final PaymentMethodBankAccount? bankAccount;
   final String createdAt;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String customerId;
   final bool? ephemeral;
   final String? expiresOn;
@@ -10117,9 +10039,7 @@ final class PaymentMethod implements _InttegroValue {
         createdAt: json["created_at"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         customerId: json["customer_id"] as String,
         ephemeral: json["ephemeral"] == null ? null : json["ephemeral"] as bool,
         expiresOn:
@@ -10565,7 +10485,7 @@ final class PaymentMethodSettings implements _InttegroValue {
 final class PaymentMethodSnapshot implements _InttegroValue {
   final String id;
   final PaymentMethodSnapshotBankAccount? bankAccount;
-  final Map<String, Object?>? card;
+  final JsonData? card;
   final String createdAt;
   final String customerId;
   final PaymentMethodSnapshotMobileMoney? mobileMoney;
@@ -10595,9 +10515,7 @@ final class PaymentMethodSnapshot implements _InttegroValue {
               ),
         card: json["card"] == null
             ? null
-            : (json["card"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : JsonData.fromJson(json["card"]),
         createdAt: json["created_at"] as String,
         customerId: json["customer_id"] as String,
         mobileMoney: json["mobile_money"] == null
@@ -10856,7 +10774,7 @@ final class PaymentMethodVerificationSession implements _InttegroValue {
   final String status;
   final String? tokenSentAt;
   final String? expiresAt;
-  final Map<String, Object?>? delivery;
+  final JsonData? delivery;
   const PaymentMethodVerificationSession({
     required this.paymentMethodId,
     required this.status,
@@ -10877,9 +10795,7 @@ final class PaymentMethodVerificationSession implements _InttegroValue {
             json["expires_at"] == null ? null : json["expires_at"] as String,
         delivery: json["delivery"] == null
             ? null
-            : (json["delivery"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : JsonData.fromJson(json["delivery"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -10895,7 +10811,7 @@ final class PaymentMethodVerificationSession implements _InttegroValue {
 final class PaymentNextAction implements _InttegroValue {
   final PaymentNextActionType type;
   final PaymentNextActionConfirmPayment? confirmPayment;
-  final Map<String, Object?>? execute;
+  final JsonData? execute;
   final PaymentNextActionRedirect? redirect;
   final PaymentNextActionAuthorize? authorize;
   const PaymentNextAction({
@@ -10915,9 +10831,7 @@ final class PaymentNextAction implements _InttegroValue {
               ),
         execute: json["execute"] == null
             ? null
-            : (json["execute"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : JsonData.fromJson(json["execute"]),
         redirect: json["redirect"] == null
             ? null
             : PaymentNextActionRedirect.fromJson(
@@ -11195,7 +11109,7 @@ final class Payout implements _InttegroValue {
   final Amount? amount;
   final List<String>? balanceTransactions;
   final String? canceledAt;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String destinationId;
   final PayoutError? error;
   final String executeAfter;
@@ -11251,9 +11165,7 @@ final class Payout implements _InttegroValue {
             json["canceled_at"] == null ? null : json["canceled_at"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         destinationId: json["destination_id"] as String,
         error: json["error"] == null
             ? null
@@ -11375,7 +11287,7 @@ final class PayoutPage implements _InttegroValue {
 
 /// Typed Inttegro domain value.
 final class PayoutSettingsLookup implements _InttegroValue {
-  final Map<String, String> destinations;
+  final PayoutDestinations destinations;
   final bool? fxEnabled;
   final PayoutSettingsLookupSchedule? schedule;
   const PayoutSettingsLookup({
@@ -11385,9 +11297,7 @@ final class PayoutSettingsLookup implements _InttegroValue {
   });
   factory PayoutSettingsLookup.fromJson(Map<String, Object?> json) =>
       PayoutSettingsLookup(
-        destinations: (json["destinations"] as Map).cast<String, Object?>().map(
-              (key, value) => MapEntry(key, value as String),
-            ),
+        destinations: PayoutDestinations.fromJson(json["destinations"]),
         fxEnabled:
             json["fx_enabled"] == null ? null : json["fx_enabled"] as bool,
         schedule: json["schedule"] == null
@@ -11470,7 +11380,7 @@ final class PayoutSettingsLookupScheduleAgingSpec implements _InttegroValue {
 
 /// Typed Inttegro domain value.
 final class PayoutSettingsMutation implements _InttegroValue {
-  final Map<String, String>? destinations;
+  final PayoutDestinations? destinations;
   final String? id;
   final PayoutSettingsMutationSchedule? schedule;
   const PayoutSettingsMutation({this.destinations, this.id, this.schedule});
@@ -11478,9 +11388,7 @@ final class PayoutSettingsMutation implements _InttegroValue {
       PayoutSettingsMutation(
         destinations: json["destinations"] == null
             ? null
-            : (json["destinations"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : PayoutDestinations.fromJson(json["destinations"]),
         id: json["id"] == null ? null : json["id"] as String,
         schedule: json["schedule"] == null
             ? null
@@ -11603,14 +11511,14 @@ final class PriceEmbeddedProduct implements _InttegroValue {
   final List<PriceEmbeddedProductAttributesItem>? attributes;
   final String? category;
   final String createdAt;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String? description;
-  final Map<String, Object?>? dimensions;
-  final Map<String, Object?>? media;
+  final ProductDimensions? dimensions;
+  final ProductMedia? media;
   final String name;
   final String? publishedAt;
   final String? reference;
-  final Map<String, Object?>? shipment;
+  final ProductShipment? shipment;
   final String? taxCode;
   final ProductType type;
   final String? unitDim;
@@ -11658,21 +11566,15 @@ final class PriceEmbeddedProduct implements _InttegroValue {
         createdAt: json["created_at"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         description:
             json["description"] == null ? null : json["description"] as String,
         dimensions: json["dimensions"] == null
             ? null
-            : (json["dimensions"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : ProductDimensions.fromJson((json["dimensions"] as Map).cast<String, Object?>()),
         media: json["media"] == null
             ? null
-            : (json["media"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : ProductMedia.fromJson((json["media"] as Map).cast<String, Object?>()),
         name: json["name"] as String,
         publishedAt: json["published_at"] == null
             ? null
@@ -11681,9 +11583,7 @@ final class PriceEmbeddedProduct implements _InttegroValue {
             json["reference"] == null ? null : json["reference"] as String,
         shipment: json["shipment"] == null
             ? null
-            : (json["shipment"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : ProductShipment.fromJson((json["shipment"] as Map).cast<String, Object?>()),
         taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
         type: ProductType.fromJson(json["type"]),
         unitDim: json["unit_dim"] == null ? null : json["unit_dim"] as String,
@@ -11878,7 +11778,7 @@ final class Product implements _InttegroValue {
   final ProductMedia? media;
   final List<ProductAttribute>? attributes;
   final ProductDimensions? dimensions;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final bool active;
   final String createdAt;
   final String? updatedAt;
@@ -11952,9 +11852,7 @@ final class Product implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         active: json["active"] as bool,
         createdAt: json["created_at"] as String,
         updatedAt:
@@ -12071,7 +11969,7 @@ final class ProductDimensions implements _InttegroValue {
 final class ProductDimensionsCustom implements _InttegroValue {
   final String? sizeUnit;
   final double? size;
-  final Map<String, String>? details;
+  final ProductDimensionDetails? details;
   const ProductDimensionsCustom({this.sizeUnit, this.size, this.details});
   factory ProductDimensionsCustom.fromJson(Map<String, Object?> json) =>
       ProductDimensionsCustom(
@@ -12080,9 +11978,7 @@ final class ProductDimensionsCustom implements _InttegroValue {
         size: json["size"] == null ? null : (json["size"] as num).toDouble(),
         details: json["details"] == null
             ? null
-            : (json["details"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : ProductDimensionDetails.fromJson(json["details"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -12149,7 +12045,7 @@ final class ProductDimensionsInput implements _InttegroValue {
 final class ProductDimensionsInputCustom implements _InttegroValue {
   final String? sizeUnit;
   final double? size;
-  final Map<String, String>? details;
+  final ProductDimensionDetails? details;
   const ProductDimensionsInputCustom({this.sizeUnit, this.size, this.details});
   factory ProductDimensionsInputCustom.fromJson(Map<String, Object?> json) =>
       ProductDimensionsInputCustom(
@@ -12158,9 +12054,7 @@ final class ProductDimensionsInputCustom implements _InttegroValue {
         size: json["size"] == null ? null : (json["size"] as num).toDouble(),
         details: json["details"] == null
             ? null
-            : (json["details"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : ProductDimensionDetails.fromJson(json["details"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -12496,11 +12390,11 @@ final class ProductPriceSummary implements _InttegroValue {
 /// Typed Inttegro domain value.
 final class ProductShipment implements _InttegroValue {
   final ProductShipmentType type;
-  final Map<String, Object?>? delivery;
-  final Map<String, Object?>? download;
-  final Map<String, Object?>? render;
-  final Map<String, Object?>? service;
-  final Map<String, Object?>? stream;
+  final JsonData? delivery;
+  final JsonData? download;
+  final JsonData? render;
+  final JsonData? service;
+  final JsonData? stream;
   const ProductShipment({
     required this.type,
     this.delivery,
@@ -12514,29 +12408,19 @@ final class ProductShipment implements _InttegroValue {
         type: ProductShipmentType.fromJson(json["type"]),
         delivery: json["delivery"] == null
             ? null
-            : (json["delivery"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : JsonData.fromJson(json["delivery"]),
         download: json["download"] == null
             ? null
-            : (json["download"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : JsonData.fromJson(json["download"]),
         render: json["render"] == null
             ? null
-            : (json["render"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : JsonData.fromJson(json["render"]),
         service: json["service"] == null
             ? null
-            : (json["service"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : JsonData.fromJson(json["service"]),
         stream: json["stream"] == null
             ? null
-            : (json["stream"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : JsonData.fromJson(json["stream"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -12835,14 +12719,14 @@ final class PurchaseIntentProduct implements _InttegroValue {
   final List<PurchaseIntentProductAttributesItem>? attributes;
   final String? category;
   final String createdAt;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String? description;
-  final Map<String, Object?>? dimensions;
-  final Map<String, Object?>? media;
+  final ProductDimensions? dimensions;
+  final ProductMedia? media;
   final String name;
   final String? publishedAt;
   final String? reference;
-  final Map<String, Object?>? shipment;
+  final ProductShipment? shipment;
   final String? taxCode;
   final ProductType type;
   final String? unitDim;
@@ -12894,21 +12778,15 @@ final class PurchaseIntentProduct implements _InttegroValue {
         createdAt: json["created_at"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         description:
             json["description"] == null ? null : json["description"] as String,
         dimensions: json["dimensions"] == null
             ? null
-            : (json["dimensions"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : ProductDimensions.fromJson((json["dimensions"] as Map).cast<String, Object?>()),
         media: json["media"] == null
             ? null
-            : (json["media"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : ProductMedia.fromJson((json["media"] as Map).cast<String, Object?>()),
         name: json["name"] as String,
         publishedAt: json["published_at"] == null
             ? null
@@ -12917,9 +12795,7 @@ final class PurchaseIntentProduct implements _InttegroValue {
             json["reference"] == null ? null : json["reference"] as String,
         shipment: json["shipment"] == null
             ? null
-            : (json["shipment"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : ProductShipment.fromJson((json["shipment"] as Map).cast<String, Object?>()),
         taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
         type: ProductType.fromJson(json["type"]),
         unitDim: json["unit_dim"] == null ? null : json["unit_dim"] as String,
@@ -13052,7 +12928,7 @@ final class PurchaseIntentVariant implements _InttegroValue {
   final PurchaseIntentPrice? price;
   final PurchaseIntentProduct? product;
   final String productId;
-  final Map<String, String> variantValues;
+  final VariantValues variantValues;
   const PurchaseIntentVariant({
     required this.active,
     this.position,
@@ -13077,9 +12953,7 @@ final class PurchaseIntentVariant implements _InttegroValue {
                 (json["product"] as Map).cast<String, Object?>(),
               ),
         productId: json["product_id"] as String,
-        variantValues: (json["variant_values"] as Map)
-            .cast<String, Object?>()
-            .map((key, value) => MapEntry(key, value as String)),
+        variantValues: VariantValues.fromJson(json["variant_values"]),
       );
   @override
   Map<String, Object?> toJson() => {
@@ -13181,7 +13055,7 @@ final class PurchaseIntentVariantSet implements _InttegroValue {
 final class Refund implements _InttegroValue {
   final String? canceledAt;
   final String createdAt;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String? failedAt;
   final String id;
   final List<RefundLineItem> lineItems;
@@ -13215,9 +13089,7 @@ final class Refund implements _InttegroValue {
         createdAt: json["created_at"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         failedAt:
             json["failed_at"] == null ? null : json["failed_at"] as String,
         id: json["id"] as String,
@@ -13375,7 +13247,7 @@ final class RenderedEmailMessageTemplate implements _InttegroValue {
   final String? html;
   final MessageTemplateMailbox? from;
   final MessageTemplateMailbox? replyTo;
-  final Map<String, String>? headers;
+  final MessageHeaders? headers;
   final MessageTemplateSafetyResult? safety;
   const RenderedEmailMessageTemplate({
     required this.subject,
@@ -13403,9 +13275,7 @@ final class RenderedEmailMessageTemplate implements _InttegroValue {
               ),
         headers: json["headers"] == null
             ? null
-            : (json["headers"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : MessageHeaders.fromJson(json["headers"]),
         safety: json["safety"] == null
             ? null
             : MessageTemplateSafetyResult.fromJson(
@@ -14243,7 +14113,7 @@ final class SendChimeRequest implements _InttegroValue {
   final MessageTemplateReferenceInput? messageTemplate;
   final String? senderId;
   final String? purpose;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final SendChimeRequestRequestMeta? requestMeta;
   final SendChimeRequestRecipient recipient;
   const SendChimeRequest({
@@ -14276,9 +14146,7 @@ final class SendChimeRequest implements _InttegroValue {
         purpose: json["purpose"] == null ? null : json["purpose"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         requestMeta: json["request_meta"] == null
             ? null
             : SendChimeRequestRequestMeta.fromJson(
@@ -14319,13 +14187,11 @@ final class SendChimeRequestRequestMeta implements _InttegroValue {
 
 /// Typed Inttegro request parameters.
 final class SetPayoutDestinationsRequest implements _InttegroValue {
-  final Map<String, String> destinations;
+  final PayoutDestinations destinations;
   const SetPayoutDestinationsRequest({required this.destinations});
   factory SetPayoutDestinationsRequest.fromJson(Map<String, Object?> json) =>
       SetPayoutDestinationsRequest(
-        destinations: (json["destinations"] as Map).cast<String, Object?>().map(
-              (key, value) => MapEntry(key, value as String),
-            ),
+        destinations: PayoutDestinations.fromJson(json["destinations"]),
       );
   @override
   Map<String, Object?> toJson() => {"destinations": _encodeValue(destinations)};
@@ -14335,7 +14201,7 @@ final class SetPayoutDestinationsRequest implements _InttegroValue {
 final class ShippingDetailsInput implements _InttegroValue {
   final String? id;
   final String? taxCode;
-  final Map<String, Object?>? customData;
+  final CustomDataInput? customData;
   final AmountParams fee;
   const ShippingDetailsInput({
     this.id,
@@ -14349,9 +14215,7 @@ final class ShippingDetailsInput implements _InttegroValue {
         taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : CustomDataInput.fromJson(json["custom_data"]),
         fee: AmountParams.fromJson(
           (json["fee"] as Map).cast<String, Object?>(),
         ),
@@ -14399,7 +14263,7 @@ final class ShippingLineItemInput implements _InttegroValue {
 
 /// Typed Inttegro request parameters.
 final class TokenizeMobileMoneyPaymentMethodRequest implements _InttegroValue {
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String customerId;
   final PaymentMethodType type;
   final TokenizeMobileMoneyPaymentMethodRequestMobileMoney mobileMoney;
@@ -14417,9 +14281,7 @@ final class TokenizeMobileMoneyPaymentMethodRequest implements _InttegroValue {
       TokenizeMobileMoneyPaymentMethodRequest(
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         customerId: json["customer_id"] as String,
         type: PaymentMethodType.fromJson(json["type"]),
         mobileMoney:
@@ -14512,7 +14374,7 @@ final class UpdateApplicationRequest implements _InttegroValue {
 /// Typed Inttegro request parameters.
 final class UpdateCustomerRequest implements _InttegroValue {
   final CustomerAddressInput? billingAddress;
-  final Map<String, Object?>? customData;
+  final CustomDataPatch? customData;
   final String? emailAddress;
   final String? name;
   final String? phoneNumber;
@@ -14542,9 +14404,7 @@ final class UpdateCustomerRequest implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value),
-                ),
+            : CustomDataPatch.fromJson(json["custom_data"]),
         emailAddress: json["email_address"] == null
             ? null
             : json["email_address"] as String,
@@ -14657,7 +14517,7 @@ final class UpdateMessageTemplateRequest implements _InttegroValue {
 /// Typed Inttegro request parameters.
 final class UpdateOrderRequest implements _InttegroValue {
   final bool? clearPaymentMethod;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final InvoiceSettingsInput? invoiceSettings;
   final bool? finalize;
   final List<Object?>? lineItems;
@@ -14689,9 +14549,7 @@ final class UpdateOrderRequest implements _InttegroValue {
             : json["clear_payment_method"] as bool,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         invoiceSettings: json["invoice_settings"] == null
             ? null
             : InvoiceSettingsInput.fromJson(
@@ -14797,7 +14655,7 @@ final class UpdateOrderRequestPaymentMethodDataMobileMoney
 
 /// Typed Inttegro request parameters.
 final class UpdatePaymentMethodRequest implements _InttegroValue {
-  final Map<String, String?>? customData;
+  final CustomDataPatch? customData;
   final bool? active;
   final bool? archived;
   final UpdatePaymentMethodRequestOwner? owner;
@@ -14813,10 +14671,7 @@ final class UpdatePaymentMethodRequest implements _InttegroValue {
       UpdatePaymentMethodRequest(
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) =>
-                      MapEntry(key, value == null ? null : value as String),
-                ),
+            : CustomDataPatch.fromJson(json["custom_data"]),
         active: json["active"] == null ? null : json["active"] as bool,
         archived: json["archived"] == null ? null : json["archived"] as bool,
         owner: json["owner"] == null
@@ -14940,7 +14795,7 @@ final class UpdateProductRequest implements _InttegroValue {
   final ProductMediaInput? media;
   final List<String>? images;
   final List<ProductAttributeInput>? attributes;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final String productId;
   const UpdateProductRequest({
     this.type,
@@ -14999,9 +14854,7 @@ final class UpdateProductRequest implements _InttegroValue {
                 .toList(),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         productId: json["product_id"] as String,
       );
   @override
@@ -15116,7 +14969,7 @@ final class UpdatedProduct implements _InttegroValue {
   final String? reference;
   final String? taxCode;
   final String? category;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   final ProductDimensions? dimensions;
   final List<ProductPriceSummary>? prices;
   final String? unitDim;
@@ -15151,9 +15004,7 @@ final class UpdatedProduct implements _InttegroValue {
         category: json["category"] == null ? null : json["category"] as String,
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         dimensions: json["dimensions"] == null
             ? null
             : ProductDimensions.fromJson(
@@ -15230,8 +15081,8 @@ final class UploadRequest implements _InttegroValue {
   final UploadRequestAttempts attempts;
   final UploadRequestLatestError? latestError;
   final UploadRequestActor? canceledBy;
-  final Map<String, String>? customData;
-  final Map<String, String>? metadata;
+  final CustomData? customData;
+  final FileMetadata? metadata;
   final String createdAt;
   final String updatedAt;
   final String expiresAt;
@@ -15308,14 +15159,10 @@ final class UploadRequest implements _InttegroValue {
               ),
         customData: json["custom_data"] == null
             ? null
-            : (json["custom_data"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : CustomData.fromJson(json["custom_data"]),
         metadata: json["metadata"] == null
             ? null
-            : (json["metadata"] as Map).cast<String, Object?>().map(
-                  (key, value) => MapEntry(key, value as String),
-                ),
+            : FileMetadata.fromJson(json["metadata"]),
         createdAt: json["created_at"] as String,
         updatedAt: json["updated_at"] as String,
         expiresAt: json["expires_at"] as String,

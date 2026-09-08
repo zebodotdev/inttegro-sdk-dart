@@ -20,7 +20,7 @@ final class CreateFileRequest {
   final Uint8List bytes;
   final String purpose;
   final String? title;
-  final Map<String, String>? customData;
+  final CustomData? customData;
   const CreateFileRequest({
     required this.fileName,
     required this.bytes,
@@ -508,7 +508,7 @@ final class Client {
       request.fields['title'] = title;
     }
     if (value.customData case final customData?) {
-      request.fields['custom_data'] = jsonEncode(customData);
+      request.fields['custom_data'] = jsonEncode(_encodeValue(customData));
     }
     _record(
       'inttegro.request.prepared',

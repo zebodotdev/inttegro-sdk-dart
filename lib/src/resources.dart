@@ -104,7 +104,7 @@ final class Balances {
   const Balances._(this._client);
 
   /// Retrieve your balance
-  Future<Map<String, CurrencyBalanceSnapshot>> getValue({
+  Future<BalanceSnapshot> getValue({
     RequestOptions options = const RequestOptions(),
   }) async {
     final value = await _client._request(
@@ -116,14 +116,7 @@ final class Balances {
       field: "balances",
       authenticated: true,
     );
-    return (value as Map).cast<String, Object?>().map(
-          (key, value) => MapEntry(
-            key,
-            CurrencyBalanceSnapshot.fromJson(
-              (value as Map).cast<String, Object?>(),
-            ),
-          ),
-        );
+    return BalanceSnapshot.fromJson(value);
   }
 }
 
@@ -2032,7 +2025,7 @@ final class Specifications {
   const Specifications._(this._client);
 
   /// Get country specifications
-  Future<Map<String, CountrySpecification>> countries({
+  Future<CountrySpecifications> countries({
     RequestOptions options = const RequestOptions(),
   }) async {
     final value = await _client._request(
@@ -2044,13 +2037,7 @@ final class Specifications {
       field: "countries",
       authenticated: false,
     );
-    return (value as Map).cast<String, Object?>().map(
-          (key, value) => MapEntry(
-            key,
-            CountrySpecification.fromJson(
-                (value as Map).cast<String, Object?>()),
-          ),
-        );
+    return CountrySpecifications.fromJson(value);
   }
 }
 
