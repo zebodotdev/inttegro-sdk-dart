@@ -1770,8 +1770,8 @@ final class ActivatePaymentMethodRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "payment_method_id": _encodeValue(paymentMethodId),
-      };
+    "payment_method_id": _encodeValue(paymentMethodId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -1797,11 +1797,11 @@ final class AddProductPriceRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (label != null) "label": _encodeValue(label),
-        if (about != null) "about": _encodeValue(about),
-        "product_id": _encodeValue(productId),
-        "amount": _encodeValue(amount),
-      };
+    if (label != null) "label": _encodeValue(label),
+    if (about != null) "about": _encodeValue(about),
+    "product_id": _encodeValue(productId),
+    "amount": _encodeValue(amount),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -1827,29 +1827,28 @@ final class AddressInput implements _InttegroValue {
     required this.country,
   });
   factory AddressInput.fromJson(Map<String, Object?> json) => AddressInput(
-        line2: json["line2"] == null ? null : json["line2"] as String,
-        region: json["region"] == null ? null : json["region"] as String,
-        district: json["district"] == null ? null : json["district"] as String,
-        postCode:
-            json["post_code"] == null ? null : json["post_code"] as String,
-        name: json["name"] as String,
-        phoneNumber: json["phone_number"] as String,
-        line1: json["line1"] as String,
-        town: json["town"] as String,
-        country: json["country"] as String,
-      );
+    line2: json["line2"] == null ? null : json["line2"] as String,
+    region: json["region"] == null ? null : json["region"] as String,
+    district: json["district"] == null ? null : json["district"] as String,
+    postCode: json["post_code"] == null ? null : json["post_code"] as String,
+    name: json["name"] as String,
+    phoneNumber: json["phone_number"] as String,
+    line1: json["line1"] as String,
+    town: json["town"] as String,
+    country: json["country"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (line2 != null) "line2": _encodeValue(line2),
-        if (region != null) "region": _encodeValue(region),
-        if (district != null) "district": _encodeValue(district),
-        if (postCode != null) "post_code": _encodeValue(postCode),
-        "name": _encodeValue(name),
-        "phone_number": _encodeValue(phoneNumber),
-        "line1": _encodeValue(line1),
-        "town": _encodeValue(town),
-        "country": _encodeValue(country),
-      };
+    if (line2 != null) "line2": _encodeValue(line2),
+    if (region != null) "region": _encodeValue(region),
+    if (district != null) "district": _encodeValue(district),
+    if (postCode != null) "post_code": _encodeValue(postCode),
+    "name": _encodeValue(name),
+    "phone_number": _encodeValue(phoneNumber),
+    "line1": _encodeValue(line1),
+    "town": _encodeValue(town),
+    "country": _encodeValue(country),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -1858,14 +1857,14 @@ final class Amount implements _InttegroValue {
   final int value;
   const Amount({required this.currency, required this.value});
   factory Amount.fromJson(Map<String, Object?> json) => Amount(
-        currency: Currency.fromJson(json["currency"]),
-        value: (json["value"] as num).toInt(),
-      );
+    currency: Currency.fromJson(json["currency"]),
+    value: (json["value"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "currency": _encodeValue(currency),
-        "value": _encodeValue(value),
-      };
+    "currency": _encodeValue(currency),
+    "value": _encodeValue(value),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -1874,14 +1873,14 @@ final class AmountParams implements _InttegroValue {
   final int value;
   const AmountParams({required this.currency, required this.value});
   factory AmountParams.fromJson(Map<String, Object?> json) => AmountParams(
-        currency: Currency.fromJson(json["currency"]),
-        value: (json["value"] as num).toInt(),
-      );
+    currency: Currency.fromJson(json["currency"]),
+    value: (json["value"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "currency": _encodeValue(currency),
-        "value": _encodeValue(value),
-      };
+    "currency": _encodeValue(currency),
+    "value": _encodeValue(value),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -1907,39 +1906,40 @@ final class Application implements _InttegroValue {
     this.relationship,
   });
   factory Application.fromJson(Map<String, Object?> json) => Application(
-        id: json["id"] as String,
-        name: json["name"] as String,
-        alias: json["alias"] == null ? null : json["alias"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
-        createdAt: json["created_at"] as String,
-        updatedAt:
-            json["updated_at"] == null ? null : json["updated_at"] as String,
-        archivedAt:
-            json["archived_at"] == null ? null : json["archived_at"] as String,
-        secretKey: json["secret_key"] == null
-            ? null
-            : ApplicationSecretKey.fromJson(
-                (json["secret_key"] as Map).cast<String, Object?>(),
-              ),
-        relationship: json["relationship"] == null
-            ? null
-            : ApplicationRelationship.fromJson(
-                (json["relationship"] as Map).cast<String, Object?>(),
-              ),
-      );
+    id: json["id"] as String,
+    name: json["name"] as String,
+    alias: json["alias"] == null ? null : json["alias"] as String,
+    description: json["description"] == null
+        ? null
+        : json["description"] as String,
+    createdAt: json["created_at"] as String,
+    updatedAt: json["updated_at"] == null ? null : json["updated_at"] as String,
+    archivedAt: json["archived_at"] == null
+        ? null
+        : json["archived_at"] as String,
+    secretKey: json["secret_key"] == null
+        ? null
+        : ApplicationSecretKey.fromJson(
+            (json["secret_key"] as Map).cast<String, Object?>(),
+          ),
+    relationship: json["relationship"] == null
+        ? null
+        : ApplicationRelationship.fromJson(
+            (json["relationship"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "name": _encodeValue(name),
-        if (alias != null) "alias": _encodeValue(alias),
-        if (description != null) "description": _encodeValue(description),
-        "created_at": _encodeValue(createdAt),
-        if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
-        if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
-        if (secretKey != null) "secret_key": _encodeValue(secretKey),
-        if (relationship != null) "relationship": _encodeValue(relationship),
-      };
+    "id": _encodeValue(id),
+    "name": _encodeValue(name),
+    if (alias != null) "alias": _encodeValue(alias),
+    if (description != null) "description": _encodeValue(description),
+    "created_at": _encodeValue(createdAt),
+    if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
+    if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
+    if (secretKey != null) "secret_key": _encodeValue(secretKey),
+    if (relationship != null) "relationship": _encodeValue(relationship),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -1993,22 +1993,22 @@ final class ApplicationRelationship implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "kind": _encodeValue(kind),
-        "policy_version": _encodeValue(policyVersion),
-        "status": _encodeValue(status),
-        "actor_app_id": _encodeValue(actorAppId),
-        "creator_app_id": _encodeValue(creatorAppId),
-        "placement_parent_app_id": _encodeValue(placementParentAppId),
-        "subject_app_id": _encodeValue(subjectAppId),
-        "child_app_id": _encodeValue(childAppId),
-        "child_standing": _encodeValue(childStanding),
-        "relationship_policy": _encodeValue(relationshipPolicy),
-        "retained_creator_authority_exists": _encodeValue(
-          retainedCreatorAuthorityExists,
-        ),
-        "created_at": _encodeValue(createdAt),
-      };
+    "id": _encodeValue(id),
+    "kind": _encodeValue(kind),
+    "policy_version": _encodeValue(policyVersion),
+    "status": _encodeValue(status),
+    "actor_app_id": _encodeValue(actorAppId),
+    "creator_app_id": _encodeValue(creatorAppId),
+    "placement_parent_app_id": _encodeValue(placementParentAppId),
+    "subject_app_id": _encodeValue(subjectAppId),
+    "child_app_id": _encodeValue(childAppId),
+    "child_standing": _encodeValue(childStanding),
+    "relationship_policy": _encodeValue(relationshipPolicy),
+    "retained_creator_authority_exists": _encodeValue(
+      retainedCreatorAuthorityExists,
+    ),
+    "created_at": _encodeValue(createdAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2029,10 +2029,10 @@ final class ApplicationRelationshipPolicy implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "child_standing": _encodeValue(childStanding),
-        "management": _encodeValue(management),
-        "credentials": _encodeValue(credentials),
-      };
+    "child_standing": _encodeValue(childStanding),
+    "management": _encodeValue(management),
+    "credentials": _encodeValue(credentials),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2049,22 +2049,19 @@ final class ApplicationSecretKey implements _InttegroValue {
   });
   factory ApplicationSecretKey.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ApplicationSecretKey(
-        id: json["id"] == null ? null : json["id"] as String,
-        tokenType:
-            json["token_type"] == null ? null : json["token_type"] as String,
-        issuedAt:
-            json["issued_at"] == null ? null : json["issued_at"] as String,
-        token: json["token"] == null ? null : json["token"] as String,
-      );
+  ) => ApplicationSecretKey(
+    id: json["id"] == null ? null : json["id"] as String,
+    tokenType: json["token_type"] == null ? null : json["token_type"] as String,
+    issuedAt: json["issued_at"] == null ? null : json["issued_at"] as String,
+    token: json["token"] == null ? null : json["token"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (id != null) "id": _encodeValue(id),
-        if (tokenType != null) "token_type": _encodeValue(tokenType),
-        if (issuedAt != null) "issued_at": _encodeValue(issuedAt),
-        if (token != null) "token": _encodeValue(token),
-      };
+    if (id != null) "id": _encodeValue(id),
+    if (tokenType != null) "token_type": _encodeValue(tokenType),
+    if (issuedAt != null) "issued_at": _encodeValue(issuedAt),
+    if (token != null) "token": _encodeValue(token),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -2077,8 +2074,8 @@ final class ArchivePaymentMethodRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "payment_method_id": _encodeValue(paymentMethodId),
-      };
+    "payment_method_id": _encodeValue(paymentMethodId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2109,42 +2106,37 @@ final class BalanceTransaction implements _InttegroValue {
   });
   factory BalanceTransaction.fromJson(
     Map<String, Object?> json,
-  ) =>
-      BalanceTransaction(
-        amount: BalanceTransactionAmount.fromJson(
-          (json["amount"] as Map).cast<String, Object?>(),
-        ),
-        availableAt: json["available_at"] == null
-            ? null
-            : json["available_at"] as String,
-        claimedAt:
-            json["claimed_at"] == null ? null : json["claimed_at"] as String,
-        createdAt: json["created_at"] as String,
-        id: json["id"] as String,
-        orderId: json["order_id"] as String,
-        paidAt: json["paid_at"] == null ? null : json["paid_at"] as String,
-        paymentId:
-            json["payment_id"] == null ? null : json["payment_id"] as String,
-        payoutId:
-            json["payout_id"] == null ? null : json["payout_id"] as String,
-        refundId:
-            json["refund_id"] == null ? null : json["refund_id"] as String,
-        type: BalanceTransactionType.fromJson(json["type"]),
-      );
+  ) => BalanceTransaction(
+    amount: BalanceTransactionAmount.fromJson(
+      (json["amount"] as Map).cast<String, Object?>(),
+    ),
+    availableAt: json["available_at"] == null
+        ? null
+        : json["available_at"] as String,
+    claimedAt: json["claimed_at"] == null ? null : json["claimed_at"] as String,
+    createdAt: json["created_at"] as String,
+    id: json["id"] as String,
+    orderId: json["order_id"] as String,
+    paidAt: json["paid_at"] == null ? null : json["paid_at"] as String,
+    paymentId: json["payment_id"] == null ? null : json["payment_id"] as String,
+    payoutId: json["payout_id"] == null ? null : json["payout_id"] as String,
+    refundId: json["refund_id"] == null ? null : json["refund_id"] as String,
+    type: BalanceTransactionType.fromJson(json["type"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "amount": _encodeValue(amount),
-        if (availableAt != null) "available_at": _encodeValue(availableAt),
-        if (claimedAt != null) "claimed_at": _encodeValue(claimedAt),
-        "created_at": _encodeValue(createdAt),
-        "id": _encodeValue(id),
-        "order_id": _encodeValue(orderId),
-        if (paidAt != null) "paid_at": _encodeValue(paidAt),
-        if (paymentId != null) "payment_id": _encodeValue(paymentId),
-        if (payoutId != null) "payout_id": _encodeValue(payoutId),
-        if (refundId != null) "refund_id": _encodeValue(refundId),
-        "type": _encodeValue(type),
-      };
+    "amount": _encodeValue(amount),
+    if (availableAt != null) "available_at": _encodeValue(availableAt),
+    if (claimedAt != null) "claimed_at": _encodeValue(claimedAt),
+    "created_at": _encodeValue(createdAt),
+    "id": _encodeValue(id),
+    "order_id": _encodeValue(orderId),
+    if (paidAt != null) "paid_at": _encodeValue(paidAt),
+    if (paymentId != null) "payment_id": _encodeValue(paymentId),
+    if (payoutId != null) "payout_id": _encodeValue(payoutId),
+    if (refundId != null) "refund_id": _encodeValue(refundId),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2159,9 +2151,9 @@ final class BalanceTransactionAmount implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "currency": _encodeValue(currency),
-        "value": _encodeValue(value),
-      };
+    "currency": _encodeValue(currency),
+    "value": _encodeValue(value),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2181,19 +2173,19 @@ final class BalanceTransactionPage implements _InttegroValue {
         transactions: json["transactions"] == null
             ? null
             : (json["transactions"] as List)
-                .map(
-                  (item) => BalanceTransaction.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => BalanceTransaction.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
       );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-        if (transactions != null) "transactions": _encodeValue(transactions),
-      };
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+    if (transactions != null) "transactions": _encodeValue(transactions),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2231,11 +2223,11 @@ final class BillingDetailsInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (address != null) "address": _encodeValue(address),
-        "name": _encodeValue(name),
-        "email_address": _encodeValue(emailAddress),
-        "phone_number": _encodeValue(phoneNumber),
-      };
+    if (address != null) "address": _encodeValue(address),
+    "name": _encodeValue(name),
+    "email_address": _encodeValue(emailAddress),
+    "phone_number": _encodeValue(phoneNumber),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2272,66 +2264,63 @@ final class BroadcastCancelDetail implements _InttegroValue {
   });
   factory BroadcastCancelDetail.fromJson(
     Map<String, Object?> json,
-  ) =>
-      BroadcastCancelDetail(
-        chimeIds: json["chime_ids"] == null
-            ? null
-            : (json["chime_ids"] as List)
-                .map((item) => item as String)
-                .toList(),
-        content: json["content"] as String,
-        createdAt: json["created_at"] as String,
-        customerIds: json["customer_ids"] == null
-            ? null
-            : (json["customer_ids"] as List)
-                .map((item) => item as String)
-                .toList(),
-        email: json["email"] == null
-            ? null
-            : ChimeEmailMessage.fromJson(
-                (json["email"] as Map).cast<String, Object?>(),
-              ),
-        errors: json["errors"] == null
-            ? null
-            : (json["errors"] as List)
-                .map(
-                  (item) => BroadcastError.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        executedAt:
-            json["executed_at"] == null ? null : json["executed_at"] as String,
-        id: json["id"] as String,
-        idempotencyKey: json["idempotency_key"] == null
-            ? null
-            : json["idempotency_key"] as String,
-        purpose: json["purpose"] == null ? null : json["purpose"] as String,
-        recipients:
-            (json["recipients"] as List).map((item) => item as String).toList(),
-        sendAfter: json["send_after"] as String,
-        senderId: json["sender_id"] as String,
-        canceledAt:
-            json["canceled_at"] == null ? null : json["canceled_at"] as String,
-      );
+  ) => BroadcastCancelDetail(
+    chimeIds: json["chime_ids"] == null
+        ? null
+        : (json["chime_ids"] as List).map((item) => item as String).toList(),
+    content: json["content"] as String,
+    createdAt: json["created_at"] as String,
+    customerIds: json["customer_ids"] == null
+        ? null
+        : (json["customer_ids"] as List).map((item) => item as String).toList(),
+    email: json["email"] == null
+        ? null
+        : ChimeEmailMessage.fromJson(
+            (json["email"] as Map).cast<String, Object?>(),
+          ),
+    errors: json["errors"] == null
+        ? null
+        : (json["errors"] as List)
+              .map(
+                (item) => BroadcastError.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    executedAt: json["executed_at"] == null
+        ? null
+        : json["executed_at"] as String,
+    id: json["id"] as String,
+    idempotencyKey: json["idempotency_key"] == null
+        ? null
+        : json["idempotency_key"] as String,
+    purpose: json["purpose"] == null ? null : json["purpose"] as String,
+    recipients: (json["recipients"] as List)
+        .map((item) => item as String)
+        .toList(),
+    sendAfter: json["send_after"] as String,
+    senderId: json["sender_id"] as String,
+    canceledAt: json["canceled_at"] == null
+        ? null
+        : json["canceled_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (chimeIds != null) "chime_ids": _encodeValue(chimeIds),
-        "content": _encodeValue(content),
-        "created_at": _encodeValue(createdAt),
-        if (customerIds != null) "customer_ids": _encodeValue(customerIds),
-        if (email != null) "email": _encodeValue(email),
-        if (errors != null) "errors": _encodeValue(errors),
-        if (executedAt != null) "executed_at": _encodeValue(executedAt),
-        "id": _encodeValue(id),
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        "recipients": _encodeValue(recipients),
-        "send_after": _encodeValue(sendAfter),
-        "sender_id": _encodeValue(senderId),
-        if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
-      };
+    if (chimeIds != null) "chime_ids": _encodeValue(chimeIds),
+    "content": _encodeValue(content),
+    "created_at": _encodeValue(createdAt),
+    if (customerIds != null) "customer_ids": _encodeValue(customerIds),
+    if (email != null) "email": _encodeValue(email),
+    if (errors != null) "errors": _encodeValue(errors),
+    if (executedAt != null) "executed_at": _encodeValue(executedAt),
+    "id": _encodeValue(id),
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    "recipients": _encodeValue(recipients),
+    "send_after": _encodeValue(sendAfter),
+    "sender_id": _encodeValue(senderId),
+    if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2365,8 +2354,8 @@ final class BroadcastCreationDetail implements _InttegroValue {
         customerIds: json["customer_ids"] == null
             ? null
             : (json["customer_ids"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         email: json["email"] == null
             ? null
             : ChimeEmailMessage.fromJson(
@@ -2377,25 +2366,25 @@ final class BroadcastCreationDetail implements _InttegroValue {
             ? null
             : json["idempotency_key"] as String,
         purpose: json["purpose"] == null ? null : json["purpose"] as String,
-        recipients:
-            (json["recipients"] as List).map((item) => item as String).toList(),
+        recipients: (json["recipients"] as List)
+            .map((item) => item as String)
+            .toList(),
         sendAfter: json["send_after"] as String,
         senderId: json["sender_id"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        "content": _encodeValue(content),
-        "created_at": _encodeValue(createdAt),
-        if (customerIds != null) "customer_ids": _encodeValue(customerIds),
-        if (email != null) "email": _encodeValue(email),
-        "id": _encodeValue(id),
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        "recipients": _encodeValue(recipients),
-        "send_after": _encodeValue(sendAfter),
-        "sender_id": _encodeValue(senderId),
-      };
+    "content": _encodeValue(content),
+    "created_at": _encodeValue(createdAt),
+    if (customerIds != null) "customer_ids": _encodeValue(customerIds),
+    if (email != null) "email": _encodeValue(email),
+    "id": _encodeValue(id),
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    "recipients": _encodeValue(recipients),
+    "send_after": _encodeValue(sendAfter),
+    "sender_id": _encodeValue(senderId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2430,63 +2419,59 @@ final class BroadcastDetail implements _InttegroValue {
   });
   factory BroadcastDetail.fromJson(
     Map<String, Object?> json,
-  ) =>
-      BroadcastDetail(
-        chimeIds: json["chime_ids"] == null
-            ? null
-            : (json["chime_ids"] as List)
-                .map((item) => item as String)
-                .toList(),
-        content: json["content"] as String,
-        createdAt: json["created_at"] as String,
-        customerIds: json["customer_ids"] == null
-            ? null
-            : (json["customer_ids"] as List)
-                .map((item) => item as String)
-                .toList(),
-        email: json["email"] == null
-            ? null
-            : ChimeEmailMessage.fromJson(
-                (json["email"] as Map).cast<String, Object?>(),
-              ),
-        errors: json["errors"] == null
-            ? null
-            : (json["errors"] as List)
-                .map(
-                  (item) => BroadcastError.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        executedAt:
-            json["executed_at"] == null ? null : json["executed_at"] as String,
-        id: json["id"] as String,
-        idempotencyKey: json["idempotency_key"] == null
-            ? null
-            : json["idempotency_key"] as String,
-        purpose: json["purpose"] == null ? null : json["purpose"] as String,
-        recipients:
-            (json["recipients"] as List).map((item) => item as String).toList(),
-        sendAfter: json["send_after"] as String,
-        senderId: json["sender_id"] as String,
-      );
+  ) => BroadcastDetail(
+    chimeIds: json["chime_ids"] == null
+        ? null
+        : (json["chime_ids"] as List).map((item) => item as String).toList(),
+    content: json["content"] as String,
+    createdAt: json["created_at"] as String,
+    customerIds: json["customer_ids"] == null
+        ? null
+        : (json["customer_ids"] as List).map((item) => item as String).toList(),
+    email: json["email"] == null
+        ? null
+        : ChimeEmailMessage.fromJson(
+            (json["email"] as Map).cast<String, Object?>(),
+          ),
+    errors: json["errors"] == null
+        ? null
+        : (json["errors"] as List)
+              .map(
+                (item) => BroadcastError.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    executedAt: json["executed_at"] == null
+        ? null
+        : json["executed_at"] as String,
+    id: json["id"] as String,
+    idempotencyKey: json["idempotency_key"] == null
+        ? null
+        : json["idempotency_key"] as String,
+    purpose: json["purpose"] == null ? null : json["purpose"] as String,
+    recipients: (json["recipients"] as List)
+        .map((item) => item as String)
+        .toList(),
+    sendAfter: json["send_after"] as String,
+    senderId: json["sender_id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (chimeIds != null) "chime_ids": _encodeValue(chimeIds),
-        "content": _encodeValue(content),
-        "created_at": _encodeValue(createdAt),
-        if (customerIds != null) "customer_ids": _encodeValue(customerIds),
-        if (email != null) "email": _encodeValue(email),
-        if (errors != null) "errors": _encodeValue(errors),
-        if (executedAt != null) "executed_at": _encodeValue(executedAt),
-        "id": _encodeValue(id),
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        "recipients": _encodeValue(recipients),
-        "send_after": _encodeValue(sendAfter),
-        "sender_id": _encodeValue(senderId),
-      };
+    if (chimeIds != null) "chime_ids": _encodeValue(chimeIds),
+    "content": _encodeValue(content),
+    "created_at": _encodeValue(createdAt),
+    if (customerIds != null) "customer_ids": _encodeValue(customerIds),
+    if (email != null) "email": _encodeValue(email),
+    if (errors != null) "errors": _encodeValue(errors),
+    if (executedAt != null) "executed_at": _encodeValue(executedAt),
+    "id": _encodeValue(id),
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    "recipients": _encodeValue(recipients),
+    "send_after": _encodeValue(sendAfter),
+    "sender_id": _encodeValue(senderId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2496,17 +2481,16 @@ final class BroadcastError implements _InttegroValue {
   final String? type;
   const BroadcastError({this.recipient, this.fixCode, this.type});
   factory BroadcastError.fromJson(Map<String, Object?> json) => BroadcastError(
-        recipient:
-            json["recipient"] == null ? null : json["recipient"] as String,
-        fixCode: json["fix_code"] == null ? null : json["fix_code"] as String,
-        type: json["type"] == null ? null : json["type"] as String,
-      );
+    recipient: json["recipient"] == null ? null : json["recipient"] as String,
+    fixCode: json["fix_code"] == null ? null : json["fix_code"] as String,
+    type: json["type"] == null ? null : json["type"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (recipient != null) "recipient": _encodeValue(recipient),
-        if (fixCode != null) "fix_code": _encodeValue(fixCode),
-        if (type != null) "type": _encodeValue(type),
-      };
+    if (recipient != null) "recipient": _encodeValue(recipient),
+    if (fixCode != null) "fix_code": _encodeValue(fixCode),
+    if (type != null) "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -2548,14 +2532,14 @@ final class BroadcastRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
-        if (messageTemplate != null)
-          "message_template": _encodeValue(messageTemplate),
-        if (email != null) "email": _encodeValue(email),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        if (sender != null) "sender": _encodeValue(sender),
-        "recipients": _encodeValue(recipients),
-      };
+    if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
+    if (messageTemplate != null)
+      "message_template": _encodeValue(messageTemplate),
+    if (email != null) "email": _encodeValue(email),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    if (sender != null) "sender": _encodeValue(sender),
+    "recipients": _encodeValue(recipients),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -2570,9 +2554,8 @@ final class BroadcastRequestRequestMeta implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-      };
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -2605,11 +2588,10 @@ final class CancelOrderRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (reason != null) "reason": _encodeValue(reason),
-        if (executeRefund != null)
-          "execute_refund": _encodeValue(executeRefund),
-        "order_id": _encodeValue(orderId),
-      };
+    if (reason != null) "reason": _encodeValue(reason),
+    if (executeRefund != null) "execute_refund": _encodeValue(executeRefund),
+    "order_id": _encodeValue(orderId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -2636,10 +2618,10 @@ final class CancelPurchaseIntentRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (id != null) "id": _encodeValue(id),
-        if (purchaseIntentId != null)
-          "purchase_intent_id": _encodeValue(purchaseIntentId),
-      };
+    if (id != null) "id": _encodeValue(id),
+    if (purchaseIntentId != null)
+      "purchase_intent_id": _encodeValue(purchaseIntentId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -2658,9 +2640,9 @@ final class CancelRefundRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
-        "refund_id": _encodeValue(refundId),
-      };
+    if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
+    "refund_id": _encodeValue(refundId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -2689,9 +2671,9 @@ final class CancelUploadRequestRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (canceledBy != null) "canceled_by": _encodeValue(canceledBy),
-        "id": _encodeValue(id),
-      };
+    if (canceledBy != null) "canceled_by": _encodeValue(canceledBy),
+    "id": _encodeValue(id),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2719,38 +2701,36 @@ final class CatalogPrice implements _InttegroValue {
     this.archivedAt,
   });
   factory CatalogPrice.fromJson(Map<String, Object?> json) => CatalogPrice(
-        id: json["id"] as String,
-        label: json["label"] == null ? null : json["label"] as String,
-        about: json["about"] == null ? null : json["about"] as String,
-        active: json["active"] as bool,
-        nominal:
-            Amount.fromJson((json["nominal"] as Map).cast<String, Object?>()),
-        productId:
-            json["product_id"] == null ? null : json["product_id"] as String,
-        product: json["product"] == null
-            ? null
-            : PriceEmbeddedProduct.fromJson(
-                (json["product"] as Map).cast<String, Object?>(),
-              ),
-        createdAt: json["created_at"] as String,
-        updatedAt:
-            json["updated_at"] == null ? null : json["updated_at"] as String,
-        archivedAt:
-            json["archived_at"] == null ? null : json["archived_at"] as String,
-      );
+    id: json["id"] as String,
+    label: json["label"] == null ? null : json["label"] as String,
+    about: json["about"] == null ? null : json["about"] as String,
+    active: json["active"] as bool,
+    nominal: Amount.fromJson((json["nominal"] as Map).cast<String, Object?>()),
+    productId: json["product_id"] == null ? null : json["product_id"] as String,
+    product: json["product"] == null
+        ? null
+        : PriceEmbeddedProduct.fromJson(
+            (json["product"] as Map).cast<String, Object?>(),
+          ),
+    createdAt: json["created_at"] as String,
+    updatedAt: json["updated_at"] == null ? null : json["updated_at"] as String,
+    archivedAt: json["archived_at"] == null
+        ? null
+        : json["archived_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        if (label != null) "label": _encodeValue(label),
-        if (about != null) "about": _encodeValue(about),
-        "active": _encodeValue(active),
-        "nominal": _encodeValue(nominal),
-        if (productId != null) "product_id": _encodeValue(productId),
-        if (product != null) "product": _encodeValue(product),
-        "created_at": _encodeValue(createdAt),
-        if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
-        if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
-      };
+    "id": _encodeValue(id),
+    if (label != null) "label": _encodeValue(label),
+    if (about != null) "about": _encodeValue(about),
+    "active": _encodeValue(active),
+    "nominal": _encodeValue(nominal),
+    if (productId != null) "product_id": _encodeValue(productId),
+    if (product != null) "product": _encodeValue(product),
+    "created_at": _encodeValue(createdAt),
+    if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
+    if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -2767,8 +2747,9 @@ final class CatalogPriceParams implements _InttegroValue {
   });
   factory CatalogPriceParams.fromJson(Map<String, Object?> json) =>
       CatalogPriceParams(
-        productId:
-            json["product_id"] == null ? null : json["product_id"] as String,
+        productId: json["product_id"] == null
+            ? null
+            : json["product_id"] as String,
         label: json["label"] == null ? null : json["label"] as String,
         about: json["about"] == null ? null : json["about"] as String,
         amount: AmountParams.fromJson(
@@ -2777,11 +2758,11 @@ final class CatalogPriceParams implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (productId != null) "product_id": _encodeValue(productId),
-        if (label != null) "label": _encodeValue(label),
-        if (about != null) "about": _encodeValue(about),
-        "amount": _encodeValue(amount),
-      };
+    if (productId != null) "product_id": _encodeValue(productId),
+    if (label != null) "label": _encodeValue(label),
+    if (about != null) "about": _encodeValue(about),
+    "amount": _encodeValue(amount),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -2796,19 +2777,17 @@ final class CatalogProductWithPriceDataInput implements _InttegroValue {
   });
   factory CatalogProductWithPriceDataInput.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CatalogProductWithPriceDataInput(
-        price: PriceParams.fromJson(
-            (json["price"] as Map).cast<String, Object?>()),
-        productId: json["product_id"] as String,
-        quantity: (json["quantity"] as num).toInt(),
-      );
+  ) => CatalogProductWithPriceDataInput(
+    price: PriceParams.fromJson((json["price"] as Map).cast<String, Object?>()),
+    productId: json["product_id"] as String,
+    quantity: (json["quantity"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "price": _encodeValue(price),
-        "product_id": _encodeValue(productId),
-        "quantity": _encodeValue(quantity),
-      };
+    "price": _encodeValue(price),
+    "product_id": _encodeValue(productId),
+    "quantity": _encodeValue(quantity),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -2823,18 +2802,17 @@ final class CatalogProductWithPriceReferenceInput implements _InttegroValue {
   });
   factory CatalogProductWithPriceReferenceInput.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CatalogProductWithPriceReferenceInput(
-        priceId: json["price_id"] as String,
-        productId: json["product_id"] as String,
-        quantity: (json["quantity"] as num).toInt(),
-      );
+  ) => CatalogProductWithPriceReferenceInput(
+    priceId: json["price_id"] as String,
+    productId: json["product_id"] as String,
+    quantity: (json["quantity"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "price_id": _encodeValue(priceId),
-        "product_id": _encodeValue(productId),
-        "quantity": _encodeValue(quantity),
-      };
+    "price_id": _encodeValue(priceId),
+    "product_id": _encodeValue(productId),
+    "quantity": _encodeValue(quantity),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2864,48 +2842,48 @@ final class Chime implements _InttegroValue {
     this.transmission,
   });
   factory Chime.fromJson(Map<String, Object?> json) => Chime(
-        createdAt: json["created_at"] as String,
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        customerId:
-            json["customer_id"] == null ? null : json["customer_id"] as String,
-        email: json["email"] == null
-            ? null
-            : ChimeEmailMessage.fromJson(
-                (json["email"] as Map).cast<String, Object?>(),
-              ),
-        fullMessage: json["full_message"] as String,
-        id: json["id"] as String,
-        idempotencyKey: json["idempotency_key"] == null
-            ? null
-            : json["idempotency_key"] as String,
-        purpose: json["purpose"] == null ? null : json["purpose"] as String,
-        recipient: ChimeRecipient.fromJson(
-          (json["recipient"] as Map).cast<String, Object?>(),
-        ),
-        senderId: json["sender_id"] as String,
-        transmission: json["transmission"] == null
-            ? null
-            : ChimeTransmission.fromJson(
-                (json["transmission"] as Map).cast<String, Object?>(),
-              ),
-      );
+    createdAt: json["created_at"] as String,
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    customerId: json["customer_id"] == null
+        ? null
+        : json["customer_id"] as String,
+    email: json["email"] == null
+        ? null
+        : ChimeEmailMessage.fromJson(
+            (json["email"] as Map).cast<String, Object?>(),
+          ),
+    fullMessage: json["full_message"] as String,
+    id: json["id"] as String,
+    idempotencyKey: json["idempotency_key"] == null
+        ? null
+        : json["idempotency_key"] as String,
+    purpose: json["purpose"] == null ? null : json["purpose"] as String,
+    recipient: ChimeRecipient.fromJson(
+      (json["recipient"] as Map).cast<String, Object?>(),
+    ),
+    senderId: json["sender_id"] as String,
+    transmission: json["transmission"] == null
+        ? null
+        : ChimeTransmission.fromJson(
+            (json["transmission"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "created_at": _encodeValue(createdAt),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (customerId != null) "customer_id": _encodeValue(customerId),
-        if (email != null) "email": _encodeValue(email),
-        "full_message": _encodeValue(fullMessage),
-        "id": _encodeValue(id),
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        "recipient": _encodeValue(recipient),
-        "sender_id": _encodeValue(senderId),
-        if (transmission != null) "transmission": _encodeValue(transmission),
-      };
+    "created_at": _encodeValue(createdAt),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (customerId != null) "customer_id": _encodeValue(customerId),
+    if (email != null) "email": _encodeValue(email),
+    "full_message": _encodeValue(fullMessage),
+    "id": _encodeValue(id),
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    "recipient": _encodeValue(recipient),
+    "sender_id": _encodeValue(senderId),
+    if (transmission != null) "transmission": _encodeValue(transmission),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -2945,8 +2923,9 @@ final class ChimeEmailEvent implements _InttegroValue {
         bounceSubType: json["bounce_sub_type"] == null
             ? null
             : json["bounce_sub_type"] as String,
-        bounceType:
-            json["bounce_type"] == null ? null : json["bounce_type"] as String,
+        bounceType: json["bounce_type"] == null
+            ? null
+            : json["bounce_type"] as String,
         complaintSubType: json["complaint_sub_type"] == null
             ? null
             : json["complaint_sub_type"] as String,
@@ -2955,10 +2934,12 @@ final class ChimeEmailEvent implements _InttegroValue {
         provider: json["provider"] as String,
         providerMessageId: json["provider_message_id"] as String,
         reason: json["reason"] == null ? null : json["reason"] as String,
-        reasonCode:
-            json["reason_code"] == null ? null : json["reason_code"] as String,
-        recipient:
-            json["recipient"] == null ? null : json["recipient"] as String,
+        reasonCode: json["reason_code"] == null
+            ? null
+            : json["reason_code"] as String,
+        recipient: json["recipient"] == null
+            ? null
+            : json["recipient"] as String,
         source: json["source"] == null ? null : json["source"] as String,
         suppressRecipient: json["suppress_recipient"] == null
             ? null
@@ -2968,24 +2949,23 @@ final class ChimeEmailEvent implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (bounceSubType != null)
-          "bounce_sub_type": _encodeValue(bounceSubType),
-        if (bounceType != null) "bounce_type": _encodeValue(bounceType),
-        if (complaintSubType != null)
-          "complaint_sub_type": _encodeValue(complaintSubType),
-        "id": _encodeValue(id),
-        "occurred_at": _encodeValue(occurredAt),
-        "provider": _encodeValue(provider),
-        "provider_message_id": _encodeValue(providerMessageId),
-        if (reason != null) "reason": _encodeValue(reason),
-        if (reasonCode != null) "reason_code": _encodeValue(reasonCode),
-        if (recipient != null) "recipient": _encodeValue(recipient),
-        if (source != null) "source": _encodeValue(source),
-        if (suppressRecipient != null)
-          "suppress_recipient": _encodeValue(suppressRecipient),
-        if (temporary != null) "temporary": _encodeValue(temporary),
-        "type": _encodeValue(type),
-      };
+    if (bounceSubType != null) "bounce_sub_type": _encodeValue(bounceSubType),
+    if (bounceType != null) "bounce_type": _encodeValue(bounceType),
+    if (complaintSubType != null)
+      "complaint_sub_type": _encodeValue(complaintSubType),
+    "id": _encodeValue(id),
+    "occurred_at": _encodeValue(occurredAt),
+    "provider": _encodeValue(provider),
+    "provider_message_id": _encodeValue(providerMessageId),
+    if (reason != null) "reason": _encodeValue(reason),
+    if (reasonCode != null) "reason_code": _encodeValue(reasonCode),
+    if (recipient != null) "recipient": _encodeValue(recipient),
+    if (source != null) "source": _encodeValue(source),
+    if (suppressRecipient != null)
+      "suppress_recipient": _encodeValue(suppressRecipient),
+    if (temporary != null) "temporary": _encodeValue(temporary),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3000,9 +2980,9 @@ final class ChimeEmailMailbox implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (name != null) "name": _encodeValue(name),
-        if (address != null) "address": _encodeValue(address),
-      };
+    if (name != null) "name": _encodeValue(name),
+    if (address != null) "address": _encodeValue(address),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3017,9 +2997,9 @@ final class ChimeEmailMailboxInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (name != null) "name": _encodeValue(name),
-        if (address != null) "address": _encodeValue(address),
-      };
+    if (name != null) "name": _encodeValue(name),
+    if (address != null) "address": _encodeValue(address),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3073,15 +3053,15 @@ final class ChimeEmailMessage implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (subject != null) "subject": _encodeValue(subject),
-        if (text != null) "text": _encodeValue(text),
-        if (html != null) "html": _encodeValue(html),
-        if (from != null) "from": _encodeValue(from),
-        if (replyTo != null) "reply_to": _encodeValue(replyTo),
-        if (headers != null) "headers": _encodeValue(headers),
-        if (safety != null) "safety": _encodeValue(safety),
-        if (schema != null) "schema": _encodeValue(schema),
-      };
+    if (subject != null) "subject": _encodeValue(subject),
+    if (text != null) "text": _encodeValue(text),
+    if (html != null) "html": _encodeValue(html),
+    if (from != null) "from": _encodeValue(from),
+    if (replyTo != null) "reply_to": _encodeValue(replyTo),
+    if (headers != null) "headers": _encodeValue(headers),
+    if (safety != null) "safety": _encodeValue(safety),
+    if (schema != null) "schema": _encodeValue(schema),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3115,13 +3095,13 @@ final class ChimeEmailMessageInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (html != null) "html": _encodeValue(html),
-        if (replyTo != null) "reply_to": _encodeValue(replyTo),
-        if (headers != null) "headers": _encodeValue(headers),
-        "subject": _encodeValue(subject),
-        "text": _encodeValue(text),
-        "from": _encodeValue(from),
-      };
+    if (html != null) "html": _encodeValue(html),
+    if (replyTo != null) "reply_to": _encodeValue(replyTo),
+    if (headers != null) "headers": _encodeValue(headers),
+    "subject": _encodeValue(subject),
+    "text": _encodeValue(text),
+    "from": _encodeValue(from),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3152,8 +3132,8 @@ final class ChimeEmailSafetyResult implements _InttegroValue {
         reasonCodes: json["reason_codes"] == null
             ? null
             : (json["reason_codes"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         sanitizedHtml: json["sanitized_html"] == null
             ? null
             : json["sanitized_html"] as String,
@@ -3163,12 +3143,12 @@ final class ChimeEmailSafetyResult implements _InttegroValue {
         links: json["links"] == null
             ? null
             : (json["links"] as List)
-                .map(
-                  (item) => ChimeEmailScannedLink.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => ChimeEmailScannedLink.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         scanner: json["scanner"] == null ? null : json["scanner"] as String,
         contentHash: json["content_hash"] == null
             ? null
@@ -3179,18 +3159,16 @@ final class ChimeEmailSafetyResult implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (status != null) "status": _encodeValue(status),
-        if (reasonCodes != null) "reason_codes": _encodeValue(reasonCodes),
-        if (sanitizedHtml != null)
-          "sanitized_html": _encodeValue(sanitizedHtml),
-        if (normalizedText != null)
-          "normalized_text": _encodeValue(normalizedText),
-        if (links != null) "links": _encodeValue(links),
-        if (scanner != null) "scanner": _encodeValue(scanner),
-        if (contentHash != null) "content_hash": _encodeValue(contentHash),
-        if (quarantineNotes != null)
-          "quarantine_notes": _encodeValue(quarantineNotes),
-      };
+    if (status != null) "status": _encodeValue(status),
+    if (reasonCodes != null) "reason_codes": _encodeValue(reasonCodes),
+    if (sanitizedHtml != null) "sanitized_html": _encodeValue(sanitizedHtml),
+    if (normalizedText != null) "normalized_text": _encodeValue(normalizedText),
+    if (links != null) "links": _encodeValue(links),
+    if (scanner != null) "scanner": _encodeValue(scanner),
+    if (contentHash != null) "content_hash": _encodeValue(contentHash),
+    if (quarantineNotes != null)
+      "quarantine_notes": _encodeValue(quarantineNotes),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3219,12 +3197,12 @@ final class ChimeEmailScannedLink implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (raw != null) "raw": _encodeValue(raw),
-        if (scheme != null) "scheme": _encodeValue(scheme),
-        if (host != null) "host": _encodeValue(host),
-        if (status != null) "status": _encodeValue(status),
-        if (reason != null) "reason": _encodeValue(reason),
-      };
+    if (raw != null) "raw": _encodeValue(raw),
+    if (scheme != null) "scheme": _encodeValue(scheme),
+    if (host != null) "host": _encodeValue(host),
+    if (status != null) "status": _encodeValue(status),
+    if (reason != null) "reason": _encodeValue(reason),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3243,9 +3221,9 @@ final class ChimeEmailSchemaMarkup implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (kind != null) "kind": _encodeValue(kind),
-        if (jsonLd != null) "json_ld": _encodeValue(jsonLd),
-      };
+    if (kind != null) "kind": _encodeValue(kind),
+    if (jsonLd != null) "json_ld": _encodeValue(jsonLd),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3260,20 +3238,19 @@ final class ChimeInlineRecipientInputVariant1 implements _InttegroValue {
   });
   factory ChimeInlineRecipientInputVariant1.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ChimeInlineRecipientInputVariant1(
-        name: json["name"] == null ? null : json["name"] as String,
-        phone: ChimeInlineRecipientInputVariant1Phone.fromJson(
-          (json["phone"] as Map).cast<String, Object?>(),
-        ),
-        type: ChimeRecipientType.fromJson(json["type"]),
-      );
+  ) => ChimeInlineRecipientInputVariant1(
+    name: json["name"] == null ? null : json["name"] as String,
+    phone: ChimeInlineRecipientInputVariant1Phone.fromJson(
+      (json["phone"] as Map).cast<String, Object?>(),
+    ),
+    type: ChimeRecipientType.fromJson(json["type"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (name != null) "name": _encodeValue(name),
-        "phone": _encodeValue(phone),
-        "type": _encodeValue(type),
-      };
+    if (name != null) "name": _encodeValue(name),
+    "phone": _encodeValue(phone),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3282,8 +3259,7 @@ final class ChimeInlineRecipientInputVariant1Phone implements _InttegroValue {
   const ChimeInlineRecipientInputVariant1Phone({required this.number});
   factory ChimeInlineRecipientInputVariant1Phone.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ChimeInlineRecipientInputVariant1Phone(number: json["number"] as String);
+  ) => ChimeInlineRecipientInputVariant1Phone(number: json["number"] as String);
   @override
   Map<String, Object?> toJson() => {"number": _encodeValue(number)};
 }
@@ -3300,20 +3276,19 @@ final class ChimeInlineRecipientInputVariant2 implements _InttegroValue {
   });
   factory ChimeInlineRecipientInputVariant2.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ChimeInlineRecipientInputVariant2(
-        name: json["name"] == null ? null : json["name"] as String,
-        email: ChimeInlineRecipientInputVariant2Email.fromJson(
-          (json["email"] as Map).cast<String, Object?>(),
-        ),
-        type: ChimeRecipientType.fromJson(json["type"]),
-      );
+  ) => ChimeInlineRecipientInputVariant2(
+    name: json["name"] == null ? null : json["name"] as String,
+    email: ChimeInlineRecipientInputVariant2Email.fromJson(
+      (json["email"] as Map).cast<String, Object?>(),
+    ),
+    type: ChimeRecipientType.fromJson(json["type"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (name != null) "name": _encodeValue(name),
-        "email": _encodeValue(email),
-        "type": _encodeValue(type),
-      };
+    if (name != null) "name": _encodeValue(name),
+    "email": _encodeValue(email),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3322,10 +3297,9 @@ final class ChimeInlineRecipientInputVariant2Email implements _InttegroValue {
   const ChimeInlineRecipientInputVariant2Email({required this.address});
   factory ChimeInlineRecipientInputVariant2Email.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ChimeInlineRecipientInputVariant2Email(
-        address: json["address"] as String,
-      );
+  ) => ChimeInlineRecipientInputVariant2Email(
+    address: json["address"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {"address": _encodeValue(address)};
 }
@@ -3341,19 +3315,18 @@ final class ChimePage implements _InttegroValue {
     required this.chimes,
   });
   factory ChimePage.fromJson(Map<String, Object?> json) => ChimePage(
-        number: (json["number"] as num).toInt(),
-        size: (json["size"] as num).toInt(),
-        chimes: (json["chimes"] as List)
-            .map(
-                (item) => Chime.fromJson((item as Map).cast<String, Object?>()))
-            .toList(),
-      );
+    number: (json["number"] as num).toInt(),
+    size: (json["size"] as num).toInt(),
+    chimes: (json["chimes"] as List)
+        .map((item) => Chime.fromJson((item as Map).cast<String, Object?>()))
+        .toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-        "chimes": _encodeValue(chimes),
-      };
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+    "chimes": _encodeValue(chimes),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3364,26 +3337,26 @@ final class ChimeRecipient implements _InttegroValue {
   final ChimeRecipientEmail? email;
   const ChimeRecipient({required this.type, this.name, this.phone, this.email});
   factory ChimeRecipient.fromJson(Map<String, Object?> json) => ChimeRecipient(
-        type: ChimeRecipientType.fromJson(json["type"]),
-        name: json["name"] == null ? null : json["name"] as String,
-        phone: json["phone"] == null
-            ? null
-            : ChimeRecipientPhone.fromJson(
-                (json["phone"] as Map).cast<String, Object?>(),
-              ),
-        email: json["email"] == null
-            ? null
-            : ChimeRecipientEmail.fromJson(
-                (json["email"] as Map).cast<String, Object?>(),
-              ),
-      );
+    type: ChimeRecipientType.fromJson(json["type"]),
+    name: json["name"] == null ? null : json["name"] as String,
+    phone: json["phone"] == null
+        ? null
+        : ChimeRecipientPhone.fromJson(
+            (json["phone"] as Map).cast<String, Object?>(),
+          ),
+    email: json["email"] == null
+        ? null
+        : ChimeRecipientEmail.fromJson(
+            (json["email"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        if (name != null) "name": _encodeValue(name),
-        if (phone != null) "phone": _encodeValue(phone),
-        if (email != null) "email": _encodeValue(email),
-      };
+    "type": _encodeValue(type),
+    if (name != null) "name": _encodeValue(name),
+    if (phone != null) "phone": _encodeValue(phone),
+    if (email != null) "email": _encodeValue(email),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3416,16 +3389,15 @@ final class ChimeSavedCustomerRecipientInput implements _InttegroValue {
   });
   factory ChimeSavedCustomerRecipientInput.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ChimeSavedCustomerRecipientInput(
-        customerId: json["customer_id"] as String,
-        transport: ChimeTransport.fromJson(json["transport"]),
-      );
+  ) => ChimeSavedCustomerRecipientInput(
+    customerId: json["customer_id"] as String,
+    transport: ChimeTransport.fromJson(json["transport"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "customer_id": _encodeValue(customerId),
-        "transport": _encodeValue(transport),
-      };
+    "customer_id": _encodeValue(customerId),
+    "transport": _encodeValue(transport),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3482,12 +3454,12 @@ final class ChimeTransmission implements _InttegroValue {
         emailEvents: json["email_events"] == null
             ? null
             : (json["email_events"] as List)
-                .map(
-                  (item) => ChimeEmailEvent.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => ChimeEmailEvent.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         emailFailureCode: json["email_failure_code"] == null
             ? null
             : json["email_failure_code"] as String,
@@ -3498,8 +3470,9 @@ final class ChimeTransmission implements _InttegroValue {
             ? null
             : json["email_status"] as String,
         error: json["error"] == null ? null : json["error"] as String,
-        failedAt:
-            json["failed_at"] == null ? null : json["failed_at"] as String,
+        failedAt: json["failed_at"] == null
+            ? null
+            : json["failed_at"] as String,
         gateway: json["gateway"] as String,
         gatewayMessageId: json["gateway_message_id"] == null
             ? null
@@ -3524,32 +3497,32 @@ final class ChimeTransmission implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "address": _encodeValue(address),
-        "created_at": _encodeValue(createdAt),
-        if (deliveredAt != null) "delivered_at": _encodeValue(deliveredAt),
-        if (emailEvents != null) "email_events": _encodeValue(emailEvents),
-        if (emailFailureCode != null)
-          "email_failure_code": _encodeValue(emailFailureCode),
-        if (emailFailureReason != null)
-          "email_failure_reason": _encodeValue(emailFailureReason),
-        if (emailStatus != null) "email_status": _encodeValue(emailStatus),
-        if (error != null) "error": _encodeValue(error),
-        if (failedAt != null) "failed_at": _encodeValue(failedAt),
-        "gateway": _encodeValue(gateway),
-        if (gatewayMessageId != null)
-          "gateway_message_id": _encodeValue(gatewayMessageId),
-        "id": _encodeValue(id),
-        "initialized_at": _encodeValue(initializedAt),
-        if (lastEmailEventAt != null)
-          "last_email_event_at": _encodeValue(lastEmailEventAt),
-        "mechanism": _encodeValue(mechanism),
-        if (sentAt != null) "sent_at": _encodeValue(sentAt),
-        if (sentVia != null) "sent_via": _encodeValue(sentVia),
-        "status": _encodeValue(status),
-        if (suppressedAt != null) "suppressed_at": _encodeValue(suppressedAt),
-        if (suppressionReason != null)
-          "suppression_reason": _encodeValue(suppressionReason),
-      };
+    "address": _encodeValue(address),
+    "created_at": _encodeValue(createdAt),
+    if (deliveredAt != null) "delivered_at": _encodeValue(deliveredAt),
+    if (emailEvents != null) "email_events": _encodeValue(emailEvents),
+    if (emailFailureCode != null)
+      "email_failure_code": _encodeValue(emailFailureCode),
+    if (emailFailureReason != null)
+      "email_failure_reason": _encodeValue(emailFailureReason),
+    if (emailStatus != null) "email_status": _encodeValue(emailStatus),
+    if (error != null) "error": _encodeValue(error),
+    if (failedAt != null) "failed_at": _encodeValue(failedAt),
+    "gateway": _encodeValue(gateway),
+    if (gatewayMessageId != null)
+      "gateway_message_id": _encodeValue(gatewayMessageId),
+    "id": _encodeValue(id),
+    "initialized_at": _encodeValue(initializedAt),
+    if (lastEmailEventAt != null)
+      "last_email_event_at": _encodeValue(lastEmailEventAt),
+    "mechanism": _encodeValue(mechanism),
+    if (sentAt != null) "sent_at": _encodeValue(sentAt),
+    if (sentVia != null) "sent_via": _encodeValue(sentVia),
+    "status": _encodeValue(status),
+    if (suppressedAt != null) "suppressed_at": _encodeValue(suppressedAt),
+    if (suppressionReason != null)
+      "suppression_reason": _encodeValue(suppressionReason),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3566,10 +3539,9 @@ final class CompleteOrderRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (paidOutOfBand != null)
-          "paid_out_of_band": _encodeValue(paidOutOfBand),
-        "order_id": _encodeValue(orderId),
-      };
+    if (paidOutOfBand != null) "paid_out_of_band": _encodeValue(paidOutOfBand),
+    "order_id": _encodeValue(orderId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3593,11 +3565,11 @@ final class ConfirmPaymentRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "order_id": _encodeValue(orderId),
-        "payment_id": _encodeValue(paymentId),
-        "confirmation_id": _encodeValue(confirmationId),
-        "token": _encodeValue(token),
-      };
+    "order_id": _encodeValue(orderId),
+    "payment_id": _encodeValue(paymentId),
+    "confirmation_id": _encodeValue(confirmationId),
+    "token": _encodeValue(token),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3615,29 +3587,28 @@ final class CountryBank implements _InttegroValue {
     required this.branches,
   });
   factory CountryBank.fromJson(Map<String, Object?> json) => CountryBank(
-        id: json["id"] as String,
-        name: json["name"] as String,
-        swiftCode:
-            json["swift_code"] == null ? null : json["swift_code"] as String,
-        sortCodePrefix: json["sort_code_prefix"] == null
-            ? null
-            : json["sort_code_prefix"] as String,
-        branches: (json["branches"] as List)
-            .map(
-              (item) => CountryBankBranch.fromJson(
-                  (item as Map).cast<String, Object?>()),
-            )
-            .toList(),
-      );
+    id: json["id"] as String,
+    name: json["name"] as String,
+    swiftCode: json["swift_code"] == null ? null : json["swift_code"] as String,
+    sortCodePrefix: json["sort_code_prefix"] == null
+        ? null
+        : json["sort_code_prefix"] as String,
+    branches: (json["branches"] as List)
+        .map(
+          (item) =>
+              CountryBankBranch.fromJson((item as Map).cast<String, Object?>()),
+        )
+        .toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "name": _encodeValue(name),
-        if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
-        if (sortCodePrefix != null)
-          "sort_code_prefix": _encodeValue(sortCodePrefix),
-        "branches": _encodeValue(branches),
-      };
+    "id": _encodeValue(id),
+    "name": _encodeValue(name),
+    if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
+    if (sortCodePrefix != null)
+      "sort_code_prefix": _encodeValue(sortCodePrefix),
+    "branches": _encodeValue(branches),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3658,10 +3629,10 @@ final class CountryBankBranch implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "name": _encodeValue(name),
-        "sort_code": _encodeValue(sortCode),
-      };
+    "id": _encodeValue(id),
+    "name": _encodeValue(name),
+    "sort_code": _encodeValue(sortCode),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3687,10 +3658,10 @@ final class CountryBankDirectory implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "bank_account_type": _encodeValue(bankAccountType),
-        "code_scheme": _encodeValue(codeScheme),
-        "items": _encodeValue(items),
-      };
+    "bank_account_type": _encodeValue(bankAccountType),
+    "code_scheme": _encodeValue(codeScheme),
+    "items": _encodeValue(items),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -3721,8 +3692,9 @@ final class CountrySpecification implements _InttegroValue {
       CountrySpecification(
         countryCode: json["country_code"] as String,
         countryName: json["country_name"] as String,
-        currencies:
-            (json["currencies"] as List).map((item) => item as String).toList(),
+        currencies: (json["currencies"] as List)
+            .map((item) => item as String)
+            .toList(),
         paymentMethods: (json["payment_methods"] as List)
             .map((item) => item as String)
             .toList(),
@@ -3749,17 +3721,17 @@ final class CountrySpecification implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "country_code": _encodeValue(countryCode),
-        "country_name": _encodeValue(countryName),
-        "currencies": _encodeValue(currencies),
-        "payment_methods": _encodeValue(paymentMethods),
-        "payout_schedules": _encodeValue(payoutSchedules),
-        "bt_aging_specs": _encodeValue(btAgingSpecs),
-        "legal_entity_types": _encodeValue(legalEntityTypes),
-        "financial_account_types": _encodeValue(financialAccountTypes),
-        "id_document_types": _encodeValue(idDocumentTypes),
-        if (banks != null) "banks": _encodeValue(banks),
-      };
+    "country_code": _encodeValue(countryCode),
+    "country_name": _encodeValue(countryName),
+    "currencies": _encodeValue(currencies),
+    "payment_methods": _encodeValue(paymentMethods),
+    "payout_schedules": _encodeValue(payoutSchedules),
+    "bt_aging_specs": _encodeValue(btAgingSpecs),
+    "legal_entity_types": _encodeValue(legalEntityTypes),
+    "financial_account_types": _encodeValue(financialAccountTypes),
+    "id_document_types": _encodeValue(idDocumentTypes),
+    if (banks != null) "banks": _encodeValue(banks),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3781,15 +3753,16 @@ final class CreateApplicationRequest implements _InttegroValue {
   factory CreateApplicationRequest.fromJson(Map<String, Object?> json) =>
       CreateApplicationRequest(
         alias: json["alias"] == null ? null : json["alias"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         legalEntityType: json["legal_entity_type"] == null
             ? null
             : json["legal_entity_type"] as String,
         placementParentApplicationId:
             json["placement_parent_application_id"] == null
-                ? null
-                : json["placement_parent_application_id"] as String,
+            ? null
+            : json["placement_parent_application_id"] as String,
         relationshipPolicy: json["relationship_policy"] == null
             ? null
             : CreateApplicationRequestRelationshipPolicy.fromJson(
@@ -3799,18 +3772,18 @@ final class CreateApplicationRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (alias != null) "alias": _encodeValue(alias),
-        if (description != null) "description": _encodeValue(description),
-        if (legalEntityType != null)
-          "legal_entity_type": _encodeValue(legalEntityType),
-        if (placementParentApplicationId != null)
-          "placement_parent_application_id": _encodeValue(
-            placementParentApplicationId,
-          ),
-        if (relationshipPolicy != null)
-          "relationship_policy": _encodeValue(relationshipPolicy),
-        "name": _encodeValue(name),
-      };
+    if (alias != null) "alias": _encodeValue(alias),
+    if (description != null) "description": _encodeValue(description),
+    if (legalEntityType != null)
+      "legal_entity_type": _encodeValue(legalEntityType),
+    if (placementParentApplicationId != null)
+      "placement_parent_application_id": _encodeValue(
+        placementParentApplicationId,
+      ),
+    if (relationshipPolicy != null)
+      "relationship_policy": _encodeValue(relationshipPolicy),
+    "name": _encodeValue(name),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3826,25 +3799,23 @@ final class CreateApplicationRequestRelationshipPolicy
   });
   factory CreateApplicationRequestRelationshipPolicy.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreateApplicationRequestRelationshipPolicy(
-        childStanding: json["child_standing"] == null
-            ? null
-            : json["child_standing"] as String,
-        management: json["management"] == null
-            ? null
-            : AppManagementRole.fromJson(json["management"]),
-        credentials: json["credentials"] == null
-            ? null
-            : AppCredentialOwner.fromJson(json["credentials"]),
-      );
+  ) => CreateApplicationRequestRelationshipPolicy(
+    childStanding: json["child_standing"] == null
+        ? null
+        : json["child_standing"] as String,
+    management: json["management"] == null
+        ? null
+        : AppManagementRole.fromJson(json["management"]),
+    credentials: json["credentials"] == null
+        ? null
+        : AppCredentialOwner.fromJson(json["credentials"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (childStanding != null)
-          "child_standing": _encodeValue(childStanding),
-        if (management != null) "management": _encodeValue(management),
-        if (credentials != null) "credentials": _encodeValue(credentials),
-      };
+    if (childStanding != null) "child_standing": _encodeValue(childStanding),
+    if (management != null) "management": _encodeValue(management),
+    if (credentials != null) "credentials": _encodeValue(credentials),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3883,8 +3854,9 @@ final class CreateCustomerRequest implements _InttegroValue {
         phoneNumber: json["phone_number"] == null
             ? null
             : json["phone_number"] as String,
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
+        reference: json["reference"] == null
+            ? null
+            : json["reference"] as String,
         shippingAddress: json["shipping_address"] == null
             ? null
             : CustomerAddressInput.fromJson(
@@ -3895,17 +3867,16 @@ final class CreateCustomerRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (billingAddress != null)
-          "billing_address": _encodeValue(billingAddress),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (emailAddress != null) "email_address": _encodeValue(emailAddress),
-        if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (shippingAddress != null)
-          "shipping_address": _encodeValue(shippingAddress),
-        if (title != null) "title": _encodeValue(title),
-        "name": _encodeValue(name),
-      };
+    if (billingAddress != null) "billing_address": _encodeValue(billingAddress),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (emailAddress != null) "email_address": _encodeValue(emailAddress),
+    if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (shippingAddress != null)
+      "shipping_address": _encodeValue(shippingAddress),
+    if (title != null) "title": _encodeValue(title),
+    "name": _encodeValue(name),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -3930,42 +3901,39 @@ final class CreateEmailMessageTemplateRequest implements _InttegroValue {
   });
   factory CreateEmailMessageTemplateRequest.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreateEmailMessageTemplateRequest(
-        about: json["about"] == null ? null : json["about"] as String,
-        attachments: json["attachments"] == null
-            ? null
-            : (json["attachments"] as List)
-                .map((item) => item as String)
-                .toList(),
-        locale: json["locale"] == null ? null : json["locale"] as String,
-        variables: json["variables"] == null
-            ? null
-            : (json["variables"] as List)
-                .map(
-                  (item) => MessageTemplateVariableInput.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        channel: MessageTemplateChannel.fromJson(json["channel"]),
-        email: MessageTemplateEmailContentInput.fromJson(
-          (json["email"] as Map).cast<String, Object?>(),
-        ),
-        name: json["name"] as String,
-        purpose: json["purpose"] as String,
-      );
+  ) => CreateEmailMessageTemplateRequest(
+    about: json["about"] == null ? null : json["about"] as String,
+    attachments: json["attachments"] == null
+        ? null
+        : (json["attachments"] as List).map((item) => item as String).toList(),
+    locale: json["locale"] == null ? null : json["locale"] as String,
+    variables: json["variables"] == null
+        ? null
+        : (json["variables"] as List)
+              .map(
+                (item) => MessageTemplateVariableInput.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    channel: MessageTemplateChannel.fromJson(json["channel"]),
+    email: MessageTemplateEmailContentInput.fromJson(
+      (json["email"] as Map).cast<String, Object?>(),
+    ),
+    name: json["name"] as String,
+    purpose: json["purpose"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (about != null) "about": _encodeValue(about),
-        if (attachments != null) "attachments": _encodeValue(attachments),
-        if (locale != null) "locale": _encodeValue(locale),
-        if (variables != null) "variables": _encodeValue(variables),
-        "channel": _encodeValue(channel),
-        "email": _encodeValue(email),
-        "name": _encodeValue(name),
-        "purpose": _encodeValue(purpose),
-      };
+    if (about != null) "about": _encodeValue(about),
+    if (attachments != null) "attachments": _encodeValue(attachments),
+    if (locale != null) "locale": _encodeValue(locale),
+    if (variables != null) "variables": _encodeValue(variables),
+    "channel": _encodeValue(channel),
+    "email": _encodeValue(email),
+    "name": _encodeValue(name),
+    "purpose": _encodeValue(purpose),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4004,19 +3972,20 @@ final class CreateFileLinkRequest implements _InttegroValue {
         customData: json["custom_data"] == null
             ? null
             : CustomData.fromJson(json["custom_data"]),
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
+        expiresAt: json["expires_at"] == null
+            ? null
+            : json["expires_at"] as String,
         fileId: json["file_id"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (delivery != null) "delivery": _encodeValue(delivery),
-        if (access != null) "access": _encodeValue(access),
-        if (createdBy != null) "created_by": _encodeValue(createdBy),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-        "file_id": _encodeValue(fileId),
-      };
+    if (delivery != null) "delivery": _encodeValue(delivery),
+    if (access != null) "access": _encodeValue(access),
+    if (createdBy != null) "created_by": _encodeValue(createdBy),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+    "file_id": _encodeValue(fileId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4057,95 +4026,89 @@ final class CreateOrderExistingCustomerInput implements _InttegroValue {
   });
   factory CreateOrderExistingCustomerInput.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreateOrderExistingCustomerInput(
-        paymentMethodId: json["payment_method_id"] == null
-            ? null
-            : json["payment_method_id"] as String,
-        paymentMethodData: json["payment_method_data"] == null
-            ? null
-            : PaymentMethodDataInput.fromJson(
-                (json["payment_method_data"] as Map).cast<String, Object?>(),
-              ),
-        receiptNumber: json["receipt_number"] == null
-            ? null
-            : json["receipt_number"] as String,
-        statementDescriptor: json["statement_descriptor"] == null
-            ? null
-            : json["statement_descriptor"] as String,
-        statementDescriptorPrefix: json["statement_descriptor_prefix"] == null
-            ? null
-            : json["statement_descriptor_prefix"] as String,
-        executePayment: json["execute_payment"] == null
-            ? null
-            : json["execute_payment"] as bool,
-        finalize: json["finalize"] == null ? null : json["finalize"] as bool,
-        requestMeta: json["request_meta"] == null
-            ? null
-            : CreateOrderExistingCustomerInputRequestMeta.fromJson(
-                (json["request_meta"] as Map).cast<String, Object?>(),
-              ),
-        checkoutSettings: json["checkout_settings"] == null
-            ? null
-            : CreateOrderExistingCustomerInputCheckoutSettings.fromJson(
-                (json["checkout_settings"] as Map).cast<String, Object?>(),
-              ),
-        invoiceSettings: json["invoice_settings"] == null
-            ? null
-            : InvoiceSettingsInput.fromJson(
-                (json["invoice_settings"] as Map).cast<String, Object?>(),
-              ),
-        payoutSettings: json["payout_settings"] == null
-            ? null
-            : OrderPayoutSettingsRequest.fromJson(
-                (json["payout_settings"] as Map).cast<String, Object?>(),
-              ),
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        billingDetails: json["billing_details"] == null
-            ? null
-            : BillingDetailsInput.fromJson(
-                (json["billing_details"] as Map).cast<String, Object?>(),
-              ),
-        shipping: json["shipping"] == null
-            ? null
-            : ShippingInput.fromJson(
-                (json["shipping"] as Map).cast<String, Object?>(),
-              ),
-        customerId: json["customer_id"] as String,
-        lineItems: (json["line_items"] as List).map((item) => item).toList(),
-      );
+  ) => CreateOrderExistingCustomerInput(
+    paymentMethodId: json["payment_method_id"] == null
+        ? null
+        : json["payment_method_id"] as String,
+    paymentMethodData: json["payment_method_data"] == null
+        ? null
+        : PaymentMethodDataInput.fromJson(
+            (json["payment_method_data"] as Map).cast<String, Object?>(),
+          ),
+    receiptNumber: json["receipt_number"] == null
+        ? null
+        : json["receipt_number"] as String,
+    statementDescriptor: json["statement_descriptor"] == null
+        ? null
+        : json["statement_descriptor"] as String,
+    statementDescriptorPrefix: json["statement_descriptor_prefix"] == null
+        ? null
+        : json["statement_descriptor_prefix"] as String,
+    executePayment: json["execute_payment"] == null
+        ? null
+        : json["execute_payment"] as bool,
+    finalize: json["finalize"] == null ? null : json["finalize"] as bool,
+    requestMeta: json["request_meta"] == null
+        ? null
+        : CreateOrderExistingCustomerInputRequestMeta.fromJson(
+            (json["request_meta"] as Map).cast<String, Object?>(),
+          ),
+    checkoutSettings: json["checkout_settings"] == null
+        ? null
+        : CreateOrderExistingCustomerInputCheckoutSettings.fromJson(
+            (json["checkout_settings"] as Map).cast<String, Object?>(),
+          ),
+    invoiceSettings: json["invoice_settings"] == null
+        ? null
+        : InvoiceSettingsInput.fromJson(
+            (json["invoice_settings"] as Map).cast<String, Object?>(),
+          ),
+    payoutSettings: json["payout_settings"] == null
+        ? null
+        : OrderPayoutSettingsRequest.fromJson(
+            (json["payout_settings"] as Map).cast<String, Object?>(),
+          ),
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    billingDetails: json["billing_details"] == null
+        ? null
+        : BillingDetailsInput.fromJson(
+            (json["billing_details"] as Map).cast<String, Object?>(),
+          ),
+    shipping: json["shipping"] == null
+        ? null
+        : ShippingInput.fromJson(
+            (json["shipping"] as Map).cast<String, Object?>(),
+          ),
+    customerId: json["customer_id"] as String,
+    lineItems: (json["line_items"] as List).map((item) => item).toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (paymentMethodId != null)
-          "payment_method_id": _encodeValue(paymentMethodId),
-        if (paymentMethodData != null)
-          "payment_method_data": _encodeValue(paymentMethodData),
-        if (receiptNumber != null)
-          "receipt_number": _encodeValue(receiptNumber),
-        if (statementDescriptor != null)
-          "statement_descriptor": _encodeValue(statementDescriptor),
-        if (statementDescriptorPrefix != null)
-          "statement_descriptor_prefix":
-              _encodeValue(statementDescriptorPrefix),
-        if (executePayment != null)
-          "execute_payment": _encodeValue(executePayment),
-        if (finalize != null) "finalize": _encodeValue(finalize),
-        if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
-        if (checkoutSettings != null)
-          "checkout_settings": _encodeValue(checkoutSettings),
-        if (invoiceSettings != null)
-          "invoice_settings": _encodeValue(invoiceSettings),
-        if (payoutSettings != null)
-          "payout_settings": _encodeValue(payoutSettings),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (billingDetails != null)
-          "billing_details": _encodeValue(billingDetails),
-        if (shipping != null) "shipping": _encodeValue(shipping),
-        "customer_id": _encodeValue(customerId),
-        "line_items": _encodeValue(lineItems),
-      };
+    if (paymentMethodId != null)
+      "payment_method_id": _encodeValue(paymentMethodId),
+    if (paymentMethodData != null)
+      "payment_method_data": _encodeValue(paymentMethodData),
+    if (receiptNumber != null) "receipt_number": _encodeValue(receiptNumber),
+    if (statementDescriptor != null)
+      "statement_descriptor": _encodeValue(statementDescriptor),
+    if (statementDescriptorPrefix != null)
+      "statement_descriptor_prefix": _encodeValue(statementDescriptorPrefix),
+    if (executePayment != null) "execute_payment": _encodeValue(executePayment),
+    if (finalize != null) "finalize": _encodeValue(finalize),
+    if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
+    if (checkoutSettings != null)
+      "checkout_settings": _encodeValue(checkoutSettings),
+    if (invoiceSettings != null)
+      "invoice_settings": _encodeValue(invoiceSettings),
+    if (payoutSettings != null) "payout_settings": _encodeValue(payoutSettings),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (billingDetails != null) "billing_details": _encodeValue(billingDetails),
+    if (shipping != null) "shipping": _encodeValue(shipping),
+    "customer_id": _encodeValue(customerId),
+    "line_items": _encodeValue(lineItems),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4159,19 +4122,17 @@ final class CreateOrderExistingCustomerInputCheckoutSettings
   });
   factory CreateOrderExistingCustomerInputCheckoutSettings.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreateOrderExistingCustomerInputCheckoutSettings(
-        redirectUrl: json["redirect_url"] == null
-            ? null
-            : json["redirect_url"] as String,
-        cancelUrl:
-            json["cancel_url"] == null ? null : json["cancel_url"] as String,
-      );
+  ) => CreateOrderExistingCustomerInputCheckoutSettings(
+    redirectUrl: json["redirect_url"] == null
+        ? null
+        : json["redirect_url"] as String,
+    cancelUrl: json["cancel_url"] == null ? null : json["cancel_url"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (redirectUrl != null) "redirect_url": _encodeValue(redirectUrl),
-        if (cancelUrl != null) "cancel_url": _encodeValue(cancelUrl),
-      };
+    if (redirectUrl != null) "redirect_url": _encodeValue(redirectUrl),
+    if (cancelUrl != null) "cancel_url": _encodeValue(cancelUrl),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4181,17 +4142,15 @@ final class CreateOrderExistingCustomerInputRequestMeta
   const CreateOrderExistingCustomerInputRequestMeta({this.idempotencyKey});
   factory CreateOrderExistingCustomerInputRequestMeta.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreateOrderExistingCustomerInputRequestMeta(
-        idempotencyKey: json["idempotency_key"] == null
-            ? null
-            : json["idempotency_key"] as String,
-      );
+  ) => CreateOrderExistingCustomerInputRequestMeta(
+    idempotencyKey: json["idempotency_key"] == null
+        ? null
+        : json["idempotency_key"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-      };
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4291,33 +4250,28 @@ final class CreateOrderNewCustomerInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (number != null) "number": _encodeValue(number),
-        if (receiptNumber != null)
-          "receipt_number": _encodeValue(receiptNumber),
-        if (statementDescriptor != null)
-          "statement_descriptor": _encodeValue(statementDescriptor),
-        if (statementDescriptorPrefix != null)
-          "statement_descriptor_prefix":
-              _encodeValue(statementDescriptorPrefix),
-        if (executePayment != null)
-          "execute_payment": _encodeValue(executePayment),
-        if (finalize != null) "finalize": _encodeValue(finalize),
-        if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
-        if (checkoutSettings != null)
-          "checkout_settings": _encodeValue(checkoutSettings),
-        if (invoiceSettings != null)
-          "invoice_settings": _encodeValue(invoiceSettings),
-        if (payoutSettings != null)
-          "payout_settings": _encodeValue(payoutSettings),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (billingDetails != null)
-          "billing_details": _encodeValue(billingDetails),
-        if (shipping != null) "shipping": _encodeValue(shipping),
-        if (paymentMethodData != null)
-          "payment_method_data": _encodeValue(paymentMethodData),
-        "customer_data": _encodeValue(customerData),
-        "line_items": _encodeValue(lineItems),
-      };
+    if (number != null) "number": _encodeValue(number),
+    if (receiptNumber != null) "receipt_number": _encodeValue(receiptNumber),
+    if (statementDescriptor != null)
+      "statement_descriptor": _encodeValue(statementDescriptor),
+    if (statementDescriptorPrefix != null)
+      "statement_descriptor_prefix": _encodeValue(statementDescriptorPrefix),
+    if (executePayment != null) "execute_payment": _encodeValue(executePayment),
+    if (finalize != null) "finalize": _encodeValue(finalize),
+    if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
+    if (checkoutSettings != null)
+      "checkout_settings": _encodeValue(checkoutSettings),
+    if (invoiceSettings != null)
+      "invoice_settings": _encodeValue(invoiceSettings),
+    if (payoutSettings != null) "payout_settings": _encodeValue(payoutSettings),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (billingDetails != null) "billing_details": _encodeValue(billingDetails),
+    if (shipping != null) "shipping": _encodeValue(shipping),
+    if (paymentMethodData != null)
+      "payment_method_data": _encodeValue(paymentMethodData),
+    "customer_data": _encodeValue(customerData),
+    "line_items": _encodeValue(lineItems),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4331,19 +4285,17 @@ final class CreateOrderNewCustomerInputCheckoutSettings
   });
   factory CreateOrderNewCustomerInputCheckoutSettings.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreateOrderNewCustomerInputCheckoutSettings(
-        redirectUrl: json["redirect_url"] == null
-            ? null
-            : json["redirect_url"] as String,
-        cancelUrl:
-            json["cancel_url"] == null ? null : json["cancel_url"] as String,
-      );
+  ) => CreateOrderNewCustomerInputCheckoutSettings(
+    redirectUrl: json["redirect_url"] == null
+        ? null
+        : json["redirect_url"] as String,
+    cancelUrl: json["cancel_url"] == null ? null : json["cancel_url"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (redirectUrl != null) "redirect_url": _encodeValue(redirectUrl),
-        if (cancelUrl != null) "cancel_url": _encodeValue(cancelUrl),
-      };
+    if (redirectUrl != null) "redirect_url": _encodeValue(redirectUrl),
+    if (cancelUrl != null) "cancel_url": _encodeValue(cancelUrl),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4352,17 +4304,15 @@ final class CreateOrderNewCustomerInputRequestMeta implements _InttegroValue {
   const CreateOrderNewCustomerInputRequestMeta({this.idempotencyKey});
   factory CreateOrderNewCustomerInputRequestMeta.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreateOrderNewCustomerInputRequestMeta(
-        idempotencyKey: json["idempotency_key"] == null
-            ? null
-            : json["idempotency_key"] as String,
-      );
+  ) => CreateOrderNewCustomerInputRequestMeta(
+    idempotencyKey: json["idempotency_key"] == null
+        ? null
+        : json["idempotency_key"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-      };
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4399,10 +4349,12 @@ final class CreateProductRequest implements _InttegroValue {
   });
   factory CreateProductRequest.fromJson(Map<String, Object?> json) =>
       CreateProductRequest(
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        reference: json["reference"] == null
+            ? null
+            : json["reference"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         about: json["about"] == null ? null : json["about"] as String,
         taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
         category: json["category"] == null ? null : json["category"] as String,
@@ -4427,12 +4379,12 @@ final class CreateProductRequest implements _InttegroValue {
         attributes: json["attributes"] == null
             ? null
             : (json["attributes"] as List)
-                .map(
-                  (item) => ProductAttributeInput.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => ProductAttributeInput.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         publish: json["publish"] == null ? null : json["publish"] as bool,
         customData: json["custom_data"] == null
             ? null
@@ -4442,22 +4394,21 @@ final class CreateProductRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (reference != null) "reference": _encodeValue(reference),
-        if (description != null) "description": _encodeValue(description),
-        if (about != null) "about": _encodeValue(about),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        if (category != null) "category": _encodeValue(category),
-        if (shipment != null) "shipment": _encodeValue(shipment),
-        if (dimensions != null) "dimensions": _encodeValue(dimensions),
-        if (unitDimension != null)
-          "unit_dimension": _encodeValue(unitDimension),
-        if (media != null) "media": _encodeValue(media),
-        if (attributes != null) "attributes": _encodeValue(attributes),
-        if (publish != null) "publish": _encodeValue(publish),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        "type": _encodeValue(type),
-        "name": _encodeValue(name),
-      };
+    if (reference != null) "reference": _encodeValue(reference),
+    if (description != null) "description": _encodeValue(description),
+    if (about != null) "about": _encodeValue(about),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    if (category != null) "category": _encodeValue(category),
+    if (shipment != null) "shipment": _encodeValue(shipment),
+    if (dimensions != null) "dimensions": _encodeValue(dimensions),
+    if (unitDimension != null) "unit_dimension": _encodeValue(unitDimension),
+    if (media != null) "media": _encodeValue(media),
+    if (attributes != null) "attributes": _encodeValue(attributes),
+    if (publish != null) "publish": _encodeValue(publish),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    "type": _encodeValue(type),
+    "name": _encodeValue(name),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4480,42 +4431,39 @@ final class CreatePurchaseIntentRequest implements _InttegroValue {
   });
   factory CreatePurchaseIntentRequest.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreatePurchaseIntentRequest(
-        product: json["product"] == null
-            ? null
-            : CreatePurchaseIntentRequestProduct.fromJson(
-                (json["product"] as Map).cast<String, Object?>(),
-              ),
-        productId:
-            json["product_id"] == null ? null : json["product_id"] as String,
-        price: json["price"] == null
-            ? null
-            : CreatePurchaseIntentRequestPrice.fromJson(
-                (json["price"] as Map).cast<String, Object?>(),
-              ),
-        priceId: json["price_id"] == null ? null : json["price_id"] as String,
-        usage: json["usage"] == null
-            ? null
-            : CreatePurchaseIntentRequestUsage.fromJson(
-                (json["usage"] as Map).cast<String, Object?>(),
-              ),
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
-        quantity: CreatePurchaseIntentRequestQuantity.fromJson(
-          (json["quantity"] as Map).cast<String, Object?>(),
-        ),
-      );
+  ) => CreatePurchaseIntentRequest(
+    product: json["product"] == null
+        ? null
+        : CreatePurchaseIntentRequestProduct.fromJson(
+            (json["product"] as Map).cast<String, Object?>(),
+          ),
+    productId: json["product_id"] == null ? null : json["product_id"] as String,
+    price: json["price"] == null
+        ? null
+        : CreatePurchaseIntentRequestPrice.fromJson(
+            (json["price"] as Map).cast<String, Object?>(),
+          ),
+    priceId: json["price_id"] == null ? null : json["price_id"] as String,
+    usage: json["usage"] == null
+        ? null
+        : CreatePurchaseIntentRequestUsage.fromJson(
+            (json["usage"] as Map).cast<String, Object?>(),
+          ),
+    expiresAt: json["expires_at"] == null ? null : json["expires_at"] as String,
+    quantity: CreatePurchaseIntentRequestQuantity.fromJson(
+      (json["quantity"] as Map).cast<String, Object?>(),
+    ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (product != null) "product": _encodeValue(product),
-        if (productId != null) "product_id": _encodeValue(productId),
-        if (price != null) "price": _encodeValue(price),
-        if (priceId != null) "price_id": _encodeValue(priceId),
-        if (usage != null) "usage": _encodeValue(usage),
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-        "quantity": _encodeValue(quantity),
-      };
+    if (product != null) "product": _encodeValue(product),
+    if (productId != null) "product_id": _encodeValue(productId),
+    if (price != null) "price": _encodeValue(price),
+    if (priceId != null) "price_id": _encodeValue(priceId),
+    if (usage != null) "usage": _encodeValue(usage),
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+    "quantity": _encodeValue(quantity),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4532,29 +4480,29 @@ final class CreatePurchaseIntentRequestPrice implements _InttegroValue {
   });
   factory CreatePurchaseIntentRequestPrice.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreatePurchaseIntentRequestPrice(
-        id: json["id"] == null ? null : json["id"] as String,
-        nominal: json["nominal"] == null
-            ? null
-            : PriceParams.fromJson(
-                (json["nominal"] as Map).cast<String, Object?>(),
-              ),
-        original: json["original"] == null
-            ? null
-            : CreatePurchaseIntentRequestPriceOriginal.fromJson(
-                (json["original"] as Map).cast<String, Object?>(),
-              ),
-        originalId:
-            json["original_id"] == null ? null : json["original_id"] as String,
-      );
+  ) => CreatePurchaseIntentRequestPrice(
+    id: json["id"] == null ? null : json["id"] as String,
+    nominal: json["nominal"] == null
+        ? null
+        : PriceParams.fromJson(
+            (json["nominal"] as Map).cast<String, Object?>(),
+          ),
+    original: json["original"] == null
+        ? null
+        : CreatePurchaseIntentRequestPriceOriginal.fromJson(
+            (json["original"] as Map).cast<String, Object?>(),
+          ),
+    originalId: json["original_id"] == null
+        ? null
+        : json["original_id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (id != null) "id": _encodeValue(id),
-        if (nominal != null) "nominal": _encodeValue(nominal),
-        if (original != null) "original": _encodeValue(original),
-        if (originalId != null) "original_id": _encodeValue(originalId),
-      };
+    if (id != null) "id": _encodeValue(id),
+    if (nominal != null) "nominal": _encodeValue(nominal),
+    if (original != null) "original": _encodeValue(original),
+    if (originalId != null) "original_id": _encodeValue(originalId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4564,20 +4512,19 @@ final class CreatePurchaseIntentRequestPriceOriginal implements _InttegroValue {
   const CreatePurchaseIntentRequestPriceOriginal({this.id, this.nominal});
   factory CreatePurchaseIntentRequestPriceOriginal.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreatePurchaseIntentRequestPriceOriginal(
-        id: json["id"] == null ? null : json["id"] as String,
-        nominal: json["nominal"] == null
-            ? null
-            : PriceParams.fromJson(
-                (json["nominal"] as Map).cast<String, Object?>(),
-              ),
-      );
+  ) => CreatePurchaseIntentRequestPriceOriginal(
+    id: json["id"] == null ? null : json["id"] as String,
+    nominal: json["nominal"] == null
+        ? null
+        : PriceParams.fromJson(
+            (json["nominal"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (id != null) "id": _encodeValue(id),
-        if (nominal != null) "nominal": _encodeValue(nominal),
-      };
+    if (id != null) "id": _encodeValue(id),
+    if (nominal != null) "nominal": _encodeValue(nominal),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4590,18 +4537,17 @@ final class CreatePurchaseIntentRequestProduct implements _InttegroValue {
   });
   factory CreatePurchaseIntentRequestProduct.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreatePurchaseIntentRequestProduct(
-        variantSetId: json["variant_set_id"] == null
-            ? null
-            : json["variant_set_id"] as String,
-        id: json["id"] as String,
-      );
+  ) => CreatePurchaseIntentRequestProduct(
+    variantSetId: json["variant_set_id"] == null
+        ? null
+        : json["variant_set_id"] as String,
+    id: json["id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (variantSetId != null) "variant_set_id": _encodeValue(variantSetId),
-        "id": _encodeValue(id),
-      };
+    if (variantSetId != null) "variant_set_id": _encodeValue(variantSetId),
+    "id": _encodeValue(id),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4611,16 +4557,15 @@ final class CreatePurchaseIntentRequestQuantity implements _InttegroValue {
   const CreatePurchaseIntentRequestQuantity({this.max, required this.min});
   factory CreatePurchaseIntentRequestQuantity.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreatePurchaseIntentRequestQuantity(
-        max: json["max"] == null ? null : (json["max"] as num).toInt(),
-        min: (json["min"] as num).toInt(),
-      );
+  ) => CreatePurchaseIntentRequestQuantity(
+    max: json["max"] == null ? null : (json["max"] as num).toInt(),
+    min: (json["min"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (max != null) "max": _encodeValue(max),
-        "min": _encodeValue(min),
-      };
+    if (max != null) "max": _encodeValue(max),
+    "min": _encodeValue(min),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4630,17 +4575,15 @@ final class CreatePurchaseIntentRequestUsage implements _InttegroValue {
   const CreatePurchaseIntentRequestUsage({this.singleUse, this.multiUse});
   factory CreatePurchaseIntentRequestUsage.fromJson(
     Map<String, Object?> json,
-  ) =>
-      CreatePurchaseIntentRequestUsage(
-        singleUse:
-            json["single_use"] == null ? null : json["single_use"] as bool,
-        multiUse: json["multi_use"] == null ? null : json["multi_use"] as bool,
-      );
+  ) => CreatePurchaseIntentRequestUsage(
+    singleUse: json["single_use"] == null ? null : json["single_use"] as bool,
+    multiUse: json["multi_use"] == null ? null : json["multi_use"] as bool,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (singleUse != null) "single_use": _encodeValue(singleUse),
-        if (multiUse != null) "multi_use": _encodeValue(multiUse),
-      };
+    if (singleUse != null) "single_use": _encodeValue(singleUse),
+    if (multiUse != null) "multi_use": _encodeValue(multiUse),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4670,12 +4613,11 @@ final class CreateRefundLineItemInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (reason != null) "reason": _encodeValue(reason),
-        if (reasonDetails != null)
-          "reason_details": _encodeValue(reasonDetails),
-        "order_line_item_id": _encodeValue(orderLineItemId),
-        "refund_amount": _encodeValue(refundAmount),
-      };
+    if (reason != null) "reason": _encodeValue(reason),
+    if (reasonDetails != null) "reason_details": _encodeValue(reasonDetails),
+    "order_line_item_id": _encodeValue(orderLineItemId),
+    "refund_amount": _encodeValue(refundAmount),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4704,8 +4646,9 @@ final class CreateRefundRequest implements _InttegroValue {
         reasonDetails: json["reason_details"] == null
             ? null
             : json["reason_details"] as String,
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
+        reference: json["reference"] == null
+            ? null
+            : json["reference"] as String,
         requestMeta: json["request_meta"] == null
             ? null
             : RefundRequestMetaInput.fromJson(
@@ -4723,15 +4666,14 @@ final class CreateRefundRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (reasonDetails != null)
-          "reason_details": _encodeValue(reasonDetails),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
-        "line_items": _encodeValue(lineItems),
-        "order_id": _encodeValue(orderId),
-        "reason": _encodeValue(reason),
-      };
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (reasonDetails != null) "reason_details": _encodeValue(reasonDetails),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
+    "line_items": _encodeValue(lineItems),
+    "order_id": _encodeValue(orderId),
+    "reason": _encodeValue(reason),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4759,12 +4701,12 @@ final class CreateSMSMessageTemplateRequest implements _InttegroValue {
         variables: json["variables"] == null
             ? null
             : (json["variables"] as List)
-                .map(
-                  (item) => MessageTemplateVariableInput.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => MessageTemplateVariableInput.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         channel: MessageTemplateChannel.fromJson(json["channel"]),
         name: json["name"] as String,
         purpose: json["purpose"] as String,
@@ -4774,14 +4716,14 @@ final class CreateSMSMessageTemplateRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (about != null) "about": _encodeValue(about),
-        if (locale != null) "locale": _encodeValue(locale),
-        if (variables != null) "variables": _encodeValue(variables),
-        "channel": _encodeValue(channel),
-        "name": _encodeValue(name),
-        "purpose": _encodeValue(purpose),
-        "sms": _encodeValue(sms),
-      };
+    if (about != null) "about": _encodeValue(about),
+    if (locale != null) "locale": _encodeValue(locale),
+    if (variables != null) "variables": _encodeValue(variables),
+    "channel": _encodeValue(channel),
+    "name": _encodeValue(name),
+    "purpose": _encodeValue(purpose),
+    "sms": _encodeValue(sms),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -4848,23 +4790,24 @@ final class CreateUploadRequestRequest implements _InttegroValue {
         customData: json["custom_data"] == null
             ? null
             : CustomData.fromJson(json["custom_data"]),
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
+        expiresAt: json["expires_at"] == null
+            ? null
+            : json["expires_at"] as String,
         purpose: json["purpose"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (constraints != null) "constraints": _encodeValue(constraints),
-        if (display != null) "display": _encodeValue(display),
-        if (subject != null) "subject": _encodeValue(subject),
-        if (recipient != null) "recipient": _encodeValue(recipient),
-        if (resource != null) "resource": _encodeValue(resource),
-        if (requester != null) "requester": _encodeValue(requester),
-        if (attempts != null) "attempts": _encodeValue(attempts),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-        "purpose": _encodeValue(purpose),
-      };
+    if (constraints != null) "constraints": _encodeValue(constraints),
+    if (display != null) "display": _encodeValue(display),
+    if (subject != null) "subject": _encodeValue(subject),
+    if (recipient != null) "recipient": _encodeValue(recipient),
+    if (resource != null) "resource": _encodeValue(resource),
+    if (requester != null) "requester": _encodeValue(requester),
+    if (attempts != null) "attempts": _encodeValue(attempts),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+    "purpose": _encodeValue(purpose),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -4900,13 +4843,12 @@ final class CurrencyBalanceSnapshot implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "available": _encodeValue(available),
-        "includes_transactions_before":
-            _encodeValue(includesTransactionsBefore),
-        "pending": _encodeValue(pending),
-        "refund": _encodeValue(refund),
-        "reserved": _encodeValue(reserved),
-      };
+    "available": _encodeValue(available),
+    "includes_transactions_before": _encodeValue(includesTransactionsBefore),
+    "pending": _encodeValue(pending),
+    "refund": _encodeValue(refund),
+    "reserved": _encodeValue(reserved),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -4962,56 +4904,53 @@ final class Customer implements _InttegroValue {
     this.updatedAt,
   });
   factory Customer.fromJson(Map<String, Object?> json) => Customer(
-        balance: CustomerBalance.fromJson(json["balance"]),
-        billingAddress: json["billing_address"] == null
-            ? null
-            : CustomerAddress.fromJson(
-                (json["billing_address"] as Map).cast<String, Object?>(),
-              ),
-        createdAt: json["created_at"] as String,
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        emailAddress: json["email_address"] == null
-            ? null
-            : json["email_address"] as String,
-        guest: json["guest"] as bool,
-        id: json["id"] as String,
-        name: json["name"] as String,
-        phoneNumber: json["phone_number"] == null
-            ? null
-            : json["phone_number"] as String,
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        shippingAddress: json["shipping_address"] == null
-            ? null
-            : CustomerAddress.fromJson(
-                (json["shipping_address"] as Map).cast<String, Object?>(),
-              ),
-        suffix: json["suffix"] == null ? null : json["suffix"] as String,
-        title: json["title"] == null ? null : json["title"] as String,
-        updatedAt:
-            json["updated_at"] == null ? null : json["updated_at"] as String,
-      );
+    balance: CustomerBalance.fromJson(json["balance"]),
+    billingAddress: json["billing_address"] == null
+        ? null
+        : CustomerAddress.fromJson(
+            (json["billing_address"] as Map).cast<String, Object?>(),
+          ),
+    createdAt: json["created_at"] as String,
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    emailAddress: json["email_address"] == null
+        ? null
+        : json["email_address"] as String,
+    guest: json["guest"] as bool,
+    id: json["id"] as String,
+    name: json["name"] as String,
+    phoneNumber: json["phone_number"] == null
+        ? null
+        : json["phone_number"] as String,
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    shippingAddress: json["shipping_address"] == null
+        ? null
+        : CustomerAddress.fromJson(
+            (json["shipping_address"] as Map).cast<String, Object?>(),
+          ),
+    suffix: json["suffix"] == null ? null : json["suffix"] as String,
+    title: json["title"] == null ? null : json["title"] as String,
+    updatedAt: json["updated_at"] == null ? null : json["updated_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "balance": _encodeValue(balance),
-        if (billingAddress != null)
-          "billing_address": _encodeValue(billingAddress),
-        "created_at": _encodeValue(createdAt),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (emailAddress != null) "email_address": _encodeValue(emailAddress),
-        "guest": _encodeValue(guest),
-        "id": _encodeValue(id),
-        "name": _encodeValue(name),
-        if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (shippingAddress != null)
-          "shipping_address": _encodeValue(shippingAddress),
-        if (suffix != null) "suffix": _encodeValue(suffix),
-        if (title != null) "title": _encodeValue(title),
-        if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
-      };
+    "balance": _encodeValue(balance),
+    if (billingAddress != null) "billing_address": _encodeValue(billingAddress),
+    "created_at": _encodeValue(createdAt),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (emailAddress != null) "email_address": _encodeValue(emailAddress),
+    "guest": _encodeValue(guest),
+    "id": _encodeValue(id),
+    "name": _encodeValue(name),
+    if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (shippingAddress != null)
+      "shipping_address": _encodeValue(shippingAddress),
+    if (suffix != null) "suffix": _encodeValue(suffix),
+    if (title != null) "title": _encodeValue(title),
+    if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5044,21 +4983,22 @@ final class CustomerAddress implements _InttegroValue {
         phoneNumber: json["phone_number"] == null
             ? null
             : json["phone_number"] as String,
-        postCode:
-            json["post_code"] == null ? null : json["post_code"] as String,
+        postCode: json["post_code"] == null
+            ? null
+            : json["post_code"] as String,
         region: json["region"] == null ? null : json["region"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (city != null) "city": _encodeValue(city),
-        "country": _encodeValue(country),
-        if (line1 != null) "line1": _encodeValue(line1),
-        if (line2 != null) "line2": _encodeValue(line2),
-        if (name != null) "name": _encodeValue(name),
-        if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
-        if (postCode != null) "post_code": _encodeValue(postCode),
-        if (region != null) "region": _encodeValue(region),
-      };
+    if (city != null) "city": _encodeValue(city),
+    "country": _encodeValue(country),
+    if (line1 != null) "line1": _encodeValue(line1),
+    if (line2 != null) "line2": _encodeValue(line2),
+    if (name != null) "name": _encodeValue(name),
+    if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
+    if (postCode != null) "post_code": _encodeValue(postCode),
+    if (region != null) "region": _encodeValue(region),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -5090,22 +5030,23 @@ final class CustomerAddressInput implements _InttegroValue {
         phoneNumber: json["phone_number"] == null
             ? null
             : json["phone_number"] as String,
-        postCode:
-            json["post_code"] == null ? null : json["post_code"] as String,
+        postCode: json["post_code"] == null
+            ? null
+            : json["post_code"] as String,
         region: json["region"] == null ? null : json["region"] as String,
         country: json["country"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (city != null) "city": _encodeValue(city),
-        if (line1 != null) "line1": _encodeValue(line1),
-        if (line2 != null) "line2": _encodeValue(line2),
-        if (name != null) "name": _encodeValue(name),
-        if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
-        if (postCode != null) "post_code": _encodeValue(postCode),
-        if (region != null) "region": _encodeValue(region),
-        "country": _encodeValue(country),
-      };
+    if (city != null) "city": _encodeValue(city),
+    if (line1 != null) "line1": _encodeValue(line1),
+    if (line2 != null) "line2": _encodeValue(line2),
+    if (name != null) "name": _encodeValue(name),
+    if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
+    if (postCode != null) "post_code": _encodeValue(postCode),
+    if (region != null) "region": _encodeValue(region),
+    "country": _encodeValue(country),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5122,9 +5063,9 @@ final class CustomerBalanceValue implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "as_of": _encodeValue(asOf),
-        "available": _encodeValue(available),
-      };
+    "as_of": _encodeValue(asOf),
+    "available": _encodeValue(available),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -5143,8 +5084,9 @@ final class CustomerDataInput implements _InttegroValue {
   });
   factory CustomerDataInput.fromJson(Map<String, Object?> json) =>
       CustomerDataInput(
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
+        reference: json["reference"] == null
+            ? null
+            : json["reference"] as String,
         customData: json["custom_data"] == null
             ? null
             : CustomDataInput.fromJson(json["custom_data"]),
@@ -5154,12 +5096,12 @@ final class CustomerDataInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (reference != null) "reference": _encodeValue(reference),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        "name": _encodeValue(name),
-        "email_address": _encodeValue(emailAddress),
-        "phone_number": _encodeValue(phoneNumber),
-      };
+    if (reference != null) "reference": _encodeValue(reference),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    "name": _encodeValue(name),
+    "email_address": _encodeValue(emailAddress),
+    "phone_number": _encodeValue(phoneNumber),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5173,19 +5115,18 @@ final class CustomerPage implements _InttegroValue {
     required this.size,
   });
   factory CustomerPage.fromJson(Map<String, Object?> json) => CustomerPage(
-        customers: (json["customers"] as List)
-            .map((item) =>
-                Customer.fromJson((item as Map).cast<String, Object?>()))
-            .toList(),
-        number: (json["number"] as num).toInt(),
-        size: (json["size"] as num).toInt(),
-      );
+    customers: (json["customers"] as List)
+        .map((item) => Customer.fromJson((item as Map).cast<String, Object?>()))
+        .toList(),
+    number: (json["number"] as num).toInt(),
+    size: (json["size"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "customers": _encodeValue(customers),
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-      };
+    "customers": _encodeValue(customers),
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -5227,8 +5168,8 @@ final class DisactivatePaymentMethodRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "payment_method_id": _encodeValue(paymentMethodId),
-      };
+    "payment_method_id": _encodeValue(paymentMethodId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -5259,24 +5200,24 @@ final class Error implements _InttegroValue {
     required this.url,
   });
   factory Error.fromJson(Map<String, Object?> json) => Error(
-        message: json["message"] == null ? null : json["message"] as String,
-        fixCode: json["fix_code"] == null ? null : json["fix_code"] as String,
-        detail: json["detail"] == null ? null : json["detail"] as String,
-        cause: json["cause"] == null ? null : json["cause"] as String,
-        type: json["type"] as String,
-        code: json["code"] as String,
-        url: json["url"] as String,
-      );
+    message: json["message"] == null ? null : json["message"] as String,
+    fixCode: json["fix_code"] == null ? null : json["fix_code"] as String,
+    detail: json["detail"] == null ? null : json["detail"] as String,
+    cause: json["cause"] == null ? null : json["cause"] as String,
+    type: json["type"] as String,
+    code: json["code"] as String,
+    url: json["url"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (message != null) "message": _encodeValue(message),
-        if (fixCode != null) "fix_code": _encodeValue(fixCode),
-        if (detail != null) "detail": _encodeValue(detail),
-        if (cause != null) "cause": _encodeValue(cause),
-        "type": _encodeValue(type),
-        "code": _encodeValue(code),
-        "url": _encodeValue(url),
-      };
+    if (message != null) "message": _encodeValue(message),
+    if (fixCode != null) "fix_code": _encodeValue(fixCode),
+    if (detail != null) "detail": _encodeValue(detail),
+    if (cause != null) "cause": _encodeValue(cause),
+    "type": _encodeValue(type),
+    "code": _encodeValue(code),
+    "url": _encodeValue(url),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -5300,8 +5241,9 @@ final class FeeDetailsInput implements _InttegroValue {
         id: json["id"] == null ? null : json["id"] as String,
         label: json["label"] == null ? null : json["label"] as String,
         taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         customData: json["custom_data"] == null
             ? null
             : CustomDataInput.fromJson(json["custom_data"]),
@@ -5311,13 +5253,13 @@ final class FeeDetailsInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (id != null) "id": _encodeValue(id),
-        if (label != null) "label": _encodeValue(label),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        if (description != null) "description": _encodeValue(description),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        "amount": _encodeValue(amount),
-      };
+    if (id != null) "id": _encodeValue(id),
+    if (label != null) "label": _encodeValue(label),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    if (description != null) "description": _encodeValue(description),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    "amount": _encodeValue(amount),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -5334,9 +5276,9 @@ final class FeeLineItemInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        "fee": _encodeValue(fee),
-      };
+    "type": _encodeValue(type),
+    "fee": _encodeValue(fee),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5386,76 +5328,74 @@ final class File implements _InttegroValue {
     this.expiresAt,
   });
   factory File.fromJson(Map<String, Object?> json) => File(
-        id: json["id"] as String,
-        purpose: json["purpose"] as String,
-        status: FileStatus.fromJson(json["status"]),
-        scanStatus: FileScanStatus.fromJson(json["scan_status"]),
-        name: json["name"] == null ? null : json["name"] as String,
-        filename: json["filename"] == null ? null : json["filename"] as String,
-        contentType: json["content_type"] as String,
-        size: (json["size"] as num).toInt(),
-        checksumSha256: json["checksum_sha256"] as String,
-        createdBy: FileActor.fromJson(
-          (json["created_by"] as Map).cast<String, Object?>(),
-        ),
-        source: FileSource.fromJson(
-          (json["source"] as Map).cast<String, Object?>(),
-        ),
-        media: json["media"] == null
-            ? null
-            : FileMedia.fromJson(
-                (json["media"] as Map).cast<String, Object?>()),
-        storage: PublicFileStorage.fromJson(
-          (json["storage"] as Map).cast<String, Object?>(),
-        ),
-        delivery: json["delivery"] == null
-            ? null
-            : FileDeliveryDetails.fromJson(
-                (json["delivery"] as Map).cast<String, Object?>(),
-              ),
-        latestError: json["latest_error"] == null
-            ? null
-            : FileLatestError.fromJson(
-                (json["latest_error"] as Map).cast<String, Object?>(),
-              ),
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        metadata: json["metadata"] == null
-            ? null
-            : FileMetadata.fromJson(json["metadata"]),
-        createdAt: json["created_at"] as String,
-        updatedAt: json["updated_at"] as String,
-        availableAt: json["available_at"] == null
-            ? null
-            : json["available_at"] as String,
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
-      );
+    id: json["id"] as String,
+    purpose: json["purpose"] as String,
+    status: FileStatus.fromJson(json["status"]),
+    scanStatus: FileScanStatus.fromJson(json["scan_status"]),
+    name: json["name"] == null ? null : json["name"] as String,
+    filename: json["filename"] == null ? null : json["filename"] as String,
+    contentType: json["content_type"] as String,
+    size: (json["size"] as num).toInt(),
+    checksumSha256: json["checksum_sha256"] as String,
+    createdBy: FileActor.fromJson(
+      (json["created_by"] as Map).cast<String, Object?>(),
+    ),
+    source: FileSource.fromJson(
+      (json["source"] as Map).cast<String, Object?>(),
+    ),
+    media: json["media"] == null
+        ? null
+        : FileMedia.fromJson((json["media"] as Map).cast<String, Object?>()),
+    storage: PublicFileStorage.fromJson(
+      (json["storage"] as Map).cast<String, Object?>(),
+    ),
+    delivery: json["delivery"] == null
+        ? null
+        : FileDeliveryDetails.fromJson(
+            (json["delivery"] as Map).cast<String, Object?>(),
+          ),
+    latestError: json["latest_error"] == null
+        ? null
+        : FileLatestError.fromJson(
+            (json["latest_error"] as Map).cast<String, Object?>(),
+          ),
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    metadata: json["metadata"] == null
+        ? null
+        : FileMetadata.fromJson(json["metadata"]),
+    createdAt: json["created_at"] as String,
+    updatedAt: json["updated_at"] as String,
+    availableAt: json["available_at"] == null
+        ? null
+        : json["available_at"] as String,
+    expiresAt: json["expires_at"] == null ? null : json["expires_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "purpose": _encodeValue(purpose),
-        "status": _encodeValue(status),
-        "scan_status": _encodeValue(scanStatus),
-        if (name != null) "name": _encodeValue(name),
-        if (filename != null) "filename": _encodeValue(filename),
-        "content_type": _encodeValue(contentType),
-        "size": _encodeValue(size),
-        "checksum_sha256": _encodeValue(checksumSha256),
-        "created_by": _encodeValue(createdBy),
-        "source": _encodeValue(source),
-        if (media != null) "media": _encodeValue(media),
-        "storage": _encodeValue(storage),
-        if (delivery != null) "delivery": _encodeValue(delivery),
-        if (latestError != null) "latest_error": _encodeValue(latestError),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (metadata != null) "metadata": _encodeValue(metadata),
-        "created_at": _encodeValue(createdAt),
-        "updated_at": _encodeValue(updatedAt),
-        if (availableAt != null) "available_at": _encodeValue(availableAt),
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-      };
+    "id": _encodeValue(id),
+    "purpose": _encodeValue(purpose),
+    "status": _encodeValue(status),
+    "scan_status": _encodeValue(scanStatus),
+    if (name != null) "name": _encodeValue(name),
+    if (filename != null) "filename": _encodeValue(filename),
+    "content_type": _encodeValue(contentType),
+    "size": _encodeValue(size),
+    "checksum_sha256": _encodeValue(checksumSha256),
+    "created_by": _encodeValue(createdBy),
+    "source": _encodeValue(source),
+    if (media != null) "media": _encodeValue(media),
+    "storage": _encodeValue(storage),
+    if (delivery != null) "delivery": _encodeValue(delivery),
+    if (latestError != null) "latest_error": _encodeValue(latestError),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (metadata != null) "metadata": _encodeValue(metadata),
+    "created_at": _encodeValue(createdAt),
+    "updated_at": _encodeValue(updatedAt),
+    if (availableAt != null) "available_at": _encodeValue(availableAt),
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5466,18 +5406,18 @@ final class FileActor implements _InttegroValue {
   final String? email;
   const FileActor({required this.type, this.id, this.name, this.email});
   factory FileActor.fromJson(Map<String, Object?> json) => FileActor(
-        type: json["type"] as String,
-        id: json["id"] == null ? null : json["id"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-        email: json["email"] == null ? null : json["email"] as String,
-      );
+    type: json["type"] as String,
+    id: json["id"] == null ? null : json["id"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+    email: json["email"] == null ? null : json["email"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        if (id != null) "id": _encodeValue(id),
-        if (name != null) "name": _encodeValue(name),
-        if (email != null) "email": _encodeValue(email),
-      };
+    "type": _encodeValue(type),
+    if (id != null) "id": _encodeValue(id),
+    if (name != null) "name": _encodeValue(name),
+    if (email != null) "email": _encodeValue(email),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -5488,18 +5428,18 @@ final class FileActorInput implements _InttegroValue {
   final String? type;
   const FileActorInput({this.email, this.id, this.name, this.type});
   factory FileActorInput.fromJson(Map<String, Object?> json) => FileActorInput(
-        email: json["email"] == null ? null : json["email"] as String,
-        id: json["id"] == null ? null : json["id"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-        type: json["type"] == null ? null : json["type"] as String,
-      );
+    email: json["email"] == null ? null : json["email"] as String,
+    id: json["id"] == null ? null : json["id"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+    type: json["type"] == null ? null : json["type"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (email != null) "email": _encodeValue(email),
-        if (id != null) "id": _encodeValue(id),
-        if (name != null) "name": _encodeValue(name),
-        if (type != null) "type": _encodeValue(type),
-      };
+    if (email != null) "email": _encodeValue(email),
+    if (id != null) "id": _encodeValue(id),
+    if (name != null) "name": _encodeValue(name),
+    if (type != null) "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -5524,10 +5464,10 @@ final class FileContentsRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (disposition != null) "disposition": _encodeValue(disposition),
-        if (delivery != null) "delivery": _encodeValue(delivery),
-        "file_id": _encodeValue(fileId),
-      };
+    if (disposition != null) "disposition": _encodeValue(disposition),
+    if (delivery != null) "delivery": _encodeValue(delivery),
+    "file_id": _encodeValue(fileId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5542,8 +5482,9 @@ final class FileDeliveryDetails implements _InttegroValue {
   });
   factory FileDeliveryDetails.fromJson(Map<String, Object?> json) =>
       FileDeliveryDetails(
-        publicUrl:
-            json["public_url"] == null ? null : json["public_url"] as String,
+        publicUrl: json["public_url"] == null
+            ? null
+            : json["public_url"] as String,
         cacheControl: json["cache_control"] == null
             ? null
             : json["cache_control"] as String,
@@ -5553,10 +5494,10 @@ final class FileDeliveryDetails implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (publicUrl != null) "public_url": _encodeValue(publicUrl),
-        if (cacheControl != null) "cache_control": _encodeValue(cacheControl),
-        if (contentType != null) "content_type": _encodeValue(contentType),
-      };
+    if (publicUrl != null) "public_url": _encodeValue(publicUrl),
+    if (cacheControl != null) "cache_control": _encodeValue(cacheControl),
+    if (contentType != null) "content_type": _encodeValue(contentType),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5575,11 +5516,11 @@ final class FileLatestError implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (code != null) "code": _encodeValue(code),
-        if (message != null) "message": _encodeValue(message),
-        if (retryable != null) "retryable": _encodeValue(retryable),
-        if (at != null) "at": _encodeValue(at),
-      };
+    if (code != null) "code": _encodeValue(code),
+    if (message != null) "message": _encodeValue(message),
+    if (retryable != null) "retryable": _encodeValue(retryable),
+    if (at != null) "at": _encodeValue(at),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5619,57 +5560,56 @@ final class FileLink implements _InttegroValue {
     this.revokedAt,
   });
   factory FileLink.fromJson(Map<String, Object?> json) => FileLink(
-        id: json["id"] as String,
-        kind: FileLinkKind.fromJson(json["kind"]),
-        fileId: json["file_id"] as String,
-        purpose: json["purpose"] as String,
-        status: FileLinkStatus.fromJson(json["status"]),
-        active: json["active"] as bool,
-        delivery: FileLinkDelivery.fromJson(
-          (json["delivery"] as Map).cast<String, Object?>(),
-        ),
-        access: FileLinkAccess.fromJson(
-          (json["access"] as Map).cast<String, Object?>(),
-        ),
-        createdBy: FileLinkActor.fromJson(
-          (json["created_by"] as Map).cast<String, Object?>(),
-        ),
-        revokedBy: json["revoked_by"] == null
-            ? null
-            : FileLinkActor.fromJson(
-                (json["revoked_by"] as Map).cast<String, Object?>(),
-              ),
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        metadata: json["metadata"] == null
-            ? null
-            : FileMetadata.fromJson(json["metadata"]),
-        createdAt: json["created_at"] as String,
-        updatedAt: json["updated_at"] as String,
-        expiresAt: json["expires_at"] as String,
-        revokedAt:
-            json["revoked_at"] == null ? null : json["revoked_at"] as String,
-      );
+    id: json["id"] as String,
+    kind: FileLinkKind.fromJson(json["kind"]),
+    fileId: json["file_id"] as String,
+    purpose: json["purpose"] as String,
+    status: FileLinkStatus.fromJson(json["status"]),
+    active: json["active"] as bool,
+    delivery: FileLinkDelivery.fromJson(
+      (json["delivery"] as Map).cast<String, Object?>(),
+    ),
+    access: FileLinkAccess.fromJson(
+      (json["access"] as Map).cast<String, Object?>(),
+    ),
+    createdBy: FileLinkActor.fromJson(
+      (json["created_by"] as Map).cast<String, Object?>(),
+    ),
+    revokedBy: json["revoked_by"] == null
+        ? null
+        : FileLinkActor.fromJson(
+            (json["revoked_by"] as Map).cast<String, Object?>(),
+          ),
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    metadata: json["metadata"] == null
+        ? null
+        : FileMetadata.fromJson(json["metadata"]),
+    createdAt: json["created_at"] as String,
+    updatedAt: json["updated_at"] as String,
+    expiresAt: json["expires_at"] as String,
+    revokedAt: json["revoked_at"] == null ? null : json["revoked_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "kind": _encodeValue(kind),
-        "file_id": _encodeValue(fileId),
-        "purpose": _encodeValue(purpose),
-        "status": _encodeValue(status),
-        "active": _encodeValue(active),
-        "delivery": _encodeValue(delivery),
-        "access": _encodeValue(access),
-        "created_by": _encodeValue(createdBy),
-        if (revokedBy != null) "revoked_by": _encodeValue(revokedBy),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (metadata != null) "metadata": _encodeValue(metadata),
-        "created_at": _encodeValue(createdAt),
-        "updated_at": _encodeValue(updatedAt),
-        "expires_at": _encodeValue(expiresAt),
-        if (revokedAt != null) "revoked_at": _encodeValue(revokedAt),
-      };
+    "id": _encodeValue(id),
+    "kind": _encodeValue(kind),
+    "file_id": _encodeValue(fileId),
+    "purpose": _encodeValue(purpose),
+    "status": _encodeValue(status),
+    "active": _encodeValue(active),
+    "delivery": _encodeValue(delivery),
+    "access": _encodeValue(access),
+    "created_by": _encodeValue(createdBy),
+    if (revokedBy != null) "revoked_by": _encodeValue(revokedBy),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (metadata != null) "metadata": _encodeValue(metadata),
+    "created_at": _encodeValue(createdAt),
+    "updated_at": _encodeValue(updatedAt),
+    "expires_at": _encodeValue(expiresAt),
+    if (revokedAt != null) "revoked_at": _encodeValue(revokedAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5687,35 +5627,33 @@ final class FileLinkAccess implements _InttegroValue {
     this.allowedOrigins,
   });
   factory FileLinkAccess.fromJson(Map<String, Object?> json) => FileLinkAccess(
-        maxAccesses: json["max_accesses"] == null
-            ? null
-            : (json["max_accesses"] as num).toInt(),
-        accessCount: json["access_count"] == null
-            ? null
-            : (json["access_count"] as num).toInt(),
-        lastAccessedAt: json["last_accessed_at"] == null
-            ? null
-            : json["last_accessed_at"] as String,
-        allowDownload: json["allow_download"] == null
-            ? null
-            : json["allow_download"] as bool,
-        allowedOrigins: json["allowed_origins"] == null
-            ? null
-            : (json["allowed_origins"] as List)
-                .map((item) => item as String)
-                .toList(),
-      );
+    maxAccesses: json["max_accesses"] == null
+        ? null
+        : (json["max_accesses"] as num).toInt(),
+    accessCount: json["access_count"] == null
+        ? null
+        : (json["access_count"] as num).toInt(),
+    lastAccessedAt: json["last_accessed_at"] == null
+        ? null
+        : json["last_accessed_at"] as String,
+    allowDownload: json["allow_download"] == null
+        ? null
+        : json["allow_download"] as bool,
+    allowedOrigins: json["allowed_origins"] == null
+        ? null
+        : (json["allowed_origins"] as List)
+              .map((item) => item as String)
+              .toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (maxAccesses != null) "max_accesses": _encodeValue(maxAccesses),
-        if (accessCount != null) "access_count": _encodeValue(accessCount),
-        if (lastAccessedAt != null)
-          "last_accessed_at": _encodeValue(lastAccessedAt),
-        if (allowDownload != null)
-          "allow_download": _encodeValue(allowDownload),
-        if (allowedOrigins != null)
-          "allowed_origins": _encodeValue(allowedOrigins),
-      };
+    if (maxAccesses != null) "max_accesses": _encodeValue(maxAccesses),
+    if (accessCount != null) "access_count": _encodeValue(accessCount),
+    if (lastAccessedAt != null)
+      "last_accessed_at": _encodeValue(lastAccessedAt),
+    if (allowDownload != null) "allow_download": _encodeValue(allowDownload),
+    if (allowedOrigins != null) "allowed_origins": _encodeValue(allowedOrigins),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -5741,24 +5679,22 @@ final class FileLinkAccessRequest implements _InttegroValue {
         allowedOrigins: json["allowed_origins"] == null
             ? null
             : (json["allowed_origins"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         allowedIpRanges: json["allowed_ip_ranges"] == null
             ? null
             : (json["allowed_ip_ranges"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
       );
   @override
   Map<String, Object?> toJson() => {
-        if (maxAccesses != null) "max_accesses": _encodeValue(maxAccesses),
-        if (allowDownload != null)
-          "allow_download": _encodeValue(allowDownload),
-        if (allowedOrigins != null)
-          "allowed_origins": _encodeValue(allowedOrigins),
-        if (allowedIpRanges != null)
-          "allowed_ip_ranges": _encodeValue(allowedIpRanges),
-      };
+    if (maxAccesses != null) "max_accesses": _encodeValue(maxAccesses),
+    if (allowDownload != null) "allow_download": _encodeValue(allowDownload),
+    if (allowedOrigins != null) "allowed_origins": _encodeValue(allowedOrigins),
+    if (allowedIpRanges != null)
+      "allowed_ip_ranges": _encodeValue(allowedIpRanges),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5769,18 +5705,18 @@ final class FileLinkActor implements _InttegroValue {
   final String type;
   const FileLinkActor({this.email, this.id, this.name, required this.type});
   factory FileLinkActor.fromJson(Map<String, Object?> json) => FileLinkActor(
-        email: json["email"] == null ? null : json["email"] as String,
-        id: json["id"] == null ? null : json["id"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-        type: json["type"] as String,
-      );
+    email: json["email"] == null ? null : json["email"] as String,
+    id: json["id"] == null ? null : json["id"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+    type: json["type"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (email != null) "email": _encodeValue(email),
-        if (id != null) "id": _encodeValue(id),
-        if (name != null) "name": _encodeValue(name),
-        "type": _encodeValue(type),
-      };
+    if (email != null) "email": _encodeValue(email),
+    if (id != null) "id": _encodeValue(id),
+    if (name != null) "name": _encodeValue(name),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5797,9 +5733,9 @@ final class FileLinkCreation implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "file_link": _encodeValue(fileLink),
-        "url": _encodeValue(url),
-      };
+    "file_link": _encodeValue(fileLink),
+    "url": _encodeValue(url),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5823,16 +5759,17 @@ final class FileLinkDelivery implements _InttegroValue {
         contentType: json["content_type"] == null
             ? null
             : json["content_type"] as String,
-        disposition:
-            json["disposition"] == null ? null : json["disposition"] as String,
+        disposition: json["disposition"] == null
+            ? null
+            : json["disposition"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (mode != null) "mode": _encodeValue(mode),
-        if (filename != null) "filename": _encodeValue(filename),
-        if (contentType != null) "content_type": _encodeValue(contentType),
-        if (disposition != null) "disposition": _encodeValue(disposition),
-      };
+    if (mode != null) "mode": _encodeValue(mode),
+    if (filename != null) "filename": _encodeValue(filename),
+    if (contentType != null) "content_type": _encodeValue(contentType),
+    if (disposition != null) "disposition": _encodeValue(disposition),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -5856,16 +5793,17 @@ final class FileLinkDeliveryInput implements _InttegroValue {
         contentType: json["content_type"] == null
             ? null
             : json["content_type"] as String,
-        disposition:
-            json["disposition"] == null ? null : json["disposition"] as String,
+        disposition: json["disposition"] == null
+            ? null
+            : json["disposition"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (mode != null) "mode": _encodeValue(mode),
-        if (filename != null) "filename": _encodeValue(filename),
-        if (contentType != null) "content_type": _encodeValue(contentType),
-        if (disposition != null) "disposition": _encodeValue(disposition),
-      };
+    if (mode != null) "mode": _encodeValue(mode),
+    if (filename != null) "filename": _encodeValue(filename),
+    if (contentType != null) "content_type": _encodeValue(contentType),
+    if (disposition != null) "disposition": _encodeValue(disposition),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5879,19 +5817,18 @@ final class FileLinkPage implements _InttegroValue {
     required this.fileLinks,
   });
   factory FileLinkPage.fromJson(Map<String, Object?> json) => FileLinkPage(
-        number: (json["number"] as num).toInt(),
-        size: (json["size"] as num).toInt(),
-        fileLinks: (json["file_links"] as List)
-            .map((item) =>
-                FileLink.fromJson((item as Map).cast<String, Object?>()))
-            .toList(),
-      );
+    number: (json["number"] as num).toInt(),
+    size: (json["size"] as num).toInt(),
+    fileLinks: (json["file_links"] as List)
+        .map((item) => FileLink.fromJson((item as Map).cast<String, Object?>()))
+        .toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-        "file_links": _encodeValue(fileLinks),
-      };
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+    "file_links": _encodeValue(fileLinks),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5919,39 +5856,40 @@ final class FileMedia implements _InttegroValue {
     this.aspectRatio,
   });
   factory FileMedia.fromJson(Map<String, Object?> json) => FileMedia(
-        kind: json["kind"] == null ? null : json["kind"] as String,
-        width: json["width"] == null ? null : (json["width"] as num).toInt(),
-        height: json["height"] == null ? null : (json["height"] as num).toInt(),
-        durationMs: json["duration_ms"] == null
-            ? null
-            : (json["duration_ms"] as num).toInt(),
-        pageCount: json["page_count"] == null
-            ? null
-            : (json["page_count"] as num).toInt(),
-        frameCount: json["frame_count"] == null
-            ? null
-            : (json["frame_count"] as num).toInt(),
-        colorSpace:
-            json["color_space"] == null ? null : json["color_space"] as String,
-        hasAlpha: json["has_alpha"] == null ? null : json["has_alpha"] as bool,
-        codec: json["codec"] == null ? null : json["codec"] as String,
-        aspectRatio: json["aspect_ratio"] == null
-            ? null
-            : json["aspect_ratio"] as String,
-      );
+    kind: json["kind"] == null ? null : json["kind"] as String,
+    width: json["width"] == null ? null : (json["width"] as num).toInt(),
+    height: json["height"] == null ? null : (json["height"] as num).toInt(),
+    durationMs: json["duration_ms"] == null
+        ? null
+        : (json["duration_ms"] as num).toInt(),
+    pageCount: json["page_count"] == null
+        ? null
+        : (json["page_count"] as num).toInt(),
+    frameCount: json["frame_count"] == null
+        ? null
+        : (json["frame_count"] as num).toInt(),
+    colorSpace: json["color_space"] == null
+        ? null
+        : json["color_space"] as String,
+    hasAlpha: json["has_alpha"] == null ? null : json["has_alpha"] as bool,
+    codec: json["codec"] == null ? null : json["codec"] as String,
+    aspectRatio: json["aspect_ratio"] == null
+        ? null
+        : json["aspect_ratio"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (kind != null) "kind": _encodeValue(kind),
-        if (width != null) "width": _encodeValue(width),
-        if (height != null) "height": _encodeValue(height),
-        if (durationMs != null) "duration_ms": _encodeValue(durationMs),
-        if (pageCount != null) "page_count": _encodeValue(pageCount),
-        if (frameCount != null) "frame_count": _encodeValue(frameCount),
-        if (colorSpace != null) "color_space": _encodeValue(colorSpace),
-        if (hasAlpha != null) "has_alpha": _encodeValue(hasAlpha),
-        if (codec != null) "codec": _encodeValue(codec),
-        if (aspectRatio != null) "aspect_ratio": _encodeValue(aspectRatio),
-      };
+    if (kind != null) "kind": _encodeValue(kind),
+    if (width != null) "width": _encodeValue(width),
+    if (height != null) "height": _encodeValue(height),
+    if (durationMs != null) "duration_ms": _encodeValue(durationMs),
+    if (pageCount != null) "page_count": _encodeValue(pageCount),
+    if (frameCount != null) "frame_count": _encodeValue(frameCount),
+    if (colorSpace != null) "color_space": _encodeValue(colorSpace),
+    if (hasAlpha != null) "has_alpha": _encodeValue(hasAlpha),
+    if (codec != null) "codec": _encodeValue(codec),
+    if (aspectRatio != null) "aspect_ratio": _encodeValue(aspectRatio),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5965,18 +5903,18 @@ final class FilePage implements _InttegroValue {
     required this.files,
   });
   factory FilePage.fromJson(Map<String, Object?> json) => FilePage(
-        number: (json["number"] as num).toInt(),
-        size: (json["size"] as num).toInt(),
-        files: (json["files"] as List)
-            .map((item) => File.fromJson((item as Map).cast<String, Object?>()))
-            .toList(),
-      );
+    number: (json["number"] as num).toInt(),
+    size: (json["size"] as num).toInt(),
+    files: (json["files"] as List)
+        .map((item) => File.fromJson((item as Map).cast<String, Object?>()))
+        .toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-        "files": _encodeValue(files),
-      };
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+    "files": _encodeValue(files),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -5987,18 +5925,18 @@ final class FileParty implements _InttegroValue {
   final String? email;
   const FileParty({this.type, this.id, this.name, this.email});
   factory FileParty.fromJson(Map<String, Object?> json) => FileParty(
-        type: json["type"] == null ? null : json["type"] as String,
-        id: json["id"] == null ? null : json["id"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-        email: json["email"] == null ? null : json["email"] as String,
-      );
+    type: json["type"] == null ? null : json["type"] as String,
+    id: json["id"] == null ? null : json["id"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+    email: json["email"] == null ? null : json["email"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (type != null) "type": _encodeValue(type),
-        if (id != null) "id": _encodeValue(id),
-        if (name != null) "name": _encodeValue(name),
-        if (email != null) "email": _encodeValue(email),
-      };
+    if (type != null) "type": _encodeValue(type),
+    if (id != null) "id": _encodeValue(id),
+    if (name != null) "name": _encodeValue(name),
+    if (email != null) "email": _encodeValue(email),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6009,18 +5947,18 @@ final class FilePartyInput implements _InttegroValue {
   final String? email;
   const FilePartyInput({this.type, this.id, this.name, this.email});
   factory FilePartyInput.fromJson(Map<String, Object?> json) => FilePartyInput(
-        type: json["type"] == null ? null : json["type"] as String,
-        id: json["id"] == null ? null : json["id"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-        email: json["email"] == null ? null : json["email"] as String,
-      );
+    type: json["type"] == null ? null : json["type"] as String,
+    id: json["id"] == null ? null : json["id"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+    email: json["email"] == null ? null : json["email"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (type != null) "type": _encodeValue(type),
-        if (id != null) "id": _encodeValue(id),
-        if (name != null) "name": _encodeValue(name),
-        if (email != null) "email": _encodeValue(email),
-      };
+    if (type != null) "type": _encodeValue(type),
+    if (id != null) "id": _encodeValue(id),
+    if (name != null) "name": _encodeValue(name),
+    if (email != null) "email": _encodeValue(email),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6039,8 +5977,9 @@ final class FileReferenceInput implements _InttegroValue {
   });
   factory FileReferenceInput.fromJson(Map<String, Object?> json) =>
       FileReferenceInput(
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
+        reference: json["reference"] == null
+            ? null
+            : json["reference"] as String,
         referenceKind: json["reference_kind"] == null
             ? null
             : json["reference_kind"] as String,
@@ -6050,13 +5989,12 @@ final class FileReferenceInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (reference != null) "reference": _encodeValue(reference),
-        if (referenceKind != null)
-          "reference_kind": _encodeValue(referenceKind),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        "file_id": _encodeValue(fileId),
-        "field": _encodeValue(field),
-      };
+    if (reference != null) "reference": _encodeValue(reference),
+    if (referenceKind != null) "reference_kind": _encodeValue(referenceKind),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    "file_id": _encodeValue(fileId),
+    "field": _encodeValue(field),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6074,21 +6012,21 @@ final class FileReferenceReconcileRequest implements _InttegroValue {
         references: json["references"] == null
             ? null
             : (json["references"] as List)
-                .map(
-                  (item) => FileReferenceInput.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => FileReferenceInput.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         resourceType: json["resource_type"] as String,
         resourceId: json["resource_id"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (references != null) "references": _encodeValue(references),
-        "resource_type": _encodeValue(resourceType),
-        "resource_id": _encodeValue(resourceId),
-      };
+    if (references != null) "references": _encodeValue(references),
+    "resource_type": _encodeValue(resourceType),
+    "resource_id": _encodeValue(resourceId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -6108,16 +6046,16 @@ final class FileResource implements _InttegroValue {
   final String? name;
   const FileResource({this.type, this.id, this.name});
   factory FileResource.fromJson(Map<String, Object?> json) => FileResource(
-        type: json["type"] == null ? null : json["type"] as String,
-        id: json["id"] == null ? null : json["id"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-      );
+    type: json["type"] == null ? null : json["type"] as String,
+    id: json["id"] == null ? null : json["id"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (type != null) "type": _encodeValue(type),
-        if (id != null) "id": _encodeValue(id),
-        if (name != null) "name": _encodeValue(name),
-      };
+    if (type != null) "type": _encodeValue(type),
+    if (id != null) "id": _encodeValue(id),
+    if (name != null) "name": _encodeValue(name),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6134,10 +6072,10 @@ final class FileResourceInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (type != null) "type": _encodeValue(type),
-        if (id != null) "id": _encodeValue(id),
-        if (name != null) "name": _encodeValue(name),
-      };
+    if (type != null) "type": _encodeValue(type),
+    if (id != null) "id": _encodeValue(id),
+    if (name != null) "name": _encodeValue(name),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -6147,20 +6085,19 @@ final class FileSource implements _InttegroValue {
   final String? uploadRequestId;
   const FileSource({this.type, this.service, this.uploadRequestId});
   factory FileSource.fromJson(Map<String, Object?> json) => FileSource(
-        type:
-            json["type"] == null ? null : FileSourceType.fromJson(json["type"]),
-        service: json["service"] == null ? null : json["service"] as String,
-        uploadRequestId: json["upload_request_id"] == null
-            ? null
-            : json["upload_request_id"] as String,
-      );
+    type: json["type"] == null ? null : FileSourceType.fromJson(json["type"]),
+    service: json["service"] == null ? null : json["service"] as String,
+    uploadRequestId: json["upload_request_id"] == null
+        ? null
+        : json["upload_request_id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (type != null) "type": _encodeValue(type),
-        if (service != null) "service": _encodeValue(service),
-        if (uploadRequestId != null)
-          "upload_request_id": _encodeValue(uploadRequestId),
-      };
+    if (type != null) "type": _encodeValue(type),
+    if (service != null) "service": _encodeValue(service),
+    if (uploadRequestId != null)
+      "upload_request_id": _encodeValue(uploadRequestId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -6193,14 +6130,14 @@ final class FileUploadReceipt implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "content_type": _encodeValue(contentType),
-        "created_at": _encodeValue(createdAt),
-        if (filename != null) "filename": _encodeValue(filename),
-        "id": _encodeValue(id),
-        if (name != null) "name": _encodeValue(name),
-        "size": _encodeValue(size),
-        "status": _encodeValue(status),
-      };
+    "content_type": _encodeValue(contentType),
+    "created_at": _encodeValue(createdAt),
+    if (filename != null) "filename": _encodeValue(filename),
+    "id": _encodeValue(id),
+    if (name != null) "name": _encodeValue(name),
+    "size": _encodeValue(size),
+    "status": _encodeValue(status),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6255,19 +6192,19 @@ final class FinancialAccount implements _InttegroValue {
     this.owner,
     this.wallet,
   });
-  factory FinancialAccount.fromJson(
-    Map<String, Object?> json,
-  ) =>
+  factory FinancialAccount.fromJson(Map<String, Object?> json) =>
       FinancialAccount(
-        archivedAt:
-            json["archived_at"] == null ? null : json["archived_at"] as String,
+        archivedAt: json["archived_at"] == null
+            ? null
+            : json["archived_at"] as String,
         createdAt: json["created_at"] as String,
         currency: json["currency"] as String,
         customData: json["custom_data"] == null
             ? null
             : CustomData.fromJson(json["custom_data"]),
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         id: json["id"] as String,
         institution: json["institution"] == null
             ? null
@@ -6285,8 +6222,9 @@ final class FinancialAccount implements _InttegroValue {
             : FinancialAccountPushConfiguration.fromJson(
                 (json["push_configuration"] as Map).cast<String, Object?>(),
               ),
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
+        reference: json["reference"] == null
+            ? null
+            : json["reference"] as String,
         supplied: json["supplied"] == null
             ? null
             : ResourceSupply.fromJson(
@@ -6320,29 +6258,28 @@ final class FinancialAccount implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
-        "created_at": _encodeValue(createdAt),
-        "currency": _encodeValue(currency),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (description != null) "description": _encodeValue(description),
-        "id": _encodeValue(id),
-        if (institution != null) "institution": _encodeValue(institution),
-        if (label != null) "label": _encodeValue(label),
-        if (pullConfiguration != null)
-          "pull_configuration": _encodeValue(pullConfiguration),
-        if (pushConfiguration != null)
-          "push_configuration": _encodeValue(pushConfiguration),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (supplied != null) "supplied": _encodeValue(supplied),
-        "type": _encodeValue(type),
-        if (verification != null) "verification": _encodeValue(verification),
-        if (bankAccount != null) "bank_account": _encodeValue(bankAccount),
-        if (disconnectedAt != null)
-          "disconnected_at": _encodeValue(disconnectedAt),
-        if (doshAccount != null) "dosh_account": _encodeValue(doshAccount),
-        if (owner != null) "owner": _encodeValue(owner),
-        if (wallet != null) "wallet": _encodeValue(wallet),
-      };
+    if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
+    "created_at": _encodeValue(createdAt),
+    "currency": _encodeValue(currency),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (description != null) "description": _encodeValue(description),
+    "id": _encodeValue(id),
+    if (institution != null) "institution": _encodeValue(institution),
+    if (label != null) "label": _encodeValue(label),
+    if (pullConfiguration != null)
+      "pull_configuration": _encodeValue(pullConfiguration),
+    if (pushConfiguration != null)
+      "push_configuration": _encodeValue(pushConfiguration),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (supplied != null) "supplied": _encodeValue(supplied),
+    "type": _encodeValue(type),
+    if (verification != null) "verification": _encodeValue(verification),
+    if (bankAccount != null) "bank_account": _encodeValue(bankAccount),
+    if (disconnectedAt != null) "disconnected_at": _encodeValue(disconnectedAt),
+    if (doshAccount != null) "dosh_account": _encodeValue(doshAccount),
+    if (owner != null) "owner": _encodeValue(owner),
+    if (wallet != null) "wallet": _encodeValue(wallet),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -6373,21 +6310,22 @@ final class FinancialAccountAddress implements _InttegroValue {
         line2: json["line_2"] == null ? null : json["line_2"] as String,
         name: json["name"] == null ? null : json["name"] as String,
         phone: json["phone"] == null ? null : json["phone"] as String,
-        postCode:
-            json["post_code"] == null ? null : json["post_code"] as String,
+        postCode: json["post_code"] == null
+            ? null
+            : json["post_code"] as String,
         region: json["region"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        "city": _encodeValue(city),
-        "country": _encodeValue(country),
-        "line_1": _encodeValue(line1),
-        if (line2 != null) "line_2": _encodeValue(line2),
-        if (name != null) "name": _encodeValue(name),
-        if (phone != null) "phone": _encodeValue(phone),
-        if (postCode != null) "post_code": _encodeValue(postCode),
-        "region": _encodeValue(region),
-      };
+    "city": _encodeValue(city),
+    "country": _encodeValue(country),
+    "line_1": _encodeValue(line1),
+    if (line2 != null) "line_2": _encodeValue(line2),
+    if (name != null) "name": _encodeValue(name),
+    if (phone != null) "phone": _encodeValue(phone),
+    if (postCode != null) "post_code": _encodeValue(postCode),
+    "region": _encodeValue(region),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -6406,10 +6344,10 @@ final class FinancialAccountBank implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        if (ghanaBankAccount != null)
-          "ghana_bank_account": _encodeValue(ghanaBankAccount),
-      };
+    "type": _encodeValue(type),
+    if (ghanaBankAccount != null)
+      "ghana_bank_account": _encodeValue(ghanaBankAccount),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6441,8 +6379,9 @@ final class FinancialAccountBankRequest implements _InttegroValue {
         customData: json["custom_data"] == null
             ? null
             : CustomDataInput.fromJson(json["custom_data"]),
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         owner: json["owner"] == null
             ? null
             : FinancialAccountOwnerInput.fromJson(
@@ -6468,19 +6407,19 @@ final class FinancialAccountBankRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (description != null) "description": _encodeValue(description),
-        if (owner != null) "owner": _encodeValue(owner),
-        if (pullConfiguration != null)
-          "pull_configuration": _encodeValue(pullConfiguration),
-        if (pushConfiguration != null)
-          "push_configuration": _encodeValue(pushConfiguration),
-        "currency": _encodeValue(currency),
-        "label": _encodeValue(label),
-        "reference": _encodeValue(reference),
-        "type": _encodeValue(type),
-        "bank_account": _encodeValue(bankAccount),
-      };
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (description != null) "description": _encodeValue(description),
+    if (owner != null) "owner": _encodeValue(owner),
+    if (pullConfiguration != null)
+      "pull_configuration": _encodeValue(pullConfiguration),
+    if (pushConfiguration != null)
+      "push_configuration": _encodeValue(pushConfiguration),
+    "currency": _encodeValue(currency),
+    "label": _encodeValue(label),
+    "reference": _encodeValue(reference),
+    "type": _encodeValue(type),
+    "bank_account": _encodeValue(bankAccount),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6493,19 +6432,18 @@ final class FinancialAccountBankRequestBankAccount implements _InttegroValue {
   });
   factory FinancialAccountBankRequestBankAccount.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountBankRequestBankAccount(
-        type: BankAccountType.fromJson(json["type"]),
-        ghanaBankAccount:
-            FinancialAccountBankRequestBankAccountGhanaBankAccount.fromJson(
+  ) => FinancialAccountBankRequestBankAccount(
+    type: BankAccountType.fromJson(json["type"]),
+    ghanaBankAccount:
+        FinancialAccountBankRequestBankAccountGhanaBankAccount.fromJson(
           (json["ghana_bank_account"] as Map).cast<String, Object?>(),
         ),
-      );
+  );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        "ghana_bank_account": _encodeValue(ghanaBankAccount),
-      };
+    "type": _encodeValue(type),
+    "ghana_bank_account": _encodeValue(ghanaBankAccount),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6527,31 +6465,27 @@ final class FinancialAccountBankRequestBankAccountGhanaBankAccount
   });
   factory FinancialAccountBankRequestBankAccountGhanaBankAccount.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountBankRequestBankAccountGhanaBankAccount(
-        bankName:
-            json["bank_name"] == null ? null : json["bank_name"] as String,
-        branch: json["branch"] == null ? null : json["branch"] as String,
-        sortCode:
-            json["sort_code"] == null ? null : json["sort_code"] as String,
-        swiftCode:
-            json["swift_code"] == null ? null : json["swift_code"] as String,
-        holder: json["holder"] == null
-            ? null
-            : FinancialAccountOwnerInput.fromJson(
-                (json["holder"] as Map).cast<String, Object?>(),
-              ),
-        number: json["number"] as String,
-      );
+  ) => FinancialAccountBankRequestBankAccountGhanaBankAccount(
+    bankName: json["bank_name"] == null ? null : json["bank_name"] as String,
+    branch: json["branch"] == null ? null : json["branch"] as String,
+    sortCode: json["sort_code"] == null ? null : json["sort_code"] as String,
+    swiftCode: json["swift_code"] == null ? null : json["swift_code"] as String,
+    holder: json["holder"] == null
+        ? null
+        : FinancialAccountOwnerInput.fromJson(
+            (json["holder"] as Map).cast<String, Object?>(),
+          ),
+    number: json["number"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (bankName != null) "bank_name": _encodeValue(bankName),
-        if (branch != null) "branch": _encodeValue(branch),
-        if (sortCode != null) "sort_code": _encodeValue(sortCode),
-        if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
-        if (holder != null) "holder": _encodeValue(holder),
-        "number": _encodeValue(number),
-      };
+    if (bankName != null) "bank_name": _encodeValue(bankName),
+    if (branch != null) "branch": _encodeValue(branch),
+    if (sortCode != null) "sort_code": _encodeValue(sortCode),
+    if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
+    if (holder != null) "holder": _encodeValue(holder),
+    "number": _encodeValue(number),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6561,14 +6495,13 @@ final class FinancialAccountBankRequestPullConfiguration
   const FinancialAccountBankRequestPullConfiguration({this.enabled});
   factory FinancialAccountBankRequestPullConfiguration.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountBankRequestPullConfiguration(
-        enabled: json["enabled"] == null ? null : json["enabled"] as bool,
-      );
+  ) => FinancialAccountBankRequestPullConfiguration(
+    enabled: json["enabled"] == null ? null : json["enabled"] as bool,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (enabled != null) "enabled": _encodeValue(enabled),
-      };
+    if (enabled != null) "enabled": _encodeValue(enabled),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6578,14 +6511,13 @@ final class FinancialAccountBankRequestPushConfiguration
   const FinancialAccountBankRequestPushConfiguration({this.enabled});
   factory FinancialAccountBankRequestPushConfiguration.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountBankRequestPushConfiguration(
-        enabled: json["enabled"] == null ? null : json["enabled"] as bool,
-      );
+  ) => FinancialAccountBankRequestPushConfiguration(
+    enabled: json["enabled"] == null ? null : json["enabled"] as bool,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (enabled != null) "enabled": _encodeValue(enabled),
-      };
+    if (enabled != null) "enabled": _encodeValue(enabled),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6605,10 +6537,10 @@ final class FinancialAccountDisableRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (unsetAsPayoutDestination != null)
-          "unset_as_payout_destination": _encodeValue(unsetAsPayoutDestination),
-        "account_id": _encodeValue(accountId),
-      };
+    if (unsetAsPayoutDestination != null)
+      "unset_as_payout_destination": _encodeValue(unsetAsPayoutDestination),
+    "account_id": _encodeValue(accountId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6640,8 +6572,9 @@ final class FinancialAccountDoshRequest implements _InttegroValue {
         customData: json["custom_data"] == null
             ? null
             : CustomDataInput.fromJson(json["custom_data"]),
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         pullConfiguration: json["pull_configuration"] == null
             ? null
             : FinancialAccountDoshRequestPullConfiguration.fromJson(
@@ -6663,19 +6596,19 @@ final class FinancialAccountDoshRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (description != null) "description": _encodeValue(description),
-        if (pullConfiguration != null)
-          "pull_configuration": _encodeValue(pullConfiguration),
-        if (pushConfiguration != null)
-          "push_configuration": _encodeValue(pushConfiguration),
-        "currency": _encodeValue(currency),
-        "label": _encodeValue(label),
-        "owner": _encodeValue(owner),
-        "reference": _encodeValue(reference),
-        "type": _encodeValue(type),
-        "dosh_account": _encodeValue(doshAccount),
-      };
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (description != null) "description": _encodeValue(description),
+    if (pullConfiguration != null)
+      "pull_configuration": _encodeValue(pullConfiguration),
+    if (pushConfiguration != null)
+      "push_configuration": _encodeValue(pushConfiguration),
+    "currency": _encodeValue(currency),
+    "label": _encodeValue(label),
+    "owner": _encodeValue(owner),
+    "reference": _encodeValue(reference),
+    "type": _encodeValue(type),
+    "dosh_account": _encodeValue(doshAccount),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6685,14 +6618,13 @@ final class FinancialAccountDoshRequestPullConfiguration
   const FinancialAccountDoshRequestPullConfiguration({this.enabled});
   factory FinancialAccountDoshRequestPullConfiguration.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountDoshRequestPullConfiguration(
-        enabled: json["enabled"] == null ? null : json["enabled"] as bool,
-      );
+  ) => FinancialAccountDoshRequestPullConfiguration(
+    enabled: json["enabled"] == null ? null : json["enabled"] as bool,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (enabled != null) "enabled": _encodeValue(enabled),
-      };
+    if (enabled != null) "enabled": _encodeValue(enabled),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6702,14 +6634,13 @@ final class FinancialAccountDoshRequestPushConfiguration
   const FinancialAccountDoshRequestPushConfiguration({this.enabled});
   factory FinancialAccountDoshRequestPushConfiguration.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountDoshRequestPushConfiguration(
-        enabled: json["enabled"] == null ? null : json["enabled"] as bool,
-      );
+  ) => FinancialAccountDoshRequestPushConfiguration(
+    enabled: json["enabled"] == null ? null : json["enabled"] as bool,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (enabled != null) "enabled": _encodeValue(enabled),
-      };
+    if (enabled != null) "enabled": _encodeValue(enabled),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6724,20 +6655,17 @@ final class FinancialAccountEnablePullRequest implements _InttegroValue {
   });
   factory FinancialAccountEnablePullRequest.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountEnablePullRequest(
-        ipAddress:
-            json["ip_address"] == null ? null : json["ip_address"] as String,
-        userAgent:
-            json["user_agent"] == null ? null : json["user_agent"] as String,
-        accountId: json["account_id"] as String,
-      );
+  ) => FinancialAccountEnablePullRequest(
+    ipAddress: json["ip_address"] == null ? null : json["ip_address"] as String,
+    userAgent: json["user_agent"] == null ? null : json["user_agent"] as String,
+    accountId: json["account_id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (ipAddress != null) "ip_address": _encodeValue(ipAddress),
-        if (userAgent != null) "user_agent": _encodeValue(userAgent),
-        "account_id": _encodeValue(accountId),
-      };
+    if (ipAddress != null) "ip_address": _encodeValue(ipAddress),
+    if (userAgent != null) "user_agent": _encodeValue(userAgent),
+    "account_id": _encodeValue(accountId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6764,9 +6692,9 @@ final class FinancialAccountOwner implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "address": _encodeValue(address),
-        "name": _encodeValue(name),
-      };
+    "address": _encodeValue(address),
+    "name": _encodeValue(name),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6783,9 +6711,9 @@ final class FinancialAccountOwnerInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "name": _encodeValue(name),
-        "address": _encodeValue(address),
-      };
+    "name": _encodeValue(name),
+    "address": _encodeValue(address),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6810,29 +6738,27 @@ final class FinancialAccountOwnerInputAddress implements _InttegroValue {
   });
   factory FinancialAccountOwnerInputAddress.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountOwnerInputAddress(
-        city: json["city"] == null ? null : json["city"] as String,
-        line1: json["line_1"] == null ? null : json["line_1"] as String,
-        line2: json["line_2"] == null ? null : json["line_2"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-        phone: json["phone"] == null ? null : json["phone"] as String,
-        postCode:
-            json["post_code"] == null ? null : json["post_code"] as String,
-        region: json["region"] == null ? null : json["region"] as String,
-        country: json["country"] as String,
-      );
+  ) => FinancialAccountOwnerInputAddress(
+    city: json["city"] == null ? null : json["city"] as String,
+    line1: json["line_1"] == null ? null : json["line_1"] as String,
+    line2: json["line_2"] == null ? null : json["line_2"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+    phone: json["phone"] == null ? null : json["phone"] as String,
+    postCode: json["post_code"] == null ? null : json["post_code"] as String,
+    region: json["region"] == null ? null : json["region"] as String,
+    country: json["country"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (city != null) "city": _encodeValue(city),
-        if (line1 != null) "line_1": _encodeValue(line1),
-        if (line2 != null) "line_2": _encodeValue(line2),
-        if (name != null) "name": _encodeValue(name),
-        if (phone != null) "phone": _encodeValue(phone),
-        if (postCode != null) "post_code": _encodeValue(postCode),
-        if (region != null) "region": _encodeValue(region),
-        "country": _encodeValue(country),
-      };
+    if (city != null) "city": _encodeValue(city),
+    if (line1 != null) "line_1": _encodeValue(line1),
+    if (line2 != null) "line_2": _encodeValue(line2),
+    if (name != null) "name": _encodeValue(name),
+    if (phone != null) "phone": _encodeValue(phone),
+    if (postCode != null) "post_code": _encodeValue(postCode),
+    if (region != null) "region": _encodeValue(region),
+    "country": _encodeValue(country),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6842,20 +6768,19 @@ final class FinancialAccountOwnerUpdateInput implements _InttegroValue {
   const FinancialAccountOwnerUpdateInput({this.name, this.address});
   factory FinancialAccountOwnerUpdateInput.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountOwnerUpdateInput(
-        name: json["name"] == null ? null : json["name"] as String,
-        address: json["address"] == null
-            ? null
-            : FinancialAccountOwnerUpdateInputAddress.fromJson(
-                (json["address"] as Map).cast<String, Object?>(),
-              ),
-      );
+  ) => FinancialAccountOwnerUpdateInput(
+    name: json["name"] == null ? null : json["name"] as String,
+    address: json["address"] == null
+        ? null
+        : FinancialAccountOwnerUpdateInputAddress.fromJson(
+            (json["address"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (name != null) "name": _encodeValue(name),
-        if (address != null) "address": _encodeValue(address),
-      };
+    if (name != null) "name": _encodeValue(name),
+    if (address != null) "address": _encodeValue(address),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6880,29 +6805,27 @@ final class FinancialAccountOwnerUpdateInputAddress implements _InttegroValue {
   });
   factory FinancialAccountOwnerUpdateInputAddress.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountOwnerUpdateInputAddress(
-        city: json["city"] == null ? null : json["city"] as String,
-        country: json["country"] == null ? null : json["country"] as String,
-        line1: json["line_1"] == null ? null : json["line_1"] as String,
-        line2: json["line_2"] == null ? null : json["line_2"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-        phone: json["phone"] == null ? null : json["phone"] as String,
-        postCode:
-            json["post_code"] == null ? null : json["post_code"] as String,
-        region: json["region"] == null ? null : json["region"] as String,
-      );
+  ) => FinancialAccountOwnerUpdateInputAddress(
+    city: json["city"] == null ? null : json["city"] as String,
+    country: json["country"] == null ? null : json["country"] as String,
+    line1: json["line_1"] == null ? null : json["line_1"] as String,
+    line2: json["line_2"] == null ? null : json["line_2"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+    phone: json["phone"] == null ? null : json["phone"] as String,
+    postCode: json["post_code"] == null ? null : json["post_code"] as String,
+    region: json["region"] == null ? null : json["region"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (city != null) "city": _encodeValue(city),
-        if (country != null) "country": _encodeValue(country),
-        if (line1 != null) "line_1": _encodeValue(line1),
-        if (line2 != null) "line_2": _encodeValue(line2),
-        if (name != null) "name": _encodeValue(name),
-        if (phone != null) "phone": _encodeValue(phone),
-        if (postCode != null) "post_code": _encodeValue(postCode),
-        if (region != null) "region": _encodeValue(region),
-      };
+    if (city != null) "city": _encodeValue(city),
+    if (country != null) "country": _encodeValue(country),
+    if (line1 != null) "line_1": _encodeValue(line1),
+    if (line2 != null) "line_2": _encodeValue(line2),
+    if (name != null) "name": _encodeValue(name),
+    if (phone != null) "phone": _encodeValue(phone),
+    if (postCode != null) "post_code": _encodeValue(postCode),
+    if (region != null) "region": _encodeValue(region),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -6929,10 +6852,10 @@ final class FinancialAccountPage implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "accounts": _encodeValue(accounts),
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-      };
+    "accounts": _encodeValue(accounts),
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -6949,9 +6872,9 @@ final class FinancialAccountPageRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-        "page_number": _encodeValue(pageNumber),
-      };
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+    "page_number": _encodeValue(pageNumber),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -6964,18 +6887,17 @@ final class FinancialAccountPullConfiguration implements _InttegroValue {
   });
   factory FinancialAccountPullConfiguration.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountPullConfiguration(
-        enabledAt: json["enabled_at"] as String,
-        mandate: FinancialAccountPullConfigurationMandate.fromJson(
-          (json["mandate"] as Map).cast<String, Object?>(),
-        ),
-      );
+  ) => FinancialAccountPullConfiguration(
+    enabledAt: json["enabled_at"] as String,
+    mandate: FinancialAccountPullConfigurationMandate.fromJson(
+      (json["mandate"] as Map).cast<String, Object?>(),
+    ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "enabled_at": _encodeValue(enabledAt),
-        "mandate": _encodeValue(mandate),
-      };
+    "enabled_at": _encodeValue(enabledAt),
+    "mandate": _encodeValue(mandate),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -6992,20 +6914,19 @@ final class FinancialAccountPullConfigurationMandate implements _InttegroValue {
   });
   factory FinancialAccountPullConfigurationMandate.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountPullConfigurationMandate(
-        createdAt: json["created_at"] as String,
-        id: json["id"] as String,
-        ipAddress: json["ip_address"] as String,
-        userAgent: json["user_agent"] as String,
-      );
+  ) => FinancialAccountPullConfigurationMandate(
+    createdAt: json["created_at"] as String,
+    id: json["id"] as String,
+    ipAddress: json["ip_address"] as String,
+    userAgent: json["user_agent"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "created_at": _encodeValue(createdAt),
-        "id": _encodeValue(id),
-        "ip_address": _encodeValue(ipAddress),
-        "user_agent": _encodeValue(userAgent),
-      };
+    "created_at": _encodeValue(createdAt),
+    "id": _encodeValue(id),
+    "ip_address": _encodeValue(ipAddress),
+    "user_agent": _encodeValue(userAgent),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -7014,10 +6935,9 @@ final class FinancialAccountPushConfiguration implements _InttegroValue {
   const FinancialAccountPushConfiguration({required this.enabledAt});
   factory FinancialAccountPushConfiguration.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountPushConfiguration(
-        enabledAt: json["enabled_at"] as String,
-      );
+  ) => FinancialAccountPushConfiguration(
+    enabledAt: json["enabled_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {"enabled_at": _encodeValue(enabledAt)};
 }
@@ -7043,27 +6963,29 @@ final class FinancialAccountUpdateRequest implements _InttegroValue {
         customData: json["custom_data"] == null
             ? null
             : CustomDataPatch.fromJson(json["custom_data"]),
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         label: json["label"] == null ? null : json["label"] as String,
         owner: json["owner"] == null
             ? null
             : FinancialAccountOwnerUpdateInput.fromJson(
                 (json["owner"] as Map).cast<String, Object?>(),
               ),
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
+        reference: json["reference"] == null
+            ? null
+            : json["reference"] as String,
         accountId: json["account_id"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (description != null) "description": _encodeValue(description),
-        if (label != null) "label": _encodeValue(label),
-        if (owner != null) "owner": _encodeValue(owner),
-        if (reference != null) "reference": _encodeValue(reference),
-        "account_id": _encodeValue(accountId),
-      };
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (description != null) "description": _encodeValue(description),
+    if (label != null) "label": _encodeValue(label),
+    if (owner != null) "owner": _encodeValue(owner),
+    if (reference != null) "reference": _encodeValue(reference),
+    "account_id": _encodeValue(accountId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -7088,10 +7010,10 @@ final class FinancialAccountWallet implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "type": _encodeValue(type),
-        if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
-      };
+    "id": _encodeValue(id),
+    "type": _encodeValue(type),
+    if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -7104,16 +7026,15 @@ final class FinancialAccountWalletMobileMoney implements _InttegroValue {
   });
   factory FinancialAccountWalletMobileMoney.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountWalletMobileMoney(
-        accountNumber: json["account_number"] as String,
-        network: MobileMoneyNetwork.fromJson(json["network"]),
-      );
+  ) => FinancialAccountWalletMobileMoney(
+    accountNumber: json["account_number"] as String,
+    network: MobileMoneyNetwork.fromJson(json["network"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "account_number": _encodeValue(accountNumber),
-        "network": _encodeValue(network),
-      };
+    "account_number": _encodeValue(accountNumber),
+    "network": _encodeValue(network),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7145,8 +7066,9 @@ final class FinancialAccountWalletRequest implements _InttegroValue {
         customData: json["custom_data"] == null
             ? null
             : CustomDataInput.fromJson(json["custom_data"]),
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         pullConfiguration: json["pull_configuration"] == null
             ? null
             : FinancialAccountWalletRequestPullConfiguration.fromJson(
@@ -7170,19 +7092,19 @@ final class FinancialAccountWalletRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (description != null) "description": _encodeValue(description),
-        if (pullConfiguration != null)
-          "pull_configuration": _encodeValue(pullConfiguration),
-        if (pushConfiguration != null)
-          "push_configuration": _encodeValue(pushConfiguration),
-        "currency": _encodeValue(currency),
-        "label": _encodeValue(label),
-        "owner": _encodeValue(owner),
-        "reference": _encodeValue(reference),
-        "type": _encodeValue(type),
-        "wallet": _encodeValue(wallet),
-      };
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (description != null) "description": _encodeValue(description),
+    if (pullConfiguration != null)
+      "pull_configuration": _encodeValue(pullConfiguration),
+    if (pushConfiguration != null)
+      "push_configuration": _encodeValue(pushConfiguration),
+    "currency": _encodeValue(currency),
+    "label": _encodeValue(label),
+    "owner": _encodeValue(owner),
+    "reference": _encodeValue(reference),
+    "type": _encodeValue(type),
+    "wallet": _encodeValue(wallet),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7192,14 +7114,13 @@ final class FinancialAccountWalletRequestPullConfiguration
   const FinancialAccountWalletRequestPullConfiguration({this.enabled});
   factory FinancialAccountWalletRequestPullConfiguration.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountWalletRequestPullConfiguration(
-        enabled: json["enabled"] == null ? null : json["enabled"] as bool,
-      );
+  ) => FinancialAccountWalletRequestPullConfiguration(
+    enabled: json["enabled"] == null ? null : json["enabled"] as bool,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (enabled != null) "enabled": _encodeValue(enabled),
-      };
+    if (enabled != null) "enabled": _encodeValue(enabled),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7209,14 +7130,13 @@ final class FinancialAccountWalletRequestPushConfiguration
   const FinancialAccountWalletRequestPushConfiguration({this.enabled});
   factory FinancialAccountWalletRequestPushConfiguration.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountWalletRequestPushConfiguration(
-        enabled: json["enabled"] == null ? null : json["enabled"] as bool,
-      );
+  ) => FinancialAccountWalletRequestPushConfiguration(
+    enabled: json["enabled"] == null ? null : json["enabled"] as bool,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (enabled != null) "enabled": _encodeValue(enabled),
-      };
+    if (enabled != null) "enabled": _encodeValue(enabled),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7229,18 +7149,17 @@ final class FinancialAccountWalletRequestWallet implements _InttegroValue {
   });
   factory FinancialAccountWalletRequestWallet.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountWalletRequestWallet(
-        type: WalletType.fromJson(json["type"]),
-        mobileMoney: FinancialAccountWalletRequestWalletMobileMoney.fromJson(
-          (json["mobile_money"] as Map).cast<String, Object?>(),
-        ),
-      );
+  ) => FinancialAccountWalletRequestWallet(
+    type: WalletType.fromJson(json["type"]),
+    mobileMoney: FinancialAccountWalletRequestWalletMobileMoney.fromJson(
+      (json["mobile_money"] as Map).cast<String, Object?>(),
+    ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        "mobile_money": _encodeValue(mobileMoney),
-      };
+    "type": _encodeValue(type),
+    "mobile_money": _encodeValue(mobileMoney),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7254,16 +7173,15 @@ final class FinancialAccountWalletRequestWalletMobileMoney
   });
   factory FinancialAccountWalletRequestWalletMobileMoney.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialAccountWalletRequestWalletMobileMoney(
-        accountNumber: json["account_number"] as String,
-        network: MobileMoneyNetwork.fromJson(json["network"]),
-      );
+  ) => FinancialAccountWalletRequestWalletMobileMoney(
+    accountNumber: json["account_number"] as String,
+    network: MobileMoneyNetwork.fromJson(json["network"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "account_number": _encodeValue(accountNumber),
-        "network": _encodeValue(network),
-      };
+    "account_number": _encodeValue(accountNumber),
+    "network": _encodeValue(network),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -7301,14 +7219,14 @@ final class FinancialInstitution implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (bank != null) "bank": _encodeValue(bank),
-        "country": _encodeValue(country),
-        "id": _encodeValue(id),
-        if (mobileMoneyProvider != null)
-          "mobile_money_provider": _encodeValue(mobileMoneyProvider),
-        "name": _encodeValue(name),
-        "type": _encodeValue(type),
-      };
+    if (bank != null) "bank": _encodeValue(bank),
+    "country": _encodeValue(country),
+    "id": _encodeValue(id),
+    if (mobileMoneyProvider != null)
+      "mobile_money_provider": _encodeValue(mobileMoneyProvider),
+    "name": _encodeValue(name),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -7337,18 +7255,19 @@ final class FinancialInstitutionBank implements _InttegroValue {
         sortCodePrefix: json["sort_code_prefix"] == null
             ? null
             : json["sort_code_prefix"] as String,
-        swiftCode:
-            json["swift_code"] == null ? null : json["swift_code"] as String,
+        swiftCode: json["swift_code"] == null
+            ? null
+            : json["swift_code"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        "bank_account_type": _encodeValue(bankAccountType),
-        if (branch != null) "branch": _encodeValue(branch),
-        "code_scheme": _encodeValue(codeScheme),
-        if (sortCodePrefix != null)
-          "sort_code_prefix": _encodeValue(sortCodePrefix),
-        if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
-      };
+    "bank_account_type": _encodeValue(bankAccountType),
+    if (branch != null) "branch": _encodeValue(branch),
+    "code_scheme": _encodeValue(codeScheme),
+    if (sortCodePrefix != null)
+      "sort_code_prefix": _encodeValue(sortCodePrefix),
+    if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -7369,10 +7288,10 @@ final class FinancialInstitutionBankBranch implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "name": _encodeValue(name),
-        "sort_code": _encodeValue(sortCode),
-      };
+    "id": _encodeValue(id),
+    "name": _encodeValue(name),
+    "sort_code": _encodeValue(sortCode),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -7381,10 +7300,9 @@ final class FinancialInstitutionMobileMoneyProvider implements _InttegroValue {
   const FinancialInstitutionMobileMoneyProvider({required this.provider});
   factory FinancialInstitutionMobileMoneyProvider.fromJson(
     Map<String, Object?> json,
-  ) =>
-      FinancialInstitutionMobileMoneyProvider(
-        provider: json["provider"] as String,
-      );
+  ) => FinancialInstitutionMobileMoneyProvider(
+    provider: json["provider"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {"provider": _encodeValue(provider)};
 }
@@ -7399,8 +7317,8 @@ final class GenerateSecretKeyRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (label != null) "label": _encodeValue(label),
-      };
+    if (label != null) "label": _encodeValue(label),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -7427,12 +7345,12 @@ final class GeneratedSecretKey implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        if (label != null) "label": _encodeValue(label),
-        "token_type": _encodeValue(tokenType),
-        "issued_at": _encodeValue(issuedAt),
-        "token": _encodeValue(token),
-      };
+    "id": _encodeValue(id),
+    if (label != null) "label": _encodeValue(label),
+    "token_type": _encodeValue(tokenType),
+    "issued_at": _encodeValue(issuedAt),
+    "token": _encodeValue(token),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7471,28 +7389,25 @@ final class GhanaBankAccount implements _InttegroValue {
   });
   factory GhanaBankAccount.fromJson(
     Map<String, Object?> json,
-  ) =>
-      GhanaBankAccount(
-        branch: json["branch"] == null ? null : json["branch"] as String,
-        holder: FinancialAccountOwner.fromJson(
-          (json["holder"] as Map).cast<String, Object?>(),
-        ),
-        name: json["name"] == null ? null : json["name"] as String,
-        number: json["number"] as String,
-        sortCode:
-            json["sort_code"] == null ? null : json["sort_code"] as String,
-        swiftCode:
-            json["swift_code"] == null ? null : json["swift_code"] as String,
-      );
+  ) => GhanaBankAccount(
+    branch: json["branch"] == null ? null : json["branch"] as String,
+    holder: FinancialAccountOwner.fromJson(
+      (json["holder"] as Map).cast<String, Object?>(),
+    ),
+    name: json["name"] == null ? null : json["name"] as String,
+    number: json["number"] as String,
+    sortCode: json["sort_code"] == null ? null : json["sort_code"] as String,
+    swiftCode: json["swift_code"] == null ? null : json["swift_code"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (branch != null) "branch": _encodeValue(branch),
-        "holder": _encodeValue(holder),
-        if (name != null) "name": _encodeValue(name),
-        "number": _encodeValue(number),
-        if (sortCode != null) "sort_code": _encodeValue(sortCode),
-        if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
-      };
+    if (branch != null) "branch": _encodeValue(branch),
+    "holder": _encodeValue(holder),
+    if (name != null) "name": _encodeValue(name),
+    "number": _encodeValue(number),
+    if (sortCode != null) "sort_code": _encodeValue(sortCode),
+    if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7544,23 +7459,20 @@ final class InitiateOTPRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (asyncDelivery != null)
-          "async_delivery": _encodeValue(asyncDelivery),
-        if (messageTemplate != null)
-          "message_template": _encodeValue(messageTemplate),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        if (sender != null) "sender": _encodeValue(sender),
-        if (tokenAlphabet != null)
-          "token_alphabet": _encodeValue(tokenAlphabet),
-        if (tokenAlphabetType != null)
-          "token_alphabet_type": _encodeValue(tokenAlphabetType),
-        if (validityDurationInMinutes != null)
-          "validity_duration_in_minutes":
-              _encodeValue(validityDurationInMinutes),
-        "recipient": _encodeValue(recipient),
-        "service_name": _encodeValue(serviceName),
-        "token_size": _encodeValue(tokenSize),
-      };
+    if (asyncDelivery != null) "async_delivery": _encodeValue(asyncDelivery),
+    if (messageTemplate != null)
+      "message_template": _encodeValue(messageTemplate),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    if (sender != null) "sender": _encodeValue(sender),
+    if (tokenAlphabet != null) "token_alphabet": _encodeValue(tokenAlphabet),
+    if (tokenAlphabetType != null)
+      "token_alphabet_type": _encodeValue(tokenAlphabetType),
+    if (validityDurationInMinutes != null)
+      "validity_duration_in_minutes": _encodeValue(validityDurationInMinutes),
+    "recipient": _encodeValue(recipient),
+    "service_name": _encodeValue(serviceName),
+    "token_size": _encodeValue(tokenSize),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7585,32 +7497,29 @@ final class InlineProductDetailsInput implements _InttegroValue {
   });
   factory InlineProductDetailsInput.fromJson(
     Map<String, Object?> json,
-  ) =>
-      InlineProductDetailsInput(
-        about: json["about"] == null ? null : json["about"] as String,
-        customData: json["custom_data"] == null
-            ? null
-            : CustomDataInput.fromJson(json["custom_data"]),
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
-        name: json["name"] as String,
-        price: PriceParams.fromJson(
-            (json["price"] as Map).cast<String, Object?>()),
-        quantity: (json["quantity"] as num).toInt(),
-        type: ProductType.fromJson(json["type"]),
-      );
+  ) => InlineProductDetailsInput(
+    about: json["about"] == null ? null : json["about"] as String,
+    customData: json["custom_data"] == null
+        ? null
+        : CustomDataInput.fromJson(json["custom_data"]),
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
+    name: json["name"] as String,
+    price: PriceParams.fromJson((json["price"] as Map).cast<String, Object?>()),
+    quantity: (json["quantity"] as num).toInt(),
+    type: ProductType.fromJson(json["type"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (about != null) "about": _encodeValue(about),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        "name": _encodeValue(name),
-        "price": _encodeValue(price),
-        "quantity": _encodeValue(quantity),
-        "type": _encodeValue(type),
-      };
+    if (about != null) "about": _encodeValue(about),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    "name": _encodeValue(name),
+    "price": _encodeValue(price),
+    "quantity": _encodeValue(quantity),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -7631,11 +7540,11 @@ final class InvoiceSettings implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (number != null) "number": _encodeValue(number),
-        if (memo != null) "memo": _encodeValue(memo),
-        if (footer != null) "footer": _encodeValue(footer),
-        if (customData != null) "custom_data": _encodeValue(customData),
-      };
+    if (number != null) "number": _encodeValue(number),
+    if (memo != null) "memo": _encodeValue(memo),
+    if (footer != null) "footer": _encodeValue(footer),
+    if (customData != null) "custom_data": _encodeValue(customData),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7661,11 +7570,11 @@ final class InvoiceSettingsInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (number != null) "number": _encodeValue(number),
-        if (memo != null) "memo": _encodeValue(memo),
-        if (footer != null) "footer": _encodeValue(footer),
-        if (customData != null) "custom_data": _encodeValue(customData),
-      };
+    if (number != null) "number": _encodeValue(number),
+    if (memo != null) "memo": _encodeValue(memo),
+    if (footer != null) "footer": _encodeValue(footer),
+    if (customData != null) "custom_data": _encodeValue(customData),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7687,8 +7596,8 @@ final class LookupBalanceTransactionRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "transaction_id": _encodeValue(transactionId),
-      };
+    "transaction_id": _encodeValue(transactionId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7758,8 +7667,8 @@ final class LookupOTPRequest implements _InttegroValue {
       LookupOTPRequest(transactionId: json["transaction_id"] as String);
   @override
   Map<String, Object?> toJson() => {
-        "transaction_id": _encodeValue(transactionId),
-      };
+    "transaction_id": _encodeValue(transactionId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7782,8 +7691,8 @@ final class LookupPaymentMethodRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "payment_method_id": _encodeValue(paymentMethodId),
-      };
+    "payment_method_id": _encodeValue(paymentMethodId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -7926,12 +7835,12 @@ final class MessageTemplate implements _InttegroValue {
         variables: json["variables"] == null
             ? null
             : (json["variables"] as List)
-                .map(
-                  (item) => MessageTemplateVariable.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => MessageTemplateVariable.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         sms: json["sms"] == null
             ? null
             : MessageTemplateSMSContent.fromJson(
@@ -7945,39 +7854,40 @@ final class MessageTemplate implements _InttegroValue {
         attachments: json["attachments"] == null
             ? null
             : (json["attachments"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         createdAt: json["created_at"] as String,
         updatedAt: json["updated_at"] as String,
         publishedAt: json["published_at"] == null
             ? null
             : json["published_at"] as String,
-        archivedAt:
-            json["archived_at"] == null ? null : json["archived_at"] as String,
+        archivedAt: json["archived_at"] == null
+            ? null
+            : json["archived_at"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "name": _encodeValue(name),
-        if (about != null) "about": _encodeValue(about),
-        "channel": _encodeValue(channel),
-        "purpose": _encodeValue(purpose),
-        "locale": _encodeValue(locale),
-        "status": _encodeValue(status),
-        "version": _encodeValue(version),
-        if (publishedVersion != null)
-          "published_version": _encodeValue(publishedVersion),
-        "draft_version": _encodeValue(draftVersion),
-        "has_unpublished_changes": _encodeValue(hasUnpublishedChanges),
-        if (variables != null) "variables": _encodeValue(variables),
-        if (sms != null) "sms": _encodeValue(sms),
-        if (email != null) "email": _encodeValue(email),
-        if (attachments != null) "attachments": _encodeValue(attachments),
-        "created_at": _encodeValue(createdAt),
-        "updated_at": _encodeValue(updatedAt),
-        if (publishedAt != null) "published_at": _encodeValue(publishedAt),
-        if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
-      };
+    "id": _encodeValue(id),
+    "name": _encodeValue(name),
+    if (about != null) "about": _encodeValue(about),
+    "channel": _encodeValue(channel),
+    "purpose": _encodeValue(purpose),
+    "locale": _encodeValue(locale),
+    "status": _encodeValue(status),
+    "version": _encodeValue(version),
+    if (publishedVersion != null)
+      "published_version": _encodeValue(publishedVersion),
+    "draft_version": _encodeValue(draftVersion),
+    "has_unpublished_changes": _encodeValue(hasUnpublishedChanges),
+    if (variables != null) "variables": _encodeValue(variables),
+    if (sms != null) "sms": _encodeValue(sms),
+    if (email != null) "email": _encodeValue(email),
+    if (attachments != null) "attachments": _encodeValue(attachments),
+    "created_at": _encodeValue(createdAt),
+    "updated_at": _encodeValue(updatedAt),
+    if (publishedAt != null) "published_at": _encodeValue(publishedAt),
+    if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8014,12 +7924,12 @@ final class MessageTemplateEmailContent implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "subject": _encodeValue(subject),
-        "html": _encodeValue(html),
-        if (from != null) "from": _encodeValue(from),
-        if (replyTo != null) "reply_to": _encodeValue(replyTo),
-        if (headers != null) "headers": _encodeValue(headers),
-      };
+    "subject": _encodeValue(subject),
+    "html": _encodeValue(html),
+    if (from != null) "from": _encodeValue(from),
+    if (replyTo != null) "reply_to": _encodeValue(replyTo),
+    if (headers != null) "headers": _encodeValue(headers),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -8038,32 +7948,31 @@ final class MessageTemplateEmailContentInput implements _InttegroValue {
   });
   factory MessageTemplateEmailContentInput.fromJson(
     Map<String, Object?> json,
-  ) =>
-      MessageTemplateEmailContentInput(
-        from: json["from"] == null
-            ? null
-            : MessageTemplateMailboxInput.fromJson(
-                (json["from"] as Map).cast<String, Object?>(),
-              ),
-        replyTo: json["reply_to"] == null
-            ? null
-            : MessageTemplateMailboxInput.fromJson(
-                (json["reply_to"] as Map).cast<String, Object?>(),
-              ),
-        headers: json["headers"] == null
-            ? null
-            : MessageHeaders.fromJson(json["headers"]),
-        subject: json["subject"] as String,
-        html: json["html"] as String,
-      );
+  ) => MessageTemplateEmailContentInput(
+    from: json["from"] == null
+        ? null
+        : MessageTemplateMailboxInput.fromJson(
+            (json["from"] as Map).cast<String, Object?>(),
+          ),
+    replyTo: json["reply_to"] == null
+        ? null
+        : MessageTemplateMailboxInput.fromJson(
+            (json["reply_to"] as Map).cast<String, Object?>(),
+          ),
+    headers: json["headers"] == null
+        ? null
+        : MessageHeaders.fromJson(json["headers"]),
+    subject: json["subject"] as String,
+    html: json["html"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (from != null) "from": _encodeValue(from),
-        if (replyTo != null) "reply_to": _encodeValue(replyTo),
-        if (headers != null) "headers": _encodeValue(headers),
-        "subject": _encodeValue(subject),
-        "html": _encodeValue(html),
-      };
+    if (from != null) "from": _encodeValue(from),
+    if (replyTo != null) "reply_to": _encodeValue(replyTo),
+    if (headers != null) "headers": _encodeValue(headers),
+    "subject": _encodeValue(subject),
+    "html": _encodeValue(html),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -8088,9 +7997,9 @@ final class MessageTemplateMailbox implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "address": _encodeValue(address),
-        if (name != null) "name": _encodeValue(name),
-      };
+    "address": _encodeValue(address),
+    if (name != null) "name": _encodeValue(name),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -8105,9 +8014,9 @@ final class MessageTemplateMailboxInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (name != null) "name": _encodeValue(name),
-        "address": _encodeValue(address),
-      };
+    if (name != null) "name": _encodeValue(name),
+    "address": _encodeValue(address),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8129,9 +8038,9 @@ final class MessageTemplatePreview implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "message_template": _encodeValue(messageTemplate),
-        "rendered": _encodeValue(rendered),
-      };
+    "message_template": _encodeValue(messageTemplate),
+    "rendered": _encodeValue(rendered),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -8151,9 +8060,9 @@ final class MessageTemplateReferenceInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (variables != null) "variables": _encodeValue(variables),
-        "template_id": _encodeValue(templateId),
-      };
+    if (variables != null) "variables": _encodeValue(variables),
+    "template_id": _encodeValue(templateId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8166,8 +8075,8 @@ final class MessageTemplateSMSContent implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "message_template": _encodeValue(messageTemplate),
-      };
+    "message_template": _encodeValue(messageTemplate),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -8180,8 +8089,8 @@ final class MessageTemplateSMSContentInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "message_template": _encodeValue(messageTemplate),
-      };
+    "message_template": _encodeValue(messageTemplate),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8210,12 +8119,12 @@ final class MessageTemplateSafetyResult implements _InttegroValue {
         links: json["links"] == null
             ? null
             : (json["links"] as List)
-                .map(
-                  (item) => MessageTemplateScannedLink.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => MessageTemplateScannedLink.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         normalizedText: json["normalized_text"] as String,
         quarantineNotes: json["quarantine_notes"] == null
             ? null
@@ -8223,8 +8132,8 @@ final class MessageTemplateSafetyResult implements _InttegroValue {
         reasonCodes: json["reason_codes"] == null
             ? null
             : (json["reason_codes"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         sanitizedHtml: json["sanitized_html"] == null
             ? null
             : json["sanitized_html"] as String,
@@ -8233,17 +8142,16 @@ final class MessageTemplateSafetyResult implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "content_hash": _encodeValue(contentHash),
-        if (links != null) "links": _encodeValue(links),
-        "normalized_text": _encodeValue(normalizedText),
-        if (quarantineNotes != null)
-          "quarantine_notes": _encodeValue(quarantineNotes),
-        if (reasonCodes != null) "reason_codes": _encodeValue(reasonCodes),
-        if (sanitizedHtml != null)
-          "sanitized_html": _encodeValue(sanitizedHtml),
-        "scanner": _encodeValue(scanner),
-        "status": _encodeValue(status),
-      };
+    "content_hash": _encodeValue(contentHash),
+    if (links != null) "links": _encodeValue(links),
+    "normalized_text": _encodeValue(normalizedText),
+    if (quarantineNotes != null)
+      "quarantine_notes": _encodeValue(quarantineNotes),
+    if (reasonCodes != null) "reason_codes": _encodeValue(reasonCodes),
+    if (sanitizedHtml != null) "sanitized_html": _encodeValue(sanitizedHtml),
+    "scanner": _encodeValue(scanner),
+    "status": _encodeValue(status),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8270,12 +8178,12 @@ final class MessageTemplateScannedLink implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (host != null) "host": _encodeValue(host),
-        "raw": _encodeValue(raw),
-        if (reason != null) "reason": _encodeValue(reason),
-        "scheme": _encodeValue(scheme),
-        "status": _encodeValue(status),
-      };
+    if (host != null) "host": _encodeValue(host),
+    "raw": _encodeValue(raw),
+    if (reason != null) "reason": _encodeValue(reason),
+    "scheme": _encodeValue(scheme),
+    "status": _encodeValue(status),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8301,25 +8209,25 @@ final class MessageTemplateVariable implements _InttegroValue {
         items: json["items"] == null
             ? null
             : (json["items"] as List)
-                .map(
-                  (item) => MessageTemplateVariableItem.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => MessageTemplateVariableItem.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         name: json["name"] as String,
         requiredValue: json["required"] as bool,
         type: MessageTemplateVariableType.fromJson(json["type"]),
       );
   @override
   Map<String, Object?> toJson() => {
-        if (about != null) "about": _encodeValue(about),
-        if (defaultValue != null) "default": _encodeValue(defaultValue),
-        if (items != null) "items": _encodeValue(items),
-        "name": _encodeValue(name),
-        "required": _encodeValue(requiredValue),
-        "type": _encodeValue(type),
-      };
+    if (about != null) "about": _encodeValue(about),
+    if (defaultValue != null) "default": _encodeValue(defaultValue),
+    if (items != null) "items": _encodeValue(items),
+    "name": _encodeValue(name),
+    "required": _encodeValue(requiredValue),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -8340,31 +8248,32 @@ final class MessageTemplateVariableInput implements _InttegroValue {
   });
   factory MessageTemplateVariableInput.fromJson(Map<String, Object?> json) =>
       MessageTemplateVariableInput(
-        requiredValue:
-            json["required"] == null ? null : json["required"] as bool,
+        requiredValue: json["required"] == null
+            ? null
+            : json["required"] as bool,
         defaultValue: json["default"],
         about: json["about"] == null ? null : json["about"] as String,
         items: json["items"] == null
             ? null
             : (json["items"] as List)
-                .map(
-                  (item) => MessageTemplateVariableItemInput.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => MessageTemplateVariableItemInput.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         name: json["name"] as String,
         type: MessageTemplateVariableType.fromJson(json["type"]),
       );
   @override
   Map<String, Object?> toJson() => {
-        if (requiredValue != null) "required": _encodeValue(requiredValue),
-        if (defaultValue != null) "default": _encodeValue(defaultValue),
-        if (about != null) "about": _encodeValue(about),
-        if (items != null) "items": _encodeValue(items),
-        "name": _encodeValue(name),
-        "type": _encodeValue(type),
-      };
+    if (requiredValue != null) "required": _encodeValue(requiredValue),
+    if (defaultValue != null) "default": _encodeValue(defaultValue),
+    if (about != null) "about": _encodeValue(about),
+    if (items != null) "items": _encodeValue(items),
+    "name": _encodeValue(name),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8391,12 +8300,12 @@ final class MessageTemplateVariableItem implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (about != null) "about": _encodeValue(about),
-        if (defaultValue != null) "default": _encodeValue(defaultValue),
-        "name": _encodeValue(name),
-        "required": _encodeValue(requiredValue),
-        "type": _encodeValue(type),
-      };
+    if (about != null) "about": _encodeValue(about),
+    if (defaultValue != null) "default": _encodeValue(defaultValue),
+    "name": _encodeValue(name),
+    "required": _encodeValue(requiredValue),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -8415,23 +8324,21 @@ final class MessageTemplateVariableItemInput implements _InttegroValue {
   });
   factory MessageTemplateVariableItemInput.fromJson(
     Map<String, Object?> json,
-  ) =>
-      MessageTemplateVariableItemInput(
-        about: json["about"] == null ? null : json["about"] as String,
-        defaultValue: json["default"],
-        requiredValue:
-            json["required"] == null ? null : json["required"] as bool,
-        name: json["name"] as String,
-        type: MessageTemplateVariableItemType.fromJson(json["type"]),
-      );
+  ) => MessageTemplateVariableItemInput(
+    about: json["about"] == null ? null : json["about"] as String,
+    defaultValue: json["default"],
+    requiredValue: json["required"] == null ? null : json["required"] as bool,
+    name: json["name"] as String,
+    type: MessageTemplateVariableItemType.fromJson(json["type"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (about != null) "about": _encodeValue(about),
-        if (defaultValue != null) "default": _encodeValue(defaultValue),
-        if (requiredValue != null) "required": _encodeValue(requiredValue),
-        "name": _encodeValue(name),
-        "type": _encodeValue(type),
-      };
+    if (about != null) "about": _encodeValue(about),
+    if (defaultValue != null) "default": _encodeValue(defaultValue),
+    if (requiredValue != null) "required": _encodeValue(requiredValue),
+    "name": _encodeValue(name),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8458,10 +8365,10 @@ final class MessageTemplatesPage implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-        "message_templates": _encodeValue(messageTemplates),
-      };
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+    "message_templates": _encodeValue(messageTemplates),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8485,33 +8392,34 @@ final class OTPTransaction implements _InttegroValue {
     this.transmission,
   });
   factory OTPTransaction.fromJson(Map<String, Object?> json) => OTPTransaction(
-        cancelReason: json["cancel_reason"] == null
-            ? null
-            : json["cancel_reason"] as String,
-        canceledAt:
-            json["canceled_at"] == null ? null : json["canceled_at"] as String,
-        expiresAt: json["expires_at"] as String,
-        fullMessage: json["full_message"] as String,
-        id: json["id"] as String,
-        initiatedAt: json["initiated_at"] as String,
-        status: OTPStatus.fromJson(json["status"]),
-        transmission: json["transmission"] == null
-            ? null
-            : OTPTransmission.fromJson(
-                (json["transmission"] as Map).cast<String, Object?>(),
-              ),
-      );
+    cancelReason: json["cancel_reason"] == null
+        ? null
+        : json["cancel_reason"] as String,
+    canceledAt: json["canceled_at"] == null
+        ? null
+        : json["canceled_at"] as String,
+    expiresAt: json["expires_at"] as String,
+    fullMessage: json["full_message"] as String,
+    id: json["id"] as String,
+    initiatedAt: json["initiated_at"] as String,
+    status: OTPStatus.fromJson(json["status"]),
+    transmission: json["transmission"] == null
+        ? null
+        : OTPTransmission.fromJson(
+            (json["transmission"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (cancelReason != null) "cancel_reason": _encodeValue(cancelReason),
-        if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
-        "expires_at": _encodeValue(expiresAt),
-        "full_message": _encodeValue(fullMessage),
-        "id": _encodeValue(id),
-        "initiated_at": _encodeValue(initiatedAt),
-        "status": _encodeValue(status),
-        if (transmission != null) "transmission": _encodeValue(transmission),
-      };
+    if (cancelReason != null) "cancel_reason": _encodeValue(cancelReason),
+    if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
+    "expires_at": _encodeValue(expiresAt),
+    "full_message": _encodeValue(fullMessage),
+    "id": _encodeValue(id),
+    "initiated_at": _encodeValue(initiatedAt),
+    "status": _encodeValue(status),
+    if (transmission != null) "transmission": _encodeValue(transmission),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8540,12 +8448,12 @@ final class OTPTransmission implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "recipient": _encodeValue(recipient),
-        "sender_id": _encodeValue(senderId),
-        if (sentAt != null) "sent_at": _encodeValue(sentAt),
-        if (sentVia != null) "sent_via": _encodeValue(sentVia),
-        if (status != null) "status": _encodeValue(status),
-      };
+    "recipient": _encodeValue(recipient),
+    "sender_id": _encodeValue(senderId),
+    if (sentAt != null) "sent_at": _encodeValue(sentAt),
+    if (sentVia != null) "sent_via": _encodeValue(sentVia),
+    if (status != null) "status": _encodeValue(status),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8567,9 +8475,9 @@ final class OTPVerification implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "transaction": _encodeValue(transaction),
-        "verification_attempt": _encodeValue(verificationAttempt),
-      };
+    "transaction": _encodeValue(transaction),
+    "verification_attempt": _encodeValue(verificationAttempt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8598,12 +8506,12 @@ final class OTPVerificationAttempt implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "attempted_at": _encodeValue(attemptedAt),
-        "id": _encodeValue(id),
-        "presented_token": _encodeValue(presentedToken),
-        "recipient": _encodeValue(recipient),
-        "result": _encodeValue(result),
-      };
+    "attempted_at": _encodeValue(attemptedAt),
+    "id": _encodeValue(id),
+    "presented_token": _encodeValue(presentedToken),
+    "recipient": _encodeValue(recipient),
+    "result": _encodeValue(result),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8618,9 +8526,9 @@ final class OTPVerificationAttemptResult implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (detail != null) "detail": _encodeValue(detail),
-        "verdict": _encodeValue(verdict),
-      };
+    if (detail != null) "detail": _encodeValue(detail),
+    "verdict": _encodeValue(verdict),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8674,109 +8582,103 @@ final class Order implements _InttegroValue {
     this.shipping,
   });
   factory Order.fromJson(Map<String, Object?> json) => Order(
-        canceledAt:
-            json["canceled_at"] == null ? null : json["canceled_at"] as String,
-        checkoutSettings: json["checkout_settings"] == null
-            ? null
-            : OrderCheckoutSettings.fromJson(
-                (json["checkout_settings"] as Map).cast<String, Object?>(),
-              ),
-        completedAt: json["completed_at"] == null
-            ? null
-            : json["completed_at"] as String,
-        createdFrom: json["created_from"] == null
-            ? null
-            : OrderCreatedFrom.fromJson(
-                (json["created_from"] as Map).cast<String, Object?>(),
-              ),
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        customer: OrderCustomer.fromJson(
-          (json["customer"] as Map).cast<String, Object?>(),
-        ),
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
-        id: json["id"] as String,
-        initiatedAt: json["initiated_at"] as String,
-        invoice: json["invoice"] == null
-            ? null
-            : OrderInvoice.fromJson(
-                (json["invoice"] as Map).cast<String, Object?>(),
-              ),
-        number: json["number"] == null ? null : json["number"] as String,
-        receiptNumber: json["receipt_number"] == null
-            ? null
-            : json["receipt_number"] as String,
-        refunds: json["refunds"] == null
-            ? null
-            : (json["refunds"] as List)
-                .map(
-                  (item) =>
-                      Refund.fromJson((item as Map).cast<String, Object?>()),
-                )
-                .toList(),
-        invoiceSettings: json["invoice_settings"] == null
-            ? null
-            : InvoiceSettings.fromJson(
-                (json["invoice_settings"] as Map).cast<String, Object?>(),
-              ),
-        status: OrderStatus.fromJson(json["status"]),
-        sealedAt:
-            json["sealed_at"] == null ? null : json["sealed_at"] as String,
-        lineItemGroup: json["line_item_group"] == null
-            ? null
-            : OrderLineItemGroup.fromJson(
-                (json["line_item_group"] as Map).cast<String, Object?>(),
-              ),
-        payment: json["payment"] == null
-            ? null
-            : Payment.fromJson(
-                (json["payment"] as Map).cast<String, Object?>()),
-        paidAt: json["paid_at"] == null ? null : json["paid_at"] as String,
-        paymentDueAt: json["payment_due_at"] == null
-            ? null
-            : json["payment_due_at"] as String,
-        payoutSettings: json["payout_settings"] == null
-            ? null
-            : OrderPayoutSettings.fromJson(json["payout_settings"]),
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        shipping: json["shipping"] == null
-            ? null
-            : Shipping.fromJson(json["shipping"]),
-      );
+    canceledAt: json["canceled_at"] == null
+        ? null
+        : json["canceled_at"] as String,
+    checkoutSettings: json["checkout_settings"] == null
+        ? null
+        : OrderCheckoutSettings.fromJson(
+            (json["checkout_settings"] as Map).cast<String, Object?>(),
+          ),
+    completedAt: json["completed_at"] == null
+        ? null
+        : json["completed_at"] as String,
+    createdFrom: json["created_from"] == null
+        ? null
+        : OrderCreatedFrom.fromJson(
+            (json["created_from"] as Map).cast<String, Object?>(),
+          ),
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    customer: OrderCustomer.fromJson(
+      (json["customer"] as Map).cast<String, Object?>(),
+    ),
+    expiresAt: json["expires_at"] == null ? null : json["expires_at"] as String,
+    id: json["id"] as String,
+    initiatedAt: json["initiated_at"] as String,
+    invoice: json["invoice"] == null
+        ? null
+        : OrderInvoice.fromJson(
+            (json["invoice"] as Map).cast<String, Object?>(),
+          ),
+    number: json["number"] == null ? null : json["number"] as String,
+    receiptNumber: json["receipt_number"] == null
+        ? null
+        : json["receipt_number"] as String,
+    refunds: json["refunds"] == null
+        ? null
+        : (json["refunds"] as List)
+              .map(
+                (item) =>
+                    Refund.fromJson((item as Map).cast<String, Object?>()),
+              )
+              .toList(),
+    invoiceSettings: json["invoice_settings"] == null
+        ? null
+        : InvoiceSettings.fromJson(
+            (json["invoice_settings"] as Map).cast<String, Object?>(),
+          ),
+    status: OrderStatus.fromJson(json["status"]),
+    sealedAt: json["sealed_at"] == null ? null : json["sealed_at"] as String,
+    lineItemGroup: json["line_item_group"] == null
+        ? null
+        : OrderLineItemGroup.fromJson(
+            (json["line_item_group"] as Map).cast<String, Object?>(),
+          ),
+    payment: json["payment"] == null
+        ? null
+        : Payment.fromJson((json["payment"] as Map).cast<String, Object?>()),
+    paidAt: json["paid_at"] == null ? null : json["paid_at"] as String,
+    paymentDueAt: json["payment_due_at"] == null
+        ? null
+        : json["payment_due_at"] as String,
+    payoutSettings: json["payout_settings"] == null
+        ? null
+        : OrderPayoutSettings.fromJson(json["payout_settings"]),
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    shipping: json["shipping"] == null
+        ? null
+        : Shipping.fromJson(json["shipping"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
-        if (checkoutSettings != null)
-          "checkout_settings": _encodeValue(checkoutSettings),
-        if (completedAt != null) "completed_at": _encodeValue(completedAt),
-        if (createdFrom != null) "created_from": _encodeValue(createdFrom),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        "customer": _encodeValue(customer),
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-        "id": _encodeValue(id),
-        "initiated_at": _encodeValue(initiatedAt),
-        if (invoice != null) "invoice": _encodeValue(invoice),
-        if (number != null) "number": _encodeValue(number),
-        if (receiptNumber != null)
-          "receipt_number": _encodeValue(receiptNumber),
-        if (refunds != null) "refunds": _encodeValue(refunds),
-        if (invoiceSettings != null)
-          "invoice_settings": _encodeValue(invoiceSettings),
-        "status": _encodeValue(status),
-        if (sealedAt != null) "sealed_at": _encodeValue(sealedAt),
-        if (lineItemGroup != null)
-          "line_item_group": _encodeValue(lineItemGroup),
-        if (payment != null) "payment": _encodeValue(payment),
-        if (paidAt != null) "paid_at": _encodeValue(paidAt),
-        if (paymentDueAt != null) "payment_due_at": _encodeValue(paymentDueAt),
-        if (payoutSettings != null)
-          "payout_settings": _encodeValue(payoutSettings),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (shipping != null) "shipping": _encodeValue(shipping),
-      };
+    if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
+    if (checkoutSettings != null)
+      "checkout_settings": _encodeValue(checkoutSettings),
+    if (completedAt != null) "completed_at": _encodeValue(completedAt),
+    if (createdFrom != null) "created_from": _encodeValue(createdFrom),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    "customer": _encodeValue(customer),
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+    "id": _encodeValue(id),
+    "initiated_at": _encodeValue(initiatedAt),
+    if (invoice != null) "invoice": _encodeValue(invoice),
+    if (number != null) "number": _encodeValue(number),
+    if (receiptNumber != null) "receipt_number": _encodeValue(receiptNumber),
+    if (refunds != null) "refunds": _encodeValue(refunds),
+    if (invoiceSettings != null)
+      "invoice_settings": _encodeValue(invoiceSettings),
+    "status": _encodeValue(status),
+    if (sealedAt != null) "sealed_at": _encodeValue(sealedAt),
+    if (lineItemGroup != null) "line_item_group": _encodeValue(lineItemGroup),
+    if (payment != null) "payment": _encodeValue(payment),
+    if (paidAt != null) "paid_at": _encodeValue(paidAt),
+    if (paymentDueAt != null) "payment_due_at": _encodeValue(paymentDueAt),
+    if (payoutSettings != null) "payout_settings": _encodeValue(payoutSettings),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (shipping != null) "shipping": _encodeValue(shipping),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8800,29 +8702,28 @@ final class OrderAddress implements _InttegroValue {
     required this.country,
   });
   factory OrderAddress.fromJson(Map<String, Object?> json) => OrderAddress(
-        name: json["name"] == null ? null : json["name"] as String,
-        phoneNumber: json["phone_number"] == null
-            ? null
-            : json["phone_number"] as String,
-        line1: json["line1"] == null ? null : json["line1"] as String,
-        line2: json["line2"] == null ? null : json["line2"] as String,
-        city: json["city"] == null ? null : json["city"] as String,
-        region: json["region"] == null ? null : json["region"] as String,
-        postCode:
-            json["post_code"] == null ? null : json["post_code"] as String,
-        country: json["country"] as String,
-      );
+    name: json["name"] == null ? null : json["name"] as String,
+    phoneNumber: json["phone_number"] == null
+        ? null
+        : json["phone_number"] as String,
+    line1: json["line1"] == null ? null : json["line1"] as String,
+    line2: json["line2"] == null ? null : json["line2"] as String,
+    city: json["city"] == null ? null : json["city"] as String,
+    region: json["region"] == null ? null : json["region"] as String,
+    postCode: json["post_code"] == null ? null : json["post_code"] as String,
+    country: json["country"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (name != null) "name": _encodeValue(name),
-        if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
-        if (line1 != null) "line1": _encodeValue(line1),
-        if (line2 != null) "line2": _encodeValue(line2),
-        if (city != null) "city": _encodeValue(city),
-        if (region != null) "region": _encodeValue(region),
-        if (postCode != null) "post_code": _encodeValue(postCode),
-        "country": _encodeValue(country),
-      };
+    if (name != null) "name": _encodeValue(name),
+    if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
+    if (line1 != null) "line1": _encodeValue(line1),
+    if (line2 != null) "line2": _encodeValue(line2),
+    if (city != null) "city": _encodeValue(city),
+    if (region != null) "region": _encodeValue(region),
+    if (postCode != null) "post_code": _encodeValue(postCode),
+    "country": _encodeValue(country),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8835,14 +8736,15 @@ final class OrderCheckoutSettings implements _InttegroValue {
         redirectUrl: json["redirect_url"] == null
             ? null
             : json["redirect_url"] as String,
-        cancelUrl:
-            json["cancel_url"] == null ? null : json["cancel_url"] as String,
+        cancelUrl: json["cancel_url"] == null
+            ? null
+            : json["cancel_url"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (redirectUrl != null) "redirect_url": _encodeValue(redirectUrl),
-        if (cancelUrl != null) "cancel_url": _encodeValue(cancelUrl),
-      };
+    if (redirectUrl != null) "redirect_url": _encodeValue(redirectUrl),
+    if (cancelUrl != null) "cancel_url": _encodeValue(cancelUrl),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8857,15 +8759,16 @@ final class OrderCreatedFrom implements _InttegroValue {
         resourceType: json["resource_type"] == null
             ? null
             : OrderCreatedFromResourceType.fromJson(json["resource_type"]),
-        resourceId:
-            json["resource_id"] == null ? null : json["resource_id"] as String,
+        resourceId: json["resource_id"] == null
+            ? null
+            : json["resource_id"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (source != null) "source": _encodeValue(source),
-        if (resourceType != null) "resource_type": _encodeValue(resourceType),
-        if (resourceId != null) "resource_id": _encodeValue(resourceId),
-      };
+    if (source != null) "source": _encodeValue(source),
+    if (resourceType != null) "resource_type": _encodeValue(resourceType),
+    if (resourceId != null) "resource_id": _encodeValue(resourceId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8887,38 +8790,37 @@ final class OrderCustomer implements _InttegroValue {
     this.shippingAddress,
   });
   factory OrderCustomer.fromJson(Map<String, Object?> json) => OrderCustomer(
-        id: json["id"] as String,
-        guest: json["guest"] as bool,
-        name: json["name"] as String,
-        emailAddress: json["email_address"] == null
-            ? null
-            : json["email_address"] as String,
-        phoneNumber: json["phone_number"] == null
-            ? null
-            : json["phone_number"] as String,
-        billingAddress: json["billing_address"] == null
-            ? null
-            : OrderAddress.fromJson(
-                (json["billing_address"] as Map).cast<String, Object?>(),
-              ),
-        shippingAddress: json["shipping_address"] == null
-            ? null
-            : OrderAddress.fromJson(
-                (json["shipping_address"] as Map).cast<String, Object?>(),
-              ),
-      );
+    id: json["id"] as String,
+    guest: json["guest"] as bool,
+    name: json["name"] as String,
+    emailAddress: json["email_address"] == null
+        ? null
+        : json["email_address"] as String,
+    phoneNumber: json["phone_number"] == null
+        ? null
+        : json["phone_number"] as String,
+    billingAddress: json["billing_address"] == null
+        ? null
+        : OrderAddress.fromJson(
+            (json["billing_address"] as Map).cast<String, Object?>(),
+          ),
+    shippingAddress: json["shipping_address"] == null
+        ? null
+        : OrderAddress.fromJson(
+            (json["shipping_address"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "guest": _encodeValue(guest),
-        "name": _encodeValue(name),
-        if (emailAddress != null) "email_address": _encodeValue(emailAddress),
-        if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
-        if (billingAddress != null)
-          "billing_address": _encodeValue(billingAddress),
-        if (shippingAddress != null)
-          "shipping_address": _encodeValue(shippingAddress),
-      };
+    "id": _encodeValue(id),
+    "guest": _encodeValue(guest),
+    "name": _encodeValue(name),
+    if (emailAddress != null) "email_address": _encodeValue(emailAddress),
+    if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
+    if (billingAddress != null) "billing_address": _encodeValue(billingAddress),
+    if (shippingAddress != null)
+      "shipping_address": _encodeValue(shippingAddress),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -8942,12 +8844,12 @@ final class OrderDocumentDelivery implements _InttegroValue {
         deliveries: json["deliveries"] == null
             ? null
             : (json["deliveries"] as List)
-                .map(
-                  (item) => OrderDocumentDeliveryAttempt.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => OrderDocumentDeliveryAttempt.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         documentKind: json["document_kind"] == null
             ? null
             : OrderDocumentKind.fromJson(json["document_kind"]),
@@ -8957,33 +8859,32 @@ final class OrderDocumentDelivery implements _InttegroValue {
         failedChannels: json["failed_channels"] == null
             ? null
             : (json["failed_channels"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         failures: json["failures"] == null
             ? null
             : (json["failures"] as List)
-                .map(
-                  (item) => OrderDocumentDeliveryFailure.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => OrderDocumentDeliveryFailure.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         sentChannels: json["sent_channels"] == null
             ? null
             : (json["sent_channels"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
       );
   @override
   Map<String, Object?> toJson() => {
-        if (deliveries != null) "deliveries": _encodeValue(deliveries),
-        if (documentKind != null) "document_kind": _encodeValue(documentKind),
-        if (documentUrl != null) "document_url": _encodeValue(documentUrl),
-        if (failedChannels != null)
-          "failed_channels": _encodeValue(failedChannels),
-        if (failures != null) "failures": _encodeValue(failures),
-        if (sentChannels != null) "sent_channels": _encodeValue(sentChannels),
-      };
+    if (deliveries != null) "deliveries": _encodeValue(deliveries),
+    if (documentKind != null) "document_kind": _encodeValue(documentKind),
+    if (documentUrl != null) "document_url": _encodeValue(documentUrl),
+    if (failedChannels != null) "failed_channels": _encodeValue(failedChannels),
+    if (failures != null) "failures": _encodeValue(failures),
+    if (sentChannels != null) "sent_channels": _encodeValue(sentChannels),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9000,9 +8901,9 @@ final class OrderDocumentDeliveryAttempt implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (channel != null) "channel": _encodeValue(channel),
-        if (chimeId != null) "chime_id": _encodeValue(chimeId),
-      };
+    if (channel != null) "channel": _encodeValue(channel),
+    if (chimeId != null) "chime_id": _encodeValue(chimeId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9019,9 +8920,9 @@ final class OrderDocumentDeliveryFailure implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (channel != null) "channel": _encodeValue(channel),
-        if (error != null) "error": _encodeValue(error),
-      };
+    if (channel != null) "channel": _encodeValue(channel),
+    if (error != null) "error": _encodeValue(error),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9056,10 +8957,10 @@ final class OrderDocumentDeliveryResult implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (delivery != null) "delivery": _encodeValue(delivery),
-        if (error != null) "error": _encodeValue(error),
-        if (order != null) "order": _encodeValue(order),
-      };
+    if (delivery != null) "delivery": _encodeValue(delivery),
+    if (error != null) "error": _encodeValue(error),
+    if (order != null) "order": _encodeValue(order),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9086,9 +8987,9 @@ final class OrderFeeLineItem implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        "fee": _encodeValue(fee),
-      };
+    "type": _encodeValue(type),
+    "fee": _encodeValue(fee),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9108,8 +9009,9 @@ final class OrderFeeLineItemFee implements _InttegroValue {
   factory OrderFeeLineItemFee.fromJson(Map<String, Object?> json) =>
       OrderFeeLineItemFee(
         id: json["id"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
         amount: Amount.fromJson(
           (json["amount"] as Map).cast<String, Object?>(),
@@ -9118,12 +9020,12 @@ final class OrderFeeLineItemFee implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        if (description != null) "description": _encodeValue(description),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        "amount": _encodeValue(amount),
-        "label": _encodeValue(label),
-      };
+    "id": _encodeValue(id),
+    if (description != null) "description": _encodeValue(description),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    "amount": _encodeValue(amount),
+    "label": _encodeValue(label),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9132,18 +9034,18 @@ final class OrderInvoice implements _InttegroValue {
   final OrderInvoiceFormat? format;
   const OrderInvoice({this.number, this.format});
   factory OrderInvoice.fromJson(Map<String, Object?> json) => OrderInvoice(
-        number: json["number"] == null ? null : json["number"] as String,
-        format: json["format"] == null
-            ? null
-            : OrderInvoiceFormat.fromJson(
-                (json["format"] as Map).cast<String, Object?>(),
-              ),
-      );
+    number: json["number"] == null ? null : json["number"] as String,
+    format: json["format"] == null
+        ? null
+        : OrderInvoiceFormat.fromJson(
+            (json["format"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (number != null) "number": _encodeValue(number),
-        if (format != null) "format": _encodeValue(format),
-      };
+    if (number != null) "number": _encodeValue(number),
+    if (format != null) "format": _encodeValue(format),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9172,10 +9074,10 @@ final class OrderInvoiceFormat implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "web": _encodeValue(web),
-        "pdf": _encodeValue(pdf),
-        if (receipt != null) "receipt": _encodeValue(receipt),
-      };
+    "web": _encodeValue(web),
+    "pdf": _encodeValue(pdf),
+    if (receipt != null) "receipt": _encodeValue(receipt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9190,9 +9092,9 @@ final class OrderLineItemGroup implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "line_items": _encodeValue(lineItems),
-        "total": _encodeValue(total),
-      };
+    "line_items": _encodeValue(lineItems),
+    "total": _encodeValue(total),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9202,23 +9104,22 @@ final class OrderPage implements _InttegroValue {
   final List<Order>? orders;
   const OrderPage({this.number, this.size, this.orders});
   factory OrderPage.fromJson(Map<String, Object?> json) => OrderPage(
-        number: json["number"] == null ? null : (json["number"] as num).toInt(),
-        size: json["size"] == null ? null : (json["size"] as num).toInt(),
-        orders: json["orders"] == null
-            ? null
-            : (json["orders"] as List)
-                .map(
-                  (item) =>
-                      Order.fromJson((item as Map).cast<String, Object?>()),
-                )
-                .toList(),
-      );
+    number: json["number"] == null ? null : (json["number"] as num).toInt(),
+    size: json["size"] == null ? null : (json["size"] as num).toInt(),
+    orders: json["orders"] == null
+        ? null
+        : (json["orders"] as List)
+              .map(
+                (item) => Order.fromJson((item as Map).cast<String, Object?>()),
+              )
+              .toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (number != null) "number": _encodeValue(number),
-        if (size != null) "size": _encodeValue(size),
-        if (orders != null) "orders": _encodeValue(orders),
-      };
+    if (number != null) "number": _encodeValue(number),
+    if (size != null) "size": _encodeValue(size),
+    if (orders != null) "orders": _encodeValue(orders),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9237,9 +9138,9 @@ final class OrderPayoutSettingsRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (destination != null) "destination": _encodeValue(destination),
-        if (enableFx != null) "enable_fx": _encodeValue(enableFx),
-      };
+    if (destination != null) "destination": _encodeValue(destination),
+    if (enableFx != null) "enable_fx": _encodeValue(enableFx),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9250,14 +9151,13 @@ final class OrderPayoutSettingsRequestDestination implements _InttegroValue {
   });
   factory OrderPayoutSettingsRequestDestination.fromJson(
     Map<String, Object?> json,
-  ) =>
-      OrderPayoutSettingsRequestDestination(
-        financialAccountId: json["financial_account_id"] as String,
-      );
+  ) => OrderPayoutSettingsRequestDestination(
+    financialAccountId: json["financial_account_id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "financial_account_id": _encodeValue(financialAccountId),
-      };
+    "financial_account_id": _encodeValue(financialAccountId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9274,9 +9174,9 @@ final class OrderProductLineItem implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        "product": _encodeValue(product),
-      };
+    "type": _encodeValue(type),
+    "product": _encodeValue(product),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9309,40 +9209,37 @@ final class OrderProductLineItemProduct implements _InttegroValue {
   });
   factory OrderProductLineItemProduct.fromJson(
     Map<String, Object?> json,
-  ) =>
-      OrderProductLineItemProduct(
-        id: json["id"] as String,
-        productId:
-            json["product_id"] == null ? null : json["product_id"] as String,
-        priceId: json["price_id"] == null ? null : json["price_id"] as String,
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        about: json["about"] == null ? null : json["about"] as String,
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
-        name: json["name"] as String,
-        category: json["category"] == null ? null : json["category"] as String,
-        type: json["type"] == null ? null : json["type"] as String,
-        price: Price.fromJson((json["price"] as Map).cast<String, Object?>()),
-        quantity: (json["quantity"] as num).toInt(),
-      );
+  ) => OrderProductLineItemProduct(
+    id: json["id"] as String,
+    productId: json["product_id"] == null ? null : json["product_id"] as String,
+    priceId: json["price_id"] == null ? null : json["price_id"] as String,
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    about: json["about"] == null ? null : json["about"] as String,
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
+    name: json["name"] as String,
+    category: json["category"] == null ? null : json["category"] as String,
+    type: json["type"] == null ? null : json["type"] as String,
+    price: Price.fromJson((json["price"] as Map).cast<String, Object?>()),
+    quantity: (json["quantity"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        if (productId != null) "product_id": _encodeValue(productId),
-        if (priceId != null) "price_id": _encodeValue(priceId),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (about != null) "about": _encodeValue(about),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        "name": _encodeValue(name),
-        if (category != null) "category": _encodeValue(category),
-        if (type != null) "type": _encodeValue(type),
-        "price": _encodeValue(price),
-        "quantity": _encodeValue(quantity),
-      };
+    "id": _encodeValue(id),
+    if (productId != null) "product_id": _encodeValue(productId),
+    if (priceId != null) "price_id": _encodeValue(priceId),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (about != null) "about": _encodeValue(about),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    "name": _encodeValue(name),
+    if (category != null) "category": _encodeValue(category),
+    if (type != null) "type": _encodeValue(type),
+    "price": _encodeValue(price),
+    "quantity": _encodeValue(quantity),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9359,9 +9256,9 @@ final class OrderShippingLineItem implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        "shipping": _encodeValue(shipping),
-      };
+    "type": _encodeValue(type),
+    "shipping": _encodeValue(shipping),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9385,11 +9282,11 @@ final class OrderShippingLineItemShipping implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        if (label != null) "label": _encodeValue(label),
-        "fee": _encodeValue(fee),
-      };
+    "id": _encodeValue(id),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    if (label != null) "label": _encodeValue(label),
+    "fee": _encodeValue(fee),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9407,9 +9304,9 @@ final class PageBalanceTransactionsRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "page_number": _encodeValue(pageNumber),
-        "page_size": _encodeValue(pageSize),
-      };
+    "page_number": _encodeValue(pageNumber),
+    "page_size": _encodeValue(pageSize),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9426,24 +9323,26 @@ final class PageChimesRequest implements _InttegroValue {
   });
   factory PageChimesRequest.fromJson(Map<String, Object?> json) =>
       PageChimesRequest(
-        customerId:
-            json["customer_id"] == null ? null : json["customer_id"] as String,
+        customerId: json["customer_id"] == null
+            ? null
+            : json["customer_id"] as String,
         pageNumber: json["page_number"] == null
             ? null
             : (json["page_number"] as num).toInt(),
         pageSize: json["page_size"] == null
             ? null
             : (json["page_size"] as num).toInt(),
-        recipient:
-            json["recipient"] == null ? null : json["recipient"] as String,
+        recipient: json["recipient"] == null
+            ? null
+            : json["recipient"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (customerId != null) "customer_id": _encodeValue(customerId),
-        if (pageNumber != null) "page_number": _encodeValue(pageNumber),
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-        if (recipient != null) "recipient": _encodeValue(recipient),
-      };
+    if (customerId != null) "customer_id": _encodeValue(customerId),
+    if (pageNumber != null) "page_number": _encodeValue(pageNumber),
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+    if (recipient != null) "recipient": _encodeValue(recipient),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9460,9 +9359,9 @@ final class PageCustomersRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-        "page_number": _encodeValue(pageNumber),
-      };
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+    "page_number": _encodeValue(pageNumber),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9492,11 +9391,11 @@ final class PageFileLinksRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (fileId != null) "file_id": _encodeValue(fileId),
-        if (status != null) "status": _encodeValue(status),
-        if (pageNumber != null) "page_number": _encodeValue(pageNumber),
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-      };
+    if (fileId != null) "file_id": _encodeValue(fileId),
+    if (status != null) "status": _encodeValue(status),
+    if (pageNumber != null) "page_number": _encodeValue(pageNumber),
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9518,8 +9417,9 @@ final class PageFilesRequest implements _InttegroValue {
   factory PageFilesRequest.fromJson(Map<String, Object?> json) =>
       PageFilesRequest(
         purpose: json["purpose"] == null ? null : json["purpose"] as String,
-        status:
-            json["status"] == null ? null : FileStatus.fromJson(json["status"]),
+        status: json["status"] == null
+            ? null
+            : FileStatus.fromJson(json["status"]),
         pageNumber: json["page_number"] == null
             ? null
             : (json["page_number"] as num).toInt(),
@@ -9535,14 +9435,13 @@ final class PageFilesRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        if (status != null) "status": _encodeValue(status),
-        if (pageNumber != null) "page_number": _encodeValue(pageNumber),
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-        if (createdAfter != null) "created_after": _encodeValue(createdAfter),
-        if (createdBefore != null)
-          "created_before": _encodeValue(createdBefore),
-      };
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    if (status != null) "status": _encodeValue(status),
+    if (pageNumber != null) "page_number": _encodeValue(pageNumber),
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+    if (createdAfter != null) "created_after": _encodeValue(createdAfter),
+    if (createdBefore != null) "created_before": _encodeValue(createdBefore),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9576,13 +9475,13 @@ final class PageMessageTemplatesRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (page != null) "page": _encodeValue(page),
-        if (size != null) "size": _encodeValue(size),
-        if (status != null) "status": _encodeValue(status),
-        if (channel != null) "channel": _encodeValue(channel),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        if (locale != null) "locale": _encodeValue(locale),
-      };
+    if (page != null) "page": _encodeValue(page),
+    if (size != null) "size": _encodeValue(size),
+    if (status != null) "status": _encodeValue(status),
+    if (channel != null) "channel": _encodeValue(channel),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    if (locale != null) "locale": _encodeValue(locale),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9600,16 +9499,17 @@ final class PageOrdersRequest implements _InttegroValue {
         pageNumber: json["page_number"] == null
             ? null
             : (json["page_number"] as num).toInt(),
-        customerId:
-            json["customer_id"] == null ? null : json["customer_id"] as String,
+        customerId: json["customer_id"] == null
+            ? null
+            : json["customer_id"] as String,
         pageSize: (json["page_size"] as num).toInt(),
       );
   @override
   Map<String, Object?> toJson() => {
-        if (pageNumber != null) "page_number": _encodeValue(pageNumber),
-        if (customerId != null) "customer_id": _encodeValue(customerId),
-        "page_size": _encodeValue(pageSize),
-      };
+    if (pageNumber != null) "page_number": _encodeValue(pageNumber),
+    if (customerId != null) "customer_id": _encodeValue(customerId),
+    "page_size": _encodeValue(pageSize),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9626,9 +9526,9 @@ final class PagePayoutsRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-        "page_number": _encodeValue(pageNumber),
-      };
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+    "page_number": _encodeValue(pageNumber),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9645,9 +9545,9 @@ final class PageProductsRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-        "page_number": _encodeValue(pageNumber),
-      };
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+    "page_number": _encodeValue(pageNumber),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9665,9 +9565,9 @@ final class PagePurchaseIntentsRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "page_number": _encodeValue(pageNumber),
-        "page_size": _encodeValue(pageSize),
-      };
+    "page_number": _encodeValue(pageNumber),
+    "page_size": _encodeValue(pageSize),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9684,9 +9584,9 @@ final class PageRefundsRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-        "page_number": _encodeValue(pageNumber),
-      };
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+    "page_number": _encodeValue(pageNumber),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9703,10 +9603,10 @@ final class PageSecretKeysRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (page != null) "page": _encodeValue(page),
-        if (number != null) "number": _encodeValue(number),
-        if (size != null) "size": _encodeValue(size),
-      };
+    if (page != null) "page": _encodeValue(page),
+    if (number != null) "number": _encodeValue(number),
+    if (size != null) "size": _encodeValue(size),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9743,12 +9643,12 @@ final class PageUploadRequestsRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        if (status != null) "status": _encodeValue(status),
-        if (resource != null) "resource": _encodeValue(resource),
-        if (pageNumber != null) "page_number": _encodeValue(pageNumber),
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-      };
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    if (status != null) "status": _encodeValue(status),
+    if (resource != null) "resource": _encodeValue(resource),
+    if (pageNumber != null) "page_number": _encodeValue(pageNumber),
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -9780,14 +9680,13 @@ final class PayOrderRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (paymentMethodData != null)
-          "payment_method_data": _encodeValue(paymentMethodData),
-        if (paymentMethodId != null)
-          "payment_method_id": _encodeValue(paymentMethodId),
-        if (paidOutOfBand != null)
-          "paid_out_of_band": _encodeValue(paidOutOfBand),
-        "order_id": _encodeValue(orderId),
-      };
+    if (paymentMethodData != null)
+      "payment_method_data": _encodeValue(paymentMethodData),
+    if (paymentMethodId != null)
+      "payment_method_id": _encodeValue(paymentMethodId),
+    if (paidOutOfBand != null) "paid_out_of_band": _encodeValue(paidOutOfBand),
+    "order_id": _encodeValue(orderId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9831,81 +9730,79 @@ final class Payment implements _InttegroValue {
     this.payoutConfiguration,
   });
   factory Payment.fromJson(Map<String, Object?> json) => Payment(
-        id: json["id"] as String,
-        status: PaymentStatus.fromJson(json["status"]),
-        statementDescriptor: json["statement_descriptor"] as String,
-        amount:
-            Amount.fromJson((json["amount"] as Map).cast<String, Object?>()),
-        balanceTransaction: json["balance_transaction"] == null
-            ? null
-            : BalanceTransaction.fromJson(
-                (json["balance_transaction"] as Map).cast<String, Object?>(),
-              ),
-        paymentMethod: json["payment_method"] == null
-            ? null
-            : PaymentMethodSnapshot.fromJson(
-                (json["payment_method"] as Map).cast<String, Object?>(),
-              ),
-        latestAttempt: json["latest_attempt"] == null
-            ? null
-            : PaymentAttempt.fromJson(
-                (json["latest_attempt"] as Map).cast<String, Object?>(),
-              ),
-        nextAction: json["next_action"] == null
-            ? null
-            : PaymentNextAction.fromJson(
-                (json["next_action"] as Map).cast<String, Object?>(),
-              ),
-        initiatedAt: json["initiated_at"] as String,
-        executedAt:
-            json["executed_at"] == null ? null : json["executed_at"] as String,
-        paidAt: json["paid_at"] == null ? null : json["paid_at"] as String,
-        canceledAt:
-            json["canceled_at"] == null ? null : json["canceled_at"] as String,
-        dueAt: json["due_at"] == null ? null : json["due_at"] as String,
-        expiredAt:
-            json["expired_at"] == null ? null : json["expired_at"] as String,
-        failedAt:
-            json["failed_at"] == null ? null : json["failed_at"] as String,
-        paidOffline:
-            json["paid_offline"] == null ? null : json["paid_offline"] as bool,
-        paymentMethodTypes: json["payment_method_types"] == null
-            ? null
-            : (json["payment_method_types"] as List)
-                .map((item) => item as String)
-                .toList(),
-        payoutConfiguration: json["payout_configuration"] == null
-            ? null
-            : PaymentPayoutConfiguration.fromJson(
-                (json["payout_configuration"] as Map).cast<String, Object?>(),
-              ),
-      );
+    id: json["id"] as String,
+    status: PaymentStatus.fromJson(json["status"]),
+    statementDescriptor: json["statement_descriptor"] as String,
+    amount: Amount.fromJson((json["amount"] as Map).cast<String, Object?>()),
+    balanceTransaction: json["balance_transaction"] == null
+        ? null
+        : BalanceTransaction.fromJson(
+            (json["balance_transaction"] as Map).cast<String, Object?>(),
+          ),
+    paymentMethod: json["payment_method"] == null
+        ? null
+        : PaymentMethodSnapshot.fromJson(
+            (json["payment_method"] as Map).cast<String, Object?>(),
+          ),
+    latestAttempt: json["latest_attempt"] == null
+        ? null
+        : PaymentAttempt.fromJson(
+            (json["latest_attempt"] as Map).cast<String, Object?>(),
+          ),
+    nextAction: json["next_action"] == null
+        ? null
+        : PaymentNextAction.fromJson(
+            (json["next_action"] as Map).cast<String, Object?>(),
+          ),
+    initiatedAt: json["initiated_at"] as String,
+    executedAt: json["executed_at"] == null
+        ? null
+        : json["executed_at"] as String,
+    paidAt: json["paid_at"] == null ? null : json["paid_at"] as String,
+    canceledAt: json["canceled_at"] == null
+        ? null
+        : json["canceled_at"] as String,
+    dueAt: json["due_at"] == null ? null : json["due_at"] as String,
+    expiredAt: json["expired_at"] == null ? null : json["expired_at"] as String,
+    failedAt: json["failed_at"] == null ? null : json["failed_at"] as String,
+    paidOffline: json["paid_offline"] == null
+        ? null
+        : json["paid_offline"] as bool,
+    paymentMethodTypes: json["payment_method_types"] == null
+        ? null
+        : (json["payment_method_types"] as List)
+              .map((item) => item as String)
+              .toList(),
+    payoutConfiguration: json["payout_configuration"] == null
+        ? null
+        : PaymentPayoutConfiguration.fromJson(
+            (json["payout_configuration"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "status": _encodeValue(status),
-        "statement_descriptor": _encodeValue(statementDescriptor),
-        "amount": _encodeValue(amount),
-        if (balanceTransaction != null)
-          "balance_transaction": _encodeValue(balanceTransaction),
-        if (paymentMethod != null)
-          "payment_method": _encodeValue(paymentMethod),
-        if (latestAttempt != null)
-          "latest_attempt": _encodeValue(latestAttempt),
-        if (nextAction != null) "next_action": _encodeValue(nextAction),
-        "initiated_at": _encodeValue(initiatedAt),
-        if (executedAt != null) "executed_at": _encodeValue(executedAt),
-        if (paidAt != null) "paid_at": _encodeValue(paidAt),
-        if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
-        if (dueAt != null) "due_at": _encodeValue(dueAt),
-        if (expiredAt != null) "expired_at": _encodeValue(expiredAt),
-        if (failedAt != null) "failed_at": _encodeValue(failedAt),
-        if (paidOffline != null) "paid_offline": _encodeValue(paidOffline),
-        if (paymentMethodTypes != null)
-          "payment_method_types": _encodeValue(paymentMethodTypes),
-        if (payoutConfiguration != null)
-          "payout_configuration": _encodeValue(payoutConfiguration),
-      };
+    "id": _encodeValue(id),
+    "status": _encodeValue(status),
+    "statement_descriptor": _encodeValue(statementDescriptor),
+    "amount": _encodeValue(amount),
+    if (balanceTransaction != null)
+      "balance_transaction": _encodeValue(balanceTransaction),
+    if (paymentMethod != null) "payment_method": _encodeValue(paymentMethod),
+    if (latestAttempt != null) "latest_attempt": _encodeValue(latestAttempt),
+    if (nextAction != null) "next_action": _encodeValue(nextAction),
+    "initiated_at": _encodeValue(initiatedAt),
+    if (executedAt != null) "executed_at": _encodeValue(executedAt),
+    if (paidAt != null) "paid_at": _encodeValue(paidAt),
+    if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
+    if (dueAt != null) "due_at": _encodeValue(dueAt),
+    if (expiredAt != null) "expired_at": _encodeValue(expiredAt),
+    if (failedAt != null) "failed_at": _encodeValue(failedAt),
+    if (paidOffline != null) "paid_offline": _encodeValue(paidOffline),
+    if (paymentMethodTypes != null)
+      "payment_method_types": _encodeValue(paymentMethodTypes),
+    if (payoutConfiguration != null)
+      "payout_configuration": _encodeValue(payoutConfiguration),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9925,35 +9822,34 @@ final class PaymentAttempt implements _InttegroValue {
     this.succeededAt,
   });
   factory PaymentAttempt.fromJson(Map<String, Object?> json) => PaymentAttempt(
-        paymentMethodType: json["payment_method_type"] == null
-            ? null
-            : json["payment_method_type"] as String,
-        paymentMethodId: json["payment_method_id"] == null
-            ? null
-            : json["payment_method_id"] as String,
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        status: json["status"] == null
-            ? null
-            : PaymentAttemptStatus.fromJson(json["status"]),
-        initiatedAt: json["initiated_at"] == null
-            ? null
-            : json["initiated_at"] as String,
-        succeededAt: json["succeeded_at"] == null
-            ? null
-            : json["succeeded_at"] as String,
-      );
+    paymentMethodType: json["payment_method_type"] == null
+        ? null
+        : json["payment_method_type"] as String,
+    paymentMethodId: json["payment_method_id"] == null
+        ? null
+        : json["payment_method_id"] as String,
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    status: json["status"] == null
+        ? null
+        : PaymentAttemptStatus.fromJson(json["status"]),
+    initiatedAt: json["initiated_at"] == null
+        ? null
+        : json["initiated_at"] as String,
+    succeededAt: json["succeeded_at"] == null
+        ? null
+        : json["succeeded_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (paymentMethodType != null)
-          "payment_method_type": _encodeValue(paymentMethodType),
-        if (paymentMethodId != null)
-          "payment_method_id": _encodeValue(paymentMethodId),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (status != null) "status": _encodeValue(status),
-        if (initiatedAt != null) "initiated_at": _encodeValue(initiatedAt),
-        if (succeededAt != null) "succeeded_at": _encodeValue(succeededAt),
-      };
+    if (paymentMethodType != null)
+      "payment_method_type": _encodeValue(paymentMethodType),
+    if (paymentMethodId != null)
+      "payment_method_id": _encodeValue(paymentMethodId),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (status != null) "status": _encodeValue(status),
+    if (initiatedAt != null) "initiated_at": _encodeValue(initiatedAt),
+    if (succeededAt != null) "succeeded_at": _encodeValue(succeededAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -9991,65 +9887,66 @@ final class PaymentMethod implements _InttegroValue {
     this.verifiedAt,
   });
   factory PaymentMethod.fromJson(Map<String, Object?> json) => PaymentMethod(
-        active: json["active"] as bool,
-        archivedAt:
-            json["archived_at"] == null ? null : json["archived_at"] as String,
-        bankAccount: json["bank_account"] == null
-            ? null
-            : PaymentMethodBankAccount.fromJson(
-                (json["bank_account"] as Map).cast<String, Object?>(),
-              ),
-        createdAt: json["created_at"] as String,
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        customerId: json["customer_id"] as String,
-        ephemeral: json["ephemeral"] == null ? null : json["ephemeral"] as bool,
-        expiresOn:
-            json["expires_on"] == null ? null : json["expires_on"] as String,
-        id: json["id"] as String,
-        mobileMoney: json["mobile_money"] == null
-            ? null
-            : PaymentMethodMobileMoney.fromJson(
-                (json["mobile_money"] as Map).cast<String, Object?>(),
-              ),
-        owner: json["owner"] == null
-            ? null
-            : PaymentMethodOwner.fromJson(
-                (json["owner"] as Map).cast<String, Object?>(),
-              ),
-        type: PaymentMethodType.fromJson(json["type"]),
-        supplied: json["supplied"] == null
-            ? null
-            : PaymentMethodSupplied.fromJson(
-                (json["supplied"] as Map).cast<String, Object?>(),
-              ),
-        verification: json["verification"] == null
-            ? null
-            : PaymentMethodVerification.fromJson(
-                (json["verification"] as Map).cast<String, Object?>(),
-              ),
-        verifiedAt:
-            json["verified_at"] == null ? null : json["verified_at"] as String,
-      );
+    active: json["active"] as bool,
+    archivedAt: json["archived_at"] == null
+        ? null
+        : json["archived_at"] as String,
+    bankAccount: json["bank_account"] == null
+        ? null
+        : PaymentMethodBankAccount.fromJson(
+            (json["bank_account"] as Map).cast<String, Object?>(),
+          ),
+    createdAt: json["created_at"] as String,
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    customerId: json["customer_id"] as String,
+    ephemeral: json["ephemeral"] == null ? null : json["ephemeral"] as bool,
+    expiresOn: json["expires_on"] == null ? null : json["expires_on"] as String,
+    id: json["id"] as String,
+    mobileMoney: json["mobile_money"] == null
+        ? null
+        : PaymentMethodMobileMoney.fromJson(
+            (json["mobile_money"] as Map).cast<String, Object?>(),
+          ),
+    owner: json["owner"] == null
+        ? null
+        : PaymentMethodOwner.fromJson(
+            (json["owner"] as Map).cast<String, Object?>(),
+          ),
+    type: PaymentMethodType.fromJson(json["type"]),
+    supplied: json["supplied"] == null
+        ? null
+        : PaymentMethodSupplied.fromJson(
+            (json["supplied"] as Map).cast<String, Object?>(),
+          ),
+    verification: json["verification"] == null
+        ? null
+        : PaymentMethodVerification.fromJson(
+            (json["verification"] as Map).cast<String, Object?>(),
+          ),
+    verifiedAt: json["verified_at"] == null
+        ? null
+        : json["verified_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "active": _encodeValue(active),
-        if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
-        if (bankAccount != null) "bank_account": _encodeValue(bankAccount),
-        "created_at": _encodeValue(createdAt),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        "customer_id": _encodeValue(customerId),
-        if (ephemeral != null) "ephemeral": _encodeValue(ephemeral),
-        if (expiresOn != null) "expires_on": _encodeValue(expiresOn),
-        "id": _encodeValue(id),
-        if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
-        if (owner != null) "owner": _encodeValue(owner),
-        "type": _encodeValue(type),
-        if (supplied != null) "supplied": _encodeValue(supplied),
-        if (verification != null) "verification": _encodeValue(verification),
-        if (verifiedAt != null) "verified_at": _encodeValue(verifiedAt),
-      };
+    "active": _encodeValue(active),
+    if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
+    if (bankAccount != null) "bank_account": _encodeValue(bankAccount),
+    "created_at": _encodeValue(createdAt),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    "customer_id": _encodeValue(customerId),
+    if (ephemeral != null) "ephemeral": _encodeValue(ephemeral),
+    if (expiresOn != null) "expires_on": _encodeValue(expiresOn),
+    "id": _encodeValue(id),
+    if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
+    if (owner != null) "owner": _encodeValue(owner),
+    "type": _encodeValue(type),
+    if (supplied != null) "supplied": _encodeValue(supplied),
+    if (verification != null) "verification": _encodeValue(verification),
+    if (verifiedAt != null) "verified_at": _encodeValue(verifiedAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10068,10 +9965,10 @@ final class PaymentMethodBankAccount implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (ghanaBankAccount != null)
-          "ghana_bank_account": _encodeValue(ghanaBankAccount),
-        "type": _encodeValue(type),
-      };
+    if (ghanaBankAccount != null)
+      "ghana_bank_account": _encodeValue(ghanaBankAccount),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10090,24 +9987,21 @@ final class PaymentMethodBankAccountGhanaBankAccount implements _InttegroValue {
   });
   factory PaymentMethodBankAccountGhanaBankAccount.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PaymentMethodBankAccountGhanaBankAccount(
-        branch: json["branch"] == null ? null : json["branch"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-        accountNumber: json["account_number"] as String,
-        sortCode:
-            json["sort_code"] == null ? null : json["sort_code"] as String,
-        swiftCode:
-            json["swift_code"] == null ? null : json["swift_code"] as String,
-      );
+  ) => PaymentMethodBankAccountGhanaBankAccount(
+    branch: json["branch"] == null ? null : json["branch"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+    accountNumber: json["account_number"] as String,
+    sortCode: json["sort_code"] == null ? null : json["sort_code"] as String,
+    swiftCode: json["swift_code"] == null ? null : json["swift_code"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (branch != null) "branch": _encodeValue(branch),
-        if (name != null) "name": _encodeValue(name),
-        "account_number": _encodeValue(accountNumber),
-        if (sortCode != null) "sort_code": _encodeValue(sortCode),
-        if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
-      };
+    if (branch != null) "branch": _encodeValue(branch),
+    if (name != null) "name": _encodeValue(name),
+    "account_number": _encodeValue(accountNumber),
+    if (sortCode != null) "sort_code": _encodeValue(sortCode),
+    if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -10126,9 +10020,9 @@ final class PaymentMethodDataInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
-        "type": _encodeValue(type),
-      };
+    if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -10141,16 +10035,15 @@ final class PaymentMethodDataInputMobileMoney implements _InttegroValue {
   });
   factory PaymentMethodDataInputMobileMoney.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PaymentMethodDataInputMobileMoney(
-        network: MobileMoneyNetwork.fromJson(json["network"]),
-        accountNumber: json["account_number"] as String,
-      );
+  ) => PaymentMethodDataInputMobileMoney(
+    network: MobileMoneyNetwork.fromJson(json["network"]),
+    accountNumber: json["account_number"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "network": _encodeValue(network),
-        "account_number": _encodeValue(accountNumber),
-      };
+    "network": _encodeValue(network),
+    "account_number": _encodeValue(accountNumber),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10168,9 +10061,9 @@ final class PaymentMethodDeletion implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "deleted": _encodeValue(deleted),
-        "payment_method_id": _encodeValue(paymentMethodId),
-      };
+    "deleted": _encodeValue(deleted),
+    "payment_method_id": _encodeValue(paymentMethodId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10191,10 +10084,10 @@ final class PaymentMethodMobileMoney implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "account_number": _encodeValue(accountNumber),
-        "last4": _encodeValue(last4),
-        "network": _encodeValue(network),
-      };
+    "account_number": _encodeValue(accountNumber),
+    "last4": _encodeValue(last4),
+    "network": _encodeValue(network),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10213,9 +10106,9 @@ final class PaymentMethodOwner implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (address != null) "address": _encodeValue(address),
-        "name": _encodeValue(name),
-      };
+    if (address != null) "address": _encodeValue(address),
+    "name": _encodeValue(name),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10248,21 +10141,22 @@ final class PaymentMethodOwnerAddress implements _InttegroValue {
         phoneNumber: json["phone_number"] == null
             ? null
             : json["phone_number"] as String,
-        postCode:
-            json["post_code"] == null ? null : json["post_code"] as String,
+        postCode: json["post_code"] == null
+            ? null
+            : json["post_code"] as String,
         region: json["region"] == null ? null : json["region"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (city != null) "city": _encodeValue(city),
-        "country": _encodeValue(country),
-        if (line1 != null) "line_1": _encodeValue(line1),
-        if (line2 != null) "line_2": _encodeValue(line2),
-        if (name != null) "name": _encodeValue(name),
-        if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
-        if (postCode != null) "post_code": _encodeValue(postCode),
-        if (region != null) "region": _encodeValue(region),
-      };
+    if (city != null) "city": _encodeValue(city),
+    "country": _encodeValue(country),
+    if (line1 != null) "line_1": _encodeValue(line1),
+    if (line2 != null) "line_2": _encodeValue(line2),
+    if (name != null) "name": _encodeValue(name),
+    if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
+    if (postCode != null) "post_code": _encodeValue(postCode),
+    if (region != null) "region": _encodeValue(region),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -10279,9 +10173,9 @@ final class PaymentMethodOwnerInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "address": _encodeValue(address),
-        "name": _encodeValue(name),
-      };
+    "address": _encodeValue(address),
+    "name": _encodeValue(name),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -10313,22 +10207,23 @@ final class PaymentMethodOwnerInputAddress implements _InttegroValue {
         phoneNumber: json["phone_number"] == null
             ? null
             : json["phone_number"] as String,
-        postCode:
-            json["post_code"] == null ? null : json["post_code"] as String,
+        postCode: json["post_code"] == null
+            ? null
+            : json["post_code"] as String,
         region: json["region"] == null ? null : json["region"] as String,
         country: json["country"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (city != null) "city": _encodeValue(city),
-        if (line1 != null) "line1": _encodeValue(line1),
-        if (line2 != null) "line2": _encodeValue(line2),
-        if (name != null) "name": _encodeValue(name),
-        if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
-        if (postCode != null) "post_code": _encodeValue(postCode),
-        if (region != null) "region": _encodeValue(region),
-        "country": _encodeValue(country),
-      };
+    if (city != null) "city": _encodeValue(city),
+    if (line1 != null) "line1": _encodeValue(line1),
+    if (line2 != null) "line2": _encodeValue(line2),
+    if (name != null) "name": _encodeValue(name),
+    if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
+    if (postCode != null) "post_code": _encodeValue(postCode),
+    if (region != null) "region": _encodeValue(region),
+    "country": _encodeValue(country),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10354,10 +10249,10 @@ final class PaymentMethodPage implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "payment_methods": _encodeValue(paymentMethods),
-        "size": _encodeValue(size),
-      };
+    "number": _encodeValue(number),
+    "payment_methods": _encodeValue(paymentMethods),
+    "size": _encodeValue(size),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -10372,8 +10267,9 @@ final class PaymentMethodPageRequest implements _InttegroValue {
   });
   factory PaymentMethodPageRequest.fromJson(Map<String, Object?> json) =>
       PaymentMethodPageRequest(
-        customerId:
-            json["customer_id"] == null ? null : json["customer_id"] as String,
+        customerId: json["customer_id"] == null
+            ? null
+            : json["customer_id"] as String,
         pageNumber: json["page_number"] == null
             ? null
             : (json["page_number"] as num).toInt(),
@@ -10383,10 +10279,10 @@ final class PaymentMethodPageRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (customerId != null) "customer_id": _encodeValue(customerId),
-        if (pageNumber != null) "page_number": _encodeValue(pageNumber),
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-      };
+    if (customerId != null) "customer_id": _encodeValue(customerId),
+    if (pageNumber != null) "page_number": _encodeValue(pageNumber),
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10426,11 +10322,11 @@ final class PaymentMethodSettings implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
-        if (bankAccount != null) "bank_account": _encodeValue(bankAccount),
-        if (card != null) "card": _encodeValue(card),
-        if (motito != null) "motito": _encodeValue(motito),
-      };
+    if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
+    if (bankAccount != null) "bank_account": _encodeValue(bankAccount),
+    if (card != null) "card": _encodeValue(card),
+    if (motito != null) "motito": _encodeValue(motito),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10465,9 +10361,7 @@ final class PaymentMethodSnapshot implements _InttegroValue {
             : PaymentMethodSnapshotBankAccount.fromJson(
                 (json["bank_account"] as Map).cast<String, Object?>(),
               ),
-        card: json["card"] == null
-            ? null
-            : JsonData.fromJson(json["card"]),
+        card: json["card"] == null ? null : JsonData.fromJson(json["card"]),
         createdAt: json["created_at"] as String,
         customerId: json["customer_id"] as String,
         mobileMoney: json["mobile_money"] == null
@@ -10482,22 +10376,23 @@ final class PaymentMethodSnapshot implements _InttegroValue {
               ),
         type: PaymentMethodType.fromJson(json["type"]),
         verified: json["verified"] as bool,
-        verifiedAt:
-            json["verified_at"] == null ? null : json["verified_at"] as String,
+        verifiedAt: json["verified_at"] == null
+            ? null
+            : json["verified_at"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        if (bankAccount != null) "bank_account": _encodeValue(bankAccount),
-        if (card != null) "card": _encodeValue(card),
-        "created_at": _encodeValue(createdAt),
-        "customer_id": _encodeValue(customerId),
-        if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
-        if (owner != null) "owner": _encodeValue(owner),
-        "type": _encodeValue(type),
-        "verified": _encodeValue(verified),
-        if (verifiedAt != null) "verified_at": _encodeValue(verifiedAt),
-      };
+    "id": _encodeValue(id),
+    if (bankAccount != null) "bank_account": _encodeValue(bankAccount),
+    if (card != null) "card": _encodeValue(card),
+    "created_at": _encodeValue(createdAt),
+    "customer_id": _encodeValue(customerId),
+    if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
+    if (owner != null) "owner": _encodeValue(owner),
+    "type": _encodeValue(type),
+    "verified": _encodeValue(verified),
+    if (verifiedAt != null) "verified_at": _encodeValue(verifiedAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10510,21 +10405,20 @@ final class PaymentMethodSnapshotBankAccount implements _InttegroValue {
   });
   factory PaymentMethodSnapshotBankAccount.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PaymentMethodSnapshotBankAccount(
-        type: json["type"] as String,
-        ghanaBankAccount: json["ghana_bank_account"] == null
-            ? null
-            : PaymentMethodSnapshotGhanaBankAccount.fromJson(
-                (json["ghana_bank_account"] as Map).cast<String, Object?>(),
-              ),
-      );
+  ) => PaymentMethodSnapshotBankAccount(
+    type: json["type"] as String,
+    ghanaBankAccount: json["ghana_bank_account"] == null
+        ? null
+        : PaymentMethodSnapshotGhanaBankAccount.fromJson(
+            (json["ghana_bank_account"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        if (ghanaBankAccount != null)
-          "ghana_bank_account": _encodeValue(ghanaBankAccount),
-      };
+    "type": _encodeValue(type),
+    if (ghanaBankAccount != null)
+      "ghana_bank_account": _encodeValue(ghanaBankAccount),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10543,24 +10437,21 @@ final class PaymentMethodSnapshotGhanaBankAccount implements _InttegroValue {
   });
   factory PaymentMethodSnapshotGhanaBankAccount.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PaymentMethodSnapshotGhanaBankAccount(
-        accountNumber: json["account_number"] as String,
-        branch: json["branch"] == null ? null : json["branch"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-        sortCode:
-            json["sort_code"] == null ? null : json["sort_code"] as String,
-        swiftCode:
-            json["swift_code"] == null ? null : json["swift_code"] as String,
-      );
+  ) => PaymentMethodSnapshotGhanaBankAccount(
+    accountNumber: json["account_number"] as String,
+    branch: json["branch"] == null ? null : json["branch"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+    sortCode: json["sort_code"] == null ? null : json["sort_code"] as String,
+    swiftCode: json["swift_code"] == null ? null : json["swift_code"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "account_number": _encodeValue(accountNumber),
-        if (branch != null) "branch": _encodeValue(branch),
-        if (name != null) "name": _encodeValue(name),
-        if (sortCode != null) "sort_code": _encodeValue(sortCode),
-        if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
-      };
+    "account_number": _encodeValue(accountNumber),
+    if (branch != null) "branch": _encodeValue(branch),
+    if (name != null) "name": _encodeValue(name),
+    if (sortCode != null) "sort_code": _encodeValue(sortCode),
+    if (swiftCode != null) "swift_code": _encodeValue(swiftCode),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10575,18 +10466,17 @@ final class PaymentMethodSnapshotMobileMoney implements _InttegroValue {
   });
   factory PaymentMethodSnapshotMobileMoney.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PaymentMethodSnapshotMobileMoney(
-        network: MobileMoneyNetwork.fromJson(json["network"]),
-        accountNumber: json["account_number"] as String,
-        last4: json["last4"] as String,
-      );
+  ) => PaymentMethodSnapshotMobileMoney(
+    network: MobileMoneyNetwork.fromJson(json["network"]),
+    accountNumber: json["account_number"] as String,
+    last4: json["last4"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "network": _encodeValue(network),
-        "account_number": _encodeValue(accountNumber),
-        "last4": _encodeValue(last4),
-      };
+    "network": _encodeValue(network),
+    "account_number": _encodeValue(accountNumber),
+    "last4": _encodeValue(last4),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10605,9 +10495,9 @@ final class PaymentMethodSnapshotOwner implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "name": _encodeValue(name),
-        if (address != null) "address": _encodeValue(address),
-      };
+    "name": _encodeValue(name),
+    if (address != null) "address": _encodeValue(address),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10628,12 +10518,14 @@ final class PaymentMethodSupplied implements _InttegroValue {
   });
   factory PaymentMethodSupplied.fromJson(Map<String, Object?> json) =>
       PaymentMethodSupplied(
-        attemptId:
-            json["attempt_id"] == null ? null : json["attempt_id"] as String,
+        attemptId: json["attempt_id"] == null
+            ? null
+            : json["attempt_id"] as String,
         by: json["by"] as String,
         channel: json["channel"] == null ? null : json["channel"] as String,
-        resourceId:
-            json["resource_id"] == null ? null : json["resource_id"] as String,
+        resourceId: json["resource_id"] == null
+            ? null
+            : json["resource_id"] as String,
         resourceType: json["resource_type"] == null
             ? null
             : json["resource_type"] as String,
@@ -10641,13 +10533,13 @@ final class PaymentMethodSupplied implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (attemptId != null) "attempt_id": _encodeValue(attemptId),
-        "by": _encodeValue(by),
-        if (channel != null) "channel": _encodeValue(channel),
-        if (resourceId != null) "resource_id": _encodeValue(resourceId),
-        if (resourceType != null) "resource_type": _encodeValue(resourceType),
-        "supplied_at": _encodeValue(suppliedAt),
-      };
+    if (attemptId != null) "attempt_id": _encodeValue(attemptId),
+    "by": _encodeValue(by),
+    if (channel != null) "channel": _encodeValue(channel),
+    if (resourceId != null) "resource_id": _encodeValue(resourceId),
+    if (resourceType != null) "resource_type": _encodeValue(resourceType),
+    "supplied_at": _encodeValue(suppliedAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10670,19 +10562,20 @@ final class PaymentMethodTypeSetting implements _InttegroValue {
             ? null
             : PaymentMethodType.fromJson(json["type"]),
         name: json["name"] == null ? null : json["name"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         enabled: json["enabled"] as bool,
         confirmsUse: json["confirms_use"] as bool,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (type != null) "type": _encodeValue(type),
-        if (name != null) "name": _encodeValue(name),
-        if (description != null) "description": _encodeValue(description),
-        "enabled": _encodeValue(enabled),
-        "confirms_use": _encodeValue(confirmsUse),
-      };
+    if (type != null) "type": _encodeValue(type),
+    if (name != null) "name": _encodeValue(name),
+    if (description != null) "description": _encodeValue(description),
+    "enabled": _encodeValue(enabled),
+    "confirms_use": _encodeValue(confirmsUse),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10705,19 +10598,20 @@ final class PaymentMethodVerification implements _InttegroValue {
             ? null
             : json["completed_at"] as String,
         initiatedAt: json["initiated_at"] as String,
-        mechanism:
-            json["mechanism"] == null ? null : json["mechanism"] as String,
+        mechanism: json["mechanism"] == null
+            ? null
+            : json["mechanism"] as String,
         requestId: json["request_id"] as String,
         type: json["type"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (completedAt != null) "completed_at": _encodeValue(completedAt),
-        "initiated_at": _encodeValue(initiatedAt),
-        if (mechanism != null) "mechanism": _encodeValue(mechanism),
-        "request_id": _encodeValue(requestId),
-        "type": _encodeValue(type),
-      };
+    if (completedAt != null) "completed_at": _encodeValue(completedAt),
+    "initiated_at": _encodeValue(initiatedAt),
+    if (mechanism != null) "mechanism": _encodeValue(mechanism),
+    "request_id": _encodeValue(requestId),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10736,27 +10630,25 @@ final class PaymentMethodVerificationSession implements _InttegroValue {
   });
   factory PaymentMethodVerificationSession.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PaymentMethodVerificationSession(
-        paymentMethodId: json["payment_method_id"] as String,
-        status: json["status"] as String,
-        tokenSentAt: json["token_sent_at"] == null
-            ? null
-            : json["token_sent_at"] as String,
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
-        delivery: json["delivery"] == null
-            ? null
-            : JsonData.fromJson(json["delivery"]),
-      );
+  ) => PaymentMethodVerificationSession(
+    paymentMethodId: json["payment_method_id"] as String,
+    status: json["status"] as String,
+    tokenSentAt: json["token_sent_at"] == null
+        ? null
+        : json["token_sent_at"] as String,
+    expiresAt: json["expires_at"] == null ? null : json["expires_at"] as String,
+    delivery: json["delivery"] == null
+        ? null
+        : JsonData.fromJson(json["delivery"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "payment_method_id": _encodeValue(paymentMethodId),
-        "status": _encodeValue(status),
-        if (tokenSentAt != null) "token_sent_at": _encodeValue(tokenSentAt),
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-        if (delivery != null) "delivery": _encodeValue(delivery),
-      };
+    "payment_method_id": _encodeValue(paymentMethodId),
+    "status": _encodeValue(status),
+    if (tokenSentAt != null) "token_sent_at": _encodeValue(tokenSentAt),
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+    if (delivery != null) "delivery": _encodeValue(delivery),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10797,13 +10689,12 @@ final class PaymentNextAction implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        if (confirmPayment != null)
-          "confirm_payment": _encodeValue(confirmPayment),
-        if (execute != null) "execute": _encodeValue(execute),
-        if (redirect != null) "redirect": _encodeValue(redirect),
-        if (authorize != null) "authorize": _encodeValue(authorize),
-      };
+    "type": _encodeValue(type),
+    if (confirmPayment != null) "confirm_payment": _encodeValue(confirmPayment),
+    if (execute != null) "execute": _encodeValue(execute),
+    if (redirect != null) "redirect": _encodeValue(redirect),
+    if (authorize != null) "authorize": _encodeValue(authorize),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10818,18 +10709,20 @@ final class PaymentNextActionAuthorize implements _InttegroValue {
   });
   factory PaymentNextActionAuthorize.fromJson(Map<String, Object?> json) =>
       PaymentNextActionAuthorize(
-        beneficiary:
-            json["beneficiary"] == null ? null : json["beneficiary"] as String,
+        beneficiary: json["beneficiary"] == null
+            ? null
+            : json["beneficiary"] as String,
         scheme: json["scheme"] == null ? null : json["scheme"] as String,
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
+        expiresAt: json["expires_at"] == null
+            ? null
+            : json["expires_at"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (beneficiary != null) "beneficiary": _encodeValue(beneficiary),
-        if (scheme != null) "scheme": _encodeValue(scheme),
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-      };
+    if (beneficiary != null) "beneficiary": _encodeValue(beneficiary),
+    if (scheme != null) "scheme": _encodeValue(scheme),
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10850,8 +10743,9 @@ final class PaymentNextActionConfirmPayment implements _InttegroValue {
   });
   factory PaymentNextActionConfirmPayment.fromJson(Map<String, Object?> json) =>
       PaymentNextActionConfirmPayment(
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
+        expiresAt: json["expires_at"] == null
+            ? null
+            : json["expires_at"] as String,
         scheme: json["scheme"] == null ? null : json["scheme"] as String,
         request: json["request"] == null
             ? null
@@ -10868,13 +10762,13 @@ final class PaymentNextActionConfirmPayment implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-        if (scheme != null) "scheme": _encodeValue(scheme),
-        if (request != null) "request": _encodeValue(request),
-        if (attempt != null) "attempt": _encodeValue(attempt),
-        if (confirmed != null) "confirmed": _encodeValue(confirmed),
-        if (status != null) "status": _encodeValue(status),
-      };
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+    if (scheme != null) "scheme": _encodeValue(scheme),
+    if (request != null) "request": _encodeValue(request),
+    if (attempt != null) "attempt": _encodeValue(attempt),
+    if (confirmed != null) "confirmed": _encodeValue(confirmed),
+    if (status != null) "status": _encodeValue(status),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10895,26 +10789,25 @@ final class PaymentNextActionConfirmPaymentAttempt implements _InttegroValue {
   });
   factory PaymentNextActionConfirmPaymentAttempt.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PaymentNextActionConfirmPaymentAttempt(
-        status: json["status"] == null ? null : json["status"] as String,
-        confirmed: json["confirmed"] == null ? null : json["confirmed"] as bool,
-        reason: json["reason"] == null ? null : json["reason"] as String,
-        token: json["token"] == null ? null : json["token"] as String,
-        executedAt:
-            json["executed_at"] == null ? null : json["executed_at"] as String,
-        createdAt:
-            json["created_at"] == null ? null : json["created_at"] as String,
-      );
+  ) => PaymentNextActionConfirmPaymentAttempt(
+    status: json["status"] == null ? null : json["status"] as String,
+    confirmed: json["confirmed"] == null ? null : json["confirmed"] as bool,
+    reason: json["reason"] == null ? null : json["reason"] as String,
+    token: json["token"] == null ? null : json["token"] as String,
+    executedAt: json["executed_at"] == null
+        ? null
+        : json["executed_at"] as String,
+    createdAt: json["created_at"] == null ? null : json["created_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (status != null) "status": _encodeValue(status),
-        if (confirmed != null) "confirmed": _encodeValue(confirmed),
-        if (reason != null) "reason": _encodeValue(reason),
-        if (token != null) "token": _encodeValue(token),
-        if (executedAt != null) "executed_at": _encodeValue(executedAt),
-        if (createdAt != null) "created_at": _encodeValue(createdAt),
-      };
+    if (status != null) "status": _encodeValue(status),
+    if (confirmed != null) "confirmed": _encodeValue(confirmed),
+    if (reason != null) "reason": _encodeValue(reason),
+    if (token != null) "token": _encodeValue(token),
+    if (executedAt != null) "executed_at": _encodeValue(executedAt),
+    if (createdAt != null) "created_at": _encodeValue(createdAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10933,28 +10826,25 @@ final class PaymentNextActionConfirmPaymentRequest implements _InttegroValue {
   });
   factory PaymentNextActionConfirmPaymentRequest.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PaymentNextActionConfirmPaymentRequest(
-        id: json["id"] == null ? null : json["id"] as String,
-        recipient:
-            json["recipient"] == null ? null : json["recipient"] as String,
-        sentVia: json["sent_via"] == null
-            ? null
-            : PaymentConfirmationChannel.fromJson(json["sent_via"]),
-        tokenSize: json["token_size"] == null
-            ? null
-            : (json["token_size"] as num).toInt(),
-        senderId:
-            json["sender_id"] == null ? null : json["sender_id"] as String,
-      );
+  ) => PaymentNextActionConfirmPaymentRequest(
+    id: json["id"] == null ? null : json["id"] as String,
+    recipient: json["recipient"] == null ? null : json["recipient"] as String,
+    sentVia: json["sent_via"] == null
+        ? null
+        : PaymentConfirmationChannel.fromJson(json["sent_via"]),
+    tokenSize: json["token_size"] == null
+        ? null
+        : (json["token_size"] as num).toInt(),
+    senderId: json["sender_id"] == null ? null : json["sender_id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (id != null) "id": _encodeValue(id),
-        if (recipient != null) "recipient": _encodeValue(recipient),
-        if (sentVia != null) "sent_via": _encodeValue(sentVia),
-        if (tokenSize != null) "token_size": _encodeValue(tokenSize),
-        if (senderId != null) "sender_id": _encodeValue(senderId),
-      };
+    if (id != null) "id": _encodeValue(id),
+    if (recipient != null) "recipient": _encodeValue(recipient),
+    if (sentVia != null) "sent_via": _encodeValue(sentVia),
+    if (tokenSize != null) "token_size": _encodeValue(tokenSize),
+    if (senderId != null) "sender_id": _encodeValue(senderId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -10972,8 +10862,9 @@ final class PaymentNextActionRedirect implements _InttegroValue {
         redirectUrl: json["redirect_url"] == null
             ? null
             : json["redirect_url"] as String,
-        validUntil:
-            json["valid_until"] == null ? null : json["valid_until"] as String,
+        validUntil: json["valid_until"] == null
+            ? null
+            : json["valid_until"] as String,
         latestVisit: json["latest_visit"] == null
             ? null
             : PaymentNextActionRedirectLatestVisit.fromJson(
@@ -10982,10 +10873,10 @@ final class PaymentNextActionRedirect implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (redirectUrl != null) "redirect_url": _encodeValue(redirectUrl),
-        if (validUntil != null) "valid_until": _encodeValue(validUntil),
-        if (latestVisit != null) "latest_visit": _encodeValue(latestVisit),
-      };
+    if (redirectUrl != null) "redirect_url": _encodeValue(redirectUrl),
+    if (validUntil != null) "valid_until": _encodeValue(validUntil),
+    if (latestVisit != null) "latest_visit": _encodeValue(latestVisit),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11000,20 +10891,17 @@ final class PaymentNextActionRedirectLatestVisit implements _InttegroValue {
   });
   factory PaymentNextActionRedirectLatestVisit.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PaymentNextActionRedirectLatestVisit(
-        userAgent:
-            json["user_agent"] == null ? null : json["user_agent"] as String,
-        ipAddress:
-            json["ip_address"] == null ? null : json["ip_address"] as String,
-        at: json["at"] == null ? null : json["at"] as String,
-      );
+  ) => PaymentNextActionRedirectLatestVisit(
+    userAgent: json["user_agent"] == null ? null : json["user_agent"] as String,
+    ipAddress: json["ip_address"] == null ? null : json["ip_address"] as String,
+    at: json["at"] == null ? null : json["at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (userAgent != null) "user_agent": _encodeValue(userAgent),
-        if (ipAddress != null) "ip_address": _encodeValue(ipAddress),
-        if (at != null) "at": _encodeValue(at),
-      };
+    if (userAgent != null) "user_agent": _encodeValue(userAgent),
+    if (ipAddress != null) "ip_address": _encodeValue(ipAddress),
+    if (at != null) "at": _encodeValue(at),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11032,9 +10920,9 @@ final class PaymentPayoutConfiguration implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (enableFx != null) "enable_fx": _encodeValue(enableFx),
-        if (destination != null) "destination": _encodeValue(destination),
-      };
+    if (enableFx != null) "enable_fx": _encodeValue(enableFx),
+    if (destination != null) "destination": _encodeValue(destination),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11043,17 +10931,16 @@ final class PaymentPayoutConfigurationDestination implements _InttegroValue {
   const PaymentPayoutConfigurationDestination({this.financialAccountId});
   factory PaymentPayoutConfigurationDestination.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PaymentPayoutConfigurationDestination(
-        financialAccountId: json["financial_account_id"] == null
-            ? null
-            : json["financial_account_id"] as String,
-      );
+  ) => PaymentPayoutConfigurationDestination(
+    financialAccountId: json["financial_account_id"] == null
+        ? null
+        : json["financial_account_id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (financialAccountId != null)
-          "financial_account_id": _encodeValue(financialAccountId),
-      };
+    if (financialAccountId != null)
+      "financial_account_id": _encodeValue(financialAccountId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11105,83 +10992,83 @@ final class Payout implements _InttegroValue {
     this.succeededAt,
   });
   factory Payout.fromJson(Map<String, Object?> json) => Payout(
-        amount: json["amount"] == null
-            ? null
-            : Amount.fromJson((json["amount"] as Map).cast<String, Object?>()),
-        balanceTransactions: json["balance_transactions"] == null
-            ? null
-            : (json["balance_transactions"] as List)
-                .map((item) => item as String)
-                .toList(),
-        canceledAt:
-            json["canceled_at"] == null ? null : json["canceled_at"] as String,
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        destinationId: json["destination_id"] as String,
-        error: json["error"] == null
-            ? null
-            : PayoutError.fromJson(
-                (json["error"] as Map).cast<String, Object?>()),
-        executeAfter: json["execute_after"] as String,
-        executedBy:
-            json["executed_by"] == null ? null : json["executed_by"] as String,
-        expectedAt:
-            json["expected_at"] == null ? null : json["expected_at"] as String,
-        failedAt:
-            json["failed_at"] == null ? null : json["failed_at"] as String,
-        id: json["id"] as String,
-        initiatedAt: json["initiated_at"] as String,
-        initiatedBy: json["initiated_by"] == null
-            ? null
-            : json["initiated_by"] as String,
-        maxAmount: Amount.fromJson(
-          (json["max_amount"] as Map).cast<String, Object?>(),
-        ),
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        scheduleId:
-            json["schedule_id"] == null ? null : json["schedule_id"] as String,
-        scheduledAt: json["scheduled_at"] == null
-            ? null
-            : json["scheduled_at"] as String,
-        scheduledBy: json["scheduled_by"] == null
-            ? null
-            : json["scheduled_by"] as String,
-        sentAt: json["sent_at"] == null ? null : json["sent_at"] as String,
-        sourceId:
-            json["source_id"] == null ? null : json["source_id"] as String,
-        status: PayoutStatus.fromJson(json["status"]),
-        succeededAt: json["succeeded_at"] == null
-            ? null
-            : json["succeeded_at"] as String,
-      );
+    amount: json["amount"] == null
+        ? null
+        : Amount.fromJson((json["amount"] as Map).cast<String, Object?>()),
+    balanceTransactions: json["balance_transactions"] == null
+        ? null
+        : (json["balance_transactions"] as List)
+              .map((item) => item as String)
+              .toList(),
+    canceledAt: json["canceled_at"] == null
+        ? null
+        : json["canceled_at"] as String,
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    destinationId: json["destination_id"] as String,
+    error: json["error"] == null
+        ? null
+        : PayoutError.fromJson((json["error"] as Map).cast<String, Object?>()),
+    executeAfter: json["execute_after"] as String,
+    executedBy: json["executed_by"] == null
+        ? null
+        : json["executed_by"] as String,
+    expectedAt: json["expected_at"] == null
+        ? null
+        : json["expected_at"] as String,
+    failedAt: json["failed_at"] == null ? null : json["failed_at"] as String,
+    id: json["id"] as String,
+    initiatedAt: json["initiated_at"] as String,
+    initiatedBy: json["initiated_by"] == null
+        ? null
+        : json["initiated_by"] as String,
+    maxAmount: Amount.fromJson(
+      (json["max_amount"] as Map).cast<String, Object?>(),
+    ),
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    scheduleId: json["schedule_id"] == null
+        ? null
+        : json["schedule_id"] as String,
+    scheduledAt: json["scheduled_at"] == null
+        ? null
+        : json["scheduled_at"] as String,
+    scheduledBy: json["scheduled_by"] == null
+        ? null
+        : json["scheduled_by"] as String,
+    sentAt: json["sent_at"] == null ? null : json["sent_at"] as String,
+    sourceId: json["source_id"] == null ? null : json["source_id"] as String,
+    status: PayoutStatus.fromJson(json["status"]),
+    succeededAt: json["succeeded_at"] == null
+        ? null
+        : json["succeeded_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (amount != null) "amount": _encodeValue(amount),
-        if (balanceTransactions != null)
-          "balance_transactions": _encodeValue(balanceTransactions),
-        if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        "destination_id": _encodeValue(destinationId),
-        if (error != null) "error": _encodeValue(error),
-        "execute_after": _encodeValue(executeAfter),
-        if (executedBy != null) "executed_by": _encodeValue(executedBy),
-        if (expectedAt != null) "expected_at": _encodeValue(expectedAt),
-        if (failedAt != null) "failed_at": _encodeValue(failedAt),
-        "id": _encodeValue(id),
-        "initiated_at": _encodeValue(initiatedAt),
-        if (initiatedBy != null) "initiated_by": _encodeValue(initiatedBy),
-        "max_amount": _encodeValue(maxAmount),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (scheduleId != null) "schedule_id": _encodeValue(scheduleId),
-        if (scheduledAt != null) "scheduled_at": _encodeValue(scheduledAt),
-        if (scheduledBy != null) "scheduled_by": _encodeValue(scheduledBy),
-        if (sentAt != null) "sent_at": _encodeValue(sentAt),
-        if (sourceId != null) "source_id": _encodeValue(sourceId),
-        "status": _encodeValue(status),
-        if (succeededAt != null) "succeeded_at": _encodeValue(succeededAt),
-      };
+    if (amount != null) "amount": _encodeValue(amount),
+    if (balanceTransactions != null)
+      "balance_transactions": _encodeValue(balanceTransactions),
+    if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    "destination_id": _encodeValue(destinationId),
+    if (error != null) "error": _encodeValue(error),
+    "execute_after": _encodeValue(executeAfter),
+    if (executedBy != null) "executed_by": _encodeValue(executedBy),
+    if (expectedAt != null) "expected_at": _encodeValue(expectedAt),
+    if (failedAt != null) "failed_at": _encodeValue(failedAt),
+    "id": _encodeValue(id),
+    "initiated_at": _encodeValue(initiatedAt),
+    if (initiatedBy != null) "initiated_by": _encodeValue(initiatedBy),
+    "max_amount": _encodeValue(maxAmount),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (scheduleId != null) "schedule_id": _encodeValue(scheduleId),
+    if (scheduledAt != null) "scheduled_at": _encodeValue(scheduledAt),
+    if (scheduledBy != null) "scheduled_by": _encodeValue(scheduledBy),
+    if (sentAt != null) "sent_at": _encodeValue(sentAt),
+    if (sourceId != null) "source_id": _encodeValue(sourceId),
+    "status": _encodeValue(status),
+    if (succeededAt != null) "succeeded_at": _encodeValue(succeededAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11197,18 +11084,18 @@ final class PayoutError implements _InttegroValue {
     required this.type,
   });
   factory PayoutError.fromJson(Map<String, Object?> json) => PayoutError(
-        cause: json["cause"] as String,
-        message: json["message"] as String,
-        occurredAt: json["occurred_at"] as String,
-        type: json["type"] as String,
-      );
+    cause: json["cause"] as String,
+    message: json["message"] as String,
+    occurredAt: json["occurred_at"] as String,
+    type: json["type"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "cause": _encodeValue(cause),
-        "message": _encodeValue(message),
-        "occurred_at": _encodeValue(occurredAt),
-        "type": _encodeValue(type),
-      };
+    "cause": _encodeValue(cause),
+    "message": _encodeValue(message),
+    "occurred_at": _encodeValue(occurredAt),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11218,23 +11105,23 @@ final class PayoutPage implements _InttegroValue {
   final List<Payout>? payouts;
   const PayoutPage({required this.number, required this.size, this.payouts});
   factory PayoutPage.fromJson(Map<String, Object?> json) => PayoutPage(
-        number: (json["number"] as num).toInt(),
-        size: (json["size"] as num).toInt(),
-        payouts: json["payouts"] == null
-            ? null
-            : (json["payouts"] as List)
-                .map(
-                  (item) =>
-                      Payout.fromJson((item as Map).cast<String, Object?>()),
-                )
-                .toList(),
-      );
+    number: (json["number"] as num).toInt(),
+    size: (json["size"] as num).toInt(),
+    payouts: json["payouts"] == null
+        ? null
+        : (json["payouts"] as List)
+              .map(
+                (item) =>
+                    Payout.fromJson((item as Map).cast<String, Object?>()),
+              )
+              .toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-        if (payouts != null) "payouts": _encodeValue(payouts),
-      };
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+    if (payouts != null) "payouts": _encodeValue(payouts),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11250,8 +11137,9 @@ final class PayoutSettingsLookup implements _InttegroValue {
   factory PayoutSettingsLookup.fromJson(Map<String, Object?> json) =>
       PayoutSettingsLookup(
         destinations: PayoutDestinations.fromJson(json["destinations"]),
-        fxEnabled:
-            json["fx_enabled"] == null ? null : json["fx_enabled"] as bool,
+        fxEnabled: json["fx_enabled"] == null
+            ? null
+            : json["fx_enabled"] as bool,
         schedule: json["schedule"] == null
             ? null
             : PayoutSettingsLookupSchedule.fromJson(
@@ -11260,10 +11148,10 @@ final class PayoutSettingsLookup implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "destinations": _encodeValue(destinations),
-        if (fxEnabled != null) "fx_enabled": _encodeValue(fxEnabled),
-        if (schedule != null) "schedule": _encodeValue(schedule),
-      };
+    "destinations": _encodeValue(destinations),
+    if (fxEnabled != null) "fx_enabled": _encodeValue(fxEnabled),
+    if (schedule != null) "schedule": _encodeValue(schedule),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11295,13 +11183,13 @@ final class PayoutSettingsLookupSchedule implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "aging_spec": _encodeValue(agingSpec),
-        "description": _encodeValue(description),
-        "interval": _encodeValue(interval),
-        "name": _encodeValue(name),
-        "schedule_on": _encodeValue(scheduleOn),
-        "type": _encodeValue(type),
-      };
+    "aging_spec": _encodeValue(agingSpec),
+    "description": _encodeValue(description),
+    "interval": _encodeValue(interval),
+    "name": _encodeValue(name),
+    "schedule_on": _encodeValue(scheduleOn),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11316,18 +11204,17 @@ final class PayoutSettingsLookupScheduleAgingSpec implements _InttegroValue {
   });
   factory PayoutSettingsLookupScheduleAgingSpec.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PayoutSettingsLookupScheduleAgingSpec(
-        abide: json["abide"] as String,
-        label: json["label"] as String,
-        tPlus: json["t_plus"] as String,
-      );
+  ) => PayoutSettingsLookupScheduleAgingSpec(
+    abide: json["abide"] as String,
+    label: json["label"] as String,
+    tPlus: json["t_plus"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "abide": _encodeValue(abide),
-        "label": _encodeValue(label),
-        "t_plus": _encodeValue(tPlus),
-      };
+    "abide": _encodeValue(abide),
+    "label": _encodeValue(label),
+    "t_plus": _encodeValue(tPlus),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11350,10 +11237,10 @@ final class PayoutSettingsMutation implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (destinations != null) "destinations": _encodeValue(destinations),
-        if (id != null) "id": _encodeValue(id),
-        if (schedule != null) "schedule": _encodeValue(schedule),
-      };
+    if (destinations != null) "destinations": _encodeValue(destinations),
+    if (id != null) "id": _encodeValue(id),
+    if (schedule != null) "schedule": _encodeValue(schedule),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11388,14 +11275,14 @@ final class PayoutSettingsMutationSchedule implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "description": _encodeValue(description),
-        "id": _encodeValue(id),
-        "interval": _encodeValue(interval),
-        "name": _encodeValue(name),
-        "schedule_on": _encodeValue(scheduleOn),
-        "spec": _encodeValue(spec),
-        "type": _encodeValue(type),
-      };
+    "description": _encodeValue(description),
+    "id": _encodeValue(id),
+    "interval": _encodeValue(interval),
+    "name": _encodeValue(name),
+    "schedule_on": _encodeValue(scheduleOn),
+    "spec": _encodeValue(spec),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11412,20 +11299,19 @@ final class PayoutSettingsMutationScheduleSpec implements _InttegroValue {
   });
   factory PayoutSettingsMutationScheduleSpec.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PayoutSettingsMutationScheduleSpec(
-        abide: json["abide"] as String,
-        id: json["id"] as String,
-        label: json["label"] as String,
-        tPlus: json["t_plus"] as String,
-      );
+  ) => PayoutSettingsMutationScheduleSpec(
+    abide: json["abide"] as String,
+    id: json["id"] as String,
+    label: json["label"] as String,
+    tPlus: json["t_plus"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "abide": _encodeValue(abide),
-        "id": _encodeValue(id),
-        "label": _encodeValue(label),
-        "t_plus": _encodeValue(tPlus),
-      };
+    "abide": _encodeValue(abide),
+    "id": _encodeValue(id),
+    "label": _encodeValue(label),
+    "t_plus": _encodeValue(tPlus),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11434,14 +11320,14 @@ final class Price implements _InttegroValue {
   final int value;
   const Price({required this.currency, required this.value});
   factory Price.fromJson(Map<String, Object?> json) => Price(
-        currency: Currency.fromJson(json["currency"]),
-        value: (json["value"] as num).toInt(),
-      );
+    currency: Currency.fromJson(json["currency"]),
+    value: (json["value"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "currency": _encodeValue(currency),
-        "value": _encodeValue(value),
-      };
+    "currency": _encodeValue(currency),
+    "value": _encodeValue(value),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -11498,72 +11384,75 @@ final class PriceEmbeddedProduct implements _InttegroValue {
   });
   factory PriceEmbeddedProduct.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PriceEmbeddedProduct(
-        id: json["id"] as String,
-        about: json["about"] == null ? null : json["about"] as String,
-        active: json["active"] as bool,
-        archivedAt:
-            json["archived_at"] == null ? null : json["archived_at"] as String,
-        attributes: json["attributes"] == null
-            ? null
-            : (json["attributes"] as List)
-                .map(
-                  (item) => PriceEmbeddedProductAttributesItem.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        category: json["category"] == null ? null : json["category"] as String,
-        createdAt: json["created_at"] as String,
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        description:
-            json["description"] == null ? null : json["description"] as String,
-        dimensions: json["dimensions"] == null
-            ? null
-            : ProductDimensions.fromJson((json["dimensions"] as Map).cast<String, Object?>()),
-        media: json["media"] == null
-            ? null
-            : ProductMedia.fromJson((json["media"] as Map).cast<String, Object?>()),
-        name: json["name"] as String,
-        publishedAt: json["published_at"] == null
-            ? null
-            : json["published_at"] as String,
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        shipment: json["shipment"] == null
-            ? null
-            : ProductShipment.fromJson((json["shipment"] as Map).cast<String, Object?>()),
-        taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
-        type: ProductType.fromJson(json["type"]),
-        unitDim: json["unit_dim"] == null ? null : json["unit_dim"] as String,
-        updatedAt:
-            json["updated_at"] == null ? null : json["updated_at"] as String,
-      );
+  ) => PriceEmbeddedProduct(
+    id: json["id"] as String,
+    about: json["about"] == null ? null : json["about"] as String,
+    active: json["active"] as bool,
+    archivedAt: json["archived_at"] == null
+        ? null
+        : json["archived_at"] as String,
+    attributes: json["attributes"] == null
+        ? null
+        : (json["attributes"] as List)
+              .map(
+                (item) => PriceEmbeddedProductAttributesItem.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    category: json["category"] == null ? null : json["category"] as String,
+    createdAt: json["created_at"] as String,
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    description: json["description"] == null
+        ? null
+        : json["description"] as String,
+    dimensions: json["dimensions"] == null
+        ? null
+        : ProductDimensions.fromJson(
+            (json["dimensions"] as Map).cast<String, Object?>(),
+          ),
+    media: json["media"] == null
+        ? null
+        : ProductMedia.fromJson((json["media"] as Map).cast<String, Object?>()),
+    name: json["name"] as String,
+    publishedAt: json["published_at"] == null
+        ? null
+        : json["published_at"] as String,
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    shipment: json["shipment"] == null
+        ? null
+        : ProductShipment.fromJson(
+            (json["shipment"] as Map).cast<String, Object?>(),
+          ),
+    taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
+    type: ProductType.fromJson(json["type"]),
+    unitDim: json["unit_dim"] == null ? null : json["unit_dim"] as String,
+    updatedAt: json["updated_at"] == null ? null : json["updated_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        if (about != null) "about": _encodeValue(about),
-        "active": _encodeValue(active),
-        if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
-        if (attributes != null) "attributes": _encodeValue(attributes),
-        if (category != null) "category": _encodeValue(category),
-        "created_at": _encodeValue(createdAt),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (description != null) "description": _encodeValue(description),
-        if (dimensions != null) "dimensions": _encodeValue(dimensions),
-        if (media != null) "media": _encodeValue(media),
-        "name": _encodeValue(name),
-        if (publishedAt != null) "published_at": _encodeValue(publishedAt),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (shipment != null) "shipment": _encodeValue(shipment),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        "type": _encodeValue(type),
-        if (unitDim != null) "unit_dim": _encodeValue(unitDim),
-        if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
-      };
+    "id": _encodeValue(id),
+    if (about != null) "about": _encodeValue(about),
+    "active": _encodeValue(active),
+    if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
+    if (attributes != null) "attributes": _encodeValue(attributes),
+    if (category != null) "category": _encodeValue(category),
+    "created_at": _encodeValue(createdAt),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (description != null) "description": _encodeValue(description),
+    if (dimensions != null) "dimensions": _encodeValue(dimensions),
+    if (media != null) "media": _encodeValue(media),
+    "name": _encodeValue(name),
+    if (publishedAt != null) "published_at": _encodeValue(publishedAt),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (shipment != null) "shipment": _encodeValue(shipment),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    "type": _encodeValue(type),
+    if (unitDim != null) "unit_dim": _encodeValue(unitDim),
+    if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11576,16 +11465,15 @@ final class PriceEmbeddedProductAttributesItem implements _InttegroValue {
   });
   factory PriceEmbeddedProductAttributesItem.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PriceEmbeddedProductAttributesItem(
-        name: json["name"] as String,
-        value: json["value"] as String,
-      );
+  ) => PriceEmbeddedProductAttributesItem(
+    name: json["name"] as String,
+    value: json["value"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "name": _encodeValue(name),
-        "value": _encodeValue(value),
-      };
+    "name": _encodeValue(name),
+    "value": _encodeValue(value),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11595,24 +11483,24 @@ final class PricePage implements _InttegroValue {
   final List<CatalogPrice>? prices;
   const PricePage({this.number, this.size, this.prices});
   factory PricePage.fromJson(Map<String, Object?> json) => PricePage(
-        number: json["number"] == null ? null : (json["number"] as num).toInt(),
-        size: json["size"] == null ? null : (json["size"] as num).toInt(),
-        prices: json["prices"] == null
-            ? null
-            : (json["prices"] as List)
-                .map(
-                  (item) => CatalogPrice.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-      );
+    number: json["number"] == null ? null : (json["number"] as num).toInt(),
+    size: json["size"] == null ? null : (json["size"] as num).toInt(),
+    prices: json["prices"] == null
+        ? null
+        : (json["prices"] as List)
+              .map(
+                (item) => CatalogPrice.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (number != null) "number": _encodeValue(number),
-        if (size != null) "size": _encodeValue(size),
-        if (prices != null) "prices": _encodeValue(prices),
-      };
+    if (number != null) "number": _encodeValue(number),
+    if (size != null) "size": _encodeValue(size),
+    if (prices != null) "prices": _encodeValue(prices),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11640,38 +11528,36 @@ final class PricePageItem implements _InttegroValue {
     this.archivedAt,
   });
   factory PricePageItem.fromJson(Map<String, Object?> json) => PricePageItem(
-        id: json["id"] as String,
-        label: json["label"] == null ? null : json["label"] as String,
-        about: json["about"] == null ? null : json["about"] as String,
-        active: json["active"] as bool,
-        nominal:
-            Amount.fromJson((json["nominal"] as Map).cast<String, Object?>()),
-        productId:
-            json["product_id"] == null ? null : json["product_id"] as String,
-        product: json["product"] == null
-            ? null
-            : PriceEmbeddedProduct.fromJson(
-                (json["product"] as Map).cast<String, Object?>(),
-              ),
-        createdAt: json["created_at"] as String,
-        updatedAt:
-            json["updated_at"] == null ? null : json["updated_at"] as String,
-        archivedAt:
-            json["archived_at"] == null ? null : json["archived_at"] as String,
-      );
+    id: json["id"] as String,
+    label: json["label"] == null ? null : json["label"] as String,
+    about: json["about"] == null ? null : json["about"] as String,
+    active: json["active"] as bool,
+    nominal: Amount.fromJson((json["nominal"] as Map).cast<String, Object?>()),
+    productId: json["product_id"] == null ? null : json["product_id"] as String,
+    product: json["product"] == null
+        ? null
+        : PriceEmbeddedProduct.fromJson(
+            (json["product"] as Map).cast<String, Object?>(),
+          ),
+    createdAt: json["created_at"] as String,
+    updatedAt: json["updated_at"] == null ? null : json["updated_at"] as String,
+    archivedAt: json["archived_at"] == null
+        ? null
+        : json["archived_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        if (label != null) "label": _encodeValue(label),
-        if (about != null) "about": _encodeValue(about),
-        "active": _encodeValue(active),
-        "nominal": _encodeValue(nominal),
-        if (productId != null) "product_id": _encodeValue(productId),
-        if (product != null) "product": _encodeValue(product),
-        "created_at": _encodeValue(createdAt),
-        if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
-        if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
-      };
+    "id": _encodeValue(id),
+    if (label != null) "label": _encodeValue(label),
+    if (about != null) "about": _encodeValue(about),
+    "active": _encodeValue(active),
+    "nominal": _encodeValue(nominal),
+    if (productId != null) "product_id": _encodeValue(productId),
+    if (product != null) "product": _encodeValue(product),
+    "created_at": _encodeValue(createdAt),
+    if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
+    if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -11688,15 +11574,16 @@ final class PricePageRequest implements _InttegroValue {
         pageSize: json["page_size"] == null
             ? null
             : (json["page_size"] as num).toInt(),
-        productId:
-            json["product_id"] == null ? null : json["product_id"] as String,
+        productId: json["product_id"] == null
+            ? null
+            : json["product_id"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (pageNumber != null) "page_number": _encodeValue(pageNumber),
-        if (pageSize != null) "page_size": _encodeValue(pageSize),
-        if (productId != null) "product_id": _encodeValue(productId),
-      };
+    if (pageNumber != null) "page_number": _encodeValue(pageNumber),
+    if (pageSize != null) "page_size": _encodeValue(pageSize),
+    if (productId != null) "product_id": _encodeValue(productId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -11705,14 +11592,14 @@ final class PriceParams implements _InttegroValue {
   final int value;
   const PriceParams({required this.currency, required this.value});
   factory PriceParams.fromJson(Map<String, Object?> json) => PriceParams(
-        currency: Currency.fromJson(json["currency"]),
-        value: (json["value"] as num).toInt(),
-      );
+    currency: Currency.fromJson(json["currency"]),
+    value: (json["value"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "currency": _encodeValue(currency),
-        "value": _encodeValue(value),
-      };
+    "currency": _encodeValue(currency),
+    "value": _encodeValue(value),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11760,85 +11647,84 @@ final class Product implements _InttegroValue {
     this.unitDim,
   });
   factory Product.fromJson(Map<String, Object?> json) => Product(
-        id: json["id"] as String,
-        type: ProductType.fromJson(json["type"]),
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        name: json["name"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
-        about: json["about"] == null ? null : json["about"] as String,
-        taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
-        category: json["category"] == null ? null : json["category"] as String,
-        prices: json["prices"] == null
-            ? null
-            : (json["prices"] as List)
-                .map(
-                  (item) => ProductPriceSummary.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        shipment: json["shipment"] == null
-            ? null
-            : ProductShipment.fromJson(
-                (json["shipment"] as Map).cast<String, Object?>(),
-              ),
-        media: json["media"] == null
-            ? null
-            : ProductMedia.fromJson(
-                (json["media"] as Map).cast<String, Object?>()),
-        attributes: json["attributes"] == null
-            ? null
-            : (json["attributes"] as List)
-                .map(
-                  (item) => ProductAttribute.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        dimensions: json["dimensions"] == null
-            ? null
-            : ProductDimensions.fromJson(
-                (json["dimensions"] as Map).cast<String, Object?>(),
-              ),
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        active: json["active"] as bool,
-        createdAt: json["created_at"] as String,
-        updatedAt:
-            json["updated_at"] == null ? null : json["updated_at"] as String,
-        archivedAt:
-            json["archived_at"] == null ? null : json["archived_at"] as String,
-        publishedAt: json["published_at"] == null
-            ? null
-            : json["published_at"] as String,
-        unitDim: json["unit_dim"] == null ? null : json["unit_dim"] as String,
-      );
+    id: json["id"] as String,
+    type: ProductType.fromJson(json["type"]),
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    name: json["name"] as String,
+    description: json["description"] == null
+        ? null
+        : json["description"] as String,
+    about: json["about"] == null ? null : json["about"] as String,
+    taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
+    category: json["category"] == null ? null : json["category"] as String,
+    prices: json["prices"] == null
+        ? null
+        : (json["prices"] as List)
+              .map(
+                (item) => ProductPriceSummary.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    shipment: json["shipment"] == null
+        ? null
+        : ProductShipment.fromJson(
+            (json["shipment"] as Map).cast<String, Object?>(),
+          ),
+    media: json["media"] == null
+        ? null
+        : ProductMedia.fromJson((json["media"] as Map).cast<String, Object?>()),
+    attributes: json["attributes"] == null
+        ? null
+        : (json["attributes"] as List)
+              .map(
+                (item) => ProductAttribute.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    dimensions: json["dimensions"] == null
+        ? null
+        : ProductDimensions.fromJson(
+            (json["dimensions"] as Map).cast<String, Object?>(),
+          ),
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    active: json["active"] as bool,
+    createdAt: json["created_at"] as String,
+    updatedAt: json["updated_at"] == null ? null : json["updated_at"] as String,
+    archivedAt: json["archived_at"] == null
+        ? null
+        : json["archived_at"] as String,
+    publishedAt: json["published_at"] == null
+        ? null
+        : json["published_at"] as String,
+    unitDim: json["unit_dim"] == null ? null : json["unit_dim"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "type": _encodeValue(type),
-        if (reference != null) "reference": _encodeValue(reference),
-        "name": _encodeValue(name),
-        if (description != null) "description": _encodeValue(description),
-        if (about != null) "about": _encodeValue(about),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        if (category != null) "category": _encodeValue(category),
-        if (prices != null) "prices": _encodeValue(prices),
-        if (shipment != null) "shipment": _encodeValue(shipment),
-        if (media != null) "media": _encodeValue(media),
-        if (attributes != null) "attributes": _encodeValue(attributes),
-        if (dimensions != null) "dimensions": _encodeValue(dimensions),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        "active": _encodeValue(active),
-        "created_at": _encodeValue(createdAt),
-        if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
-        if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
-        if (publishedAt != null) "published_at": _encodeValue(publishedAt),
-        if (unitDim != null) "unit_dim": _encodeValue(unitDim),
-      };
+    "id": _encodeValue(id),
+    "type": _encodeValue(type),
+    if (reference != null) "reference": _encodeValue(reference),
+    "name": _encodeValue(name),
+    if (description != null) "description": _encodeValue(description),
+    if (about != null) "about": _encodeValue(about),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    if (category != null) "category": _encodeValue(category),
+    if (prices != null) "prices": _encodeValue(prices),
+    if (shipment != null) "shipment": _encodeValue(shipment),
+    if (media != null) "media": _encodeValue(media),
+    if (attributes != null) "attributes": _encodeValue(attributes),
+    if (dimensions != null) "dimensions": _encodeValue(dimensions),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    "active": _encodeValue(active),
+    "created_at": _encodeValue(createdAt),
+    if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
+    if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
+    if (publishedAt != null) "published_at": _encodeValue(publishedAt),
+    if (unitDim != null) "unit_dim": _encodeValue(unitDim),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -11863,9 +11749,9 @@ final class ProductAttribute implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "name": _encodeValue(name),
-        "value": _encodeValue(value),
-      };
+    "name": _encodeValue(name),
+    "value": _encodeValue(value),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -11880,9 +11766,9 @@ final class ProductAttributeInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "name": _encodeValue(name),
-        "value": _encodeValue(value),
-      };
+    "name": _encodeValue(name),
+    "value": _encodeValue(value),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11911,10 +11797,10 @@ final class ProductDimensions implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (physical != null) "physical": _encodeValue(physical),
-        if (digital != null) "digital": _encodeValue(digital),
-        if (custom != null) "custom": _encodeValue(custom),
-      };
+    if (physical != null) "physical": _encodeValue(physical),
+    if (digital != null) "digital": _encodeValue(digital),
+    if (custom != null) "custom": _encodeValue(custom),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11925,8 +11811,9 @@ final class ProductDimensionsCustom implements _InttegroValue {
   const ProductDimensionsCustom({this.sizeUnit, this.size, this.details});
   factory ProductDimensionsCustom.fromJson(Map<String, Object?> json) =>
       ProductDimensionsCustom(
-        sizeUnit:
-            json["size_unit"] == null ? null : json["size_unit"] as String,
+        sizeUnit: json["size_unit"] == null
+            ? null
+            : json["size_unit"] as String,
         size: json["size"] == null ? null : (json["size"] as num).toDouble(),
         details: json["details"] == null
             ? null
@@ -11934,10 +11821,10 @@ final class ProductDimensionsCustom implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (sizeUnit != null) "size_unit": _encodeValue(sizeUnit),
-        if (size != null) "size": _encodeValue(size),
-        if (details != null) "details": _encodeValue(details),
-      };
+    if (sizeUnit != null) "size_unit": _encodeValue(sizeUnit),
+    if (size != null) "size": _encodeValue(size),
+    if (details != null) "details": _encodeValue(details),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -11949,16 +11836,17 @@ final class ProductDimensionsDigital implements _InttegroValue {
   factory ProductDimensionsDigital.fromJson(Map<String, Object?> json) =>
       ProductDimensionsDigital(
         bytes: json["bytes"] == null ? null : (json["bytes"] as num).toDouble(),
-        sizeUnit:
-            json["size_unit"] == null ? null : json["size_unit"] as String,
+        sizeUnit: json["size_unit"] == null
+            ? null
+            : json["size_unit"] as String,
         size: json["size"] == null ? null : (json["size"] as num).toDouble(),
       );
   @override
   Map<String, Object?> toJson() => {
-        if (bytes != null) "bytes": _encodeValue(bytes),
-        if (sizeUnit != null) "size_unit": _encodeValue(sizeUnit),
-        if (size != null) "size": _encodeValue(size),
-      };
+    if (bytes != null) "bytes": _encodeValue(bytes),
+    if (sizeUnit != null) "size_unit": _encodeValue(sizeUnit),
+    if (size != null) "size": _encodeValue(size),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -11987,10 +11875,10 @@ final class ProductDimensionsInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (physical != null) "physical": _encodeValue(physical),
-        if (digital != null) "digital": _encodeValue(digital),
-        if (custom != null) "custom": _encodeValue(custom),
-      };
+    if (physical != null) "physical": _encodeValue(physical),
+    if (digital != null) "digital": _encodeValue(digital),
+    if (custom != null) "custom": _encodeValue(custom),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -12001,8 +11889,9 @@ final class ProductDimensionsInputCustom implements _InttegroValue {
   const ProductDimensionsInputCustom({this.sizeUnit, this.size, this.details});
   factory ProductDimensionsInputCustom.fromJson(Map<String, Object?> json) =>
       ProductDimensionsInputCustom(
-        sizeUnit:
-            json["size_unit"] == null ? null : json["size_unit"] as String,
+        sizeUnit: json["size_unit"] == null
+            ? null
+            : json["size_unit"] as String,
         size: json["size"] == null ? null : (json["size"] as num).toDouble(),
         details: json["details"] == null
             ? null
@@ -12010,10 +11899,10 @@ final class ProductDimensionsInputCustom implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (sizeUnit != null) "size_unit": _encodeValue(sizeUnit),
-        if (size != null) "size": _encodeValue(size),
-        if (details != null) "details": _encodeValue(details),
-      };
+    if (sizeUnit != null) "size_unit": _encodeValue(sizeUnit),
+    if (size != null) "size": _encodeValue(size),
+    if (details != null) "details": _encodeValue(details),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -12025,16 +11914,17 @@ final class ProductDimensionsInputDigital implements _InttegroValue {
   factory ProductDimensionsInputDigital.fromJson(Map<String, Object?> json) =>
       ProductDimensionsInputDigital(
         bytes: json["bytes"] == null ? null : (json["bytes"] as num).toDouble(),
-        sizeUnit:
-            json["size_unit"] == null ? null : json["size_unit"] as String,
+        sizeUnit: json["size_unit"] == null
+            ? null
+            : json["size_unit"] as String,
         size: json["size"] == null ? null : (json["size"] as num).toDouble(),
       );
   @override
   Map<String, Object?> toJson() => {
-        if (bytes != null) "bytes": _encodeValue(bytes),
-        if (sizeUnit != null) "size_unit": _encodeValue(sizeUnit),
-        if (size != null) "size": _encodeValue(size),
-      };
+    if (bytes != null) "bytes": _encodeValue(bytes),
+    if (sizeUnit != null) "size_unit": _encodeValue(sizeUnit),
+    if (size != null) "size": _encodeValue(size),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -12059,34 +11949,31 @@ final class ProductDimensionsInputPhysical implements _InttegroValue {
   });
   factory ProductDimensionsInputPhysical.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ProductDimensionsInputPhysical(
-        weightUnit:
-            json["weight_unit"] == null ? null : json["weight_unit"] as String,
-        weight:
-            json["weight"] == null ? null : (json["weight"] as num).toDouble(),
-        size: json["size"] == null ? null : (json["size"] as num).toDouble(),
-        volumeUnit:
-            json["volume_unit"] == null ? null : json["volume_unit"] as String,
-        volume:
-            json["volume"] == null ? null : (json["volume"] as num).toDouble(),
-        length:
-            json["length"] == null ? null : (json["length"] as num).toDouble(),
-        height:
-            json["height"] == null ? null : (json["height"] as num).toDouble(),
-        width: json["width"] == null ? null : (json["width"] as num).toDouble(),
-      );
+  ) => ProductDimensionsInputPhysical(
+    weightUnit: json["weight_unit"] == null
+        ? null
+        : json["weight_unit"] as String,
+    weight: json["weight"] == null ? null : (json["weight"] as num).toDouble(),
+    size: json["size"] == null ? null : (json["size"] as num).toDouble(),
+    volumeUnit: json["volume_unit"] == null
+        ? null
+        : json["volume_unit"] as String,
+    volume: json["volume"] == null ? null : (json["volume"] as num).toDouble(),
+    length: json["length"] == null ? null : (json["length"] as num).toDouble(),
+    height: json["height"] == null ? null : (json["height"] as num).toDouble(),
+    width: json["width"] == null ? null : (json["width"] as num).toDouble(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (weightUnit != null) "weight_unit": _encodeValue(weightUnit),
-        if (weight != null) "weight": _encodeValue(weight),
-        if (size != null) "size": _encodeValue(size),
-        if (volumeUnit != null) "volume_unit": _encodeValue(volumeUnit),
-        if (volume != null) "volume": _encodeValue(volume),
-        if (length != null) "length": _encodeValue(length),
-        if (height != null) "height": _encodeValue(height),
-        if (width != null) "width": _encodeValue(width),
-      };
+    if (weightUnit != null) "weight_unit": _encodeValue(weightUnit),
+    if (weight != null) "weight": _encodeValue(weight),
+    if (size != null) "size": _encodeValue(size),
+    if (volumeUnit != null) "volume_unit": _encodeValue(volumeUnit),
+    if (volume != null) "volume": _encodeValue(volume),
+    if (length != null) "length": _encodeValue(length),
+    if (height != null) "height": _encodeValue(height),
+    if (width != null) "width": _encodeValue(width),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12111,34 +11998,31 @@ final class ProductDimensionsPhysical implements _InttegroValue {
   });
   factory ProductDimensionsPhysical.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ProductDimensionsPhysical(
-        weightUnit:
-            json["weight_unit"] == null ? null : json["weight_unit"] as String,
-        weight:
-            json["weight"] == null ? null : (json["weight"] as num).toDouble(),
-        size: json["size"] == null ? null : (json["size"] as num).toDouble(),
-        volumeUnit:
-            json["volume_unit"] == null ? null : json["volume_unit"] as String,
-        volume:
-            json["volume"] == null ? null : (json["volume"] as num).toDouble(),
-        length:
-            json["length"] == null ? null : (json["length"] as num).toDouble(),
-        height:
-            json["height"] == null ? null : (json["height"] as num).toDouble(),
-        width: json["width"] == null ? null : (json["width"] as num).toDouble(),
-      );
+  ) => ProductDimensionsPhysical(
+    weightUnit: json["weight_unit"] == null
+        ? null
+        : json["weight_unit"] as String,
+    weight: json["weight"] == null ? null : (json["weight"] as num).toDouble(),
+    size: json["size"] == null ? null : (json["size"] as num).toDouble(),
+    volumeUnit: json["volume_unit"] == null
+        ? null
+        : json["volume_unit"] as String,
+    volume: json["volume"] == null ? null : (json["volume"] as num).toDouble(),
+    length: json["length"] == null ? null : (json["length"] as num).toDouble(),
+    height: json["height"] == null ? null : (json["height"] as num).toDouble(),
+    width: json["width"] == null ? null : (json["width"] as num).toDouble(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (weightUnit != null) "weight_unit": _encodeValue(weightUnit),
-        if (weight != null) "weight": _encodeValue(weight),
-        if (size != null) "size": _encodeValue(size),
-        if (volumeUnit != null) "volume_unit": _encodeValue(volumeUnit),
-        if (volume != null) "volume": _encodeValue(volume),
-        if (length != null) "length": _encodeValue(length),
-        if (height != null) "height": _encodeValue(height),
-        if (width != null) "width": _encodeValue(width),
-      };
+    if (weightUnit != null) "weight_unit": _encodeValue(weightUnit),
+    if (weight != null) "weight": _encodeValue(weight),
+    if (size != null) "size": _encodeValue(size),
+    if (volumeUnit != null) "volume_unit": _encodeValue(volumeUnit),
+    if (volume != null) "volume": _encodeValue(volume),
+    if (length != null) "length": _encodeValue(length),
+    if (height != null) "height": _encodeValue(height),
+    if (width != null) "width": _encodeValue(width),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -12153,9 +12037,9 @@ final class ProductLineItemInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        "product": _encodeValue(product),
-      };
+    "type": _encodeValue(type),
+    "product": _encodeValue(product),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12181,42 +12065,38 @@ final class ProductMedia implements _InttegroValue {
     this.downloads,
   });
   factory ProductMedia.fromJson(Map<String, Object?> json) => ProductMedia(
-        heroImage:
-            json["hero_image"] == null ? null : json["hero_image"] as String,
-        thumbnail:
-            json["thumbnail"] == null ? null : json["thumbnail"] as String,
-        webPageUrl: json["web_page_url"] == null
-            ? null
-            : json["web_page_url"] as String,
-        brandLogo:
-            json["brand_logo"] == null ? null : json["brand_logo"] as String,
-        infographic:
-            json["infographic"] == null ? null : json["infographic"] as String,
-        promoVideo:
-            json["promo_video"] == null ? null : json["promo_video"] as String,
-        demoVideo:
-            json["demo_video"] == null ? null : json["demo_video"] as String,
-        gallery: json["gallery"] == null
-            ? null
-            : (json["gallery"] as List).map((item) => item as String).toList(),
-        downloads: json["downloads"] == null
-            ? null
-            : (json["downloads"] as List)
-                .map((item) => item as String)
-                .toList(),
-      );
+    heroImage: json["hero_image"] == null ? null : json["hero_image"] as String,
+    thumbnail: json["thumbnail"] == null ? null : json["thumbnail"] as String,
+    webPageUrl: json["web_page_url"] == null
+        ? null
+        : json["web_page_url"] as String,
+    brandLogo: json["brand_logo"] == null ? null : json["brand_logo"] as String,
+    infographic: json["infographic"] == null
+        ? null
+        : json["infographic"] as String,
+    promoVideo: json["promo_video"] == null
+        ? null
+        : json["promo_video"] as String,
+    demoVideo: json["demo_video"] == null ? null : json["demo_video"] as String,
+    gallery: json["gallery"] == null
+        ? null
+        : (json["gallery"] as List).map((item) => item as String).toList(),
+    downloads: json["downloads"] == null
+        ? null
+        : (json["downloads"] as List).map((item) => item as String).toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (heroImage != null) "hero_image": _encodeValue(heroImage),
-        if (thumbnail != null) "thumbnail": _encodeValue(thumbnail),
-        if (webPageUrl != null) "web_page_url": _encodeValue(webPageUrl),
-        if (brandLogo != null) "brand_logo": _encodeValue(brandLogo),
-        if (infographic != null) "infographic": _encodeValue(infographic),
-        if (promoVideo != null) "promo_video": _encodeValue(promoVideo),
-        if (demoVideo != null) "demo_video": _encodeValue(demoVideo),
-        if (gallery != null) "gallery": _encodeValue(gallery),
-        if (downloads != null) "downloads": _encodeValue(downloads),
-      };
+    if (heroImage != null) "hero_image": _encodeValue(heroImage),
+    if (thumbnail != null) "thumbnail": _encodeValue(thumbnail),
+    if (webPageUrl != null) "web_page_url": _encodeValue(webPageUrl),
+    if (brandLogo != null) "brand_logo": _encodeValue(brandLogo),
+    if (infographic != null) "infographic": _encodeValue(infographic),
+    if (promoVideo != null) "promo_video": _encodeValue(promoVideo),
+    if (demoVideo != null) "demo_video": _encodeValue(demoVideo),
+    if (gallery != null) "gallery": _encodeValue(gallery),
+    if (downloads != null) "downloads": _encodeValue(downloads),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -12243,44 +12123,39 @@ final class ProductMediaInput implements _InttegroValue {
   });
   factory ProductMediaInput.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ProductMediaInput(
-        heroImage:
-            json["hero_image"] == null ? null : json["hero_image"] as String,
-        thumbnail:
-            json["thumbnail"] == null ? null : json["thumbnail"] as String,
-        webPageUrl: json["web_page_url"] == null
-            ? null
-            : json["web_page_url"] as String,
-        brandLogo:
-            json["brand_logo"] == null ? null : json["brand_logo"] as String,
-        infographic:
-            json["infographic"] == null ? null : json["infographic"] as String,
-        promoVideo:
-            json["promo_video"] == null ? null : json["promo_video"] as String,
-        demoVideo:
-            json["demo_video"] == null ? null : json["demo_video"] as String,
-        gallery: json["gallery"] == null
-            ? null
-            : (json["gallery"] as List).map((item) => item as String).toList(),
-        downloads: json["downloads"] == null
-            ? null
-            : (json["downloads"] as List)
-                .map((item) => item as String)
-                .toList(),
-      );
+  ) => ProductMediaInput(
+    heroImage: json["hero_image"] == null ? null : json["hero_image"] as String,
+    thumbnail: json["thumbnail"] == null ? null : json["thumbnail"] as String,
+    webPageUrl: json["web_page_url"] == null
+        ? null
+        : json["web_page_url"] as String,
+    brandLogo: json["brand_logo"] == null ? null : json["brand_logo"] as String,
+    infographic: json["infographic"] == null
+        ? null
+        : json["infographic"] as String,
+    promoVideo: json["promo_video"] == null
+        ? null
+        : json["promo_video"] as String,
+    demoVideo: json["demo_video"] == null ? null : json["demo_video"] as String,
+    gallery: json["gallery"] == null
+        ? null
+        : (json["gallery"] as List).map((item) => item as String).toList(),
+    downloads: json["downloads"] == null
+        ? null
+        : (json["downloads"] as List).map((item) => item as String).toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (heroImage != null) "hero_image": _encodeValue(heroImage),
-        if (thumbnail != null) "thumbnail": _encodeValue(thumbnail),
-        if (webPageUrl != null) "web_page_url": _encodeValue(webPageUrl),
-        if (brandLogo != null) "brand_logo": _encodeValue(brandLogo),
-        if (infographic != null) "infographic": _encodeValue(infographic),
-        if (promoVideo != null) "promo_video": _encodeValue(promoVideo),
-        if (demoVideo != null) "demo_video": _encodeValue(demoVideo),
-        if (gallery != null) "gallery": _encodeValue(gallery),
-        if (downloads != null) "downloads": _encodeValue(downloads),
-      };
+    if (heroImage != null) "hero_image": _encodeValue(heroImage),
+    if (thumbnail != null) "thumbnail": _encodeValue(thumbnail),
+    if (webPageUrl != null) "web_page_url": _encodeValue(webPageUrl),
+    if (brandLogo != null) "brand_logo": _encodeValue(brandLogo),
+    if (infographic != null) "infographic": _encodeValue(infographic),
+    if (promoVideo != null) "promo_video": _encodeValue(promoVideo),
+    if (demoVideo != null) "demo_video": _encodeValue(demoVideo),
+    if (gallery != null) "gallery": _encodeValue(gallery),
+    if (downloads != null) "downloads": _encodeValue(downloads),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12290,23 +12165,23 @@ final class ProductPage implements _InttegroValue {
   final List<Product>? products;
   const ProductPage({this.number, this.size, this.products});
   factory ProductPage.fromJson(Map<String, Object?> json) => ProductPage(
-        number: json["number"] == null ? null : (json["number"] as num).toInt(),
-        size: json["size"] == null ? null : (json["size"] as num).toInt(),
-        products: json["products"] == null
-            ? null
-            : (json["products"] as List)
-                .map(
-                  (item) =>
-                      Product.fromJson((item as Map).cast<String, Object?>()),
-                )
-                .toList(),
-      );
+    number: json["number"] == null ? null : (json["number"] as num).toInt(),
+    size: json["size"] == null ? null : (json["size"] as num).toInt(),
+    products: json["products"] == null
+        ? null
+        : (json["products"] as List)
+              .map(
+                (item) =>
+                    Product.fromJson((item as Map).cast<String, Object?>()),
+              )
+              .toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (number != null) "number": _encodeValue(number),
-        if (size != null) "size": _encodeValue(size),
-        if (products != null) "products": _encodeValue(products),
-      };
+    if (number != null) "number": _encodeValue(number),
+    if (size != null) "size": _encodeValue(size),
+    if (products != null) "products": _encodeValue(products),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12332,11 +12207,11 @@ final class ProductPriceSummary implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "active": _encodeValue(active),
-        if (label != null) "label": _encodeValue(label),
-        "nominal": _encodeValue(nominal),
-      };
+    "id": _encodeValue(id),
+    "active": _encodeValue(active),
+    if (label != null) "label": _encodeValue(label),
+    "nominal": _encodeValue(nominal),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12355,34 +12230,31 @@ final class ProductShipment implements _InttegroValue {
     this.service,
     this.stream,
   });
-  factory ProductShipment.fromJson(Map<String, Object?> json) =>
-      ProductShipment(
-        type: ProductShipmentType.fromJson(json["type"]),
-        delivery: json["delivery"] == null
-            ? null
-            : JsonData.fromJson(json["delivery"]),
-        download: json["download"] == null
-            ? null
-            : JsonData.fromJson(json["download"]),
-        render: json["render"] == null
-            ? null
-            : JsonData.fromJson(json["render"]),
-        service: json["service"] == null
-            ? null
-            : JsonData.fromJson(json["service"]),
-        stream: json["stream"] == null
-            ? null
-            : JsonData.fromJson(json["stream"]),
-      );
+  factory ProductShipment.fromJson(
+    Map<String, Object?> json,
+  ) => ProductShipment(
+    type: ProductShipmentType.fromJson(json["type"]),
+    delivery: json["delivery"] == null
+        ? null
+        : JsonData.fromJson(json["delivery"]),
+    download: json["download"] == null
+        ? null
+        : JsonData.fromJson(json["download"]),
+    render: json["render"] == null ? null : JsonData.fromJson(json["render"]),
+    service: json["service"] == null
+        ? null
+        : JsonData.fromJson(json["service"]),
+    stream: json["stream"] == null ? null : JsonData.fromJson(json["stream"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        if (delivery != null) "delivery": _encodeValue(delivery),
-        if (download != null) "download": _encodeValue(download),
-        if (render != null) "render": _encodeValue(render),
-        if (service != null) "service": _encodeValue(service),
-        if (stream != null) "stream": _encodeValue(stream),
-      };
+    "type": _encodeValue(type),
+    if (delivery != null) "delivery": _encodeValue(delivery),
+    if (download != null) "download": _encodeValue(download),
+    if (render != null) "render": _encodeValue(render),
+    if (service != null) "service": _encodeValue(service),
+    if (stream != null) "stream": _encodeValue(stream),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -12409,9 +12281,9 @@ final class PublicFileStorage implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "encoding": _encodeValue(encoding),
-        "stored_size": _encodeValue(storedSize),
-      };
+    "encoding": _encodeValue(encoding),
+    "stored_size": _encodeValue(storedSize),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12447,65 +12319,64 @@ final class PurchaseIntent implements _InttegroValue {
     this.variantSet,
   });
   factory PurchaseIntent.fromJson(Map<String, Object?> json) => PurchaseIntent(
-        activity: json["activity"] == null
-            ? null
-            : PurchaseIntentActivity.fromJson(
-                (json["activity"] as Map).cast<String, Object?>(),
-              ),
-        allowVariants: json["allow_variants"] as bool,
-        createdAt: json["created_at"] as String,
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
-        id: json["id"] as String,
-        inactiveAt:
-            json["inactive_at"] == null ? null : json["inactive_at"] as String,
-        merchant: json["merchant"] == null
-            ? null
-            : PurchaseIntentMerchant.fromJson(
-                (json["merchant"] as Map).cast<String, Object?>(),
-              ),
-        price: json["price"] == null
-            ? null
-            : PurchaseIntentPrice.fromJson(
-                (json["price"] as Map).cast<String, Object?>(),
-              ),
-        product: json["product"] == null
-            ? null
-            : PurchaseIntentProduct.fromJson(
-                (json["product"] as Map).cast<String, Object?>(),
-              ),
-        quantity: PurchaseIntentQuantity.fromJson(
-          (json["quantity"] as Map).cast<String, Object?>(),
-        ),
-        status: PurchaseIntentStatus.fromJson(json["status"]),
-        updatedAt:
-            json["updated_at"] == null ? null : json["updated_at"] as String,
-        usage: PurchaseIntentUsage.fromJson(
-          (json["usage"] as Map).cast<String, Object?>(),
-        ),
-        variantSet: json["variant_set"] == null
-            ? null
-            : PurchaseIntentVariantSet.fromJson(
-                (json["variant_set"] as Map).cast<String, Object?>(),
-              ),
-      );
+    activity: json["activity"] == null
+        ? null
+        : PurchaseIntentActivity.fromJson(
+            (json["activity"] as Map).cast<String, Object?>(),
+          ),
+    allowVariants: json["allow_variants"] as bool,
+    createdAt: json["created_at"] as String,
+    expiresAt: json["expires_at"] == null ? null : json["expires_at"] as String,
+    id: json["id"] as String,
+    inactiveAt: json["inactive_at"] == null
+        ? null
+        : json["inactive_at"] as String,
+    merchant: json["merchant"] == null
+        ? null
+        : PurchaseIntentMerchant.fromJson(
+            (json["merchant"] as Map).cast<String, Object?>(),
+          ),
+    price: json["price"] == null
+        ? null
+        : PurchaseIntentPrice.fromJson(
+            (json["price"] as Map).cast<String, Object?>(),
+          ),
+    product: json["product"] == null
+        ? null
+        : PurchaseIntentProduct.fromJson(
+            (json["product"] as Map).cast<String, Object?>(),
+          ),
+    quantity: PurchaseIntentQuantity.fromJson(
+      (json["quantity"] as Map).cast<String, Object?>(),
+    ),
+    status: PurchaseIntentStatus.fromJson(json["status"]),
+    updatedAt: json["updated_at"] == null ? null : json["updated_at"] as String,
+    usage: PurchaseIntentUsage.fromJson(
+      (json["usage"] as Map).cast<String, Object?>(),
+    ),
+    variantSet: json["variant_set"] == null
+        ? null
+        : PurchaseIntentVariantSet.fromJson(
+            (json["variant_set"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (activity != null) "activity": _encodeValue(activity),
-        "allow_variants": _encodeValue(allowVariants),
-        "created_at": _encodeValue(createdAt),
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-        "id": _encodeValue(id),
-        if (inactiveAt != null) "inactive_at": _encodeValue(inactiveAt),
-        if (merchant != null) "merchant": _encodeValue(merchant),
-        if (price != null) "price": _encodeValue(price),
-        if (product != null) "product": _encodeValue(product),
-        "quantity": _encodeValue(quantity),
-        "status": _encodeValue(status),
-        if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
-        "usage": _encodeValue(usage),
-        if (variantSet != null) "variant_set": _encodeValue(variantSet),
-      };
+    if (activity != null) "activity": _encodeValue(activity),
+    "allow_variants": _encodeValue(allowVariants),
+    "created_at": _encodeValue(createdAt),
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+    "id": _encodeValue(id),
+    if (inactiveAt != null) "inactive_at": _encodeValue(inactiveAt),
+    if (merchant != null) "merchant": _encodeValue(merchant),
+    if (price != null) "price": _encodeValue(price),
+    if (product != null) "product": _encodeValue(product),
+    "quantity": _encodeValue(quantity),
+    "status": _encodeValue(status),
+    if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
+    "usage": _encodeValue(usage),
+    if (variantSet != null) "variant_set": _encodeValue(variantSet),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12517,17 +12388,17 @@ final class PurchaseIntentActivity implements _InttegroValue {
         recent: json["recent"] == null
             ? null
             : (json["recent"] as List)
-                .map(
-                  (item) => PurchaseIntentActivity.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => PurchaseIntentActivity.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
       );
   @override
   Map<String, Object?> toJson() => {
-        if (recent != null) "recent": _encodeValue(recent),
-      };
+    if (recent != null) "recent": _encodeValue(recent),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12555,13 +12426,12 @@ final class PurchaseIntentMerchant implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (appId != null) "app_id": _encodeValue(appId),
-        if (appName != null) "app_name": _encodeValue(appName),
-        if (organizationId != null)
-          "organization_id": _encodeValue(organizationId),
-        if (organizationName != null)
-          "organization_name": _encodeValue(organizationName),
-      };
+    if (appId != null) "app_id": _encodeValue(appId),
+    if (appName != null) "app_name": _encodeValue(appName),
+    if (organizationId != null) "organization_id": _encodeValue(organizationId),
+    if (organizationName != null)
+      "organization_name": _encodeValue(organizationName),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12587,11 +12457,11 @@ final class PurchaseIntentOriginalPrice implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "active": _encodeValue(active),
-        if (id != null) "id": _encodeValue(id),
-        if (label != null) "label": _encodeValue(label),
-        "nominal": _encodeValue(nominal),
-      };
+    "active": _encodeValue(active),
+    if (id != null) "id": _encodeValue(id),
+    if (label != null) "label": _encodeValue(label),
+    "nominal": _encodeValue(nominal),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12618,10 +12488,10 @@ final class PurchaseIntentPage implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "purchase_intents": _encodeValue(purchaseIntents),
-        "size": _encodeValue(size),
-      };
+    "number": _encodeValue(number),
+    "purchase_intents": _encodeValue(purchaseIntents),
+    "size": _encodeValue(size),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12654,12 +12524,12 @@ final class PurchaseIntentPrice implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "active": _encodeValue(active),
-        if (id != null) "id": _encodeValue(id),
-        if (label != null) "label": _encodeValue(label),
-        "nominal": _encodeValue(nominal),
-        if (original != null) "original": _encodeValue(original),
-      };
+    "active": _encodeValue(active),
+    if (id != null) "id": _encodeValue(id),
+    if (label != null) "label": _encodeValue(label),
+    "nominal": _encodeValue(nominal),
+    if (original != null) "original": _encodeValue(original),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12710,86 +12580,89 @@ final class PurchaseIntentProduct implements _InttegroValue {
   });
   factory PurchaseIntentProduct.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PurchaseIntentProduct(
-        id: json["id"] as String,
-        about: json["about"] == null ? null : json["about"] as String,
-        active: json["active"] as bool,
-        archivedAt:
-            json["archived_at"] == null ? null : json["archived_at"] as String,
-        attributes: json["attributes"] == null
-            ? null
-            : (json["attributes"] as List)
-                .map(
-                  (item) => PurchaseIntentProductAttributesItem.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        category: json["category"] == null ? null : json["category"] as String,
-        createdAt: json["created_at"] as String,
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        description:
-            json["description"] == null ? null : json["description"] as String,
-        dimensions: json["dimensions"] == null
-            ? null
-            : ProductDimensions.fromJson((json["dimensions"] as Map).cast<String, Object?>()),
-        media: json["media"] == null
-            ? null
-            : ProductMedia.fromJson((json["media"] as Map).cast<String, Object?>()),
-        name: json["name"] as String,
-        publishedAt: json["published_at"] == null
-            ? null
-            : json["published_at"] as String,
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        shipment: json["shipment"] == null
-            ? null
-            : ProductShipment.fromJson((json["shipment"] as Map).cast<String, Object?>()),
-        taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
-        type: ProductType.fromJson(json["type"]),
-        unitDim: json["unit_dim"] == null ? null : json["unit_dim"] as String,
-        updatedAt:
-            json["updated_at"] == null ? null : json["updated_at"] as String,
-        prices: json["prices"] == null
-            ? null
-            : (json["prices"] as List)
-                .map(
-                  (item) => ProductPriceSummary.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        variantSetId: json["variant_set_id"] == null
-            ? null
-            : json["variant_set_id"] as String,
-      );
+  ) => PurchaseIntentProduct(
+    id: json["id"] as String,
+    about: json["about"] == null ? null : json["about"] as String,
+    active: json["active"] as bool,
+    archivedAt: json["archived_at"] == null
+        ? null
+        : json["archived_at"] as String,
+    attributes: json["attributes"] == null
+        ? null
+        : (json["attributes"] as List)
+              .map(
+                (item) => PurchaseIntentProductAttributesItem.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    category: json["category"] == null ? null : json["category"] as String,
+    createdAt: json["created_at"] as String,
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    description: json["description"] == null
+        ? null
+        : json["description"] as String,
+    dimensions: json["dimensions"] == null
+        ? null
+        : ProductDimensions.fromJson(
+            (json["dimensions"] as Map).cast<String, Object?>(),
+          ),
+    media: json["media"] == null
+        ? null
+        : ProductMedia.fromJson((json["media"] as Map).cast<String, Object?>()),
+    name: json["name"] as String,
+    publishedAt: json["published_at"] == null
+        ? null
+        : json["published_at"] as String,
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    shipment: json["shipment"] == null
+        ? null
+        : ProductShipment.fromJson(
+            (json["shipment"] as Map).cast<String, Object?>(),
+          ),
+    taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
+    type: ProductType.fromJson(json["type"]),
+    unitDim: json["unit_dim"] == null ? null : json["unit_dim"] as String,
+    updatedAt: json["updated_at"] == null ? null : json["updated_at"] as String,
+    prices: json["prices"] == null
+        ? null
+        : (json["prices"] as List)
+              .map(
+                (item) => ProductPriceSummary.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    variantSetId: json["variant_set_id"] == null
+        ? null
+        : json["variant_set_id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        if (about != null) "about": _encodeValue(about),
-        "active": _encodeValue(active),
-        if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
-        if (attributes != null) "attributes": _encodeValue(attributes),
-        if (category != null) "category": _encodeValue(category),
-        "created_at": _encodeValue(createdAt),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (description != null) "description": _encodeValue(description),
-        if (dimensions != null) "dimensions": _encodeValue(dimensions),
-        if (media != null) "media": _encodeValue(media),
-        "name": _encodeValue(name),
-        if (publishedAt != null) "published_at": _encodeValue(publishedAt),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (shipment != null) "shipment": _encodeValue(shipment),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        "type": _encodeValue(type),
-        if (unitDim != null) "unit_dim": _encodeValue(unitDim),
-        if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
-        if (prices != null) "prices": _encodeValue(prices),
-        if (variantSetId != null) "variant_set_id": _encodeValue(variantSetId),
-      };
+    "id": _encodeValue(id),
+    if (about != null) "about": _encodeValue(about),
+    "active": _encodeValue(active),
+    if (archivedAt != null) "archived_at": _encodeValue(archivedAt),
+    if (attributes != null) "attributes": _encodeValue(attributes),
+    if (category != null) "category": _encodeValue(category),
+    "created_at": _encodeValue(createdAt),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (description != null) "description": _encodeValue(description),
+    if (dimensions != null) "dimensions": _encodeValue(dimensions),
+    if (media != null) "media": _encodeValue(media),
+    "name": _encodeValue(name),
+    if (publishedAt != null) "published_at": _encodeValue(publishedAt),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (shipment != null) "shipment": _encodeValue(shipment),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    "type": _encodeValue(type),
+    if (unitDim != null) "unit_dim": _encodeValue(unitDim),
+    if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
+    if (prices != null) "prices": _encodeValue(prices),
+    if (variantSetId != null) "variant_set_id": _encodeValue(variantSetId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12802,16 +12675,15 @@ final class PurchaseIntentProductAttributesItem implements _InttegroValue {
   });
   factory PurchaseIntentProductAttributesItem.fromJson(
     Map<String, Object?> json,
-  ) =>
-      PurchaseIntentProductAttributesItem(
-        name: json["name"] as String,
-        value: json["value"] as String,
-      );
+  ) => PurchaseIntentProductAttributesItem(
+    name: json["name"] as String,
+    value: json["value"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "name": _encodeValue(name),
-        "value": _encodeValue(value),
-      };
+    "name": _encodeValue(name),
+    "value": _encodeValue(value),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12826,9 +12698,9 @@ final class PurchaseIntentQuantity implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "min": _encodeValue(min),
-        if (max != null) "max": _encodeValue(max),
-      };
+    "min": _encodeValue(min),
+    if (max != null) "max": _encodeValue(max),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12845,15 +12717,16 @@ final class PurchaseIntentUsage implements _InttegroValue {
             : PurchaseIntentUsageOrder.fromJson(
                 (json["order"] as Map).cast<String, Object?>(),
               ),
-        singleUse:
-            json["single_use"] == null ? null : json["single_use"] as bool,
+        singleUse: json["single_use"] == null
+            ? null
+            : json["single_use"] as bool,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (multiUse != null) "multi_use": _encodeValue(multiUse),
-        if (order != null) "order": _encodeValue(order),
-        if (singleUse != null) "single_use": _encodeValue(singleUse),
-      };
+    if (multiUse != null) "multi_use": _encodeValue(multiUse),
+    if (order != null) "order": _encodeValue(order),
+    if (singleUse != null) "single_use": _encodeValue(singleUse),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12868,9 +12741,9 @@ final class PurchaseIntentUsageOrder implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "created_at": _encodeValue(createdAt),
-        "id": _encodeValue(id),
-      };
+    "created_at": _encodeValue(createdAt),
+    "id": _encodeValue(id),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12892,8 +12765,9 @@ final class PurchaseIntentVariant implements _InttegroValue {
   factory PurchaseIntentVariant.fromJson(Map<String, Object?> json) =>
       PurchaseIntentVariant(
         active: json["active"] as bool,
-        position:
-            json["position"] == null ? null : (json["position"] as num).toInt(),
+        position: json["position"] == null
+            ? null
+            : (json["position"] as num).toInt(),
         price: json["price"] == null
             ? null
             : PurchaseIntentPrice.fromJson(
@@ -12909,13 +12783,13 @@ final class PurchaseIntentVariant implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "active": _encodeValue(active),
-        if (position != null) "position": _encodeValue(position),
-        if (price != null) "price": _encodeValue(price),
-        if (product != null) "product": _encodeValue(product),
-        "product_id": _encodeValue(productId),
-        "variant_values": _encodeValue(variantValues),
-      };
+    "active": _encodeValue(active),
+    if (position != null) "position": _encodeValue(position),
+    if (price != null) "price": _encodeValue(price),
+    if (product != null) "product": _encodeValue(product),
+    "product_id": _encodeValue(productId),
+    "variant_values": _encodeValue(variantValues),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12936,10 +12810,10 @@ final class PurchaseIntentVariantAxis implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "key": _encodeValue(key),
-        "label": _encodeValue(label),
-        "position": _encodeValue(position),
-      };
+    "key": _encodeValue(key),
+    "label": _encodeValue(label),
+    "position": _encodeValue(position),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -12968,12 +12842,14 @@ final class PurchaseIntentVariantSet implements _InttegroValue {
         defaultProductId: json["default_product_id"] == null
             ? null
             : json["default_product_id"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         id: json["id"] as String,
         name: json["name"] as String,
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
+        reference: json["reference"] == null
+            ? null
+            : json["reference"] as String,
         variantAxes: (json["variant_axes"] as List)
             .map(
               (item) => PurchaseIntentVariantAxis.fromJson(
@@ -12991,16 +12867,16 @@ final class PurchaseIntentVariantSet implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "active": _encodeValue(active),
-        if (defaultProductId != null)
-          "default_product_id": _encodeValue(defaultProductId),
-        if (description != null) "description": _encodeValue(description),
-        "id": _encodeValue(id),
-        "name": _encodeValue(name),
-        if (reference != null) "reference": _encodeValue(reference),
-        "variant_axes": _encodeValue(variantAxes),
-        "variants": _encodeValue(variants),
-      };
+    "active": _encodeValue(active),
+    if (defaultProductId != null)
+      "default_product_id": _encodeValue(defaultProductId),
+    if (description != null) "description": _encodeValue(description),
+    "id": _encodeValue(id),
+    "name": _encodeValue(name),
+    if (reference != null) "reference": _encodeValue(reference),
+    "variant_axes": _encodeValue(variantAxes),
+    "variants": _encodeValue(variants),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13036,55 +12912,53 @@ final class Refund implements _InttegroValue {
     required this.total,
   });
   factory Refund.fromJson(Map<String, Object?> json) => Refund(
-        canceledAt:
-            json["canceled_at"] == null ? null : json["canceled_at"] as String,
-        createdAt: json["created_at"] as String,
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        failedAt:
-            json["failed_at"] == null ? null : json["failed_at"] as String,
-        id: json["id"] as String,
-        lineItems: (json["line_items"] as List)
-            .map(
-              (item) => RefundLineItem.fromJson(
-                  (item as Map).cast<String, Object?>()),
-            )
-            .toList(),
-        orderId: json["order_id"] as String,
-        processingAt: json["processing_at"] == null
-            ? null
-            : json["processing_at"] as String,
-        reason: RefundReason.fromJson(json["reason"]),
-        reasonDetails: json["reason_details"] == null
-            ? null
-            : json["reason_details"] as String,
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        status: RefundStatus.fromJson(json["status"]),
-        succeededAt: json["succeeded_at"] == null
-            ? null
-            : json["succeeded_at"] as String,
-        total: Amount.fromJson((json["total"] as Map).cast<String, Object?>()),
-      );
+    canceledAt: json["canceled_at"] == null
+        ? null
+        : json["canceled_at"] as String,
+    createdAt: json["created_at"] as String,
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    failedAt: json["failed_at"] == null ? null : json["failed_at"] as String,
+    id: json["id"] as String,
+    lineItems: (json["line_items"] as List)
+        .map(
+          (item) =>
+              RefundLineItem.fromJson((item as Map).cast<String, Object?>()),
+        )
+        .toList(),
+    orderId: json["order_id"] as String,
+    processingAt: json["processing_at"] == null
+        ? null
+        : json["processing_at"] as String,
+    reason: RefundReason.fromJson(json["reason"]),
+    reasonDetails: json["reason_details"] == null
+        ? null
+        : json["reason_details"] as String,
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    status: RefundStatus.fromJson(json["status"]),
+    succeededAt: json["succeeded_at"] == null
+        ? null
+        : json["succeeded_at"] as String,
+    total: Amount.fromJson((json["total"] as Map).cast<String, Object?>()),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
-        "created_at": _encodeValue(createdAt),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (failedAt != null) "failed_at": _encodeValue(failedAt),
-        "id": _encodeValue(id),
-        "line_items": _encodeValue(lineItems),
-        "order_id": _encodeValue(orderId),
-        if (processingAt != null) "processing_at": _encodeValue(processingAt),
-        "reason": _encodeValue(reason),
-        if (reasonDetails != null)
-          "reason_details": _encodeValue(reasonDetails),
-        if (reference != null) "reference": _encodeValue(reference),
-        "status": _encodeValue(status),
-        if (succeededAt != null) "succeeded_at": _encodeValue(succeededAt),
-        "total": _encodeValue(total),
-      };
+    if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
+    "created_at": _encodeValue(createdAt),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (failedAt != null) "failed_at": _encodeValue(failedAt),
+    "id": _encodeValue(id),
+    "line_items": _encodeValue(lineItems),
+    "order_id": _encodeValue(orderId),
+    if (processingAt != null) "processing_at": _encodeValue(processingAt),
+    "reason": _encodeValue(reason),
+    if (reasonDetails != null) "reason_details": _encodeValue(reasonDetails),
+    if (reference != null) "reference": _encodeValue(reference),
+    "status": _encodeValue(status),
+    if (succeededAt != null) "succeeded_at": _encodeValue(succeededAt),
+    "total": _encodeValue(total),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13104,31 +12978,30 @@ final class RefundLineItem implements _InttegroValue {
     required this.refundAmount,
   });
   factory RefundLineItem.fromJson(Map<String, Object?> json) => RefundLineItem(
-        id: json["id"] as String,
-        orderLineItemId: json["order_line_item_id"] as String,
-        originalAmountPaid: Amount.fromJson(
-          (json["original_amount_paid"] as Map).cast<String, Object?>(),
-        ),
-        reason: json["reason"] == null
-            ? null
-            : RefundReason.fromJson(json["reason"]),
-        reasonDetails: json["reason_details"] == null
-            ? null
-            : json["reason_details"] as String,
-        refundAmount: Amount.fromJson(
-          (json["refund_amount"] as Map).cast<String, Object?>(),
-        ),
-      );
+    id: json["id"] as String,
+    orderLineItemId: json["order_line_item_id"] as String,
+    originalAmountPaid: Amount.fromJson(
+      (json["original_amount_paid"] as Map).cast<String, Object?>(),
+    ),
+    reason: json["reason"] == null
+        ? null
+        : RefundReason.fromJson(json["reason"]),
+    reasonDetails: json["reason_details"] == null
+        ? null
+        : json["reason_details"] as String,
+    refundAmount: Amount.fromJson(
+      (json["refund_amount"] as Map).cast<String, Object?>(),
+    ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "order_line_item_id": _encodeValue(orderLineItemId),
-        "original_amount_paid": _encodeValue(originalAmountPaid),
-        if (reason != null) "reason": _encodeValue(reason),
-        if (reasonDetails != null)
-          "reason_details": _encodeValue(reasonDetails),
-        "refund_amount": _encodeValue(refundAmount),
-      };
+    "id": _encodeValue(id),
+    "order_line_item_id": _encodeValue(orderLineItemId),
+    "original_amount_paid": _encodeValue(originalAmountPaid),
+    if (reason != null) "reason": _encodeValue(reason),
+    if (reasonDetails != null) "reason_details": _encodeValue(reasonDetails),
+    "refund_amount": _encodeValue(refundAmount),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13142,19 +13015,18 @@ final class RefundPage implements _InttegroValue {
     required this.size,
   });
   factory RefundPage.fromJson(Map<String, Object?> json) => RefundPage(
-        number: (json["number"] as num).toInt(),
-        refunds: (json["refunds"] as List)
-            .map((item) =>
-                Refund.fromJson((item as Map).cast<String, Object?>()))
-            .toList(),
-        size: (json["size"] as num).toInt(),
-      );
+    number: (json["number"] as num).toInt(),
+    refunds: (json["refunds"] as List)
+        .map((item) => Refund.fromJson((item as Map).cast<String, Object?>()))
+        .toList(),
+    size: (json["size"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "refunds": _encodeValue(refunds),
-        "size": _encodeValue(size),
-      };
+    "number": _encodeValue(number),
+    "refunds": _encodeValue(refunds),
+    "size": _encodeValue(size),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -13169,9 +13041,8 @@ final class RefundRequestMetaInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-      };
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -13180,16 +13051,15 @@ final class RenderMessageTemplatePreviewRequest implements _InttegroValue {
   const RenderMessageTemplatePreviewRequest({required this.messageTemplate});
   factory RenderMessageTemplatePreviewRequest.fromJson(
     Map<String, Object?> json,
-  ) =>
-      RenderMessageTemplatePreviewRequest(
-        messageTemplate: MessageTemplateReferenceInput.fromJson(
-          (json["message_template"] as Map).cast<String, Object?>(),
-        ),
-      );
+  ) => RenderMessageTemplatePreviewRequest(
+    messageTemplate: MessageTemplateReferenceInput.fromJson(
+      (json["message_template"] as Map).cast<String, Object?>(),
+    ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "message_template": _encodeValue(messageTemplate),
-      };
+    "message_template": _encodeValue(messageTemplate),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13236,14 +13106,14 @@ final class RenderedEmailMessageTemplate implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "subject": _encodeValue(subject),
-        "text": _encodeValue(text),
-        if (html != null) "html": _encodeValue(html),
-        if (from != null) "from": _encodeValue(from),
-        if (replyTo != null) "reply_to": _encodeValue(replyTo),
-        if (headers != null) "headers": _encodeValue(headers),
-        if (safety != null) "safety": _encodeValue(safety),
-      };
+    "subject": _encodeValue(subject),
+    "text": _encodeValue(text),
+    if (html != null) "html": _encodeValue(html),
+    if (from != null) "from": _encodeValue(from),
+    if (replyTo != null) "reply_to": _encodeValue(replyTo),
+    if (headers != null) "headers": _encodeValue(headers),
+    if (safety != null) "safety": _encodeValue(safety),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13264,8 +13134,8 @@ final class RenderedMessageTemplate implements _InttegroValue {
         attachments: json["attachments"] == null
             ? null
             : (json["attachments"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         sms: json["sms"] == null
             ? null
             : RenderedSMSMessageTemplate.fromJson(
@@ -13279,11 +13149,11 @@ final class RenderedMessageTemplate implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "channel": _encodeValue(channel),
-        if (attachments != null) "attachments": _encodeValue(attachments),
-        if (sms != null) "sms": _encodeValue(sms),
-        if (email != null) "email": _encodeValue(email),
-      };
+    "channel": _encodeValue(channel),
+    if (attachments != null) "attachments": _encodeValue(attachments),
+    if (sms != null) "sms": _encodeValue(sms),
+    if (email != null) "email": _encodeValue(email),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13323,26 +13193,26 @@ final class ResourceSupply implements _InttegroValue {
     required this.suppliedAt,
   });
   factory ResourceSupply.fromJson(Map<String, Object?> json) => ResourceSupply(
-        attemptId:
-            json["attempt_id"] == null ? null : json["attempt_id"] as String,
-        by: json["by"] as String,
-        channel: json["channel"] == null ? null : json["channel"] as String,
-        resourceId:
-            json["resource_id"] == null ? null : json["resource_id"] as String,
-        resourceType: json["resource_type"] == null
-            ? null
-            : json["resource_type"] as String,
-        suppliedAt: json["supplied_at"] as String,
-      );
+    attemptId: json["attempt_id"] == null ? null : json["attempt_id"] as String,
+    by: json["by"] as String,
+    channel: json["channel"] == null ? null : json["channel"] as String,
+    resourceId: json["resource_id"] == null
+        ? null
+        : json["resource_id"] as String,
+    resourceType: json["resource_type"] == null
+        ? null
+        : json["resource_type"] as String,
+    suppliedAt: json["supplied_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (attemptId != null) "attempt_id": _encodeValue(attemptId),
-        "by": _encodeValue(by),
-        if (channel != null) "channel": _encodeValue(channel),
-        if (resourceId != null) "resource_id": _encodeValue(resourceId),
-        if (resourceType != null) "resource_type": _encodeValue(resourceType),
-        "supplied_at": _encodeValue(suppliedAt),
-      };
+    if (attemptId != null) "attempt_id": _encodeValue(attemptId),
+    "by": _encodeValue(by),
+    if (channel != null) "channel": _encodeValue(channel),
+    if (resourceId != null) "resource_id": _encodeValue(resourceId),
+    if (resourceType != null) "resource_type": _encodeValue(resourceType),
+    "supplied_at": _encodeValue(suppliedAt),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -13361,33 +13231,31 @@ final class ReviewUploadRequestAttemptByIDRequest implements _InttegroValue {
   });
   factory ReviewUploadRequestAttemptByIDRequest.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ReviewUploadRequestAttemptByIDRequest(
-        publicMessage: json["public_message"] == null
-            ? null
-            : json["public_message"] as String,
-        reasons: json["reasons"] == null
-            ? null
-            : (json["reasons"] as List)
-                .map(
-                  (item) => UploadRequestReviewReasonInput.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        attemptId: json["attempt_id"] as String,
-        decision: UploadReviewDecision.fromJson(json["decision"]),
-        id: json["id"] as String,
-      );
+  ) => ReviewUploadRequestAttemptByIDRequest(
+    publicMessage: json["public_message"] == null
+        ? null
+        : json["public_message"] as String,
+    reasons: json["reasons"] == null
+        ? null
+        : (json["reasons"] as List)
+              .map(
+                (item) => UploadRequestReviewReasonInput.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    attemptId: json["attempt_id"] as String,
+    decision: UploadReviewDecision.fromJson(json["decision"]),
+    id: json["id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (publicMessage != null)
-          "public_message": _encodeValue(publicMessage),
-        if (reasons != null) "reasons": _encodeValue(reasons),
-        "attempt_id": _encodeValue(attemptId),
-        "decision": _encodeValue(decision),
-        "id": _encodeValue(id),
-      };
+    if (publicMessage != null) "public_message": _encodeValue(publicMessage),
+    if (reasons != null) "reasons": _encodeValue(reasons),
+    "attempt_id": _encodeValue(attemptId),
+    "decision": _encodeValue(decision),
+    "id": _encodeValue(id),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -13407,33 +13275,31 @@ final class ReviewUploadRequestAttemptByOrdinalRequest
   });
   factory ReviewUploadRequestAttemptByOrdinalRequest.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ReviewUploadRequestAttemptByOrdinalRequest(
-        publicMessage: json["public_message"] == null
-            ? null
-            : json["public_message"] as String,
-        reasons: json["reasons"] == null
-            ? null
-            : (json["reasons"] as List)
-                .map(
-                  (item) => UploadRequestReviewReasonInput.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        attemptOrdinal: (json["attempt_ordinal"] as num).toInt(),
-        decision: UploadReviewDecision.fromJson(json["decision"]),
-        id: json["id"] as String,
-      );
+  ) => ReviewUploadRequestAttemptByOrdinalRequest(
+    publicMessage: json["public_message"] == null
+        ? null
+        : json["public_message"] as String,
+    reasons: json["reasons"] == null
+        ? null
+        : (json["reasons"] as List)
+              .map(
+                (item) => UploadRequestReviewReasonInput.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    attemptOrdinal: (json["attempt_ordinal"] as num).toInt(),
+    decision: UploadReviewDecision.fromJson(json["decision"]),
+    id: json["id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (publicMessage != null)
-          "public_message": _encodeValue(publicMessage),
-        if (reasons != null) "reasons": _encodeValue(reasons),
-        "attempt_ordinal": _encodeValue(attemptOrdinal),
-        "decision": _encodeValue(decision),
-        "id": _encodeValue(id),
-      };
+    if (publicMessage != null) "public_message": _encodeValue(publicMessage),
+    if (reasons != null) "reasons": _encodeValue(reasons),
+    "attempt_ordinal": _encodeValue(attemptOrdinal),
+    "decision": _encodeValue(decision),
+    "id": _encodeValue(id),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -13452,9 +13318,9 @@ final class RevokeFileLinkRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (revokedBy != null) "revoked_by": _encodeValue(revokedBy),
-        "id": _encodeValue(id),
-      };
+    if (revokedBy != null) "revoked_by": _encodeValue(revokedBy),
+    "id": _encodeValue(id),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13491,66 +13357,63 @@ final class ScheduleCancelDetail implements _InttegroValue {
   });
   factory ScheduleCancelDetail.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ScheduleCancelDetail(
-        chimeIds: json["chime_ids"] == null
-            ? null
-            : (json["chime_ids"] as List)
-                .map((item) => item as String)
-                .toList(),
-        content: json["content"] as String,
-        createdAt: json["created_at"] as String,
-        customerIds: json["customer_ids"] == null
-            ? null
-            : (json["customer_ids"] as List)
-                .map((item) => item as String)
-                .toList(),
-        email: json["email"] == null
-            ? null
-            : ChimeEmailMessage.fromJson(
-                (json["email"] as Map).cast<String, Object?>(),
-              ),
-        errors: json["errors"] == null
-            ? null
-            : (json["errors"] as List)
-                .map(
-                  (item) => ScheduleError.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        executedAt:
-            json["executed_at"] == null ? null : json["executed_at"] as String,
-        id: json["id"] as String,
-        idempotencyKey: json["idempotency_key"] == null
-            ? null
-            : json["idempotency_key"] as String,
-        purpose: json["purpose"] == null ? null : json["purpose"] as String,
-        recipients:
-            (json["recipients"] as List).map((item) => item as String).toList(),
-        sendAfter: json["send_after"] as String,
-        senderId: json["sender_id"] as String,
-        canceledAt:
-            json["canceled_at"] == null ? null : json["canceled_at"] as String,
-      );
+  ) => ScheduleCancelDetail(
+    chimeIds: json["chime_ids"] == null
+        ? null
+        : (json["chime_ids"] as List).map((item) => item as String).toList(),
+    content: json["content"] as String,
+    createdAt: json["created_at"] as String,
+    customerIds: json["customer_ids"] == null
+        ? null
+        : (json["customer_ids"] as List).map((item) => item as String).toList(),
+    email: json["email"] == null
+        ? null
+        : ChimeEmailMessage.fromJson(
+            (json["email"] as Map).cast<String, Object?>(),
+          ),
+    errors: json["errors"] == null
+        ? null
+        : (json["errors"] as List)
+              .map(
+                (item) => ScheduleError.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    executedAt: json["executed_at"] == null
+        ? null
+        : json["executed_at"] as String,
+    id: json["id"] as String,
+    idempotencyKey: json["idempotency_key"] == null
+        ? null
+        : json["idempotency_key"] as String,
+    purpose: json["purpose"] == null ? null : json["purpose"] as String,
+    recipients: (json["recipients"] as List)
+        .map((item) => item as String)
+        .toList(),
+    sendAfter: json["send_after"] as String,
+    senderId: json["sender_id"] as String,
+    canceledAt: json["canceled_at"] == null
+        ? null
+        : json["canceled_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (chimeIds != null) "chime_ids": _encodeValue(chimeIds),
-        "content": _encodeValue(content),
-        "created_at": _encodeValue(createdAt),
-        if (customerIds != null) "customer_ids": _encodeValue(customerIds),
-        if (email != null) "email": _encodeValue(email),
-        if (errors != null) "errors": _encodeValue(errors),
-        if (executedAt != null) "executed_at": _encodeValue(executedAt),
-        "id": _encodeValue(id),
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        "recipients": _encodeValue(recipients),
-        "send_after": _encodeValue(sendAfter),
-        "sender_id": _encodeValue(senderId),
-        if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
-      };
+    if (chimeIds != null) "chime_ids": _encodeValue(chimeIds),
+    "content": _encodeValue(content),
+    "created_at": _encodeValue(createdAt),
+    if (customerIds != null) "customer_ids": _encodeValue(customerIds),
+    if (email != null) "email": _encodeValue(email),
+    if (errors != null) "errors": _encodeValue(errors),
+    if (executedAt != null) "executed_at": _encodeValue(executedAt),
+    "id": _encodeValue(id),
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    "recipients": _encodeValue(recipients),
+    "send_after": _encodeValue(sendAfter),
+    "sender_id": _encodeValue(senderId),
+    if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -13593,24 +13456,25 @@ final class ScheduleChimeRequest implements _InttegroValue {
             : MessageTemplateReferenceInput.fromJson(
                 (json["message_template"] as Map).cast<String, Object?>(),
               ),
-        senderId:
-            json["sender_id"] == null ? null : json["sender_id"] as String,
+        senderId: json["sender_id"] == null
+            ? null
+            : json["sender_id"] as String,
         purpose: json["purpose"] == null ? null : json["purpose"] as String,
         recipients: (json["recipients"] as List).map((item) => item).toList(),
         sendAfter: json["send_after"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
-        if (fullMessage != null) "full_message": _encodeValue(fullMessage),
-        if (email != null) "email": _encodeValue(email),
-        if (messageTemplate != null)
-          "message_template": _encodeValue(messageTemplate),
-        if (senderId != null) "sender_id": _encodeValue(senderId),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        "recipients": _encodeValue(recipients),
-        "send_after": _encodeValue(sendAfter),
-      };
+    if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
+    if (fullMessage != null) "full_message": _encodeValue(fullMessage),
+    if (email != null) "email": _encodeValue(email),
+    if (messageTemplate != null)
+      "message_template": _encodeValue(messageTemplate),
+    if (senderId != null) "sender_id": _encodeValue(senderId),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    "recipients": _encodeValue(recipients),
+    "send_after": _encodeValue(sendAfter),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -13625,9 +13489,8 @@ final class ScheduleChimeRequestRequestMeta implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-      };
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13658,50 +13521,45 @@ final class ScheduleCreationDetail implements _InttegroValue {
   });
   factory ScheduleCreationDetail.fromJson(
     Map<String, Object?> json,
-  ) =>
-      ScheduleCreationDetail(
-        createdAt: json["created_at"] as String,
-        customerIds: json["customer_ids"] == null
-            ? null
-            : (json["customer_ids"] as List)
-                .map((item) => item as String)
-                .toList(),
-        email: json["email"] == null
-            ? null
-            : ChimeEmailMessage.fromJson(
-                (json["email"] as Map).cast<String, Object?>(),
-              ),
-        executedAt:
-            json["executed_at"] == null ? null : json["executed_at"] as String,
-        fullMessage: json["full_message"] as String,
-        id: json["id"] as String,
-        idempotencyKey: json["idempotency_key"] == null
-            ? null
-            : json["idempotency_key"] as String,
-        purpose: json["purpose"] == null ? null : json["purpose"] as String,
-        recipients: json["recipients"] == null
-            ? null
-            : (json["recipients"] as List)
-                .map((item) => item as String)
-                .toList(),
-        sendAfter: json["send_after"] as String,
-        senderId: json["sender_id"] as String,
-      );
+  ) => ScheduleCreationDetail(
+    createdAt: json["created_at"] as String,
+    customerIds: json["customer_ids"] == null
+        ? null
+        : (json["customer_ids"] as List).map((item) => item as String).toList(),
+    email: json["email"] == null
+        ? null
+        : ChimeEmailMessage.fromJson(
+            (json["email"] as Map).cast<String, Object?>(),
+          ),
+    executedAt: json["executed_at"] == null
+        ? null
+        : json["executed_at"] as String,
+    fullMessage: json["full_message"] as String,
+    id: json["id"] as String,
+    idempotencyKey: json["idempotency_key"] == null
+        ? null
+        : json["idempotency_key"] as String,
+    purpose: json["purpose"] == null ? null : json["purpose"] as String,
+    recipients: json["recipients"] == null
+        ? null
+        : (json["recipients"] as List).map((item) => item as String).toList(),
+    sendAfter: json["send_after"] as String,
+    senderId: json["sender_id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "created_at": _encodeValue(createdAt),
-        if (customerIds != null) "customer_ids": _encodeValue(customerIds),
-        if (email != null) "email": _encodeValue(email),
-        if (executedAt != null) "executed_at": _encodeValue(executedAt),
-        "full_message": _encodeValue(fullMessage),
-        "id": _encodeValue(id),
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        if (recipients != null) "recipients": _encodeValue(recipients),
-        "send_after": _encodeValue(sendAfter),
-        "sender_id": _encodeValue(senderId),
-      };
+    "created_at": _encodeValue(createdAt),
+    if (customerIds != null) "customer_ids": _encodeValue(customerIds),
+    if (email != null) "email": _encodeValue(email),
+    if (executedAt != null) "executed_at": _encodeValue(executedAt),
+    "full_message": _encodeValue(fullMessage),
+    "id": _encodeValue(id),
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    if (recipients != null) "recipients": _encodeValue(recipients),
+    "send_after": _encodeValue(sendAfter),
+    "sender_id": _encodeValue(senderId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13735,61 +13593,58 @@ final class ScheduleDetail implements _InttegroValue {
     required this.senderId,
   });
   factory ScheduleDetail.fromJson(Map<String, Object?> json) => ScheduleDetail(
-        chimeIds: json["chime_ids"] == null
-            ? null
-            : (json["chime_ids"] as List)
-                .map((item) => item as String)
-                .toList(),
-        content: json["content"] as String,
-        createdAt: json["created_at"] as String,
-        customerIds: json["customer_ids"] == null
-            ? null
-            : (json["customer_ids"] as List)
-                .map((item) => item as String)
-                .toList(),
-        email: json["email"] == null
-            ? null
-            : ChimeEmailMessage.fromJson(
-                (json["email"] as Map).cast<String, Object?>(),
-              ),
-        errors: json["errors"] == null
-            ? null
-            : (json["errors"] as List)
-                .map(
-                  (item) => ScheduleError.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        executedAt:
-            json["executed_at"] == null ? null : json["executed_at"] as String,
-        id: json["id"] as String,
-        idempotencyKey: json["idempotency_key"] == null
-            ? null
-            : json["idempotency_key"] as String,
-        purpose: json["purpose"] == null ? null : json["purpose"] as String,
-        recipients:
-            (json["recipients"] as List).map((item) => item as String).toList(),
-        sendAfter: json["send_after"] as String,
-        senderId: json["sender_id"] as String,
-      );
+    chimeIds: json["chime_ids"] == null
+        ? null
+        : (json["chime_ids"] as List).map((item) => item as String).toList(),
+    content: json["content"] as String,
+    createdAt: json["created_at"] as String,
+    customerIds: json["customer_ids"] == null
+        ? null
+        : (json["customer_ids"] as List).map((item) => item as String).toList(),
+    email: json["email"] == null
+        ? null
+        : ChimeEmailMessage.fromJson(
+            (json["email"] as Map).cast<String, Object?>(),
+          ),
+    errors: json["errors"] == null
+        ? null
+        : (json["errors"] as List)
+              .map(
+                (item) => ScheduleError.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    executedAt: json["executed_at"] == null
+        ? null
+        : json["executed_at"] as String,
+    id: json["id"] as String,
+    idempotencyKey: json["idempotency_key"] == null
+        ? null
+        : json["idempotency_key"] as String,
+    purpose: json["purpose"] == null ? null : json["purpose"] as String,
+    recipients: (json["recipients"] as List)
+        .map((item) => item as String)
+        .toList(),
+    sendAfter: json["send_after"] as String,
+    senderId: json["sender_id"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (chimeIds != null) "chime_ids": _encodeValue(chimeIds),
-        "content": _encodeValue(content),
-        "created_at": _encodeValue(createdAt),
-        if (customerIds != null) "customer_ids": _encodeValue(customerIds),
-        if (email != null) "email": _encodeValue(email),
-        if (errors != null) "errors": _encodeValue(errors),
-        if (executedAt != null) "executed_at": _encodeValue(executedAt),
-        "id": _encodeValue(id),
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        "recipients": _encodeValue(recipients),
-        "send_after": _encodeValue(sendAfter),
-        "sender_id": _encodeValue(senderId),
-      };
+    if (chimeIds != null) "chime_ids": _encodeValue(chimeIds),
+    "content": _encodeValue(content),
+    "created_at": _encodeValue(createdAt),
+    if (customerIds != null) "customer_ids": _encodeValue(customerIds),
+    if (email != null) "email": _encodeValue(email),
+    if (errors != null) "errors": _encodeValue(errors),
+    if (executedAt != null) "executed_at": _encodeValue(executedAt),
+    "id": _encodeValue(id),
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    "recipients": _encodeValue(recipients),
+    "send_after": _encodeValue(sendAfter),
+    "sender_id": _encodeValue(senderId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13799,17 +13654,16 @@ final class ScheduleError implements _InttegroValue {
   final String? type;
   const ScheduleError({this.recipient, this.fixCode, this.type});
   factory ScheduleError.fromJson(Map<String, Object?> json) => ScheduleError(
-        recipient:
-            json["recipient"] == null ? null : json["recipient"] as String,
-        fixCode: json["fix_code"] == null ? null : json["fix_code"] as String,
-        type: json["type"] == null ? null : json["type"] as String,
-      );
+    recipient: json["recipient"] == null ? null : json["recipient"] as String,
+    fixCode: json["fix_code"] == null ? null : json["fix_code"] as String,
+    type: json["type"] == null ? null : json["type"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (recipient != null) "recipient": _encodeValue(recipient),
-        if (fixCode != null) "fix_code": _encodeValue(fixCode),
-        if (type != null) "type": _encodeValue(type),
-      };
+    if (recipient != null) "recipient": _encodeValue(recipient),
+    if (fixCode != null) "fix_code": _encodeValue(fixCode),
+    if (type != null) "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -13837,11 +13691,11 @@ final class SchedulePayoutRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (executeAfter != null) "execute_after": _encodeValue(executeAfter),
-        if (maxAmount != null) "max_amount": _encodeValue(maxAmount),
-        "destination_id": _encodeValue(destinationId),
-        "reference": _encodeValue(reference),
-      };
+    if (executeAfter != null) "execute_after": _encodeValue(executeAfter),
+    if (maxAmount != null) "max_amount": _encodeValue(maxAmount),
+    "destination_id": _encodeValue(destinationId),
+    "reference": _encodeValue(reference),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13871,39 +13725,36 @@ final class SecretKey implements _InttegroValue {
     this.usageCount,
   });
   factory SecretKey.fromJson(Map<String, Object?> json) => SecretKey(
-        id: json["id"] as String,
-        label: json["label"] == null ? null : json["label"] as String,
-        tokenType: SecretKeyTokenType.fromJson(json["token_type"]),
-        issuedAt: json["issued_at"] as String,
-        updatedAt:
-            json["updated_at"] == null ? null : json["updated_at"] as String,
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
-        status: SecretKeyStatus.fromJson(json["status"]),
-        active: json["active"] as bool,
-        revokedAt:
-            json["revoked_at"] == null ? null : json["revoked_at"] as String,
-        lastUsedAt: json["last_used_at"] == null
-            ? null
-            : json["last_used_at"] as String,
-        usageCount: json["usage_count"] == null
-            ? null
-            : (json["usage_count"] as num).toInt(),
-      );
+    id: json["id"] as String,
+    label: json["label"] == null ? null : json["label"] as String,
+    tokenType: SecretKeyTokenType.fromJson(json["token_type"]),
+    issuedAt: json["issued_at"] as String,
+    updatedAt: json["updated_at"] == null ? null : json["updated_at"] as String,
+    expiresAt: json["expires_at"] == null ? null : json["expires_at"] as String,
+    status: SecretKeyStatus.fromJson(json["status"]),
+    active: json["active"] as bool,
+    revokedAt: json["revoked_at"] == null ? null : json["revoked_at"] as String,
+    lastUsedAt: json["last_used_at"] == null
+        ? null
+        : json["last_used_at"] as String,
+    usageCount: json["usage_count"] == null
+        ? null
+        : (json["usage_count"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        if (label != null) "label": _encodeValue(label),
-        "token_type": _encodeValue(tokenType),
-        "issued_at": _encodeValue(issuedAt),
-        if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-        "status": _encodeValue(status),
-        "active": _encodeValue(active),
-        if (revokedAt != null) "revoked_at": _encodeValue(revokedAt),
-        if (lastUsedAt != null) "last_used_at": _encodeValue(lastUsedAt),
-        if (usageCount != null) "usage_count": _encodeValue(usageCount),
-      };
+    "id": _encodeValue(id),
+    if (label != null) "label": _encodeValue(label),
+    "token_type": _encodeValue(tokenType),
+    "issued_at": _encodeValue(issuedAt),
+    if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+    "status": _encodeValue(status),
+    "active": _encodeValue(active),
+    if (revokedAt != null) "revoked_at": _encodeValue(revokedAt),
+    if (lastUsedAt != null) "last_used_at": _encodeValue(lastUsedAt),
+    if (usageCount != null) "usage_count": _encodeValue(usageCount),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13923,27 +13774,26 @@ final class SecretKeyPage implements _InttegroValue {
     required this.keys,
   });
   factory SecretKeyPage.fromJson(Map<String, Object?> json) => SecretKeyPage(
-        number: (json["number"] as num).toInt(),
-        size: (json["size"] as num).toInt(),
-        count: (json["count"] as num).toInt(),
-        total: (json["total"] as num).toInt(),
-        hasMore: json["has_more"] as bool,
-        keys: (json["keys"] as List)
-            .map(
-              (item) =>
-                  SecretKey.fromJson((item as Map).cast<String, Object?>()),
-            )
-            .toList(),
-      );
+    number: (json["number"] as num).toInt(),
+    size: (json["size"] as num).toInt(),
+    count: (json["count"] as num).toInt(),
+    total: (json["total"] as num).toInt(),
+    hasMore: json["has_more"] as bool,
+    keys: (json["keys"] as List)
+        .map(
+          (item) => SecretKey.fromJson((item as Map).cast<String, Object?>()),
+        )
+        .toList(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-        "count": _encodeValue(count),
-        "total": _encodeValue(total),
-        "has_more": _encodeValue(hasMore),
-        "keys": _encodeValue(keys),
-      };
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+    "count": _encodeValue(count),
+    "total": _encodeValue(total),
+    "has_more": _encodeValue(hasMore),
+    "keys": _encodeValue(keys),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13952,16 +13802,16 @@ final class SecretKeyUsage implements _InttegroValue {
   final SecretKeyUsagePage usage;
   const SecretKeyUsage({required this.key, required this.usage});
   factory SecretKeyUsage.fromJson(Map<String, Object?> json) => SecretKeyUsage(
-        key: SecretKey.fromJson((json["key"] as Map).cast<String, Object?>()),
-        usage: SecretKeyUsagePage.fromJson(
-          (json["usage"] as Map).cast<String, Object?>(),
-        ),
-      );
+    key: SecretKey.fromJson((json["key"] as Map).cast<String, Object?>()),
+    usage: SecretKeyUsagePage.fromJson(
+      (json["usage"] as Map).cast<String, Object?>(),
+    ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "key": _encodeValue(key),
-        "usage": _encodeValue(usage),
-      };
+    "key": _encodeValue(key),
+    "usage": _encodeValue(usage),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -13997,13 +13847,13 @@ final class SecretKeyUsagePage implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-        "count": _encodeValue(count),
-        "total": _encodeValue(total),
-        "has_more": _encodeValue(hasMore),
-        "rows": _encodeValue(rows),
-      };
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+    "count": _encodeValue(count),
+    "total": _encodeValue(total),
+    "has_more": _encodeValue(hasMore),
+    "rows": _encodeValue(rows),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14027,11 +13877,11 @@ final class SecretKeyUsageRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (number != null) "number": _encodeValue(number),
-        if (page != null) "page": _encodeValue(page),
-        if (size != null) "size": _encodeValue(size),
-        "secret_key_id": _encodeValue(secretKeyId),
-      };
+    if (number != null) "number": _encodeValue(number),
+    if (page != null) "page": _encodeValue(page),
+    if (size != null) "size": _encodeValue(size),
+    "secret_key_id": _encodeValue(secretKeyId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -14052,10 +13902,10 @@ final class SecretKeyUsageRow implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "secret_key_id": _encodeValue(secretKeyId),
-        "occurred_at": _encodeValue(occurredAt),
-        "auth_result": _encodeValue(authResult),
-      };
+    "secret_key_id": _encodeValue(secretKeyId),
+    "occurred_at": _encodeValue(occurredAt),
+    "auth_result": _encodeValue(authResult),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14093,8 +13943,9 @@ final class SendChimeRequest implements _InttegroValue {
             : MessageTemplateReferenceInput.fromJson(
                 (json["message_template"] as Map).cast<String, Object?>(),
               ),
-        senderId:
-            json["sender_id"] == null ? null : json["sender_id"] as String,
+        senderId: json["sender_id"] == null
+            ? null
+            : json["sender_id"] as String,
         purpose: json["purpose"] == null ? null : json["purpose"] as String,
         customData: json["custom_data"] == null
             ? null
@@ -14108,16 +13959,16 @@ final class SendChimeRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (fullMessage != null) "full_message": _encodeValue(fullMessage),
-        if (email != null) "email": _encodeValue(email),
-        if (messageTemplate != null)
-          "message_template": _encodeValue(messageTemplate),
-        if (senderId != null) "sender_id": _encodeValue(senderId),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
-        "recipient": _encodeValue(recipient),
-      };
+    if (fullMessage != null) "full_message": _encodeValue(fullMessage),
+    if (email != null) "email": _encodeValue(email),
+    if (messageTemplate != null)
+      "message_template": _encodeValue(messageTemplate),
+    if (senderId != null) "sender_id": _encodeValue(senderId),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (requestMeta != null) "request_meta": _encodeValue(requestMeta),
+    "recipient": _encodeValue(recipient),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14132,9 +13983,8 @@ final class SendChimeRequestRequestMeta implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (idempotencyKey != null)
-          "idempotency_key": _encodeValue(idempotencyKey),
-      };
+    if (idempotencyKey != null) "idempotency_key": _encodeValue(idempotencyKey),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14174,11 +14024,11 @@ final class ShippingDetailsInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (id != null) "id": _encodeValue(id),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        "fee": _encodeValue(fee),
-      };
+    if (id != null) "id": _encodeValue(id),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    "fee": _encodeValue(fee),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14186,10 +14036,10 @@ final class ShippingInput implements _InttegroValue {
   final AddressInput address;
   const ShippingInput({required this.address});
   factory ShippingInput.fromJson(Map<String, Object?> json) => ShippingInput(
-        address: AddressInput.fromJson(
-          (json["address"] as Map).cast<String, Object?>(),
-        ),
-      );
+    address: AddressInput.fromJson(
+      (json["address"] as Map).cast<String, Object?>(),
+    ),
+  );
   @override
   Map<String, Object?> toJson() => {"address": _encodeValue(address)};
 }
@@ -14208,9 +14058,9 @@ final class ShippingLineItemInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "type": _encodeValue(type),
-        "shipping": _encodeValue(shipping),
-      };
+    "type": _encodeValue(type),
+    "shipping": _encodeValue(shipping),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14229,29 +14079,27 @@ final class TokenizeMobileMoneyPaymentMethodRequest implements _InttegroValue {
   });
   factory TokenizeMobileMoneyPaymentMethodRequest.fromJson(
     Map<String, Object?> json,
-  ) =>
-      TokenizeMobileMoneyPaymentMethodRequest(
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        customerId: json["customer_id"] as String,
-        type: PaymentMethodType.fromJson(json["type"]),
-        mobileMoney:
-            TokenizeMobileMoneyPaymentMethodRequestMobileMoney.fromJson(
-          (json["mobile_money"] as Map).cast<String, Object?>(),
-        ),
-        owner: PaymentMethodOwnerInput.fromJson(
-          (json["owner"] as Map).cast<String, Object?>(),
-        ),
-      );
+  ) => TokenizeMobileMoneyPaymentMethodRequest(
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    customerId: json["customer_id"] as String,
+    type: PaymentMethodType.fromJson(json["type"]),
+    mobileMoney: TokenizeMobileMoneyPaymentMethodRequestMobileMoney.fromJson(
+      (json["mobile_money"] as Map).cast<String, Object?>(),
+    ),
+    owner: PaymentMethodOwnerInput.fromJson(
+      (json["owner"] as Map).cast<String, Object?>(),
+    ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (customData != null) "custom_data": _encodeValue(customData),
-        "customer_id": _encodeValue(customerId),
-        "type": _encodeValue(type),
-        "mobile_money": _encodeValue(mobileMoney),
-        "owner": _encodeValue(owner),
-      };
+    if (customData != null) "custom_data": _encodeValue(customData),
+    "customer_id": _encodeValue(customerId),
+    "type": _encodeValue(type),
+    "mobile_money": _encodeValue(mobileMoney),
+    "owner": _encodeValue(owner),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14265,16 +14113,15 @@ final class TokenizeMobileMoneyPaymentMethodRequestMobileMoney
   });
   factory TokenizeMobileMoneyPaymentMethodRequestMobileMoney.fromJson(
     Map<String, Object?> json,
-  ) =>
-      TokenizeMobileMoneyPaymentMethodRequestMobileMoney(
-        accountNumber: json["account_number"] as String,
-        network: MobileMoneyNetwork.fromJson(json["network"]),
-      );
+  ) => TokenizeMobileMoneyPaymentMethodRequestMobileMoney(
+    accountNumber: json["account_number"] as String,
+    network: MobileMoneyNetwork.fromJson(json["network"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "account_number": _encodeValue(accountNumber),
-        "network": _encodeValue(network),
-      };
+    "account_number": _encodeValue(accountNumber),
+    "network": _encodeValue(network),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14287,8 +14134,8 @@ final class UnarchivePaymentMethodRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "payment_method_id": _encodeValue(paymentMethodId),
-      };
+    "payment_method_id": _encodeValue(paymentMethodId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14307,20 +14154,21 @@ final class UpdateApplicationRequest implements _InttegroValue {
       UpdateApplicationRequest(
         name: json["name"] == null ? null : json["name"] as String,
         alias: json["alias"] == null ? null : json["alias"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         legalEntityType: json["legal_entity_type"] == null
             ? null
             : json["legal_entity_type"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (name != null) "name": _encodeValue(name),
-        if (alias != null) "alias": _encodeValue(alias),
-        if (description != null) "description": _encodeValue(description),
-        if (legalEntityType != null)
-          "legal_entity_type": _encodeValue(legalEntityType),
-      };
+    if (name != null) "name": _encodeValue(name),
+    if (alias != null) "alias": _encodeValue(alias),
+    if (description != null) "description": _encodeValue(description),
+    if (legalEntityType != null)
+      "legal_entity_type": _encodeValue(legalEntityType),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14364,8 +14212,9 @@ final class UpdateCustomerRequest implements _InttegroValue {
         phoneNumber: json["phone_number"] == null
             ? null
             : json["phone_number"] as String,
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
+        reference: json["reference"] == null
+            ? null
+            : json["reference"] as String,
         shippingAddress: json["shipping_address"] == null
             ? null
             : CustomerAddressInput.fromJson(
@@ -14377,19 +14226,18 @@ final class UpdateCustomerRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (billingAddress != null)
-          "billing_address": _encodeValue(billingAddress),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (emailAddress != null) "email_address": _encodeValue(emailAddress),
-        if (name != null) "name": _encodeValue(name),
-        if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (shippingAddress != null)
-          "shipping_address": _encodeValue(shippingAddress),
-        if (suffix != null) "suffix": _encodeValue(suffix),
-        if (title != null) "title": _encodeValue(title),
-        "customer_id": _encodeValue(customerId),
-      };
+    if (billingAddress != null) "billing_address": _encodeValue(billingAddress),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (emailAddress != null) "email_address": _encodeValue(emailAddress),
+    if (name != null) "name": _encodeValue(name),
+    if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (shippingAddress != null)
+      "shipping_address": _encodeValue(shippingAddress),
+    if (suffix != null) "suffix": _encodeValue(suffix),
+    if (title != null) "title": _encodeValue(title),
+    "customer_id": _encodeValue(customerId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14428,12 +14276,12 @@ final class UpdateMessageTemplateRequest implements _InttegroValue {
         variables: json["variables"] == null
             ? null
             : (json["variables"] as List)
-                .map(
-                  (item) => MessageTemplateVariableInput.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => MessageTemplateVariableInput.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         sms: json["sms"] == null
             ? null
             : MessageTemplateSMSContentInput.fromJson(
@@ -14447,23 +14295,23 @@ final class UpdateMessageTemplateRequest implements _InttegroValue {
         attachments: json["attachments"] == null
             ? null
             : (json["attachments"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         id: json["id"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (name != null) "name": _encodeValue(name),
-        if (about != null) "about": _encodeValue(about),
-        if (channel != null) "channel": _encodeValue(channel),
-        if (purpose != null) "purpose": _encodeValue(purpose),
-        if (locale != null) "locale": _encodeValue(locale),
-        if (variables != null) "variables": _encodeValue(variables),
-        if (sms != null) "sms": _encodeValue(sms),
-        if (email != null) "email": _encodeValue(email),
-        if (attachments != null) "attachments": _encodeValue(attachments),
-        "id": _encodeValue(id),
-      };
+    if (name != null) "name": _encodeValue(name),
+    if (about != null) "about": _encodeValue(about),
+    if (channel != null) "channel": _encodeValue(channel),
+    if (purpose != null) "purpose": _encodeValue(purpose),
+    if (locale != null) "locale": _encodeValue(locale),
+    if (variables != null) "variables": _encodeValue(variables),
+    if (sms != null) "sms": _encodeValue(sms),
+    if (email != null) "email": _encodeValue(email),
+    if (attachments != null) "attachments": _encodeValue(attachments),
+    "id": _encodeValue(id),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14533,27 +14381,25 @@ final class UpdateOrderRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (clearPaymentMethod != null)
-          "clear_payment_method": _encodeValue(clearPaymentMethod),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (invoiceSettings != null)
-          "invoice_settings": _encodeValue(invoiceSettings),
-        if (finalize != null) "finalize": _encodeValue(finalize),
-        if (lineItems != null) "line_items": _encodeValue(lineItems),
-        if (number != null) "number": _encodeValue(number),
-        if (receiptNumber != null)
-          "receipt_number": _encodeValue(receiptNumber),
-        if (paymentMethodData != null)
-          "payment_method_data": _encodeValue(paymentMethodData),
-        if (paymentMethodId != null)
-          "payment_method_id": _encodeValue(paymentMethodId),
-        if (statementDescriptor != null)
-          "statement_descriptor": _encodeValue(statementDescriptor),
-        if (statementDescriptorPrefix != null)
-          "statement_descriptor_prefix":
-              _encodeValue(statementDescriptorPrefix),
-        "order_id": _encodeValue(orderId),
-      };
+    if (clearPaymentMethod != null)
+      "clear_payment_method": _encodeValue(clearPaymentMethod),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (invoiceSettings != null)
+      "invoice_settings": _encodeValue(invoiceSettings),
+    if (finalize != null) "finalize": _encodeValue(finalize),
+    if (lineItems != null) "line_items": _encodeValue(lineItems),
+    if (number != null) "number": _encodeValue(number),
+    if (receiptNumber != null) "receipt_number": _encodeValue(receiptNumber),
+    if (paymentMethodData != null)
+      "payment_method_data": _encodeValue(paymentMethodData),
+    if (paymentMethodId != null)
+      "payment_method_id": _encodeValue(paymentMethodId),
+    if (statementDescriptor != null)
+      "statement_descriptor": _encodeValue(statementDescriptor),
+    if (statementDescriptorPrefix != null)
+      "statement_descriptor_prefix": _encodeValue(statementDescriptorPrefix),
+    "order_id": _encodeValue(orderId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14566,20 +14412,19 @@ final class UpdateOrderRequestPaymentMethodData implements _InttegroValue {
   });
   factory UpdateOrderRequestPaymentMethodData.fromJson(
     Map<String, Object?> json,
-  ) =>
-      UpdateOrderRequestPaymentMethodData(
-        mobileMoney: json["mobile_money"] == null
-            ? null
-            : UpdateOrderRequestPaymentMethodDataMobileMoney.fromJson(
-                (json["mobile_money"] as Map).cast<String, Object?>(),
-              ),
-        type: PaymentMethodType.fromJson(json["type"]),
-      );
+  ) => UpdateOrderRequestPaymentMethodData(
+    mobileMoney: json["mobile_money"] == null
+        ? null
+        : UpdateOrderRequestPaymentMethodDataMobileMoney.fromJson(
+            (json["mobile_money"] as Map).cast<String, Object?>(),
+          ),
+    type: PaymentMethodType.fromJson(json["type"]),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
-        "type": _encodeValue(type),
-      };
+    if (mobileMoney != null) "mobile_money": _encodeValue(mobileMoney),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14593,16 +14438,15 @@ final class UpdateOrderRequestPaymentMethodDataMobileMoney
   });
   factory UpdateOrderRequestPaymentMethodDataMobileMoney.fromJson(
     Map<String, Object?> json,
-  ) =>
-      UpdateOrderRequestPaymentMethodDataMobileMoney(
-        network: MobileMoneyNetwork.fromJson(json["network"]),
-        accountNumber: json["account_number"] as String,
-      );
+  ) => UpdateOrderRequestPaymentMethodDataMobileMoney(
+    network: MobileMoneyNetwork.fromJson(json["network"]),
+    accountNumber: json["account_number"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "network": _encodeValue(network),
-        "account_number": _encodeValue(accountNumber),
-      };
+    "network": _encodeValue(network),
+    "account_number": _encodeValue(accountNumber),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14635,12 +14479,12 @@ final class UpdatePaymentMethodRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (active != null) "active": _encodeValue(active),
-        if (archived != null) "archived": _encodeValue(archived),
-        if (owner != null) "owner": _encodeValue(owner),
-        "payment_method_id": _encodeValue(paymentMethodId),
-      };
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (active != null) "active": _encodeValue(active),
+    if (archived != null) "archived": _encodeValue(archived),
+    if (owner != null) "owner": _encodeValue(owner),
+    "payment_method_id": _encodeValue(paymentMethodId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14659,9 +14503,9 @@ final class UpdatePaymentMethodRequestOwner implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (name != null) "name": _encodeValue(name),
-        if (address != null) "address": _encodeValue(address),
-      };
+    if (name != null) "name": _encodeValue(name),
+    if (address != null) "address": _encodeValue(address),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14686,31 +14530,29 @@ final class UpdatePaymentMethodRequestOwnerAddress implements _InttegroValue {
   });
   factory UpdatePaymentMethodRequestOwnerAddress.fromJson(
     Map<String, Object?> json,
-  ) =>
-      UpdatePaymentMethodRequestOwnerAddress(
-        city: json["city"] == null ? null : json["city"] as String,
-        country: json["country"] == null ? null : json["country"] as String,
-        line1: json["line1"] == null ? null : json["line1"] as String,
-        line2: json["line2"] == null ? null : json["line2"] as String,
-        name: json["name"] == null ? null : json["name"] as String,
-        phoneNumber: json["phone_number"] == null
-            ? null
-            : json["phone_number"] as String,
-        postCode:
-            json["post_code"] == null ? null : json["post_code"] as String,
-        region: json["region"] == null ? null : json["region"] as String,
-      );
+  ) => UpdatePaymentMethodRequestOwnerAddress(
+    city: json["city"] == null ? null : json["city"] as String,
+    country: json["country"] == null ? null : json["country"] as String,
+    line1: json["line1"] == null ? null : json["line1"] as String,
+    line2: json["line2"] == null ? null : json["line2"] as String,
+    name: json["name"] == null ? null : json["name"] as String,
+    phoneNumber: json["phone_number"] == null
+        ? null
+        : json["phone_number"] as String,
+    postCode: json["post_code"] == null ? null : json["post_code"] as String,
+    region: json["region"] == null ? null : json["region"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (city != null) "city": _encodeValue(city),
-        if (country != null) "country": _encodeValue(country),
-        if (line1 != null) "line1": _encodeValue(line1),
-        if (line2 != null) "line2": _encodeValue(line2),
-        if (name != null) "name": _encodeValue(name),
-        if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
-        if (postCode != null) "post_code": _encodeValue(postCode),
-        if (region != null) "region": _encodeValue(region),
-      };
+    if (city != null) "city": _encodeValue(city),
+    if (country != null) "country": _encodeValue(country),
+    if (line1 != null) "line1": _encodeValue(line1),
+    if (line2 != null) "line2": _encodeValue(line2),
+    if (name != null) "name": _encodeValue(name),
+    if (phoneNumber != null) "phone_number": _encodeValue(phoneNumber),
+    if (postCode != null) "post_code": _encodeValue(postCode),
+    if (region != null) "region": _encodeValue(region),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14727,10 +14569,10 @@ final class UpdatePriceRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (label != null) "label": _encodeValue(label),
-        if (about != null) "about": _encodeValue(about),
-        "price_id": _encodeValue(priceId),
-      };
+    if (label != null) "label": _encodeValue(label),
+    if (about != null) "about": _encodeValue(about),
+    "price_id": _encodeValue(priceId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14769,8 +14611,9 @@ final class UpdateProductRequest implements _InttegroValue {
       UpdateProductRequest(
         type: json["type"] == null ? null : ProductType.fromJson(json["type"]),
         name: json["name"] == null ? null : json["name"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
         about: json["about"] == null ? null : json["about"] as String,
         taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
         category: json["category"] == null ? null : json["category"] as String,
@@ -14798,12 +14641,12 @@ final class UpdateProductRequest implements _InttegroValue {
         attributes: json["attributes"] == null
             ? null
             : (json["attributes"] as List)
-                .map(
-                  (item) => ProductAttributeInput.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => ProductAttributeInput.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         customData: json["custom_data"] == null
             ? null
             : CustomData.fromJson(json["custom_data"]),
@@ -14811,22 +14654,21 @@ final class UpdateProductRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (type != null) "type": _encodeValue(type),
-        if (name != null) "name": _encodeValue(name),
-        if (description != null) "description": _encodeValue(description),
-        if (about != null) "about": _encodeValue(about),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        if (category != null) "category": _encodeValue(category),
-        if (shipment != null) "shipment": _encodeValue(shipment),
-        if (dimensions != null) "dimensions": _encodeValue(dimensions),
-        if (unitDimension != null)
-          "unit_dimension": _encodeValue(unitDimension),
-        if (media != null) "media": _encodeValue(media),
-        if (images != null) "images": _encodeValue(images),
-        if (attributes != null) "attributes": _encodeValue(attributes),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        "product_id": _encodeValue(productId),
-      };
+    if (type != null) "type": _encodeValue(type),
+    if (name != null) "name": _encodeValue(name),
+    if (description != null) "description": _encodeValue(description),
+    if (about != null) "about": _encodeValue(about),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    if (category != null) "category": _encodeValue(category),
+    if (shipment != null) "shipment": _encodeValue(shipment),
+    if (dimensions != null) "dimensions": _encodeValue(dimensions),
+    if (unitDimension != null) "unit_dimension": _encodeValue(unitDimension),
+    if (media != null) "media": _encodeValue(media),
+    if (images != null) "images": _encodeValue(images),
+    if (attributes != null) "attributes": _encodeValue(attributes),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    "product_id": _encodeValue(productId),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14845,31 +14687,28 @@ final class UpdatePurchaseIntentRequest implements _InttegroValue {
   });
   factory UpdatePurchaseIntentRequest.fromJson(
     Map<String, Object?> json,
-  ) =>
-      UpdatePurchaseIntentRequest(
-        expiresAt:
-            json["expires_at"] == null ? null : json["expires_at"] as String,
-        id: json["id"] == null ? null : json["id"] as String,
-        quantity: json["quantity"] == null
-            ? null
-            : UpdatePurchaseIntentRequestQuantity.fromJson(
-                (json["quantity"] as Map).cast<String, Object?>(),
-              ),
-        purchaseIntentId: json["purchase_intent_id"] == null
-            ? null
-            : json["purchase_intent_id"] as String,
-        reactivate:
-            json["reactivate"] == null ? null : json["reactivate"] as bool,
-      );
+  ) => UpdatePurchaseIntentRequest(
+    expiresAt: json["expires_at"] == null ? null : json["expires_at"] as String,
+    id: json["id"] == null ? null : json["id"] as String,
+    quantity: json["quantity"] == null
+        ? null
+        : UpdatePurchaseIntentRequestQuantity.fromJson(
+            (json["quantity"] as Map).cast<String, Object?>(),
+          ),
+    purchaseIntentId: json["purchase_intent_id"] == null
+        ? null
+        : json["purchase_intent_id"] as String,
+    reactivate: json["reactivate"] == null ? null : json["reactivate"] as bool,
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
-        if (id != null) "id": _encodeValue(id),
-        if (quantity != null) "quantity": _encodeValue(quantity),
-        if (purchaseIntentId != null)
-          "purchase_intent_id": _encodeValue(purchaseIntentId),
-        if (reactivate != null) "reactivate": _encodeValue(reactivate),
-      };
+    if (expiresAt != null) "expires_at": _encodeValue(expiresAt),
+    if (id != null) "id": _encodeValue(id),
+    if (quantity != null) "quantity": _encodeValue(quantity),
+    if (purchaseIntentId != null)
+      "purchase_intent_id": _encodeValue(purchaseIntentId),
+    if (reactivate != null) "reactivate": _encodeValue(reactivate),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14879,16 +14718,15 @@ final class UpdatePurchaseIntentRequestQuantity implements _InttegroValue {
   const UpdatePurchaseIntentRequestQuantity({this.max, required this.min});
   factory UpdatePurchaseIntentRequestQuantity.fromJson(
     Map<String, Object?> json,
-  ) =>
-      UpdatePurchaseIntentRequestQuantity(
-        max: json["max"] == null ? null : (json["max"] as num).toInt(),
-        min: (json["min"] as num).toInt(),
-      );
+  ) => UpdatePurchaseIntentRequestQuantity(
+    max: json["max"] == null ? null : (json["max"] as num).toInt(),
+    min: (json["min"] as num).toInt(),
+  );
   @override
   Map<String, Object?> toJson() => {
-        if (max != null) "max": _encodeValue(max),
-        "min": _encodeValue(min),
-      };
+    if (max != null) "max": _encodeValue(max),
+    "min": _encodeValue(min),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -14906,9 +14744,9 @@ final class UpdateSecretKeyRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "label": _encodeValue(label),
-        "secret_key_id": _encodeValue(secretKeyId),
-      };
+    "label": _encodeValue(label),
+    "secret_key_id": _encodeValue(secretKeyId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -14944,55 +14782,54 @@ final class UpdatedProduct implements _InttegroValue {
     this.updatedAt,
   });
   factory UpdatedProduct.fromJson(Map<String, Object?> json) => UpdatedProduct(
-        id: json["id"] as String,
-        name: json["name"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
-        about: json["about"] == null ? null : json["about"] as String,
-        type: ProductType.fromJson(json["type"]),
-        reference:
-            json["reference"] == null ? null : json["reference"] as String,
-        taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
-        category: json["category"] == null ? null : json["category"] as String,
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        dimensions: json["dimensions"] == null
-            ? null
-            : ProductDimensions.fromJson(
-                (json["dimensions"] as Map).cast<String, Object?>(),
-              ),
-        prices: json["prices"] == null
-            ? null
-            : (json["prices"] as List)
-                .map(
-                  (item) => ProductPriceSummary.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
-        unitDim: json["unit_dim"] == null ? null : json["unit_dim"] as String,
-        createdAt: json["created_at"] as String,
-        updatedAt:
-            json["updated_at"] == null ? null : json["updated_at"] as String,
-      );
+    id: json["id"] as String,
+    name: json["name"] as String,
+    description: json["description"] == null
+        ? null
+        : json["description"] as String,
+    about: json["about"] == null ? null : json["about"] as String,
+    type: ProductType.fromJson(json["type"]),
+    reference: json["reference"] == null ? null : json["reference"] as String,
+    taxCode: json["tax_code"] == null ? null : json["tax_code"] as String,
+    category: json["category"] == null ? null : json["category"] as String,
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    dimensions: json["dimensions"] == null
+        ? null
+        : ProductDimensions.fromJson(
+            (json["dimensions"] as Map).cast<String, Object?>(),
+          ),
+    prices: json["prices"] == null
+        ? null
+        : (json["prices"] as List)
+              .map(
+                (item) => ProductPriceSummary.fromJson(
+                  (item as Map).cast<String, Object?>(),
+                ),
+              )
+              .toList(),
+    unitDim: json["unit_dim"] == null ? null : json["unit_dim"] as String,
+    createdAt: json["created_at"] as String,
+    updatedAt: json["updated_at"] == null ? null : json["updated_at"] as String,
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "name": _encodeValue(name),
-        if (description != null) "description": _encodeValue(description),
-        if (about != null) "about": _encodeValue(about),
-        "type": _encodeValue(type),
-        if (reference != null) "reference": _encodeValue(reference),
-        if (taxCode != null) "tax_code": _encodeValue(taxCode),
-        if (category != null) "category": _encodeValue(category),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (dimensions != null) "dimensions": _encodeValue(dimensions),
-        if (prices != null) "prices": _encodeValue(prices),
-        if (unitDim != null) "unit_dim": _encodeValue(unitDim),
-        "created_at": _encodeValue(createdAt),
-        if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
-      };
+    "id": _encodeValue(id),
+    "name": _encodeValue(name),
+    if (description != null) "description": _encodeValue(description),
+    if (about != null) "about": _encodeValue(about),
+    "type": _encodeValue(type),
+    if (reference != null) "reference": _encodeValue(reference),
+    if (taxCode != null) "tax_code": _encodeValue(taxCode),
+    if (category != null) "category": _encodeValue(category),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (dimensions != null) "dimensions": _encodeValue(dimensions),
+    if (prices != null) "prices": _encodeValue(prices),
+    if (unitDim != null) "unit_dim": _encodeValue(unitDim),
+    "created_at": _encodeValue(createdAt),
+    if (updatedAt != null) "updated_at": _encodeValue(updatedAt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15011,9 +14848,9 @@ final class UploadFulfillment implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "upload_request": _encodeValue(uploadRequest),
-        "file": _encodeValue(file),
-      };
+    "upload_request": _encodeValue(uploadRequest),
+    "file": _encodeValue(file),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15071,97 +14908,96 @@ final class UploadRequest implements _InttegroValue {
     this.attempt,
   });
   factory UploadRequest.fromJson(Map<String, Object?> json) => UploadRequest(
-        id: json["id"] as String,
-        purpose: json["purpose"] as String,
-        status: UploadRequestStatus.fromJson(json["status"]),
-        active: json["active"] as bool,
-        fileId: json["file_id"] == null ? null : json["file_id"] as String,
-        uploadUrl:
-            json["upload_url"] == null ? null : json["upload_url"] as String,
-        constraints: UploadRequestConstraints.fromJson(
-          (json["constraints"] as Map).cast<String, Object?>(),
-        ),
-        display: UploadRequestDisplay.fromJson(
-          (json["display"] as Map).cast<String, Object?>(),
-        ),
-        subject: FileParty.fromJson(
-          (json["subject"] as Map).cast<String, Object?>(),
-        ),
-        recipient: FileParty.fromJson(
-          (json["recipient"] as Map).cast<String, Object?>(),
-        ),
-        resource: FileResource.fromJson(
-          (json["resource"] as Map).cast<String, Object?>(),
-        ),
-        requester: UploadRequestActor.fromJson(
-          (json["requester"] as Map).cast<String, Object?>(),
-        ),
-        attempts: UploadRequestAttempts.fromJson(
-          (json["attempts"] as Map).cast<String, Object?>(),
-        ),
-        latestError: json["latest_error"] == null
-            ? null
-            : UploadRequestLatestError.fromJson(
-                (json["latest_error"] as Map).cast<String, Object?>(),
-              ),
-        canceledBy: json["canceled_by"] == null
-            ? null
-            : UploadRequestActor.fromJson(
-                (json["canceled_by"] as Map).cast<String, Object?>(),
-              ),
-        customData: json["custom_data"] == null
-            ? null
-            : CustomData.fromJson(json["custom_data"]),
-        metadata: json["metadata"] == null
-            ? null
-            : FileMetadata.fromJson(json["metadata"]),
-        createdAt: json["created_at"] as String,
-        updatedAt: json["updated_at"] as String,
-        expiresAt: json["expires_at"] as String,
-        uploadingAt: json["uploading_at"] == null
-            ? null
-            : json["uploading_at"] as String,
-        fulfilledAt: json["fulfilled_at"] == null
-            ? null
-            : json["fulfilled_at"] as String,
-        expiredAt:
-            json["expired_at"] == null ? null : json["expired_at"] as String,
-        canceledAt:
-            json["canceled_at"] == null ? null : json["canceled_at"] as String,
-        attempt: json["attempt"] == null
-            ? null
-            : UploadRequestAttempt.fromJson(
-                (json["attempt"] as Map).cast<String, Object?>(),
-              ),
-      );
+    id: json["id"] as String,
+    purpose: json["purpose"] as String,
+    status: UploadRequestStatus.fromJson(json["status"]),
+    active: json["active"] as bool,
+    fileId: json["file_id"] == null ? null : json["file_id"] as String,
+    uploadUrl: json["upload_url"] == null ? null : json["upload_url"] as String,
+    constraints: UploadRequestConstraints.fromJson(
+      (json["constraints"] as Map).cast<String, Object?>(),
+    ),
+    display: UploadRequestDisplay.fromJson(
+      (json["display"] as Map).cast<String, Object?>(),
+    ),
+    subject: FileParty.fromJson(
+      (json["subject"] as Map).cast<String, Object?>(),
+    ),
+    recipient: FileParty.fromJson(
+      (json["recipient"] as Map).cast<String, Object?>(),
+    ),
+    resource: FileResource.fromJson(
+      (json["resource"] as Map).cast<String, Object?>(),
+    ),
+    requester: UploadRequestActor.fromJson(
+      (json["requester"] as Map).cast<String, Object?>(),
+    ),
+    attempts: UploadRequestAttempts.fromJson(
+      (json["attempts"] as Map).cast<String, Object?>(),
+    ),
+    latestError: json["latest_error"] == null
+        ? null
+        : UploadRequestLatestError.fromJson(
+            (json["latest_error"] as Map).cast<String, Object?>(),
+          ),
+    canceledBy: json["canceled_by"] == null
+        ? null
+        : UploadRequestActor.fromJson(
+            (json["canceled_by"] as Map).cast<String, Object?>(),
+          ),
+    customData: json["custom_data"] == null
+        ? null
+        : CustomData.fromJson(json["custom_data"]),
+    metadata: json["metadata"] == null
+        ? null
+        : FileMetadata.fromJson(json["metadata"]),
+    createdAt: json["created_at"] as String,
+    updatedAt: json["updated_at"] as String,
+    expiresAt: json["expires_at"] as String,
+    uploadingAt: json["uploading_at"] == null
+        ? null
+        : json["uploading_at"] as String,
+    fulfilledAt: json["fulfilled_at"] == null
+        ? null
+        : json["fulfilled_at"] as String,
+    expiredAt: json["expired_at"] == null ? null : json["expired_at"] as String,
+    canceledAt: json["canceled_at"] == null
+        ? null
+        : json["canceled_at"] as String,
+    attempt: json["attempt"] == null
+        ? null
+        : UploadRequestAttempt.fromJson(
+            (json["attempt"] as Map).cast<String, Object?>(),
+          ),
+  );
   @override
   Map<String, Object?> toJson() => {
-        "id": _encodeValue(id),
-        "purpose": _encodeValue(purpose),
-        "status": _encodeValue(status),
-        "active": _encodeValue(active),
-        if (fileId != null) "file_id": _encodeValue(fileId),
-        if (uploadUrl != null) "upload_url": _encodeValue(uploadUrl),
-        "constraints": _encodeValue(constraints),
-        "display": _encodeValue(display),
-        "subject": _encodeValue(subject),
-        "recipient": _encodeValue(recipient),
-        "resource": _encodeValue(resource),
-        "requester": _encodeValue(requester),
-        "attempts": _encodeValue(attempts),
-        if (latestError != null) "latest_error": _encodeValue(latestError),
-        if (canceledBy != null) "canceled_by": _encodeValue(canceledBy),
-        if (customData != null) "custom_data": _encodeValue(customData),
-        if (metadata != null) "metadata": _encodeValue(metadata),
-        "created_at": _encodeValue(createdAt),
-        "updated_at": _encodeValue(updatedAt),
-        "expires_at": _encodeValue(expiresAt),
-        if (uploadingAt != null) "uploading_at": _encodeValue(uploadingAt),
-        if (fulfilledAt != null) "fulfilled_at": _encodeValue(fulfilledAt),
-        if (expiredAt != null) "expired_at": _encodeValue(expiredAt),
-        if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
-        if (attempt != null) "attempt": _encodeValue(attempt),
-      };
+    "id": _encodeValue(id),
+    "purpose": _encodeValue(purpose),
+    "status": _encodeValue(status),
+    "active": _encodeValue(active),
+    if (fileId != null) "file_id": _encodeValue(fileId),
+    if (uploadUrl != null) "upload_url": _encodeValue(uploadUrl),
+    "constraints": _encodeValue(constraints),
+    "display": _encodeValue(display),
+    "subject": _encodeValue(subject),
+    "recipient": _encodeValue(recipient),
+    "resource": _encodeValue(resource),
+    "requester": _encodeValue(requester),
+    "attempts": _encodeValue(attempts),
+    if (latestError != null) "latest_error": _encodeValue(latestError),
+    if (canceledBy != null) "canceled_by": _encodeValue(canceledBy),
+    if (customData != null) "custom_data": _encodeValue(customData),
+    if (metadata != null) "metadata": _encodeValue(metadata),
+    "created_at": _encodeValue(createdAt),
+    "updated_at": _encodeValue(updatedAt),
+    "expires_at": _encodeValue(expiresAt),
+    if (uploadingAt != null) "uploading_at": _encodeValue(uploadingAt),
+    if (fulfilledAt != null) "fulfilled_at": _encodeValue(fulfilledAt),
+    if (expiredAt != null) "expired_at": _encodeValue(expiredAt),
+    if (canceledAt != null) "canceled_at": _encodeValue(canceledAt),
+    if (attempt != null) "attempt": _encodeValue(attempt),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15185,11 +15021,11 @@ final class UploadRequestActor implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (email != null) "email": _encodeValue(email),
-        if (id != null) "id": _encodeValue(id),
-        if (name != null) "name": _encodeValue(name),
-        "type": _encodeValue(type),
-      };
+    if (email != null) "email": _encodeValue(email),
+    if (id != null) "id": _encodeValue(id),
+    if (name != null) "name": _encodeValue(name),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15236,8 +15072,9 @@ final class UploadRequestAttempt implements _InttegroValue {
             : UploadRequestLatestError.fromJson(
                 (json["error"] as Map).cast<String, Object?>(),
               ),
-        failedAt:
-            json["failed_at"] == null ? null : json["failed_at"] as String,
+        failedAt: json["failed_at"] == null
+            ? null
+            : json["failed_at"] as String,
         fileId: json["file_id"] == null ? null : json["file_id"] as String,
         filename: json["filename"] == null ? null : json["filename"] as String,
         id: json["id"] as String,
@@ -15255,20 +15092,20 @@ final class UploadRequestAttempt implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "attempted_at": _encodeValue(attemptedAt),
-        if (contentType != null) "content_type": _encodeValue(contentType),
-        if (declaredSize != null) "declared_size": _encodeValue(declaredSize),
-        if (error != null) "error": _encodeValue(error),
-        if (failedAt != null) "failed_at": _encodeValue(failedAt),
-        if (fileId != null) "file_id": _encodeValue(fileId),
-        if (filename != null) "filename": _encodeValue(filename),
-        "id": _encodeValue(id),
-        "ordinal": _encodeValue(ordinal),
-        if (review != null) "review": _encodeValue(review),
-        "status": _encodeValue(status),
-        if (succeededAt != null) "succeeded_at": _encodeValue(succeededAt),
-        "upload_request_id": _encodeValue(uploadRequestId),
-      };
+    "attempted_at": _encodeValue(attemptedAt),
+    if (contentType != null) "content_type": _encodeValue(contentType),
+    if (declaredSize != null) "declared_size": _encodeValue(declaredSize),
+    if (error != null) "error": _encodeValue(error),
+    if (failedAt != null) "failed_at": _encodeValue(failedAt),
+    if (fileId != null) "file_id": _encodeValue(fileId),
+    if (filename != null) "filename": _encodeValue(filename),
+    "id": _encodeValue(id),
+    "ordinal": _encodeValue(ordinal),
+    if (review != null) "review": _encodeValue(review),
+    "status": _encodeValue(status),
+    if (succeededAt != null) "succeeded_at": _encodeValue(succeededAt),
+    "upload_request_id": _encodeValue(uploadRequestId),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15296,12 +15133,12 @@ final class UploadRequestAttempts implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (maxAttempts != null) "max_attempts": _encodeValue(maxAttempts),
-        "attempt_count": _encodeValue(attemptCount),
-        "failed_attempt_count": _encodeValue(failedAttemptCount),
-        if (lastAttemptedAt != null)
-          "last_attempted_at": _encodeValue(lastAttemptedAt),
-      };
+    if (maxAttempts != null) "max_attempts": _encodeValue(maxAttempts),
+    "attempt_count": _encodeValue(attemptCount),
+    "failed_attempt_count": _encodeValue(failedAttemptCount),
+    if (lastAttemptedAt != null)
+      "last_attempted_at": _encodeValue(lastAttemptedAt),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -15316,8 +15153,8 @@ final class UploadRequestAttemptsRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (maxAttempts != null) "max_attempts": _encodeValue(maxAttempts),
-      };
+    if (maxAttempts != null) "max_attempts": _encodeValue(maxAttempts),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15338,34 +15175,36 @@ final class UploadRequestConstraints implements _InttegroValue {
   });
   factory UploadRequestConstraints.fromJson(Map<String, Object?> json) =>
       UploadRequestConstraints(
-        minSize:
-            json["min_size"] == null ? null : (json["min_size"] as num).toInt(),
-        maxSize:
-            json["max_size"] == null ? null : (json["max_size"] as num).toInt(),
+        minSize: json["min_size"] == null
+            ? null
+            : (json["min_size"] as num).toInt(),
+        maxSize: json["max_size"] == null
+            ? null
+            : (json["max_size"] as num).toInt(),
         exactSize: json["exact_size"] == null
             ? null
             : (json["exact_size"] as num).toInt(),
         contentTypes: json["content_types"] == null
             ? null
             : (json["content_types"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         extensions: json["extensions"] == null
             ? null
             : (json["extensions"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         filename: json["filename"] == null ? null : json["filename"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (minSize != null) "min_size": _encodeValue(minSize),
-        if (maxSize != null) "max_size": _encodeValue(maxSize),
-        if (exactSize != null) "exact_size": _encodeValue(exactSize),
-        if (contentTypes != null) "content_types": _encodeValue(contentTypes),
-        if (extensions != null) "extensions": _encodeValue(extensions),
-        if (filename != null) "filename": _encodeValue(filename),
-      };
+    if (minSize != null) "min_size": _encodeValue(minSize),
+    if (maxSize != null) "max_size": _encodeValue(maxSize),
+    if (exactSize != null) "exact_size": _encodeValue(exactSize),
+    if (contentTypes != null) "content_types": _encodeValue(contentTypes),
+    if (extensions != null) "extensions": _encodeValue(extensions),
+    if (filename != null) "filename": _encodeValue(filename),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -15386,34 +15225,36 @@ final class UploadRequestConstraintsInput implements _InttegroValue {
   });
   factory UploadRequestConstraintsInput.fromJson(Map<String, Object?> json) =>
       UploadRequestConstraintsInput(
-        minSize:
-            json["min_size"] == null ? null : (json["min_size"] as num).toInt(),
-        maxSize:
-            json["max_size"] == null ? null : (json["max_size"] as num).toInt(),
+        minSize: json["min_size"] == null
+            ? null
+            : (json["min_size"] as num).toInt(),
+        maxSize: json["max_size"] == null
+            ? null
+            : (json["max_size"] as num).toInt(),
         exactSize: json["exact_size"] == null
             ? null
             : (json["exact_size"] as num).toInt(),
         contentTypes: json["content_types"] == null
             ? null
             : (json["content_types"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         extensions: json["extensions"] == null
             ? null
             : (json["extensions"] as List)
-                .map((item) => item as String)
-                .toList(),
+                  .map((item) => item as String)
+                  .toList(),
         filename: json["filename"] == null ? null : json["filename"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (minSize != null) "min_size": _encodeValue(minSize),
-        if (maxSize != null) "max_size": _encodeValue(maxSize),
-        if (exactSize != null) "exact_size": _encodeValue(exactSize),
-        if (contentTypes != null) "content_types": _encodeValue(contentTypes),
-        if (extensions != null) "extensions": _encodeValue(extensions),
-        if (filename != null) "filename": _encodeValue(filename),
-      };
+    if (minSize != null) "min_size": _encodeValue(minSize),
+    if (maxSize != null) "max_size": _encodeValue(maxSize),
+    if (exactSize != null) "exact_size": _encodeValue(exactSize),
+    if (contentTypes != null) "content_types": _encodeValue(contentTypes),
+    if (extensions != null) "extensions": _encodeValue(extensions),
+    if (filename != null) "filename": _encodeValue(filename),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15425,17 +15266,19 @@ final class UploadRequestDisplay implements _InttegroValue {
   factory UploadRequestDisplay.fromJson(Map<String, Object?> json) =>
       UploadRequestDisplay(
         title: json["title"] == null ? null : json["title"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
-        helpText:
-            json["help_text"] == null ? null : json["help_text"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
+        helpText: json["help_text"] == null
+            ? null
+            : json["help_text"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (title != null) "title": _encodeValue(title),
-        if (description != null) "description": _encodeValue(description),
-        if (helpText != null) "help_text": _encodeValue(helpText),
-      };
+    if (title != null) "title": _encodeValue(title),
+    if (description != null) "description": _encodeValue(description),
+    if (helpText != null) "help_text": _encodeValue(helpText),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -15451,17 +15294,19 @@ final class UploadRequestDisplayInput implements _InttegroValue {
   factory UploadRequestDisplayInput.fromJson(Map<String, Object?> json) =>
       UploadRequestDisplayInput(
         title: json["title"] == null ? null : json["title"] as String,
-        description:
-            json["description"] == null ? null : json["description"] as String,
-        helpText:
-            json["help_text"] == null ? null : json["help_text"] as String,
+        description: json["description"] == null
+            ? null
+            : json["description"] as String,
+        helpText: json["help_text"] == null
+            ? null
+            : json["help_text"] as String,
       );
   @override
   Map<String, Object?> toJson() => {
-        if (title != null) "title": _encodeValue(title),
-        if (description != null) "description": _encodeValue(description),
-        if (helpText != null) "help_text": _encodeValue(helpText),
-      };
+    if (title != null) "title": _encodeValue(title),
+    if (description != null) "description": _encodeValue(description),
+    if (helpText != null) "help_text": _encodeValue(helpText),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15488,12 +15333,12 @@ final class UploadRequestLatestError implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (code != null) "code": _encodeValue(code),
-        if (param != null) "param": _encodeValue(param),
-        if (message != null) "message": _encodeValue(message),
-        if (retryable != null) "retryable": _encodeValue(retryable),
-        if (at != null) "at": _encodeValue(at),
-      };
+    if (code != null) "code": _encodeValue(code),
+    if (param != null) "param": _encodeValue(param),
+    if (message != null) "message": _encodeValue(message),
+    if (retryable != null) "retryable": _encodeValue(retryable),
+    if (at != null) "at": _encodeValue(at),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15519,10 +15364,10 @@ final class UploadRequestPage implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "number": _encodeValue(number),
-        "size": _encodeValue(size),
-        "upload_requests": _encodeValue(uploadRequests),
-      };
+    "number": _encodeValue(number),
+    "size": _encodeValue(size),
+    "upload_requests": _encodeValue(uploadRequests),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15554,26 +15399,25 @@ final class UploadRequestReview implements _InttegroValue {
         reasons: json["reasons"] == null
             ? null
             : (json["reasons"] as List)
-                .map(
-                  (item) => UploadRequestReviewReason.fromJson(
-                    (item as Map).cast<String, Object?>(),
-                  ),
-                )
-                .toList(),
+                  .map(
+                    (item) => UploadRequestReviewReason.fromJson(
+                      (item as Map).cast<String, Object?>(),
+                    ),
+                  )
+                  .toList(),
         reviewedAt: json["reviewed_at"] as String,
         type: UploadReviewType.fromJson(json["type"]),
       );
   @override
   Map<String, Object?> toJson() => {
-        "created_at": _encodeValue(createdAt),
-        "decision": _encodeValue(decision),
-        if (fileId != null) "file_id": _encodeValue(fileId),
-        if (publicMessage != null)
-          "public_message": _encodeValue(publicMessage),
-        if (reasons != null) "reasons": _encodeValue(reasons),
-        "reviewed_at": _encodeValue(reviewedAt),
-        "type": _encodeValue(type),
-      };
+    "created_at": _encodeValue(createdAt),
+    "decision": _encodeValue(decision),
+    if (fileId != null) "file_id": _encodeValue(fileId),
+    if (publicMessage != null) "public_message": _encodeValue(publicMessage),
+    if (reasons != null) "reasons": _encodeValue(reasons),
+    "reviewed_at": _encodeValue(reviewedAt),
+    "type": _encodeValue(type),
+  };
 }
 
 /// Typed Inttegro domain value.
@@ -15594,10 +15438,10 @@ final class UploadRequestReviewReason implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "code": _encodeValue(code),
-        "message": _encodeValue(message),
-        if (param != null) "param": _encodeValue(param),
-      };
+    "code": _encodeValue(code),
+    "message": _encodeValue(message),
+    if (param != null) "param": _encodeValue(param),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -15618,10 +15462,10 @@ final class UploadRequestReviewReasonInput implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        if (param != null) "param": _encodeValue(param),
-        "code": _encodeValue(code),
-        "message": _encodeValue(message),
-      };
+    if (param != null) "param": _encodeValue(param),
+    "code": _encodeValue(code),
+    "message": _encodeValue(message),
+  };
 }
 
 /// Typed Inttegro request parameters.
@@ -15642,8 +15486,8 @@ final class VerifyOTPRequest implements _InttegroValue {
       );
   @override
   Map<String, Object?> toJson() => {
-        "transaction_id": _encodeValue(transactionId),
-        "recipient": _encodeValue(recipient),
-        "token": _encodeValue(token),
-      };
+    "transaction_id": _encodeValue(transactionId),
+    "recipient": _encodeValue(recipient),
+    "token": _encodeValue(token),
+  };
 }
