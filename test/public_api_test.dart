@@ -34,4 +34,20 @@ void main() {
     expect(app.id, 'app_test');
     client.close();
   });
+
+  test('semantic collections control custom-data mutation', () {
+    final original = CustomData({'order': 'first'});
+    final updated = original.set('order', 'second').set('campaign', 'summer');
+
+    expect(original['order'], 'first');
+    expect(updated.toJson(), {'order': 'second', 'campaign': 'summer'});
+    expect(() => updated.values['unsafe'] = 'mutation', throwsUnsupportedError);
+    expect(
+      () => CustomData({'x' * 257: 'too long'}),
+      throwsArgumentError,
+    );
+
+    final patch = CustomDataPatch().set('campaign', 'winter').unset('legacy');
+    expect(patch.toJson(), {'campaign': 'winter', 'legacy': null});
+  });
 }
