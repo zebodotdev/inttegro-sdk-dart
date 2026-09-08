@@ -490,14 +490,15 @@ final class Files {
   Future<FileDownload> contents(
     FileContentsRequest request, {
     RequestOptions options = const RequestOptions(),
-  }) => _client._download(
-    "POST",
-    "/files/contents",
-    request.toJson(),
-    options,
-    "files.contents",
-    authenticated: true,
-  );
+  }) =>
+      _client._download(
+        "POST",
+        "/files/contents",
+        request.toJson(),
+        options,
+        "files.contents",
+        authenticated: true,
+      );
 
   /// Delete a file
   Future<File> delete(
