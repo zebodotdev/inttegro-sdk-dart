@@ -42,10 +42,7 @@ void main() {
     expect(original['order'], 'first');
     expect(updated.toJson(), {'order': 'second', 'campaign': 'summer'});
     expect(() => updated.values['unsafe'] = 'mutation', throwsUnsupportedError);
-    expect(
-      () => CustomData({'x' * 257: 'too long'}),
-      throwsArgumentError,
-    );
+    expect(() => CustomData({'x' * 257: 'too long'}), throwsArgumentError);
 
     final patch = CustomDataPatch().set('campaign', 'winter').unset('legacy');
     expect(patch.toJson(), {'campaign': 'winter', 'legacy': null});
