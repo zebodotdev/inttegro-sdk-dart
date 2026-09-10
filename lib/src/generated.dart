@@ -11235,7 +11235,7 @@ final class PaymentNextActionRequestConfirmation implements _InttegroValue {
             : PaymentNextActionConfirmPaymentRequest.fromJson(
                 (json["last_request"] as Map).cast<String, Object?>(),
               ),
-        after: _decodeDateTime(json["after"])?,
+        after: json["after"] == null ? null : _decodeDateTime(json["after"]),
       );
   @override
   Map<String, Object?> toJson() => {
