@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.5
+
+- Aligned the automated publish job with Dart's official OIDC workflow so the setup action's credential remains registered for publication.
+
 ## 0.2.4
 
 - Fixed automated publishing to use the OIDC credential configured by the Dart setup action directly.
