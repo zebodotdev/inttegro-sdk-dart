@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Fixed release verification so trusted-publishing credentials are reserved for the publish job.
+
 ## 0.2.0
 
 - Breaking: replaced generic maps with named models for balances, purchase intents, products, payment methods, payments, and orders.
