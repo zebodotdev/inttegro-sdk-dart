@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3
+
+- Isolated public dependency resolution from the scoped pub.dev OIDC publish credential.
+
 ## 0.2.2
 
 - Removed the publish credential from the verification job before resolving dependencies.
