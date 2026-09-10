@@ -1163,22 +1163,6 @@ final class Orders {
     return OrderPage.fromJson((value as Map).cast<String, Object?>());
   }
 
-  /// Create a refund using the compatibility URL
-  Future<Refund> refund(
-    CreateRefundRequest request, {
-    RequestOptions options = const RequestOptions(),
-  }) async {
-    final value = await _client._request(
-      "POST",
-      "/orders/refund",
-      request.toJson(),
-      options,
-      "orders.refund",
-      field: "refund",
-      authenticated: true,
-    );
-    return Refund.fromJson((value as Map).cast<String, Object?>());
-  }
 }
 
 /// Operations for Inttegro otp.
