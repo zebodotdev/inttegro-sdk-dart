@@ -237,28 +237,6 @@ final class VariantValues implements _InttegroValue {
   Map<String, String> toJson() => Map.of(_values);
 }
 
-/// Account balances keyed by currency.
-final class BalanceSnapshot implements _InttegroValue {
-  final Map<String, CurrencyBalanceSnapshot> _values;
-  BalanceSnapshot([Map<String, CurrencyBalanceSnapshot> values = const {}])
-      : _values = Map.unmodifiable(values);
-  factory BalanceSnapshot.fromJson(Object? json) => BalanceSnapshot(
-        (json as Map).cast<String, Object?>().map(
-              (key, value) => MapEntry(
-                key,
-                CurrencyBalanceSnapshot.fromJson(
-                  (value as Map).cast<String, Object?>(),
-                ),
-              ),
-            ),
-      );
-  Map<String, CurrencyBalanceSnapshot> get values => Map.unmodifiable(_values);
-  CurrencyBalanceSnapshot? operator [](String currency) => _values[currency];
-  @override
-  Map<String, Object?> toJson() =>
-      _values.map((key, value) => MapEntry(key, _encodeValue(value)));
-}
-
 /// Customer balances keyed by currency.
 final class CustomerBalance implements _InttegroValue {
   final Map<String, CustomerBalanceValue> _values;
@@ -337,8 +315,8 @@ final class FinancialAccountVerificationRequest implements _InttegroValue {
 
 /// Verification state attached to a financial account.
 final class FinancialAccountVerification implements _InttegroValue {
-  final String initiatedAt;
-  final String? completedAt;
+  final DateTime initiatedAt;
+  final DateTime? completedAt;
   final FinancialAccountVerificationRequest request;
   const FinancialAccountVerification({
     required this.initiatedAt,
@@ -348,15 +326,17 @@ final class FinancialAccountVerification implements _InttegroValue {
   factory FinancialAccountVerification.fromJson(Object? value) {
     final json = (value as Map).cast<String, Object?>();
     return FinancialAccountVerification(
-      initiatedAt: json['initiated_at'] as String,
-      completedAt: json['completed_at'] as String?,
+      initiatedAt: _decodeDateTime(json['initiated_at']),
+      completedAt: json['completed_at'] == null
+          ? null
+          : _decodeDateTime(json['completed_at']),
       request: FinancialAccountVerificationRequest.fromJson(json['request']),
     );
   }
   @override
   Map<String, Object?> toJson() => {
-        'initiated_at': initiatedAt,
-        if (completedAt != null) 'completed_at': completedAt,
+        'initiated_at': _encodeValue(initiatedAt),
+        if (completedAt != null) 'completed_at': _encodeValue(completedAt),
         'request': _encodeValue(request),
       };
 }
