@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.4
+
+- Fixed automated publishing to use the OIDC credential configured by the Dart setup action directly.
+
 ## 0.2.3
 
 - Isolated public dependency resolution from the scoped pub.dev OIDC publish credential.

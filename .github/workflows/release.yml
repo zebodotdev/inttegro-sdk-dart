@@ -105,11 +105,7 @@ jobs:
           dart pub token remove https://pub.dev
           dart pub get
       - name: Publish to pub.dev with OIDC
-        shell: bash
-        run: |
-          set -euo pipefail
-          dart pub token add https://pub.dev --env-var PUB_TOKEN
-          dart pub publish --force
+        run: dart pub publish --force
 
   finalize:
     needs: [verify, publish]
