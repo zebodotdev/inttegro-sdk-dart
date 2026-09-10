@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- Removed the publish credential from the verification job before resolving dependencies.
+
 ## 0.2.1
 
 - Fixed release verification so trusted-publishing credentials are reserved for the publish job.
