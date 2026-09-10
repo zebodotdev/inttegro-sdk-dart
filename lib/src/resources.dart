@@ -1162,7 +1162,6 @@ final class Orders {
     );
     return OrderPage.fromJson((value as Map).cast<String, Object?>());
   }
-
 }
 
 /// Operations for Inttegro otp.

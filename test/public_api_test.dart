@@ -62,8 +62,8 @@ void main() {
     expect(balance.ghs.available.amount, 1000);
     expect(balance.ghs.includesTransactionsBefore, isA<DateTime>());
     expect(
-      (balance.toJson()['ghs'] as Map<String, Object?>)
-          ['includes_transactions_before'],
+      (balance.toJson()['ghs']
+          as Map<String, Object?>)['includes_transactions_before'],
       '2026-09-09T12:00:00.000Z',
     );
   });
