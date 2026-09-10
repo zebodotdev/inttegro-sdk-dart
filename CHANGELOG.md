@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0
+
+- Breaking: replaced generic maps with named models for balances, purchase intents, products, payment methods, payments, and orders.
+- Breaking: exposed API timestamps as `DateTime` values and accepted `DateTime` values in timestamp request fields.
+
 ## 0.1.2
 
 - Published the fingerprint-safe SDK through the configured trusted-publishing environment.
