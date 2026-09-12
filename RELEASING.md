@@ -6,7 +6,7 @@ GitHub Actions trusted publishing can be enabled.
 1. From the clean `0.1.0` release commit, run `dart pub publish` and complete the
    pub.dev authorization flow.
 2. In pub.dev, configure automated publishing for GitHub repository
-   `zebodotdev/inttegro-sdk-dart` and tag pattern `v{{version}}`.
+   `inttegro/inttegro-sdk-dart` and tag pattern `v{{version}}`.
 3. Create a `release` GitHub environment with no required reviewers.
 4. Push `v0.1.0` after pub.dev shows that version. For subsequent versions,
    update `pubspec.yaml` and `CHANGELOG.md`, then push the matching tag.
